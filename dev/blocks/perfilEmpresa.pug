@@ -1,0 +1,55 @@
+.container-perfilEmpresa.l-container
+  h1.container-perfilEmpresa__title  Perfil de la empresa
+  .container-perfilEmpresa__empresa
+    form(action="/empresa.html" method="post").container-perfilEmpresa__form
+
+      .container-perfilEmpresa__cuenta
+        h2.container-perfilEmpresa__title Cuenta
+        label.container-perfilEmpresa__label Usuario
+        input(type="text" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Contraseña
+        input(type="password" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Repetir contraseña
+        input(type="password" required).container-perfilEmpresa__input
+
+      .container-perfilEmpresa__info
+        h2.container-perfilEmpresa__title Información empresa
+        label.container-perfilEmpresa__label Nombre juridico
+        input(type="password" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Nombre comercial
+        input(type="text" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label NIT
+        input(type="text" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Giro de la empresa
+        select(id="genero" name="genero").container-perfilEmpresa__combo
+          option(value="0").container-perfilEmpresa__opcion Seleccione...
+          option(value="1").container-perfilEmpresa__opcion Extractiva | Agricola
+          option(value="2").container-perfilEmpresa__opcion Industrial
+          option(value="2").container-perfilEmpresa__opcion Comercial
+          option(value="2").container-perfilEmpresa__opcion Financiera
+          option(value="2").container-perfilEmpresa__opcion Servicios
+        label.container-perfilEmpresa__label Correo
+        input(type="email" placeholder="correo@gmail.com" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Telefono 1
+        input(type="tel" required).container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Telefono 2
+        input(type="tel").container-perfilEmpresa__input
+        label.container-perfilEmpresa__label Dirección
+        textarea.container-perfilEmpresa__textarea
+        label.container-perfilEmpresa__label Referencia
+        textarea.container-perfilEmpresa__textarea
+        label.container-perfilEmpresa__label Departamento
+        select(id="departamento" name="departamento").container-perfilEmpresa__combo
+          option(value="0").container-perfilEmpresa__opcion Seleccione...
+          option(value="1").container-perfilEmpresa__opcion La Libertad
+        label.container-perfilEmpresa__label Municipio
+        select(id="municipio" name="municipio").container-perfilEmpresa__combo
+          option(value="0").container-perfilEmpresa__opcion Seleccione...
+          option(value="1").container-perfilEmpresa__opcion Santa Tecla
+          option(value="2").container-perfilEmpresa__opcion Antiguo Cuscatlán
+          option(value="3").container-perfilEmpresa__opcion Ciudad Arce
+          option(value="4").container-perfilEmpresa__opcion Colón
+        label.container-perfil__label Imagen de la cuenta
+        input(type="file" name="avatar").container-perfil__input
+
+      input(type="submit" value="Guardar").container-perfilEmpresa__submit.boton.primario

@@ -1,0 +1,114 @@
+header{
+  background: $color1;
+}
+
+.main-header{
+  margin-bottom: 1em;
+
+  .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+
+    &__logo {
+      margin-top: .5em;
+      width: 75%;
+    }
+
+    &__title{
+      margin: 0;
+      font-size: 0.9em;
+      @include desde($large){
+        font-size: 1.2em;
+      }
+    }
+
+    &__validar{
+      color: $white;
+      margin: 0 .5em 0;
+      @include desde($large){
+        font-size: 1.2em;
+      }
+
+      &:hover{
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
+    // Menú usuario
+
+    &__user{
+      margin: 0;
+      display: flex;
+      width: 75%;
+      justify-content: flex-end;
+      align-items: center;
+      padding: .3em 0;
+    }
+
+    &__salir{
+      margin: 0;
+      text-transform: uppercase;
+      margin-right: 2em;
+      padding: .8em 1em;
+      border: 1px solid $white;
+      border-radius: 10px;
+      color: $white;
+      cursor: pointer;
+      transition: all .3s;
+      font-size: .7em;
+      letter-spacing: .1em;
+      &:hover{
+        background: $color2;
+      }
+    }
+
+    &__editar {
+      @extend .container-header__salir;
+      font-size: .5em;
+      line-height: 1.9em;
+      text-align: center;
+      @include desde($small){
+        font-size: .6em;
+        line-height: 2.5em;
+      }
+    }
+
+
+    &__cont{
+      width: 3.5em;
+      @include desde($medium){
+        width: 4em;
+      }
+      @include desde($large){
+        width: 5em;
+      }
+
+    }
+
+    &__img{
+      vertical-align: middle;
+      width: 100px;
+      border-radius: 50%;
+      border: 1px solid $color2;
+      transition: all .3s;
+
+      @include desde($small){
+        border: 2px solid $color2;
+      }
+      @include desde($medium){
+        border: 3px solid $color2;
+
+        &:hover{
+          border: 3px solid $color2;
+        }
+      }
+
+    }
+  }
+
+
+
+}

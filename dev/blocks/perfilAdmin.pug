@@ -1,0 +1,27 @@
+.container-perfil.l-container
+  h1.container-perfil__title PERFIL DEL ADMINISTRADOR
+  .container-perfil__perfil
+    form(action="/admin.html" method="post").container-perfil__form
+
+      .container-perfil__cuenta
+        h2.container-perfil__title Cuenta
+        label.container-perfil__label Usuario
+        input(type="text" required).container-perfil__input
+        label.container-perfil__label Contraseña
+        input(type="password" required).container-perfil__input
+        label.container-perfil__label Repetir contraseña
+        input(type="password" required).container-perfil__input
+
+      .container-perfil__infoPersonal
+        h2.container-perfil__title Información personal
+        label.container-perfil__label Nombres
+        input(type="text" required).container-perfil__input
+        label.container-perfil__label Apellidos
+        input(type="password" required).container-perfil__input
+        label.container-perfil__label Correo
+        input(type="email" placeholder="correo@gmail.com" required).container-perfil__input
+        label.container-perfil__label Telefono 1
+        .container-perfil__botones
+          a(href="#").container-perfil__link.boton.secundario Guardar
+          a(href="#").container-perfil__link.boton.secundario Cancelar
+    input(type="submit" value="Guardar" style="margin-top: 8em;").container-perfil__submit.boton.primario

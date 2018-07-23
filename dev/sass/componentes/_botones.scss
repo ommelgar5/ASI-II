@@ -1,0 +1,26 @@
+.boton {
+  display: inline-block;
+  line-height: 2.5;
+  padding: 0 1.2em;
+  margin: 1em .5em 0;
+  color: $white;
+  &.primario {
+    background: $color2;
+    &:hover {
+      background: darken($color2,8);
+    }
+  }
+  &.secundario {
+    background: $color1;
+    &:hover {
+      background: darken($color1,5);
+    }
+  }
+  &.terciario {
+    background: $color3;
+    color: $color1;
+    &:hover {
+      background: darken($color3,5);
+    }
+  }
+}

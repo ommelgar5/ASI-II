@@ -1,0 +1,50 @@
+
+.main-footer{
+  background: #ccc;
+
+  .container-footer{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    @include desde($medium){
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__logos{
+      text-align: center;
+      @include desde($medium){
+        width: 20%;
+        margin-right: 1em;
+
+      }
+    }
+
+    &__address{
+      font-size: .8em;
+      text-align: center;
+
+    }
+    &__sociales{
+      text-align: center;
+      font-size: 1.6em;
+      @include desde($medium){
+        display: flex;
+        flex-direction: column;
+        margin-left: 1em;
+      }
+      @include desde($large){
+        flex-direction: row;
+        margin-top: .5em;
+      }
+    }
+
+    &__social{
+      margin-right: .4em;
+      color: $color1;
+
+      &:hover{
+        color: $color2;
+      }
+    }
+  }
+}

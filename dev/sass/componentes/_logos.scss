@@ -1,0 +1,65 @@
+
+.main-logo{
+  margin-bottom: 1em;
+
+  .container-logo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__img{
+      width: 60px;
+      height: 60px;
+      @include desde($large){
+        width: 80px;
+        height: 80px;
+      }
+
+    }
+  }
+}
+
+// VISITAS (REPORTES)
+.container-visita{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+
+
+  &__visita,
+  &__user,
+  &__empresa{
+
+
+  }
+  &__title{
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+
+  }
+  &__cont{
+    text-align: center;
+    width: 4em;
+    height: 4em;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background:darken(tomato,5);
+  }
+
+  &__user{
+
+  }
+
+  &__empresa{
+
+  }
+
+}

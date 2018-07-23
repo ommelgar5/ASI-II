@@ -1,0 +1,39 @@
+
+// Agrega las categorias
+mixin categoria(categoria)
+  li.container-categoria__item
+    a(href="#").container-categoria__link=categoria
+
+// Agrgar una oferta
+mixin oferta(img,titulo,descripcion,depto,fecha)
+  a(href="oferta.html").container-oferta__oferta
+    .container-oferta__cont
+      img(src="assets/img/logos/"+ img).container-oferta__logo
+    h3.container-oferta__title=titulo
+    p.container-oferta__description=descripcion
+    p.container-oferta__depto=depto
+    .container-oferta__date=fecha
+
+// Que se va a mostar en la opción gestión en Empresa
+mixin gestion(titulo,descripcion,fecha,nsolicitantes)
+  a(href="solicitantes.html").container-gestion__gestion
+    h3.container-gestion__title=titulo
+    p.container-gestion__description=descripcion
+    .container-gestion__date=fecha
+    .container-gestion__nsolicitante=nsolicitantes
+
+mixin solicitante(img,nombre,apellido,direccion,depto,mun,fecha)
+  a(href="curriculum.html").container-solicitante__perfil
+    .container-solicitante__cont
+      img(src="assets/img/users/"+ img).container-solicitante__logo
+    h3.container-solicitante__title=nombre + " " + apellido
+    p.container-solicitante__description=direccion
+    .container-solicitante__depto="Departamento: " + depto
+    .container-solicitante__mun="Municipio: " + mun
+    .container-solicitante__date=fecha
+
+
+
+
+
+

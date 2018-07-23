@@ -1,0 +1,155 @@
+.container-agregarOferta.l-container
+  h1.container-agregarOferta__title--detalle Agregar Oferta
+  .container-agregarOferta__oferta
+    form(action="/usuario.html" method="post").container-agregarOferta__form
+      .container-agregarOferta__detalle
+        h2.container-agregarOferta__title Detalle de la oferta
+        label.container-agregarOferta__label Cargo
+        select(id="r_cargo" name="r_cargo").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Analista | Programador
+          option(value="3").container-agregarOferta__opcion Administrador de Base de Datos
+          option(value="4").container-agregarOferta__opcion Analista de Sistemas
+          option(value="5").container-agregarOferta__opcion Jefe de Ventas
+          option(value="6").container-agregarOferta__opcion Vendedor
+        label.container-agregarOferta__label Titulo
+        input(type="text" required).container-agregarOferta__input
+        label.container-agregarOferta__label Descripción
+        textarea.container-agregarOferta__textarea
+        label.container-agregarOferta__label Años de experiencia laboral
+        select(id="r_experiencia" name="r_experiencia").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Sin experiencia
+          option(value="3").container-agregarOferta__opcion menos de un año
+          option(value="4").container-agregarOferta__opcion de uno a tres años
+          option(value="5").container-agregarOferta__opcion de tres a cinco años
+          option(value="6").container-agregarOferta__opcion mas de 5 años
+        label.container-agregarOferta__label Tipo de contrato
+        select(id="t_contrato" name="t_contrato").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Tiempo indefinido
+          option(value="2").container-agregarOferta__opcion Período determinado
+          option(value="2").container-agregarOferta__opcion Servicio profesional
+          option(value="2").container-agregarOferta__opcion Período de prueba
+          option(value="2").container-agregarOferta__opcion Interinato
+        label.container-agregarOferta__label Número de plazas
+        input(type="number" min="1" max="50" value="1" required).container-agregarOferta__input
+        label.container-agregarOferta__label Edad minima
+        input(type="number" min="15" max="75" required).container-agregarOferta__input
+        label.container-agregarOferta__label Edad máxima
+        input(type="number" min="15" max="75" required).container-agregarOferta__input
+        label.container-agregarOferta__label Salario minimo
+        input(type="number" min="1" required).container-agregarOferta__input
+        label.container-agregarOferta__label Salario maximo
+        input(type="number" min="1" required).container-agregarOferta__input
+        label.container-agregarOferta__label Género
+        select(id="genero" name="genero").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Femenino
+          option(value="2").container-agregarOferta__opcion Masculino
+        label.container-agregarOferta__label Departamento
+        select(id="departamento" name="departamento").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion La Libertad
+        label.container-agregarOferta__label Municipio
+        select(id="municipio" name="municipio").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Santa Tecla
+          option(value="2").container-agregarOferta__opcion Antiguo Cuscatlán
+          option(value="3").container-agregarOferta__opcion Ciudad Arce
+          option(value="4").container-agregarOferta__opcion Colón
+        label.container-agregarOferta__label Vehículo
+        input(type="radio" name="radio").container-agregarOferta__radiob
+        label.container-agregarOferta__label--radio Si
+        input(type="radio" name="radio").container-agregarOferta__radiob
+        label.container-agregarOferta__label--radio No
+        label.container-agregarOferta__label Tipo de licencia
+        select(id="tipoLicencia" name="tipoLicencia").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Ninguna
+          option(value="3").container-agregarOferta__opcion Juvenil Motociclistas
+          option(value="4").container-agregarOferta__opcion Motociclistas
+          option(value="5").container-agregarOferta__opcion Particular
+          option(value="5").container-agregarOferta__opcion Liviana
+          option(value="5").container-agregarOferta__opcion Pesada
+          option(value="5").container-agregarOferta__opcion Pesada-T
+      h2.container-agregarOferta__title--requisitos Requisitos requeridos
+      .container-agregarOferta__estudios
+        h2.container-agregarOferta__title Estudios
+        label.container-agregarOferta__label Carrera
+        input(type="text").container-agregarOferta__input
+        label.container-agregarOferta__label Nivel de estudio
+        select(id="nivelEstudio" name="nivelEstudio").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Estudiante Universitario (5to Año)
+          option(value="1").container-agregarOferta__opcion Estudiante Universitario (4to Año)
+          option(value="1").container-agregarOferta__opcion Estudiante Universitario (3er Año)
+          option(value="1").container-agregarOferta__opcion Estudiante Universitario (3er Año)
+          option(value="1").container-agregarOferta__opcion Estudiante Universitario (2do Año)
+        .container-agregarOferta__botones
+          a(href="#").container-agregarOferta__link.boton.secundario Guardar
+          a(href="#").container-agregarOferta__link.boton.secundario Cancelar
+
+      .container-agregarOferta__tecnologias
+        h2.container-agregarOferta__title Programas
+        label.container-agregarOferta__label Tipo de Tecnologia
+        select(id="teccnologia" name="teccnologia").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Sistemas Operativos
+          option(value="2").container-agregarOferta__opcion Lenguajes de programación
+          option(value="3").container-agregarOferta__opcion Programas de diseño
+          option(value="4").container-agregarOferta__opcion Programas de oficina
+          option(value="5").container-agregarOferta__opcion Base de datos
+        label.container-agregarOferta__label Programa
+        select(id="programa" name="programa").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Microsoft Windows
+          option(value="2").container-agregarOferta__opcion Linux
+          option(value="3").container-agregarOferta__opcion Microsoft Word
+          option(value="3").container-agregarOferta__opcion Microsoft Exel
+          option(value="3").container-agregarOferta__opcion Adobe photoshop
+        label.container-agregarOferta__label Nivel
+        select(id="nivel" name="tnivel").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Básico
+          option(value="2").container-agregarOferta__opcion Intermedio
+          option(value="3").container-agregarOferta__opcion Avanzado
+        .container-agregarOferta__botones
+          a(href="#").container-agregarOferta__link.boton.secundario Guardar
+          a(href="#").container-agregarOferta__link.boton.secundario Cancelar
+
+      .container-agregarOferta__idioma
+        h2.container-agregarOferta__title Idiomas
+        label.container-agregarOferta__label Idioma
+        select(id="idioma" name="idioma").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Inglés
+          option(value="2").container-agregarOferta__opcion Frances
+          option(value="3").container-agregarOferta__opcion Aleman
+          option(value="4").container-agregarOferta__opcion Chino mandarín
+          option(value="5").container-agregarOferta__opcion Italiano
+          option(value="5").container-agregarOferta__opcion Portugues
+        label.container-agregarOferta__label Nivel
+        select(id="nivelI" name="nivelI").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Básico
+          option(value="2").container-agregarOferta__opcion Intermedio
+          option(value="3").container-agregarOferta__opcion Avanzado
+        .container-agregarOferta__botones
+          a(href="#").container-agregarOferta__link.boton.secundario Guardar
+          a(href="#").container-agregarOferta__link.boton.secundario Cancelar
+      .container-agregarOferta__experiencia
+        h2.container-agregarOferta__title Experiencia requerida
+        label.container-agregarOferta__label Idioma
+        select(id="cargo" name="cargo").container-agregarOferta__combo
+          option(value="0").container-agregarOferta__opcion Seleccione...
+          option(value="1").container-agregarOferta__opcion Vendedor
+          option(value="2").container-agregarOferta__opcion Soport Técnico en Redes
+          option(value="3").container-agregarOferta__opcion Analista | Programador
+          option(value="4").container-agregarOferta__opcion Asistente de Mercadeo
+          option(value="5").container-agregarOferta__opcion Jefe de Ventas
+        .container-agregarOferta__botones
+          a(href="#").container-agregarOferta__link.boton.secundario Guardar
+          a(href="#").container-agregarOferta__link.boton.secundario Cancelar
+
+      input(type="submit" value="Guardar").container-agregarOferta__submit.boton.primario

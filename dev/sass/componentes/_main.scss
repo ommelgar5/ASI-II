@@ -1,0 +1,980 @@
+
+.main{
+  margin-bottom: 1em;
+  @include desde($medium){
+    display: flex;
+  }
+
+  // INDEX
+   .container-categoria{
+     margin-bottom: 1em;
+     @include desde($medium){
+       width: 150%;
+       font-size: .8em;
+       margin-right: 1em;
+     }
+     @include desde($large){
+       font-size: 1em;
+       width: 100%;
+     }
+
+
+     &__title{
+       font-size: 1em;
+       text-align: center;
+       margin: 0;
+       border-radius: 5px 5px 0 0;
+       background: $color2;
+       padding: .1em 0 .1em 0;
+       color: $white;
+     }
+
+     &__menu{
+       margin-top: 0;
+       margin-bottom: 0;
+       padding-left: 0;
+       list-style: none;
+       border:{
+         left: 1px solid #ccc;
+         bottom: 1px solid #ccc;
+         right: 1px solid #ccc;
+       }
+       border-radius: 0 0 5px 5px;
+       padding-bottom: .5em;
+     }
+
+     &__item{
+
+     }
+
+     &__link{
+       display: block;
+       width: 100%;
+       color: $black;
+       transition: all .3s;
+       padding-left: 1em;
+
+       &:hover{
+         background: rgba($color2,.3);
+         padding-left: 2em;
+       }
+     }
+  }
+
+  //INDEX
+  .container-oferta{
+
+    &__oferta{
+      color: $black;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+      box-shadow: 1px 1px 2px 2px #ccc;
+      padding: .5em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+
+      &:hover {
+        .container-oferta__date {
+          background: $color2;
+        }
+      }
+    }
+
+
+    &__logo{
+      flex-basis: 5%;
+      height: 3em;
+      display: block;
+      @include desde($large){
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    &__title{
+      font-size: .8em;
+      width: 75%;
+      text-align: center;
+      @include desde($large){
+        margin: 0;
+        width: calc(100% - 100px);
+        margin-top: -4em;
+      }
+    }
+
+    &__description{
+      margin: 0;
+      height: 4em;
+      font-size: .8rem;
+      line-height: 1rem;
+      margin-bottom: .3em;
+      overflow: hidden;
+      @include desde($large){
+        width: calc(100% - 100px);
+        margin-left: 120px;
+        margin-top: -4em;
+        line-height: 1.3em;
+        font-size: .9em;
+      }
+
+    }
+    &__depto{
+      margin: 0;
+      height: auto;
+     @extend .container-oferta__description;
+      @include desde($large){
+        width: calc(100% - 100px);
+        margin-left: 120px;
+      }
+    }
+
+    &__date{
+      position: absolute;
+      right: 10px;
+      top: -10px;
+      font-size: .8rem;
+      background: $color1;
+      padding: 0 .3em 0;
+      color: $white;
+      border-radius: 5px;
+
+    }
+  }
+// INDEX
+  .container-pagina{
+    display: flex;
+    justify-content: center;
+    @include desde($small){
+      padding: 0 1em;
+    }
+
+    &__item{
+
+    }
+    &__link{
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      background: $color1;
+      color: $white;
+      border-radius: 5px;
+      transition: .1s all;
+      margin-right: .2em;
+      @include desde($small){
+        width: 40px;
+        height: 40px;
+      }
+
+      &:hover{
+        text-decoration: underline;
+        background: $color2;
+      }
+
+    }
+  }
+
+  // LOGIN
+  .container-login{
+    margin: 6em auto 0;
+    max-width: 800px;
+    padding: 3em 1em;
+    color: $color2;
+    box-shadow: 2px 1px 2px 2px #ccc;
+    border-radius: 10px;
+    &__title{
+      margin: 0;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    &__form{
+
+    }
+
+    &__dato{
+      display: flex;
+      border-radius: 5px;
+      margin-bottom: 1em;
+    }
+
+    &__icon{
+      width: 15%;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      padding-top: .2em;
+      background: $color1;
+      color: $white;
+      border: {
+        bottom-left-radius: 5px;
+        top-left-radius: 5px;
+      };
+    }
+
+    &__input{
+      border: none;
+      padding: 3px;
+      width: 100%;
+      font-size: 1.5em;
+      padding-left: .5em;
+      &:focus{
+        outline: none;
+      };
+      border: {
+        right: 1px solid #ccc;
+        top: 1px solid #ccc;
+        bottom: 1px solid #ccc;
+      };
+      border: {
+        bottom-right-radius: 5px;
+        top-right-radius: 5px;
+      };
+    }
+
+    &__submit{
+      width: 100%;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding: .3em 0;
+      border: none;
+      border-radius: 5px;
+      background: $color2;
+      color: $white;
+      letter-spacing: 1px;
+      transition: all .3s;
+      cursor: pointer;
+      margin-bottom: 2em;
+      @include desde($medium){
+        width: auto;
+        padding-left: .5em;
+        padding-right: .5em;
+        margin: 0 auto;
+      }
+
+      &:hover{
+        background: darken(lawngreen, 15);
+      }
+    }
+
+    &__ref{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link{
+      color: $color1;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+  }
+
+  // RESTABLECER LA CONTRASEÑA
+  .container-restablecer{
+    @extend .container-login;
+
+    &__title{
+      @extend .container-login__title;
+      font-size: 1.4em;
+    }
+
+    &__form{
+
+    }
+
+    &__label{
+      text-align: center;
+      color: #212121;
+      font-size: .7em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    &__dato{
+      @extend .container-login__dato;
+    }
+
+    &__icon{
+      @extend .container-login__icon;
+    }
+
+    &__input{
+      @extend .container-login__input;
+    }
+
+    &__submit{
+      @extend .container-login__submit;
+    }
+
+    &__ref{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__link{
+      @extend .container-login__link;
+      text-transform: uppercase;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  // DERTALLE DE LA OFERTA
+  .container-ofer{
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: .5em;
+      margin-bottom: 1em;
+      @include desde($medium){
+        width: 250%;
+      }
+      @include desde($large){
+        padding: 1em;
+      }
+    &__title{
+      margin: 0;
+      font-size: 1em;
+      text-align: center;
+      @include desde($large){
+        font-size: 1.3em;
+        margin-bottom: .5em;
+      }
+
+
+    }
+    &__empresa{
+      display: flex;
+      margin-bottom: 1em;
+    }
+
+    &__cont{
+
+    }
+
+    &__img{
+        &--curriculum{
+          border-radius: 5px;
+          width: 80%;
+          position: absolute;
+          width: 7%;
+          top: 9em;
+        }
+    }
+
+    &__description{
+      width: 100%;
+      font-size: .8em;
+      line-height: 1.5em;
+      @include desde($large){
+        font-size: 1em;
+        padding-left: 1em;
+      }
+    }
+
+    &__datos{
+
+    }
+
+    &__tabla{
+      font-size: .9em;
+      margin-bottom: .7em;
+      @include desde($large){
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+
+      td{
+        padding-left: .5em;
+      }
+
+      td:first-child{
+        font-weight: bold;
+      }
+
+    }
+
+    &__all{
+      font-size: .9em;
+      line-height: 1em;
+      @include desde($large){
+        font-size: 1em;
+      }
+    }
+
+
+
+    &__button{
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+
+    &__link{
+      border-radius: 5px;
+    }
+
+  }
+
+  //PERFIL
+  .container-perfil{
+    width: 100%;
+    @include desde($large){
+      position: relative;
+    }
+
+    h1{
+        margin-bottom: 1em;
+    }
+
+    &__title{
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+    &__perfil{
+
+    }
+
+    &__form{
+
+    }
+
+    &__cuenta{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: .5em .3em;
+      margin-bottom: 1em;
+      @include desde($small){
+        padding: 1em;
+      }
+
+      @include desde($large){
+        width: 49%;
+      }
+
+    }
+    &__label{
+      font-size: .8rem;
+      &--radio{
+        display: inline-block;
+        margin-right: 6em;
+        @include desde($small){
+          margin-right: 10em;
+        }
+
+      }
+
+    }
+    &__input{
+      width: 100%;
+      border: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1.2rem;
+      padding: .2em;
+      margin-bottom: .5em;
+
+      &:focus{
+        outline: none;
+      }
+
+    }
+    &__infoPersonal{
+      @extend .container-perfil__cuenta;
+      @include desde($large){
+        position: absolute;
+        left: 52%;
+        top: 2.5em;
+      }
+    }
+    &__combo{
+      @extend .container-perfil__input;
+      font-size: 1em;
+    }
+
+    &__textarea{
+     @extend .container-perfil__input;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &__radiob{
+      display: inline-block;
+
+    }
+
+    &__opcion{
+
+    }
+    &__estudios{
+      @extend .container-perfil__cuenta;
+
+    }
+    &__botones{
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link{
+      border-radius: 5px;
+    }
+    &__experiencia{
+      @extend .container-perfil__estudios;
+
+    }
+    &__tecnologias{
+      @extend .container-perfil__estudios;
+    }
+    &__idioma{
+      @extend .container-perfil__estudios;
+    }
+    &__submit{
+      border: none;
+      border-radius: 5px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      text-transform: uppercase;
+
+      @include desde($large){
+        margin-top: 2em;
+        width: 10em;
+        padding: .5em;
+      }
+
+    }
+
+  }
+
+  //EMPRESA
+  .container-perfilEmpresa{
+    width: 100%;
+    @include desde($large){
+      position: relative;
+    }
+
+    h1{
+      margin-bottom: 1em;
+    }
+
+    &__title{
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+    &__empresa{
+
+    }
+
+    &__form{
+
+    }
+
+    &__cuenta{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: .5em .3em;
+      margin-bottom: 1em;
+      @include desde($small){
+        padding: 1em;
+      }
+
+      @include desde($large){
+        width: 49%;
+      }
+
+    }
+    &__label{
+      font-size: .8rem;
+      &--radio{
+        display: inline-block;
+        margin-right: 6em;
+        @include desde($small){
+          margin-right: 10em;
+        }
+
+      }
+
+    }
+    &__input{
+      width: 100%;
+      border: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1.2rem;
+      padding: .2em;
+      margin-bottom: .5em;
+
+      &:focus{
+        outline: none;
+      }
+
+    }
+    &__info{
+      @extend .container-perfil__cuenta;
+      @include desde($large){
+        position: relative;
+        left: 52%;
+        top: -17em;
+      }
+    }
+    &__combo{
+      @extend .container-perfil__input;
+      font-size: 1em;
+    }
+
+    &__textarea{
+      @extend .container-perfil__input;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &__opcion{
+
+    }
+
+    &__botones{
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link{
+      border-radius: 5px;
+    }
+
+    &__submit{
+      border: none;
+      border-radius: 5px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      text-transform: uppercase;
+
+      @include desde($large){
+        margin-top: 2em;
+        width: 10em;
+        padding: .5em;
+        margin-top: -20em;
+      }
+
+    }
+  }
+
+  // AGREGAR NUEVA OFERTA
+  .container-agregarOferta{
+    width: 100%;
+    @include desde($large){
+      position: relative;
+    }
+
+    h1{
+      margin-bottom: 1em;
+    }
+
+    &__title{
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+
+      &--detalle{
+        @extend .container-agregarOferta__title;
+        @include desde($large){
+          width: 50%;
+          text-align: center;
+
+        }
+      }
+      &--requisitos{
+        @extend .container-agregarOferta__title;
+        @include desde($large){
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50%;
+
+        }
+      }
+    }
+    &__oferta{
+
+    }
+
+    &__form{
+
+    }
+
+    &__detalle{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: .5em .3em;
+      margin-bottom: 1em;
+      @include desde($small){
+        padding: .5em;
+      }
+
+      @include desde($large){
+        width: 49%;
+      }
+
+    }
+    &__label{
+      font-size: .8rem;
+      &--radio{
+        display: inline-block;
+        margin-right: 6em;
+        @include desde($small){
+          margin-right: 10em;
+        }
+      }
+
+    }
+    &__input{
+      width: 100%;
+      border: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1.2rem;
+      padding: .2em;
+      margin-bottom: .5em;
+
+      &:focus{
+        outline: none;
+      }
+
+    }
+    &__combo{
+      @extend .container-agregarOferta__input;
+      font-size: 1em;
+    }
+
+    &__textarea{
+      @extend .container-agregarOferta__input;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &__radiob{
+      display: inline-block;
+
+    }
+
+    &__opcion{
+
+    }
+    &__estudios{
+      @extend .container-agregarOferta__detalle;
+      @include desde($large){
+        position: absolute;
+        top: 2.5em;
+        right: 0;
+      }
+    }
+    &__botones{
+      display: flex;
+      justify-content: center;
+    }
+
+    &__link{
+      border-radius: 5px;
+    }
+
+    &__tecnologias{
+      @extend .container-agregarOferta__detalle;
+      @include desde($large){
+        position: absolute;
+        top: 18em;
+        right: 0;
+      }
+    }
+    &__idioma{
+      @extend .container-agregarOferta__detalle;
+      @include desde($large){
+        position: absolute;
+        top: 37em;
+        right: 0;
+      }
+    }
+
+    &__experiencia{
+      @extend .container-agregarOferta__detalle;
+      @include desde($large){
+        position: absolute;
+        top: 52.5em;
+        right: 0;
+      }
+    }
+    &__submit{
+      border: none;
+      border-radius: 5px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      text-transform: uppercase;
+
+      @include desde($large){
+        margin-top: 2em;
+        width: 10em;
+        padding: .5em;
+      }
+    }
+  }
+    // container-gestion
+
+  .container-gestion{
+    width: 200%;
+
+    &__gestion{
+     color: black;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+      box-shadow: 1px 1px 2px 2px #ccc;
+      padding: .5em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+
+      &:hover {
+        .container-oferta__date,
+        .container-gestion__nsolicitante{
+            background: $color2;
+        }
+      }
+
+
+    }
+    &__title{
+      margin: 0 auto;
+      font-size: .8em;
+
+    }
+    &__description{
+      font-size:0.9em;
+      line-height: 1.3em;
+      padding-right: 1.5em;
+
+    }
+    &__date{
+      @extend .container-oferta__date;
+
+    }
+    &__nsolicitante{
+      position: absolute;
+      background: yellow;
+      right: -1em;
+      font-size: 1.8em;
+      width: 2em;
+      height: 2em;
+      text-align: center;
+      line-height: 2em;
+      border-radius: 50%;
+      background: $color1;
+      color: $white;
+
+    }
+  }
+
+  // SOLICITANTE
+
+  .container-solicitante{
+    width: 250%;
+
+    &__perfil{
+      @extend .container-oferta__oferta;
+    }
+
+    &__cont{
+
+    }
+
+    &__logo{
+      @extend .container-oferta__logo;
+      border-radius: 5px;
+    }
+
+    &__title{
+      @extend .container-oferta__title;
+    }
+
+    &__description{
+        @extend .container-oferta__description;
+    }
+
+    &__depto{
+      @extend .container-oferta__depto;
+      display: inline-block;
+      margin-right:1em;
+      width: 30%;
+    }
+
+    &__mun{
+      @extend .container-oferta__depto;
+      display: inline-block;
+      width: 40%;
+      margin-left: 0;
+    }
+
+    &__date{
+      @extend .container-oferta__date;
+    }
+
+  }
+
+
+  .container-grafica{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title{
+      text-align: center;
+      width: 100%;
+      background: #ddd;
+      line-height: 1.5em;
+      border-radius: 5px;
+      font-size: 1.5em;
+    }
+
+    &__departamentos{
+      width: 46%;
+      border: 1px solid #ccc;
+      margin-right: 2em;
+      text-align: center;
+      border-radius: 10px;
+      padding-top: 4.5em;
+
+    }
+    &__empresas{
+      width: 50%;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 10px;
+
+    }
+    &__empleo{
+      width: 46%;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 2em;
+
+    }
+
+    &__img{
+      width: 60%;
+    }
+
+  }
+
+
+
+
+
+
+}

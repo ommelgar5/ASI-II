@@ -1,0 +1,57 @@
+
+// colores
+$color1: #1868B3;
+$color2: #00A779;
+$color3: #F0B537;
+
+$white: #fff;
+$black: #111;
+
+$primary-text: #212121;
+$secundary-text: #757575;
+
+// fuentes
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:700');
+
+$font-title: 'Open Sans', sans-serif;
+$font-text: 'Lato', sans-serif;
+
+// tamaños
+$normal: 400;
+$bold: 700;
+
+// ancho máximo
+$max-width: 1200px;
+
+// Breakpoints
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$x-large: 1400px;
+
+// media query
+@mixin desde($size){
+  @media screen and (min-width: $size){
+    @content
+  }
+}
+
+// importar los modulos
+@import "componentes/base";
+@import "componentes/botones";
+@import "componentes/header";
+@import "componentes/menu";
+@import "componentes/modules";
+@import "componentes/main";
+@import "componentes/logos";
+@import "componentes/footer";
+
+
+
+
+
+
+
+
+

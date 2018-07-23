@@ -1,0 +1,187 @@
+
+.container-perfil.l-container
+  h1.container-perfil__title PERFIL DE USUARIO
+  .container-perfil__perfil
+    form(action="/usuario.html" method="post").container-perfil__form
+
+      .container-perfil__cuenta
+        h2.container-perfil__title Cuenta
+        label.container-perfil__label Usuario
+        input(type="text" required).container-perfil__input
+        label.container-perfil__label Contraseña
+        input(type="password" required).container-perfil__input
+        label.container-perfil__label Repetir contraseña
+        input(type="password" required).container-perfil__input
+
+      .container-perfil__infoPersonal
+        h2.container-perfil__title Información personal
+        label.container-perfil__label Nombres
+        input(type="text" required).container-perfil__input
+        label.container-perfil__label Apellidos
+        input(type="password" required).container-perfil__input
+        label.container-perfil__label Género
+        select(id="genero" name="genero").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Femenino
+          option(value="2").container-perfil__opcion Masculino
+        label.container-perfil__label Fecha de nacimiento
+        input(type="date" required).container-perfil__input
+        label.container-perfil__label Correo
+        input(type="email" placeholder="correo@gmail.com" required).container-perfil__input
+        label.container-perfil__label Telefono 1
+        input(type="tel" required).container-perfil__input
+        label.container-perfil__label Telefono 2
+        input(type="tel").container-perfil__input
+        label.container-perfil__label Dirección
+        textarea.container-perfil__textarea
+        label.container-perfil__label Departamento
+        select(id="departamento" name="departamento").container-perfil__combo
+            option(value="0").container-perfil__opcion Seleccione...
+            option(value="1").container-perfil__opcion La Libertad
+        label.container-perfil__label Municipio
+        select(id="municipio" name="municipio").container-perfil__combo
+            option(value="0").container-perfil__opcion Seleccione...
+            option(value="1").container-perfil__opcion Santa Tecla
+            option(value="2").container-perfil__opcion Antiguo Cuscatlán
+            option(value="3").container-perfil__opcion Ciudad Arce
+            option(value="4").container-perfil__opcion Colón
+
+        label.container-perfil__label Estado civil
+        select(id="estadoCivil" name="estadoCivil").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Soltero/a
+          option(value="3").container-perfil__opcion Casado/a
+          option(value="4").container-perfil__opcion Divorciado/a
+          option(value="5").container-perfil__opcion Viudo/a
+
+        label.container-perfil__label Años de experiencia laboral
+        select(id="aexperiencia" name="aexperiencia").container-perfil__combo
+            option(value="0").container-perfil__opcion Seleccione...
+            option(value="1").container-perfil__opcion Sin experiencia
+            option(value="3").container-perfil__opcion menos de un año
+            option(value="4").container-perfil__opcion de uno a tres años
+            option(value="5").container-perfil__opcion de tres a cinco años
+            option(value="6").container-perfil__opcion mas de 5 años
+
+        label.container-perfil__label Vehículo
+        input(type="radio" name="radio").container-perfil__radiob
+        label.container-perfil__label--radio Si
+        input(type="radio" name="radio").container-perfil__radiob
+        label.container-perfil__label--radio No
+        label.container-perfil__label Tipo de licencia
+        select(id="tipoLicencia" name="tipoLicencia").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Ninguna
+          option(value="3").container-perfil__opcion Juvenil Motociclistas
+          option(value="4").container-perfil__opcion Motociclistas
+          option(value="5").container-perfil__opcion Particular
+          option(value="5").container-perfil__opcion Liviana
+          option(value="5").container-perfil__opcion Pesada
+          option(value="5").container-perfil__opcion Pesada-T
+        label.container-perfil__label Imagen de la cuenta
+        input(type="file" name="avatar").container-perfil__input
+        label.container-perfil__label Cargar curriculum vitae
+        input(type="file" name="curriculum").container-perfil__input
+
+      .container-perfil__estudios
+        h2.container-perfil__title Estudios
+        label.container-perfil__label Área de estudio
+        select(id="areaEstudio" name="areaEstudio").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Análisis de Sistemas
+          option(value="1").container-perfil__opcion Computación
+          option(value="1").container-perfil__opcion Programación
+          option(value="1").container-perfil__opcion Telecomunicaciones
+          option(value="1").container-perfil__opcion Arquitectura
+        label.container-perfil__label Nivel de estudio
+        select(id="nivelEstudio" name="nivelEstudio").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Estudiante Universitario (5to Año)
+          option(value="1").container-perfil__opcion Estudiante Universitario (4to Año)
+          option(value="1").container-perfil__opcion Estudiante Universitario (3er Año)
+          option(value="1").container-perfil__opcion Estudiante Universitario (3er Año)
+          option(value="1").container-perfil__opcion Estudiante Universitario (2do Año)
+        label.container-perfil__label Nombre de la Institución
+        input(type="text").container-perfil__input
+        label.container-perfil__label Opcion de la carrera
+        input(type="text").container-perfil__input
+        label.container-perfil__label Fecha inicio
+        input(type="month").container-perfil__input
+        label.container-perfil__label Fecha fin
+        input(type="month").container-perfil__input
+        input(type="radio").container-perfil__radiob
+        label.container-perfil__label--radio Actual
+        .container-perfil__botones
+          a(href="#").container-perfil__link.boton.secundario Guardar
+          a(href="#").container-perfil__link.boton.secundario Cancelar
+
+      .container-perfil__experiencia
+        h2.container-perfil__title Experiencia
+        label.container-perfil__label Nombre de la empresa
+        input(type="text").container-perfil__input
+        label.container-perfil__label Cargo
+        select(id="cargo" name="cargo").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Soporte Técnico
+          option(value="1").container-perfil__opcion Asistente de Sistemas
+          option(value="1").container-perfil__opcion Analista | Programador
+          option(value="1").container-perfil__opcion Jefe de Ventas
+          option(value="1").container-perfil__opcion Asistente de Mercadeo
+        label.container-perfil__label Descripcion del puesto
+        textarea.container-perfil__textarea
+        label.container-perfil__label Fecha inicio
+        input(type="month").container-perfil__input
+        label.container-perfil__label Fecha fin
+        input(type="month").container-perfil__input
+        input(type="radio").container-perfil__radiob
+        label.container-perfil__label--radio Actual
+        .container-perfil__botones
+          a(href="#").container-perfil__link.boton.secundario Guardar
+          a(href="#").container-perfil__link.boton.secundario Cancelar
+      .container-perfil__tecnologias
+        h2.container-perfil__title Programas
+        label.container-perfil__label Tipo de Tecnologia
+        select(id="teccnologia" name="teccnologia").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Sistemas Operativos
+          option(value="2").container-perfil__opcion Lenguajes de programación
+          option(value="3").container-perfil__opcion Programas de diseño
+          option(value="4").container-perfil__opcion Programas de oficina
+          option(value="5").container-perfil__opcion Base de datos
+        label.container-perfil__label Nivel
+        select(id="nivel" name="tnivel").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Básico
+          option(value="2").container-perfil__opcion Intermedio
+          option(value="3").container-perfil__opcion Avanzado
+        label.container-perfil__label Programa
+        select(id="programa" name="programa").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Microsoft Windows
+          option(value="2").container-perfil__opcion Linux
+          option(value="3").container-perfil__opcion Mac OS
+        .container-perfil__botones
+          a(href="#").container-perfil__link.boton.secundario Guardar
+          a(href="#").container-perfil__link.boton.secundario Cancelar
+
+      .container-perfil__idioma
+        h2.container-perfil__title Idiomas
+        label.container-perfil__label Idioma
+        select(id="idioma" name="idioma").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Inglés
+          option(value="2").container-perfil__opcion Frances
+          option(value="3").container-perfil__opcion Aleman
+          option(value="4").container-perfil__opcion Chino mandarín
+          option(value="5").container-perfil__opcion Italiano
+          option(value="5").container-perfil__opcion Portugues
+        label.container-perfil__label Nivel
+        select(id="nivelI" name="nivelI").container-perfil__combo
+          option(value="0").container-perfil__opcion Seleccione...
+          option(value="1").container-perfil__opcion Básico
+          option(value="2").container-perfil__opcion Intermedio
+          option(value="3").container-perfil__opcion Avanzado
+        .container-perfil__botones
+            a(href="#").container-perfil__link.boton.secundario Guardar
+            a(href="#").container-perfil__link.boton.secundario Cancelar
+    input(type="submit" value="Guardar").container-perfil__submit.boton.primario
