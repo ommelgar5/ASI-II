@@ -1,0 +1,5 @@
+# Carperta de los modulos de Node.JS
+node_modules/
+
+# BackUp de gulp Anterior
+gulpBackup/

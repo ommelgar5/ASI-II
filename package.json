@@ -1,18 +1,30 @@
 {
-  "name": "proyecto-asi",
+  "name": "008",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "browser-sync": "^2.24.7",
+    "cssnano": "^4.1.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }
