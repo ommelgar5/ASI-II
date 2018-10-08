@@ -32,7 +32,6 @@ if (closeLogin) {
 
 if (ingresarSubmenu) {
   ingresarSubmenu.addEventListener('click', function (event) {
-    c(event.target);
     event.preventDefault();
     showSubmenuHeader();
     showLogin();
@@ -64,8 +63,6 @@ if (submenu) {
 }
 
 function showSubmenu(element) {
-  cd(element);
-
   if (element.style.maxHeight) {
     element.style.maxHeight = null;
   } else {
