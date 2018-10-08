@@ -177,109 +177,14 @@
     }
   }
 
-  // LOGIN
-  .container-login{
-    margin: 6em auto 0;
-    max-width: 800px;
-    padding: 3em 1em;
-    color: $color2;
-    box-shadow: 2px 1px 2px 2px #ccc;
-    border-radius: 10px;
-    &__title{
-      margin: 0;
-      text-align: center;
-      margin-bottom: 1em;
-    }
-
-    &__form{
-
-    }
-
-    &__dato{
-      display: flex;
-      border-radius: 5px;
-      margin-bottom: 1em;
-    }
-
-    &__icon{
-      width: 15%;
-      font-size: 1.5em;
-      display: flex;
-      justify-content: center;
-      padding-top: .2em;
-      background: $color1;
-      color: $white;
-      border: {
-        bottom-left-radius: 5px;
-        top-left-radius: 5px;
-      };
-    }
-
-    &__input{
-      border: none;
-      padding: 3px;
-      width: 100%;
-      font-size: 1.5em;
-      padding-left: .5em;
-      &:focus{
-        outline: none;
-      };
-      border: {
-        right: 1px solid #ccc;
-        top: 1px solid #ccc;
-        bottom: 1px solid #ccc;
-      };
-      border: {
-        bottom-right-radius: 5px;
-        top-right-radius: 5px;
-      };
-    }
-
-    &__submit{
-      width: 100%;
-      font-size: 1.2em;
-      text-transform: uppercase;
-      padding: .3em 0;
-      border: none;
-      border-radius: 5px;
-      background: $color2;
-      color: $white;
-      letter-spacing: 1px;
-      transition: all .3s;
-      cursor: pointer;
-      margin-bottom: 2em;
-      @include desde($medium){
-        width: auto;
-        padding-left: .5em;
-        padding-right: .5em;
-        margin: 0 auto;
-      }
-
-      &:hover{
-        background: darken(lawngreen, 15);
-      }
-    }
-
-    &__ref{
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__link{
-      color: $color1;
-      cursor: pointer;
-      margin-top: 1em;
-    }
-  }
-
   // RESTABLECER LA CONTRASEÑA
   .container-restablecer{
-    @extend .container-login;
+    // @extend .container-login;
 
-    &__title{
-      @extend .container-login__title;
-      font-size: 1.4em;
-    }
+    // &__title{
+    //   @extend .container-login__title;
+    //   font-size: 1.4em;
+    // }
 
     &__form{
 

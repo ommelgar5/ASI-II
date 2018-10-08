@@ -109,6 +109,169 @@ header{
     }
   }
 
+   // LOGIN
+   .container-login{
+    /*
+    MENÚ MODAL DEL LOGIN
+    */
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0,0,0,.4);
+    display: none;
+
+    &.show-login{
+      display: flex;
+    }
+    
+    &__modal{
+      margin: auto;
+      max-width: 800px;
+      padding: 1em 2em;
+      color: $color2;
+      border-radius: 10px;
+      background: $white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      position: relative;
+    }
+
+    &__close{
+      position: absolute;
+      $size: 30px;
+      background: yellow;
+      width: $size;
+      height: $size;
+      top: - $size / 2;
+      right: - $size / 2;
+      text-align: center;
+      line-height: $size;
+      border-radius: 50%;
+      background: hsl(10,100,50);
+      color: $white;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        background: hsl(10,100,45);
+      }
+    }
 
 
+    &__img{
+      max-width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: .5em;
+    }
+
+    &__form{
+
+    }
+
+    &__dato{
+      display: flex;
+      border-radius: 5px;
+      margin-bottom: 1em;
+    }
+
+    &__icon{
+      width: 15%;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      padding-top: .2em;
+      background: $color1;
+      color: $white;
+      border: {
+        bottom-left-radius: 5px;
+        top-left-radius: 5px;
+      };
+    }
+
+    &__input{
+      border: none;
+      padding: 3px;
+      width: 100%;
+      font-size: 1.5em;
+      padding-left: .5em;
+      &:focus{
+        outline: none;
+      };
+      border: {
+        right: 1px solid #ccc;
+        top: 1px solid #ccc;
+        bottom: 1px solid #ccc;
+      };
+      border: {
+        bottom-right-radius: 5px;
+        top-right-radius: 5px;
+      };
+    }
+
+    &__submit{
+      width: 100%;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding: .3em 0;
+      border: none;
+      border-radius: 5px;
+      background: $color2;
+      color: $white;
+      letter-spacing: 1px;
+      transition: all .3s;
+      cursor: pointer;
+      @include desde($medium){
+        width: auto;
+        padding-left: .5em;
+        padding-right: .5em;
+        margin: 0 auto;
+      }
+
+      &:hover{
+        background: darken($color2,5);
+      }
+    }
+
+    &__ref {
+      margin-top: 1.5em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link{
+      color: $color1;
+      cursor: pointer;
+      margin-top: 1em;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.animate{
+  animation: dropDown .4s ease-out;
+}
+
+@keyframes dropDown{
+  from{
+    // Opcion 1
+    // transform: scale(0);
+
+    // Opcion 2
+    top: -300px;
+    opacity: 0;
+  }
+  to{
+    // Opcion 1
+    // transform: scale(1);
+
+    // Opcion 2
+    top: 0;
+    opacity: 1;
+  }
 }

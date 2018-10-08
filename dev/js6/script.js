@@ -13,3 +13,22 @@ let all = document.querySelectorAll.bind(document);
 LOGIN
 */
 
+let ingresar = id('ingresar');
+let closeLogin = id('closeLogin');
+
+ingresar.addEventListener('click',(event)=> {
+    event.preventDefault();
+    showLogin();
+});
+
+closeLogin.addEventListener('click', ()=> {
+    showLogin();
+});
+
+function showLogin(){
+    let containerLogin = id('containerLogin');
+    let containerLoginModal = id('containerLoginModal');
+    containerLogin.classList.toggle('show-login');
+    containerLoginModal.classList.toggle('animate');
+}
+
