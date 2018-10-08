@@ -8,10 +8,14 @@
   // INDEX
    .container-categoria{
      margin-bottom: 1em;
+     @include desde($small){
+      display: none;
+     }
      @include desde($medium){
        width: 150%;
        font-size: .8em;
        margin-right: 1em;
+       display: block;
      }
      @include desde($large){
        font-size: 1em;

@@ -1,0 +1,33 @@
+
+.container-opciones#containerOpciones
+  .container-menu
+    span.container-menu__close#closeSubmenu X
+    ul.menu#submenu
+      li.menu__item: a(href="/index.html").menu__link Inicio
+      li.menu__item: a(href="#").menu__link Todas las ofertas
+      li.menu__item 
+        a(href="#").menu__link.categorias#categorias Categorias
+        ul.submenu
+            + categoria2("area")
+            + categoria2("Informática | Internet")
+            + categoria2("Mercadeo | Ventas")
+            + categoria2("Finanzas | Contabilidad | aditoria")
+            + categoria2("Banca | Servicios | Financi")
+            + categoria2("Salud ")
+            + categoria2("Recursos Humanos")
+            + categoria2("Operaciones | Logística")
+            + categoria2("Publicidad | Comunicacion")
+            + categoria2("Almacenamie")
+            + categoria2("Compra")
+            + categoria2("Puestos Profesionales")
+            + categoria2("Call Center")
+            + categoria2("Apoyo de Oficina")
+            + categoria2("Mantenimiento")
+            + categoria2("Administración")
+            + categoria2("Producción | Ingeniería | Calidad ")
+            + categoria2("Restaurantes ")
+            + categoria2("Cualquier Área")
+            + categoria2("Varios")
+            + categoria2("Telecomunicaciones")
+      li.menu__item: a(href="#").menu__link Registarse
+      li.menu__item: a(href="#").menu__link#ingresarSubmenu Ingresar

@@ -15,15 +15,29 @@ LOGIN
 
 let ingresar = id('ingresar');
 let closeLogin = id('closeLogin');
+let ingresarSubmenu = id('ingresarSubmenu');
 
-ingresar.addEventListener('click',(event)=> {
+if(ingresar){
+  ingresar.addEventListener('click',(event)=> {
+      event.preventDefault();
+      showLogin();
+  });
+}
+
+if(closeLogin){
+  closeLogin.addEventListener('click', ()=> {
+      showLogin();
+  });
+}
+
+if(ingresarSubmenu){
+  ingresarSubmenu.addEventListener('click', (event)=> {
+    c(event.target);
     event.preventDefault();
+    showSubmenuHeader();
     showLogin();
-});
-
-closeLogin.addEventListener('click', ()=> {
-    showLogin();
-});
+  });
+}
 
 function showLogin(){
     let containerLogin = id('containerLogin');
@@ -31,4 +45,61 @@ function showLogin(){
     containerLogin.classList.toggle('show-login');
     containerLoginModal.classList.toggle('animate');
 }
+
+
+/* 
+MENU PARA VISTA DE TELEFONO - EFECTO DE CATEGORIAS
+*/
+
+let submenu = id('submenu');
+
+if(submenu){
+  submenu.addEventListener('click', (event)=> {
+    let element = event.target;
+    if(element.id === 'categorias'){
+      element.classList.toggle('active');
+      showSubmenu(element.nextElementSibling);
+    }
+  });
+}
+
+function showSubmenu(element){
+  cd(element);
+  if(element.style.maxHeight){
+    element.style.maxHeight = null;
+  }else{
+    element.style.maxHeight = `${element.scrollHeight}px`;
+  }
+}
+
+/* 
+SUBMENU LATERAL COMPLETO
+*/
+
+let submenuHeader = id('submenuHeader');
+let closeSubmenu = id('closeSubmenu');
+
+if(submenuHeader){
+  submenuHeader.addEventListener('click', ()=> {
+    showSubmenuHeader();
+  });
+}
+
+if(closeSubmenu){
+  closeSubmenu.addEventListener('click', ()=> {
+    showSubmenuHeader();
+  });
+}
+
+function showSubmenuHeader(){
+  let submenu = id('containerOpciones');
+  if(submenu.style.marginLeft === '0px'){
+    submenu.style.marginLeft =  '100vw';
+    
+  }else{
+    submenu.style.marginLeft = '0';
+  }
+
+}
+
 

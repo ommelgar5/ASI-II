@@ -10,6 +10,14 @@
   &__link{
     color: $black;
     padding: 0 .5em;
+    
+    @include desde($small){
+      display: none;
+    }
+
+    @include desde($medium){
+      display: block;
+    }
 
     &:hover{
       text-decoration: underline;
@@ -18,7 +26,11 @@
 
   &__form{
     display: flex;
+    @include desde($small){
+      display: none;
+    }
     @include desde($medium){
+      display: flex;
       width: 75%;
     }
   }

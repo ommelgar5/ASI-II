@@ -4,6 +4,11 @@ mixin categoria(categoria)
   li.container-categoria__item
     a(href="#").container-categoria__link=categoria
 
+// Agrega las categorias
+mixin categoria2(categoria)
+  li.submenu__item
+    a(href="#").submenu__link=categoria
+
 // Agrgar una oferta
 mixin oferta(img,titulo,descripcion,depto,fecha)
   a(href="oferta.html").container-oferta__oferta

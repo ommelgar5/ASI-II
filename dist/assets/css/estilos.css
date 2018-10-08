@@ -117,6 +117,18 @@ header {
   margin: 0 .5em 0;
 }
 
+@media screen and (min-width: 360px) {
+  .main-header .container-header__validar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .container-header__validar {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .main-header .container-header__validar {
     font-size: 1.2em;
@@ -126,6 +138,25 @@ header {
 .main-header .container-header__validar:hover {
   text-decoration: underline;
   color: #fff;
+}
+
+.main-header .container-header__icon {
+  width: 33%;
+  text-align: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.main-header .container-header__icon:hover {
+  color: #00A779;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .container-header__icon {
+    display: none;
+  }
 }
 
 .main-header .container-header__user {
@@ -168,7 +199,7 @@ header {
   text-align: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main-header .container-header__editar {
     font-size: .6em;
     line-height: 2.5em;
@@ -200,7 +231,7 @@ header {
   transition: all .3s;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main-header .container-header__img {
     border: 2px solid #00A779;
   }
@@ -237,7 +268,7 @@ header {
 
 .main-header .container-login__modal {
   margin: auto;
-  max-width: 800px;
+  max-width: 400px;
   padding: 1em 2em;
   color: #00A779;
   border-radius: 10px;
@@ -245,6 +276,12 @@ header {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
+}
+
+@media screen and (min-width: 360px) {
+  .main-header .container-login__modal {
+    width: 90%;
+  }
 }
 
 .main-header .container-login__close {
@@ -298,6 +335,12 @@ header {
   color: #fff;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+}
+
+@media screen and (min-width: 360px) {
+  .main-header .container-login__icon, .main-header .main .container-restablecer__icon, .main .main-header .container-restablecer__icon {
+    width: 18%;
+  }
 }
 
 .main-header .container-login__input, .main-header .main .container-restablecer__input, .main .main-header .container-restablecer__input {
@@ -392,6 +435,110 @@ header {
   }
 }
 
+/* 
+MENU DE AMBURGUESA
+*/
+.container-opciones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  margin-left: 100vw;
+  overflow-x: hidden;
+}
+
+.container-menu {
+  background: #1868B3;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container-menu__close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 13.33333px;
+  right: 13.33333px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #00A779;
+  cursor: pointer;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.container-menu__close:hover {
+  background: #124e86;
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2em 1em 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 1em 1em .1em 0;
+  border-bottom: 1px solid #4a9be7;
+  color: #fff;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.menu__link:hover {
+  padding-left: .5em;
+}
+
+.menu .categorias {
+  position: relative;
+}
+
+.menu .categorias:after {
+  content: '\002B';
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  right: 5px;
+}
+
+.menu .categorias.active:after {
+  content: '\2212';
+}
+
+.menu .submenu {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 1em;
+  -webkit-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
+  background: #1b75c9;
+  overflow-y: hidden;
+  max-height: 0;
+}
+
+.menu .submenu__link {
+  display: block;
+  color: #fff;
+  padding-top: .4em;
+}
+
+.menu .submenu__link:hover {
+  text-decoration: underline;
+}
+
 .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,6 +560,18 @@ header {
   padding: 0 .5em;
 }
 
+@media screen and (min-width: 360px) {
+  .main-menu__link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-menu__link {
+    display: block;
+  }
+}
+
 .main-menu__link:hover {
   text-decoration: underline;
 }
@@ -423,8 +582,17 @@ header {
   display: flex;
 }
 
+@media screen and (min-width: 360px) {
+  .main-menu__form {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .main-menu__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 75%;
   }
 }
@@ -517,11 +685,18 @@ header {
   margin-bottom: 1em;
 }
 
+@media screen and (min-width: 360px) {
+  .main .container-categoria {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .main .container-categoria {
     width: 150%;
     font-size: .8em;
     margin-right: 1em;
+    display: block;
   }
 }
 
@@ -669,7 +844,7 @@ header {
           justify-content: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-pagina {
     padding: 0 1em;
   }
@@ -695,7 +870,7 @@ header {
   margin-right: .2em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-pagina__link {
     width: 40px;
     height: 40px;
@@ -865,7 +1040,7 @@ header {
   margin-bottom: 1em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-perfil__cuenta, .main .container-perfil__infoPersonal, .main .container-perfil__estudios, .main .container-perfil__experiencia, .main .container-perfil__tecnologias, .main .container-perfil__idioma, .main .container-perfilEmpresa__info {
     padding: 1em;
   }
@@ -886,7 +1061,7 @@ header {
   margin-right: 6em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-perfil__label--radio {
     margin-right: 10em;
   }
@@ -984,7 +1159,7 @@ header {
   margin-bottom: 1em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-perfilEmpresa__cuenta {
     padding: 1em;
   }
@@ -1005,7 +1180,7 @@ header {
   margin-right: 6em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-perfilEmpresa__label--radio {
     margin-right: 10em;
   }
@@ -1116,7 +1291,7 @@ header {
   margin-bottom: 1em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-agregarOferta__detalle, .main .container-agregarOferta__estudios, .main .container-agregarOferta__tecnologias, .main .container-agregarOferta__idioma, .main .container-agregarOferta__experiencia {
     padding: .5em;
   }
@@ -1137,7 +1312,7 @@ header {
   margin-right: 6em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .main .container-agregarOferta__label--radio {
     margin-right: 10em;
   }

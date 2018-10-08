@@ -10,7 +10,7 @@ header{
     justify-content: space-between;
     align-items: center;
     color: $white;
-
+    
     &__logo {
       margin-top: .5em;
       width: 75%;
@@ -19,6 +19,7 @@ header{
     &__title{
       margin: 0;
       font-size: 0.9em;
+
       @include desde($large){
         font-size: 1.2em;
       }
@@ -27,6 +28,14 @@ header{
     &__validar{
       color: $white;
       margin: 0 .5em 0;
+      
+      @include desde($small){
+        display: none;
+      }
+      @include desde($medium){
+        display: block;
+      }
+      
       @include desde($large){
         font-size: 1.2em;
       }
@@ -36,6 +45,24 @@ header{
         color: $white;
       }
     }
+
+    &__icon{
+      width: 33%;
+      text-align: right;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: all .3s linear;
+
+      &:hover{
+        color: $color2;
+      }
+
+      @include desde($medium){
+        display: none;
+      }
+      
+    }
+
 
     // Menú usuario
 
@@ -129,13 +156,17 @@ header{
     
     &__modal{
       margin: auto;
-      max-width: 800px;
+      max-width: 400px;
       padding: 1em 2em;
       color: $color2;
       border-radius: 10px;
       background: $white;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
       position: relative;
+      
+      @include desde($small){
+        width: 90%;
+      }
     }
 
     &__close{
@@ -190,6 +221,10 @@ header{
         bottom-left-radius: 5px;
         top-left-radius: 5px;
       };
+
+      @include desde($small){
+        width: 18%;
+      }
     }
 
     &__input{
@@ -273,5 +308,117 @@ header{
     // Opcion 2
     top: 0;
     opacity: 1;
+  }
+}
+
+
+/* 
+MENU DE AMBURGUESA
+*/
+
+.container-opciones{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all .5s ease-out;
+  // width: 0;
+  margin-left: 100vw;
+  overflow-x: hidden; 
+
+}
+.container-menu{
+  background: $color1;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+  &__close{
+    $size: 40px;
+    position: absolute;
+    width: $size;
+    height: $size;
+    top: $size / 3;
+    right: $size / 3;
+    color: $white;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    line-height: $size;
+    border-radius: 50%;
+    border: 1px solid $color2;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover{
+      background: darken($color1,10);
+    }
+  }
+}
+
+.menu{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2em 1em 0;
+  
+  &__item{
+    
+  }
+  
+  &__link{
+    display: block;
+    padding: 1em 1em .1em 0;
+    border-bottom: 1px solid lighten($color1,20);;
+    color: $white;
+    transition: all .2s ease-out;
+    cursor: pointer;
+
+    &:hover{
+      padding-left: .5em;
+    }
+  }
+
+  .categorias{
+    position: relative;
+    &:after{
+      content: '\002B';
+      font-weight: bold;
+      color: $white;
+      position: absolute;
+      right: 5px;
+    }
+
+    &.active:after{
+      content: '\2212';
+    }
+  }
+
+  .submenu{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 1em;
+    transition: max-height 0.3s ease-out;
+    background: lighten($color1,5);
+
+    overflow-y: hidden;
+    max-height: 0;
+
+    &__item{
+
+    }
+
+    &__link{
+      display: block;
+      color: $white;
+      padding-top: .4em;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
