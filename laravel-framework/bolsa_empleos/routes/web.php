@@ -26,3 +26,5 @@ Route::get('/obtenerMunicipios/{departamento}', 'CommonController@obtenerMunicip
 Route::post('/validarDUI','UserRegisterController@validarDUI');
 Route::post('/registrarUsuario','UserRegisterController@registrarUsuario');
 Route::post('/agregarEstudios/{id}','UserRegisterController@agregarEstudios');
+Route::post('/agregarIdiomas/{id}', 'UserRegisterController@agregarIdiomas');
+Route::post('/agregarProgramas/{id}', 'UserRegisterController@agregarProgramas');

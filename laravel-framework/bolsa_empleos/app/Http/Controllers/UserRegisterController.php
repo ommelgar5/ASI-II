@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\idioma_solicitante;
+use App\programa_solicitante;
+use App\idioma;
+use App\programa;
+use App\nivel;
 use App\persona;
 use App\licencia;
 use App\estadocivil;
@@ -67,7 +72,10 @@ class UserRegisterController extends Controller
             'departamentos' => departamento::where('isActive',1)->get(),
             'municipios' => municipio::where('isActive',1)->get(),
             'areasEstudio' => area_estudio::where('isActive',1)->get(),
-            'nivelesEstudio' => nivel_estudio::where('isActive',1)->get()
+            'nivelesEstudio' => nivel_estudio::where('isActive',1)->get(),
+            'idiomas' => idioma::where('isActive',1)->get(),
+            'niveles' => nivel::where('isActive',1)->get(),
+            'programas' => programa::where('isActive',1)->get()
         );
 
         return view('auth.userRegister', [ 'data' => $data ]);
@@ -139,32 +147,70 @@ class UserRegisterController extends Controller
         $response = array();
         $response['error'] = false;
 
-        $areasEstudio = $request->input('miAreaEstudio');
-        $nivelesEstudio = $request->input('miNivelEstudio');
-        $instituciones = $request->input('miInstitucion');
-        $especialidad = $request->input('miCarrera');
-        $fechasInicio = $request->input('miFechaInicio');
-        $fechasFin = $request->input('miFechaFin');
-        $actuales = $request->input('miEstudioActual');
+        // $areasEstudio = $request->input('miAreaEstudio');
+        // $nivelesEstudio = $request->input('miNivelEstudio');
+        // $instituciones = $request->input('miInstitucion');
+        // $especialidad = $request->input('miCarrera');
+        // $fechasInicio = $request->input('miFechaInicio');
+        // $fechasFin = $request->input('miFechaFin');
+        // $actuales = $request->input('miEstudioActual');
 
-        for ($i=0; $i < count($areasEstudio) ; $i++) { 
-            $estudio = new estudio;
+        // for ($i=0; $i < count($areasEstudio) ; $i++) { 
+        //     $estudio = new estudio;
 
-            $estudio->cod_nivel_est = $nivelesEstudio[$i];
-            $estudio->cod_area_est = $areasEstudio[$i];
-            $estudio->especialidad = $especialidad[$i];
-            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
-            $estudio->a_fin =  date("Y", strtotime($fechasFin[$i]) );
-            $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
-            $estudio->persona_id = $id;
-            $estudio->nombre_institucion = $instituciones[$i];
+        //     $estudio->cod_nivel_est = $nivelesEstudio[$i];
+        //     $estudio->cod_area_est = $areasEstudio[$i];
+        //     $estudio->especialidad = $especialidad[$i];
+        //     $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
+        //     $estudio->a_fin =  date("Y", strtotime($fechasFin[$i]) );
+        //     $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
+        //     $estudio->persona_id = $id;
+        //     $estudio->nombre_institucion = $instituciones[$i];
             
-            $resultado = $estudio->save();
-        }
+        //     $resultado = $estudio->save();
+        // }
 
-            $response['error'] = !$resultado;
+        //     $response['error'] = !$resultado;
 
         return response()->json($response);
+    }
+
+    public function agregarIdiomas($id, Request $request){
+        $response = array();
+        $response['error'] = false;
+
+        // $idiomas = $request->input('idiomas');
+        // $niveles = $request->input('niveles');
+
+        // for ($i=0; $i < count($idiomas); $i++) { 
+        //     $idioma_solicitante = new idioma_solicitante;
+
+        //     $idioma_solicitante->persona_id = $id;
+        //     $idioma_solicitante->cod_idioma = $idiomas[$i];
+        //     $idioma_solicitante->cod_nivel = $niveles[$i];
+        //     $resultado = $idioma_solicitante->save();
+        // }
+        //     $response['error'] = !$resultado;
+            return response()->json($response);
+    }
+
+    public function agregarProgramas($id, Request $request){
+        $response = array();
+        $response['error'] = false;
+
+        $programas = $request->input('programas');
+        $niveles = $request->input('nivelesP');
+
+        for ($i=0; $i < count($programas); $i++) { 
+            $programa_solicitante = new programa_solicitante;
+
+            $programa_solicitante->persona_id = $id;
+            $programa_solicitante->cod_programa = $programas[$i];
+            $programa_solicitante->cod_nivel = $niveles[$i];
+            $resultado = $programa_solicitante->save();
+        }
+            $response['error'] = !$resultado;
+            return response()->json($response);
     }
 
     /**

@@ -39,12 +39,12 @@ class Persona extends Model
     public function licencia()
     {
     
-        return $this->belongsTo('App\Persona','cod_licencia','cod_licencia');
+        return $this->hasOne('App\licencia','cod_licencia','cod_licencia');
     }
 
     public function genero()
     {
-        return $this->belongsTo('App\Persona','cod_genero','cod_genero');
+        return $this->belongsTo('App\genero','cod_genero','cod_genero');
     }
 
     public function estadocivil()

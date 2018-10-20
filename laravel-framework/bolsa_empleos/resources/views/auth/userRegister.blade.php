@@ -297,7 +297,7 @@
                                                             <select class="custom-select form-control required" id="a_experiencia" name="a_experiencia">
                                                                 <option value="">Seleccione una opci&oacute;n</option>
                                                                 @foreach($data['a_experiencia'] as $experiencia)
-                                                                    <option value="{{ $experiencia->cod_a_experiencia }}">{{ $experiencia->valor }}</option>
+                                                                    <option value="{{ $experiencia->cod_a_experiencia }}">{{ $experiencia->a_experiecia }}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -451,57 +451,45 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="meetingName3">
-                                                                Name of Meeting :
+                                                            <label for="idioma">
+                                                                Idioma :
                                                                 <span class="danger">*</span>
                                                             </label>
-                                                            <input type="text" class="form-control required" id="meetingName3" name="meetingName" >
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="meetingLocation3">
-                                                                Location :
-                                                                <span class="danger">*</span>
-                                                            </label>
-                                                            <input type="text" class="form-control required" id="meetingLocation3" name="meetingLocation" >
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="participants3">Names of Participants</label>
-                                                            <textarea name="participants" id="participants3" rows="4" class="form-control"></textarea>
+                                                            <select class="custom-select form-control required" id="idioma" name="idioma">
+                                                                <option value="">Seleccione un idioma</option>
+                                                                @foreach($data['idiomas'] as $idioma)
+                                                                    <option value="{{ $idioma->cod_idioma }}">{{ $idioma->idioma }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                     </div>
-
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="decisions3">Decisions Reached</label>
-                                                            <textarea name="decisions" id="decisions3" rows="4" class="form-control"></textarea>
+                                                            <label for="nivel">
+                                                                Nivel :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="nivel" name="nivel">
+                                                                <option value="">Seleccione un idioma</option>
+                                                                @foreach($data['niveles'] as $nivel)
+                                                                    <option value="{{ $nivel->cod_nivel }}">{{ $nivel->nivel }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label>Agenda Items :</label>
-                                                            <div class="c-inputs-stacked">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item31">
-                                                                    <label class="custom-control-label" for="item31">1st item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item32">
-                                                                    <label class="custom-control-label" for="item32">2nd item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item33">
-                                                                    <label class="custom-control-label" for="item33">3rd item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item34">
-                                                                    <label class="custom-control-label" for="item34">4th item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item35">
-                                                                    <label class="custom-control-label" for="item35">5th item</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn btn-info agregarIdioma" > Agregar Idioma </button>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4>Mis Idiomas</h4>
+                                                        <ol class="misIdiomas">
+                                                        </ol>
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -588,57 +576,45 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="meetingName3">
-                                                                Name of Meeting :
+                                                            <label for="programa">
+                                                                Programa :
                                                                 <span class="danger">*</span>
                                                             </label>
-                                                            <input type="text" class="form-control required" id="meetingName3" name="meetingName" >
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="meetingLocation3">
-                                                                Location :
-                                                                <span class="danger">*</span>
-                                                            </label>
-                                                            <input type="text" class="form-control required" id="meetingLocation3" name="meetingLocation" >
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="participants3">Names of Participants</label>
-                                                            <textarea name="participants" id="participants3" rows="4" class="form-control"></textarea>
+                                                            <select class="custom-select form-control required" id="programa" name="programa">
+                                                                <option value="">Seleccione un programa</option>
+                                                                @foreach($data['programas'] as $programa)
+                                                                    <option value="{{ $programa->cod_programa }}">{{ $programa->programa }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                     </div>
-
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="decisions3">Decisions Reached</label>
-                                                            <textarea name="decisions" id="decisions3" rows="4" class="form-control"></textarea>
+                                                            <label for="nivelP">
+                                                                Nivel :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="nivelP" name="nivelP">
+                                                                <option value="">Seleccione un idioma</option>
+                                                                @foreach($data['niveles'] as $nivel)
+                                                                    <option value="{{ $nivel->cod_nivel }}">{{ $nivel->nivel }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label>Agenda Items :</label>
-                                                            <div class="c-inputs-stacked">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item31">
-                                                                    <label class="custom-control-label" for="item31">1st item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item32">
-                                                                    <label class="custom-control-label" for="item32">2nd item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item33">
-                                                                    <label class="custom-control-label" for="item33">3rd item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item34">
-                                                                    <label class="custom-control-label" for="item34">4th item</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="agenda3" class="custom-control-input" id="item35">
-                                                                    <label class="custom-control-label" for="item35">5th item</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn btn-info agregarPrograma" > Agregar Programa </button>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4>Mis Programas</h4>
+                                                        <ol class="misProgramas">
+                                                        </ol>
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -687,8 +663,88 @@
                     }
                 });
 
-                $(document).on("click",".borrarEstudio",function(){
+                $(document).on("click",".borrarEstudio, .quitarIdioma, .quitarPrograma",function(){
                     $(this).parent().parent().parent().remove();
+                });
+
+                // $(document).on("click",".quitarIdioma",function(){
+                //     $(this).parent().parent().parent().remove();
+                // });
+
+                $(document).on('click','.agregarIdioma',function(event){
+                    event.preventDefault();
+                    
+                    if($("#formwizard").valid())
+                    {
+                        var objIdioma = $("#idioma");
+                        var objNivel = $("#nivel");
+
+                        var idioma = objIdioma.val();
+                        var nivel = objNivel.val();
+
+                        var idiomaTxt = $('#idioma option[value="'+idioma+'"]').text();
+                        var nivelTxt = $('#nivel option[value="'+nivel+'"]').text();
+
+                        $('#idioma option[value="'+idioma+'"]').remove();
+                        objNivel.val("");
+
+                        var html = `<li>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" disabled value="${idiomaTxt}" />
+                                    <input type="hidden" name="idiomas[]" value="${idioma}" />
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" disabled value="${nivelTxt}" />
+                                    <input type="hidden" name="niveles[]" value="${nivel}" />
+                                </div>
+                                <div class="col-md-2">
+                                    <i class="quitarIdioma fa fa-trash" style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        </li>`;
+
+                        $(html).hide().appendTo('.misIdiomas').fadeIn(1000);
+                    }
+
+                });
+
+                $(document).on('click','.agregarPrograma',function(event){
+                    event.preventDefault();
+                    
+                    if($("#formwizard").valid())
+                    {
+                        var objPrograma = $("#programa");
+                        var objNivel = $("#nivelP");
+
+                        var programa = objPrograma.val();
+                        var nivel = objNivel.val();
+
+                        var programaTxt = $('#programa option[value="'+programa+'"]').text();
+                        var nivelTxt = $('#nivelP option[value="'+nivel+'"]').text();
+
+                        $('#programa option[value="'+programa+'"]').remove();
+                        objPrograma.val("");
+
+                        var html = `<li>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" disabled value="${programaTxt}" />
+                                    <input type="hidden" name="programas[]" value="${programa}" />
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" disabled value="${nivelTxt}" />
+                                    <input type="hidden" name="nivelesP[]" value="${nivel}" />
+                                </div>
+                                <div class="col-md-2">
+                                    <i class="quitarPrograma fa fa-trash" style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        </li>`;
+
+                        $(html).hide().appendTo('.misProgramas').fadeIn(1000);
+                    }
+
                 });
 
                 //Actualiza los municipios cuando se selecciona un departamento
@@ -876,6 +932,37 @@
                             });
                         }
 
+                        if(currentIndex == 3){
+                            my_form = document.createElement('Form');
+                            $(".misIdiomas input").each(function(k,v){
+                                my_form.appendChild(v);
+                            });
+
+                            var dataF = $(my_form).serialize();
+
+                            $.ajax({
+                                type: 'post',
+                                url: '{{ url("/agregarIdiomas/") }}/'+id,
+                                async: false,
+                                // cache: false,
+                                // timeout: 30000,
+                                dataType: 'json',
+                                data:dataF,
+                                success:function(response){
+                                    if(response.error){
+                                        toastr.error(response.errorMessage);
+                                        $out = false;
+                                    }else{
+                                        $out = true;
+                                    }
+                                },
+                                error: function(){
+                                    $out = false;
+                                }
+                            });
+
+                        }
+
                         // // Forbid next action on "Warning" step if the user is to young
                         // if (newIndex === 1 && Number($("#fechaNac").val()) < 18)
                         // {
@@ -890,7 +977,7 @@
                         // }
                         
                         
-                        if(currentIndex != 2){
+                        if(currentIndex != 2 || currentIndex != 3 || currentIndex != 4 || currentIndex != 5){
                             if($out){
                                 form.validate().settings.ignore = ":disabled,:hidden";
                                 return form.valid();
