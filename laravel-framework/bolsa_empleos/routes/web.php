@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/registro', 'UserRegisterController@index');
+
+Route::get('/obtenerMunicipios/{departamento}', 'CommonController@obtenerMunicipios');
+Route::post('/validarDUI','UserRegisterController@validarDUI');
+Route::post('/registrarUsuario','UserRegisterController@registrarUsuario');
+Route::post('/agregarEstudios/{id}','UserRegisterController@agregarEstudios');
