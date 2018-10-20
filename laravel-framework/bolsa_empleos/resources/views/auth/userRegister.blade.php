@@ -437,7 +437,7 @@
 
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <h4 > Mis Estudios</h4>
+                                                        <h4> Mis Estudios</h4>
                                                         <ol class="misEstudios">
                                                             
                                                         </ol>
@@ -687,6 +687,10 @@
                     }
                 });
 
+                $(document).on("click",".borrarEstudio",function(){
+                    $(this).parent().parent().parent().remove();
+                });
+
                 //Actualiza los municipios cuando se selecciona un departamento
                 $(document).on("change","#departamento",function(event){
                     var departamento = $(this).val();
@@ -726,7 +730,7 @@
                         var estudioActual = objEstudioActual.val();
                         var estudioActualTxt = $('#estudioActual option[value="'+estudioActual+'"]').text();
 
-                        var html  = '<li><div class="row"><div class="col-md-4"><div class="form-group"><label >Area de Estudio :</label><input type="hidden" name="miAreaEstudio[]" value="'+areaEstudio+'" /> <input type="text" disabled  class="form-control" value="'+areaEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nivel de Estudio :</label><input type="hidden" name="miNivelEstudio[]" value="'+nivelEstudio+'" /> <input type="text" disabled class="form-control" value="'+nivelEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nombre de la Instituci&oacute;n :</label><input type="text" readonly="true" name="miInstitucion[]" class="form-control"  value="'+nombreInstitucion+'" /></div></div></div><div class="row"><div class="col-md-3"><div class="form-group"><label >Opcion&oacute;n  de la carrera:</label><input type="text" readonly="true" name="miCarrera[]" class="form-control" value="'+especialidadCarrera+'" /></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de inicio :</label><input type="text" readonly="true" class="form-control " id="miFechaInicio[]" name="miFechaInicio[]" value="'+fechaInicio+'" ></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de finalizaci&oacute;n :</label><input type="text" readonly="true" class="form-control " id="miFechaFin[]" name="miFechaFin[]" value="'+fechaFin+'" /></div></div><div class="col-md-3"><div class="form-group"><label >Estudio actual:</label>  <input type="hidden" name="miEstudioActual[]" value="'+estudioActual+'" /> <input type="text" disabled class="form-control" value="'+estudioActualTxt+'" /> </div></div></div></li>';
+                        var html  = '<li><div class="row"><div class="col-md-4"><div class="form-group"><label >Area de Estudio :</label><input type="hidden" name="miAreaEstudio[]" value="'+areaEstudio+'" /> <input type="text" disabled  class="form-control" value="'+areaEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nivel de Estudio :</label><input type="hidden" name="miNivelEstudio[]" value="'+nivelEstudio+'" /> <input type="text" disabled class="form-control" value="'+nivelEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nombre de la Instituci&oacute;n :</label><input type="text" readonly="true" name="miInstitucion[]" class="form-control"  value="'+nombreInstitucion+'" /></div></div></div><div class="row"><div class="col-md-3"><div class="form-group"><label >Opcion&oacute;n  de la carrera:</label><input type="text" readonly="true" name="miCarrera[]" class="form-control" value="'+especialidadCarrera+'" /></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de inicio :</label><input type="text" readonly="true" class="form-control " id="miFechaInicio[]" name="miFechaInicio[]" value="'+fechaInicio+'" ></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de finalizaci&oacute;n :</label><input type="text" readonly="true" class="form-control " id="miFechaFin[]" name="miFechaFin[]" value="'+fechaFin+'" /></div></div><div class="col-md-2"><div class="form-group"><label >Estudio actual:</label>  <input type="hidden" name="miEstudioActual[]" value="'+estudioActual+'" /> <input type="text" disabled class="form-control" value="'+estudioActualTxt+'" /></div></div><div class="col-md-1"><i class="borrarEstudio fa fa-trash" style="cursor:pointer"> </i></div></div></div></li>';
 
                         objAreaEstudio.val("");
                         objNivelEstudio.val("")

@@ -134,7 +134,11 @@ class UserRegisterController extends Controller
         return response()->json($response);
     }
 
-    public function agregarEstudios(Request $request){
+    public function agregarEstudios($id, Request $request){
+
+        $response = array();
+        $response['error'] = false;
+
         $areasEstudio = $request->input('miAreaEstudio');
         $nivelesEstudio = $request->input('miNivelEstudio');
         $instituciones = $request->input('miInstitucion');
@@ -142,8 +146,25 @@ class UserRegisterController extends Controller
         $fechasInicio = $request->input('miFechaInicio');
         $fechasFin = $request->input('miFechaFin');
         $actuales = $request->input('miEstudioActual');
-        
-        return response()->json($request);
+
+        for ($i=0; $i < count($areasEstudio) ; $i++) { 
+            $estudio = new estudio;
+
+            $estudio->cod_nivel_est = $nivelesEstudio[$i];
+            $estudio->cod_area_est = $areasEstudio[$i];
+            $estudio->especialidad = $especialidad[$i];
+            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
+            $estudio->a_fin =  date("Y", strtotime($fechasFin[$i]) );
+            $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
+            $estudio->persona_id = $id;
+            $estudio->nombre_institucion = $instituciones[$i];
+            
+            $resultado = $estudio->save();
+        }
+
+            $response['error'] = !$resultado;
+
+        return response()->json($response);
     }
 
     /**

@@ -8,7 +8,7 @@ class estudio extends Model
 {
     protected $table = 'estudio';
     protected $primaryKey = 'cod_estudio';
-    
+    public $timestamps = false;    
     protected $fillable = [
         'cod_nivel_est', 
         'cod_area_est', 
