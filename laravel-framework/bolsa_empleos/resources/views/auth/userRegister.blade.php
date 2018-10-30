@@ -87,7 +87,7 @@
     <meta name="description" content="Robust admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template.">
     <meta name="keywords" content="admin template, robust admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title>Circle Style - Robust - Responsive Bootstrap 4 Admin Dashboard Template for Web Application</title>
+    <title>Registro de Usuario</title>
     <link rel="apple-touch-icon" href="css/login_register/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="css/login_register/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,400,500,700" rel="stylesheet">
@@ -159,7 +159,7 @@
                                                 </div>
                                             </fieldset>
 
-                                        <!-- Step 2 -->
+                                            <!-- Step 2 -->
                                             <h6>Informacion Personal</h6>
                                             <fieldset>
                                                 <div class="row">
@@ -495,82 +495,6 @@
                                             </fieldset>
 
                                             <!-- Step 5 -->
-                                            <h6>Experiencia</h6>
-                                            <fieldset>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="eventName3">
-                                                            Event Name :
-                                                            <span class="danger">*</span>
-                                                            </label>
-                                                            <input type="text" class="form-control required" id="eventName3" name="eventName" >
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="eventType3">
-                                                                Event Type :
-                                                                <span class="danger">*</span>
-                                                            </label>
-                                                            <select class="custom-select form-control required" id="eventType3" name="eventType">
-                                                                <option value="Banquet">Banquet</option>
-                                                                <option value="Fund Raiser">Fund Raiser</option>
-                                                                <option value="Dinner Party">Dinner Party</option>
-                                                                <option value="Wedding">Wedding</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="eventLocation3">Event Location :</label>
-                                                            <select class="custom-select form-control" id="eventLocation3" name="eventLocation">
-                                                                <option value="">Select City</option>
-                                                                <option value="Amsterdam">Amsterdam</option>
-                                                                <option value="Berlin">Berlin</option>
-                                                                <option value="Frankfurt">Frankfurt</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="eventDate">
-                                                                Event Date - Time :
-                                                                <span class="danger">*</span>
-                                                            </label>
-                                                            <div class='input-group'>
-                                                                <input type='text' class="form-control datetime required" id="eventDate" name="eventDate" />
-                                                                <span class="input-group-addon">
-                                                                    <span class="ft-calendar"></span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="eventStatus3">
-                                                                Event Status :
-                                                                <span class="danger">*</span>
-                                                            </label>
-                                                            <select class="custom-select form-control required" id="eventStatus3" name="eventStatus">
-                                                                <option value="Planning">Planning</option>
-                                                                <option value="In Progress">In Progress</option>
-                                                                <option value="Finished">Finished</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Requirements :</label>
-                                                            <div class="c-inputs-stacked">
-                                                                <div class="d-inline-block custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="status3" class="custom-control-input" id="staffing3">
-                                                                    <label class="custom-control-label" for="staffing3">Staffing</label>
-                                                                </div>
-                                                                <div class="d-inline-block custom-control custom-checkbox">
-                                                                    <input type="checkbox" name="status3" class="custom-control-input" id="catering3">
-                                                                    <label class="custom-control-label" for="catering3">Catering</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-
-                                            <!-- Step 6 -->
                                             <h6>Programas</h6>
                                             <fieldset>
                                                 <div class="row">
@@ -618,6 +542,107 @@
                                                     </div>
                                                 </div>
                                             </fieldset>
+
+                                            <!-- Step 6 -->
+                                            <h6>Experiencia</h6>
+                                            <fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="nombreEmpresa">
+                                                                Nombre de la empresa :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control required" id="nombreEmpresa" name="nombreEmpresa" >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="grioEmpresa">
+                                                                Giro de la empresa :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="grioEmpresa" name="grioEmpresa">
+                                                                <option value="">Seleccione una opci&oacute;n</option>
+                                                                @foreach($data['giros_empresa'] as $giro_empresa)
+                                                                    <option value="{{ $giro_empresa->cod_giro }}">{{ $giro_empresa->giro }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="areaEmpresa">
+                                                                Area de la empresa :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="areaEmpresa" name="areaEmpresa">
+                                                                <option value="">Seleccione una opci&oacute;n</option>
+                                                                @foreach($data['areas_empresa'] as $areas_empresa)
+                                                                    <option value="{{ $areas_empresa->cod_area }}">{{ $areas_empresa->area }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="cargoEmpresa">
+                                                                Cargo desempe&ntilde;ado :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="cargoEmpresa" name="cargoEmpresa">
+                                                                <option value="">Seleccione una opci&oacute;n</option>
+                                                                @foreach($data['cargos_empresa'] as $cargo_empresa)
+                                                                    <option value="{{ $cargo_empresa->cod_cargo }}">{{ $cargo_empresa->cargo }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="fechaInicioEmpresa">
+                                                                Fecha de inicio :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <input type="date" class="form-control required" id="fechaInicioEmpresa" name="fechaInicioEmpresa" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="fechaFinEmpresa">
+                                                                Fecha de finalizaci&oacute;n :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <input type="date" class="form-control required" id="fechaFinEmpresa" name="fechaFinEmpresa" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="actualEmpresa">
+                                                                Actual :
+                                                                <span class="danger">*</span>
+                                                            </label>
+                                                            <select class="custom-select form-control required" id="actualEmpresa" name="actualEmpresa">
+                                                                <option value="">Seleccione una opci&oacute;n</option>
+                                                                <option value="1">Si</option>
+                                                                <option value="2">No</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="descripcionPuesto">
+                                                            Descripci&oacute;n del puesto :
+                                                            <span class="danger">*</span>
+                                                            </label>
+                                                            <textarea class="form-control required" id="descripcionPuesto" name="descripcionPuesto"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn btn-info agregarExperiencia">Agregar Experiencia </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ol class="misExperiencias">
+
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
                                         </form>
                                     </div>
                                 </div>
@@ -663,7 +688,7 @@
                     }
                 });
 
-                $(document).on("click",".borrarEstudio, .quitarIdioma, .quitarPrograma",function(){
+                $(document).on("click",".borrarEstudio, .quitarIdioma, .quitarPrograma, .quitarExperiencia",function(){
                     $(this).parent().parent().parent().remove();
                 });
 
@@ -673,6 +698,8 @@
 
                 $(document).on('click','.agregarIdioma',function(event){
                     event.preventDefault();
+
+                    $("#formwizard").validate().settings.ignore = ":disabled,:hidden";
                     
                     if($("#formwizard").valid())
                     {
@@ -711,6 +738,8 @@
 
                 $(document).on('click','.agregarPrograma',function(event){
                     event.preventDefault();
+
+                    $("#formwizard").validate().settings.ignore = ":disabled,:hidden";
                     
                     if($("#formwizard").valid())
                     {
@@ -747,6 +776,115 @@
 
                 });
 
+                $(document).on('click','.agregarExperiencia',function(event){
+                    event.preventDefault();
+
+                    $("#formwizard").validate().settings.ignore = ":disabled,:hidden";
+                    if($("#formwizard").valid())
+                    {
+                        var objnombreEmpresa = $("#nombreEmpresa");
+                        var objGiro= $("#grioEmpresa");
+                        var objAreaEmpresa = $("#areaEmpresa");
+                        var objCargoEmpresa = $("#cargoEmpresa");
+                        var objDescripcionPuesto = $("#descripcionPuesto");
+                        var objFechaInicioEmpresa = $("#fechaInicioEmpresa");
+                        var objFechaFinEmpresa = $("#objFechaFinEmpresa");
+                        var objActualEmpresa = $("#actualEmpresa");
+
+                        var nombreEmpresa = objnombreEmpresa.val();
+                        var giro = objGiro.val();
+                        var giroTxt = $('#grioEmpresa option[value="'+giro+'"]').text();
+                        var areaEmpresa = objAreaEmpresa.val();
+                        var areaEmpresaTxt = $('#areaEmpresa option[value="'+areaEmpresa+'"]').text();
+                        var cargoEmpresa = objCargoEmpresa.val();
+                        var cargoEmpresaTxt = $('#cargoEmpresa option[value="'+cargoEmpresa+'"]').text();
+                        var descriptionPuesto = objDescripcionPuesto.val();
+                        var fechaInicioEmpresa = objFechaInicioEmpresa.val();
+                        var fechaFinEmpresa = objFechaFinEmpresa.val();
+                        var actualEmpresa = objActualEmpresa.val();
+                        var actualEmpresaTxt = $('#actualEmpresa option[value="'+actualEmpresa+'"]').text();
+
+                        objnombreEmpresa.val("");
+                        objGiro.val("");
+                        objAreaEmpresa.val("");
+                        objCargoEmpresa.val("");
+                        objDescripcionPuesto.val("");
+                        objFechaInicioEmpresa.val("");
+                        objFechaFinEmpresa.val("");
+                        objActualEmpresa.val("");
+
+                        var html = `
+                        <li>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>
+                                            Nombre de la empresa :
+                                        </label>
+                                        <input type="text" class="form-control" disabled value="${nombreEmpresa}" />
+                                        <input type="hidden" name="nombresEmpresa[]" value="${nombreEmpresa}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Giro de la empresa :
+                                        </label>
+                                        <input type="text" disabled class="form-control" value="${giroTxt}" />
+                                        <input type="hidden" name="girosEmpresa[]" value="${giro}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Area de la empresa :
+                                        </label>
+                                        <input type="text" class="form-control" disabled value="${areaEmpresaTxt}" />
+                                        <input type="hidden" name="areasEmpresa[]" value="${areaEmpresa}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Cargo desempe&ntilde;ado :
+                                        </label>
+                                        <input type="text" class="form-control" disabled value="${cargoEmpresaTxt}" />
+                                        <input type="hidden" name="cargosEmpresa[]" value="${cargoEmpresa}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>
+                                            Fecha de inicio :
+                                        </label>
+                                        <input type="text" disabled class="form-control" name="fechasInicioEmpresa[]" value="${fechaInicioEmpresa}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Fecha de finalizaci&oacute;n :
+                                        </label>
+                                        <input type="text" disabled class="form-control" name="fechasFinEmpresa[]" value="${fechaFinEmpresa}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Actual :
+                                        </label>
+                                        <input type="text" class="form-control" disabled value="${actualEmpresaTxt}" />
+                                        <input type="hidden" name="actualesEmpresa[]" value="${actualEmpresa}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            Descripci&oacute;n del puesto :
+                                        </label>
+                                        <textarea class="form-control"  disabled>${descriptionPuesto}</textarea>
+                                        <input type="hidden" name="descripcionesPuesto[]" value="${descriptionPuesto}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <i class="quitarExperiencia fa fa-trash" style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        </li>
+                        `;
+
+                        $(html).hide().appendTo(".misExperiencias").fadeIn(1000);
+                    }
+                });
+
                 //Actualiza los municipios cuando se selecciona un departamento
                 $(document).on("change","#departamento",function(event){
                     var departamento = $(this).val();
@@ -765,6 +903,7 @@
                 $(document).on("click","#agregarEstudio",function(event){
                     event.preventDefault();
                     
+                    $("#formwizard").validate().settings.ignore = ":disabled,:hidden";
                     if($("#formwizard").valid())
                     {
                         var objAreaEstudio = $("#areaEstudio");
@@ -817,87 +956,91 @@
                     {
                         var $out = false;
                         
-                        if(currentIndex == 0){
-                            dui = $("#DUI").val();
-                            pass = $("#password").val();
 
-                            $.ajax({
-                                type: 'post',
-                                url: '{{ url("/validarDUI")}}',
-                                async: false,
-                                // cache: false,
-                                // timeout: 30000,
-                                dataType: 'json',
-                                data:{
-                                    'dui': dui, 
-                                    'pass': pass 
-                                },
-                                success:function(response){
-                                    if(response.error){
-                                        toastr.error(response.errorMessage);
+                        form.validate().settings.ignore = ":disabled,:hidden";
+                        if( form.valid() ){
+                            if(currentIndex == 0){
+                                dui = $("#DUI").val();
+                                pass = $("#password").val();
+
+                                $.ajax({
+                                    type: 'post',
+                                    url: '{{ url("/validarDUI")}}',
+                                    async: false,
+                                    // cache: false,
+                                    // timeout: 30000,
+                                    dataType: 'json',
+                                    data:{
+                                        'dui': dui, 
+                                        'pass': pass 
+                                    },
+                                    success:function(response){
+                                        if(response.error){
+                                            toastr.error(response.errorMessage);
+                                            $out = false;
+                                        }else{
+                                            $out = true;
+                                        }
+                                    },
+                                    error: function(){
                                         $out = false;
-                                    }else{
-                                        $out = true;
                                     }
-                                },
-                                error: function(){
-                                    $out = false;
-                                }
-                            });
-                        }
+                                });
+                            }
 
-                        if(currentIndex == 1){
-                            var nombres = $("#userName").val();
-                            var apellidos = $("#userLastName").val();
-                            var genero = $("#genero").val();
-                            var estadoCivil = $("#estadoCivil").val();
-                            var fechaNac = $("#fechaNac").val();
-                            var userEmail = $("#userEmail").val();
-                            var telFijo = $("#telFijo").val();
-                            var telMovil = $("#telMovil").val();
-                            var departamento = $("#departamento").val();
-                            var municipio = $("#municipio").val();
-                            var a_experiencia = $("#a_experiencia").val();
-                            var licencia = $("#licencia").val();
+                            if(currentIndex == 1){
+                                var nombres = $("#userName").val();
+                                var apellidos = $("#userLastName").val();
+                                var genero = $("#genero").val();
+                                var estadoCivil = $("#estadoCivil").val();
+                                var fechaNac = $("#fechaNac").val();
+                                var userEmail = $("#userEmail").val();
+                                var telFijo = $("#telFijo").val();
+                                var telMovil = $("#telMovil").val();
+                                var departamento = $("#departamento").val();
+                                var municipio = $("#municipio").val();
+                                var a_experiencia = $("#a_experiencia").val();
+                                var licencia = $("#licencia").val();
 
-                            dataF = {
-                                'nombres': nombres, 
-                                'apellidos': apellidos, 
-                                'genero': genero, 
-                                'estadoCivil': estadoCivil,
-                                'fechaNac': fechaNac,
-                                'userEmail': userEmail,
-                                'telFijo': telFijo,
-                                'telMovil': telMovil,
-                                'departamento': departamento,
-                                'municipio': municipio,
-                                'a_experiencia': a_experiencia,
-                                'licencia': licencia,
-                                'dui': dui,
-                                'pass': pass
-                            };
+                                dataF = {
+                                    'nombres': nombres, 
+                                    'apellidos': apellidos, 
+                                    'genero': genero, 
+                                    'estadoCivil': estadoCivil,
+                                    'fechaNac': fechaNac,
+                                    'userEmail': userEmail,
+                                    'telFijo': telFijo,
+                                    'telMovil': telMovil,
+                                    'departamento': departamento,
+                                    'municipio': municipio,
+                                    'a_experiencia': a_experiencia,
+                                    'licencia': licencia,
+                                    'dui': dui,
+                                    'pass': pass
+                                };
 
-                            $.ajax({
-                                type: 'post',
-                                url: '{{ url("/registrarUsuario")}}',
-                                async: false,
-                                // cache: false,
-                                // timeout: 30000,
-                                dataType: 'json',
-                                data:dataF,
-                                success:function(response){
-                                    if(response.error){
-                                        toastr.error(response.errorMessage);
+                                $.ajax({
+                                    type: 'post',
+                                    url: '{{ url("/registrarUsuario")}}',
+                                    async: false,
+                                    // cache: false,
+                                    // timeout: 30000,
+                                    dataType: 'json',
+                                    data:dataF,
+                                    success:function(response){
+                                        if(response.error){
+                                            toastr.error(response.errorMessage);
+                                            $out = false;
+                                        }else{
+                                            id = response.personaID;
+                                            $out = true;
+                                        }
+                                    },
+                                    error: function(){
                                         $out = false;
-                                    }else{
-                                        id = response.personaID;
-                                        $out = true;
                                     }
-                                },
-                                error: function(){
-                                    $out = false;
-                                }
-                            });
+                                });
+                            }
                         }
                             
                         if(currentIndex == 2){
@@ -963,6 +1106,36 @@
 
                         }
 
+                        if(currentIndex == 4){
+                            my_form = document.createElement('Form');
+                            $(".misProgramas input").each(function(k,v){
+                                my_form.appendChild(v);
+                            });
+
+                            var dataF = $(my_form).serialize();
+
+                            $.ajax({
+                                type: 'post',
+                                url: '{{ url("/agregarProgramas/") }}/'+id,
+                                async: false,
+                                // cache: false,
+                                // timeout: 30000,
+                                dataType: 'json',
+                                data:dataF,
+                                success:function(response){
+                                    if(response.error){
+                                        toastr.error(response.errorMessage);
+                                        $out = false;
+                                    }else{
+                                        $out = true;
+                                    }
+                                },
+                                error: function(){
+                                    $out = false;
+                                }
+                            });
+                        }
+
                         // // Forbid next action on "Warning" step if the user is to young
                         // if (newIndex === 1 && Number($("#fechaNac").val()) < 18)
                         // {
@@ -976,8 +1149,7 @@
                         //     form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
                         // }
                         
-                        
-                        if(currentIndex != 2 || currentIndex != 3 || currentIndex != 4 || currentIndex != 5){
+                        if(currentIndex == 0 || currentIndex == 1){
                             if($out){
                                 form.validate().settings.ignore = ":disabled,:hidden";
                                 return form.valid();
@@ -989,13 +1161,46 @@
                     },
                     onFinishing: function (event, currentIndex)
                     {
-                        debugger;
-                        form.validate().settings.ignore = ":disabled";
-                        return form.valid();
+                        
+                        // form.validate().settings.ignore = ":disabled";
+                        // return form.valid();
+
+                        if(currentIndex == 5){
+                            my_form = document.createElement('Form');
+                            $(".misExperiencias input").each(function(k,v){
+                                my_form.appendChild(v);
+                            });
+
+                            var dataF = $(my_form).serialize();
+                            debugger;
+                            $.ajax({
+                                type: 'post',
+                                url: '{{ url("/agregarExperiencias/") }}/'+id,
+                                async: false,
+                                // cache: false,
+                                // timeout: 30000,
+                                dataType: 'json',
+                                data:dataF,
+                                success:function(response){
+                                    if(response.error){
+                                        toastr.error(response.errorMessage);
+                                        $out = false;
+                                    }else{
+                                        $out = true;
+                                        window.location.replace("{{ url('/') }}");
+                                    }
+                                },
+                                error: function(){
+                                    $out = false;
+                                }
+                            });
+
+                        }
+                        
                     },
                     onFinished: function (event, currentIndex)
                     {
-                        debugger;
+                        
                         alert("Submitted!");
                     }
                 });

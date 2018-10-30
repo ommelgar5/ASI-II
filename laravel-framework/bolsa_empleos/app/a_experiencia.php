@@ -11,6 +11,6 @@ class a_experiencia extends Model
 
     public function personas()
     {
-    	return $this->hasMany('App\Persona','cod_a_experiencia','cod_a_experiencia');
+    	return $this->hasMany('App\persona','cod_a_experiencia','cod_a_experiencia');
     }
 }

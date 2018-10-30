@@ -11,6 +11,6 @@ class licencia extends Model
 
     public function personas()
     {
-    	return $this->hasMany('App\Persona','cod_licencia','cod_licencia');
+    	return $this->hasMany('App\persona','cod_licencia','cod_licencia');
     }
 }

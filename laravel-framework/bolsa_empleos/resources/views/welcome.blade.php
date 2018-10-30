@@ -37,14 +37,17 @@
       <div class="main-header">
         <div class="container-login" id="containerLogin">
           <div class="container-login__modal" id="containerLoginModal"><span class="container-login__close" id="closeLogin">X</span><img class="container-login__img" src="assets/img/logo.png" alt="login-img">
-            <form class="container-login__form" action="/usuario.html" method="post">
+            <form class="container-login__form" method="POST" action="{{ route('login') }}">
+              @csrf
               <div class="container-login__dato"><i class="fas fa-user-shield container-login__icon"></i>
-                <input class="container-login__input" type="text">
+                <input class="container-login__input"  name="dui" type="text">
               </div>
               <div class="container-login__dato"><i class="fas fa-key container-login__icon"></i>
-                <input class="container-login__input" type="password">
+                <input class="container-login__input" type="password" name="password">
               </div>
-              <!--input(type="submit" value="Ingresar").container-login__submit--><a class="container-login__submit" href="/usuario.html" style="display:block; text-align: center;">Ingresar</a>
+              <input type="submit" value="Ingresar" class="container-login__submit" style="display:block; text-align: center;" />
+
+              <!-- <a class="container-login__submit" href="/usuario.html" style="display:block; text-align: center;">Ingresar</a> -->
               <div class="container-login__ref"><a class="container-login__link" href="restablecer.html">¿Has olvidado la contraseña?</a><a class="container-login__link" href="index.html">Inicio</a></div>
             </form>
           </div>

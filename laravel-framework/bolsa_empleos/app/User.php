@@ -32,7 +32,7 @@ class User extends Authenticatable
 
     public function persona()
     {
-        return $this->belongsTo('App\Persona','dui','dui');
+        return $this->belongsTo('App\persona','dui','dui');
     }
 
 }

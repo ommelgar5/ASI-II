@@ -11,6 +11,6 @@ class tipo_usuario extends Model
 
     public function personas()
     {
-    	return $this->hasMany('App\Persona','cod_tipo_usuario','cod_tipo_usuario');
+    	return $this->hasMany('App\persona','cod_tipo_usuario','cod_tipo_usuario');
     }
 }

@@ -22,6 +22,6 @@ class estudio extends Model
 
     public function persona()
     {
-        return $this->belongsTo('App\Persona','persona_id','dui');
+        return $this->belongsTo('App\persona','persona_id','dui');
     }
 }

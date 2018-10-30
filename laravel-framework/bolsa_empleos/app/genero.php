@@ -12,6 +12,6 @@ class genero extends Model
 
     public function personas()
     {
-    	return $this->hasMany('App\Persona','cod_genero','cod_genero');
+    	return $this->hasMany('App\persona','cod_genero','cod_genero');
     }
 }

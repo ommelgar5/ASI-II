@@ -11,6 +11,6 @@ class estadocivil extends Model
 
     public function personas()
     {
-    	return $this->hasMany('App\Persona','cod_civil','cod_civil');
+    	return $this->hasMany('App\persona','cod_civil','cod_civil');
     }
 }
