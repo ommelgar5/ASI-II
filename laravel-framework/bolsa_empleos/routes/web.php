@@ -19,13 +19,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/registro', 'UserRegisterController@index');
-
 Route::get('/obtenerMunicipios/{departamento}', 'CommonController@obtenerMunicipios');
 Route::post('/validarDUI','UserRegisterController@validarDUI');
+
+// registro de perfil de aplicantes
+Route::get('/registro', 'UserRegisterController@index');
 Route::post('/registrarUsuario','UserRegisterController@registrarUsuario');
 Route::post('/agregarEstudios/{id}','UserRegisterController@agregarEstudios');
 Route::post('/agregarIdiomas/{id}', 'UserRegisterController@agregarIdiomas');
 Route::post('/agregarProgramas/{id}', 'UserRegisterController@agregarProgramas');
 Route::post('/agregarExperiencias/{id}', 'UserRegisterController@agregarExperiencias');
+
+// registro de perfil de empresas
+Route::get('/registroEmpresa', 'EmpresaRegisterController@index');
+Route::post('/registroEmpresa', 'EmpresaRegisterController@CrearEmpresa');

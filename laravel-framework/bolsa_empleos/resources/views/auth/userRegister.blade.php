@@ -1,5 +1,3 @@
-
-
 @section('content')
 <!-- <div class="container">
     <div class="row justify-content-center">
@@ -1149,14 +1147,16 @@
                         //     form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
                         // }
                         
-                        if(currentIndex == 0 || currentIndex == 1){
-                            if($out){
-                                form.validate().settings.ignore = ":disabled,:hidden";
-                                return form.valid();
-                            }
-                        }else{
-                            return $out;
-                        }
+                        // if(currentIndex == 0 || currentIndex == 1){
+                        //     if($out){
+                        //         form.validate().settings.ignore = ":disabled,:hidden";
+                        //         return form.valid();
+                        //     }
+                        // }else{
+                        //     return $out;
+                        // }
+
+                        return $out;
                             
                     },
                     onFinishing: function (event, currentIndex)

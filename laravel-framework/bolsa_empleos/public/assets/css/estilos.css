@@ -1047,7 +1047,7 @@ MENU DE AMBURGUESA
 }
 
 @media screen and (min-width: 1024px) {
-  .main .container-perfil__cuenta, .main .container-perfil__infoPersonal, .main .container-perfil__estudios, .main .container-perfil__experiencia, .main .container-perfil__tecnologias, .main .container-perfil__idioma, .main .container-perfilEmpresa__info {
+  .main .container-perfil__cuenta, .main .container-perfil__infoPersonal, .main .container-perfil__estudios, .main .container-perfil__experiencia, .main .container-perfil__tecnologias, .main .container-perfil__idioma {
     width: 49%;
   }
 }
@@ -1200,13 +1200,13 @@ MENU DE AMBURGUESA
   outline: none;
 }
 
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
   .main .container-perfilEmpresa__info {
     position: relative;
     left: 52%;
     top: -17em;
   }
-}
+}*/
 
 .main .container-perfilEmpresa__combo {
   font-size: 1em;
@@ -1233,7 +1233,7 @@ MENU DE AMBURGUESA
 .main .container-perfilEmpresa__submit {
   border: none;
   border-radius: 5px;
-  display: block;
+  display: inline;
   margin-right: auto;
   margin-left: auto;
   text-transform: uppercase;
