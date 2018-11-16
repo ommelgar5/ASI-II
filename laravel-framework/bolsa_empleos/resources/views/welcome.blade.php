@@ -26,6 +26,7 @@
                         <a href="{{ url('/') }}">Inicio</a>
                     @else
                         <a class="container-header__validar" href="#" id="ingresar">Ingresar</a> 
+                        <a class="container-header__validar" href="{{ route('empresa.login') }}">Empresa</a>
                         <a class="container-header__validar" href="{{ url('registro') }}" >Registarte</a> 
                     @endauth
                 <!-- </div> -->

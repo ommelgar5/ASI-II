@@ -17,6 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'empresas' => [
+        'driver' => 'eloquent',
+        'model' => App\empresa::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +49,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'empresa' => [
+            'driver' => 'session',
+            'provider' => 'empresas',
+        ],
+        'empresa-api' => [
+            'driver' => 'token',
+            'provider' => 'empresas',
+        ],
     ],
 
     /*
@@ -70,11 +82,15 @@ return [
             // 'driver' => 'custom',
             'model' => App\User::class,
         ],
-
-        'users' => [
-            'driver' => 'database',
-            'table' => 'usuarios',
+        'empresas' => [
+            'driver' => 'eloquent',
+            'model' => App\empresa::class,
         ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'usuarios',
+        // ],
     ],
 
     /*
@@ -97,6 +113,11 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+        ],
+        'empresas' => [
+            'provider' => 'empresas',
+            'table' => 'password_resets',
+            'expire' => 15,
         ],
     ],
 

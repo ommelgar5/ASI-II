@@ -2,10 +2,15 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class empresa extends Model
+class empresa extends Authenticatable
 {
+    use Notifiable;
+    // The authentication guard for admin
+    protected $guard = 'empresa';
+
     protected $table = 'empresa';
     protected $primaryKey = 'nit';
     public $incrementing = false;
@@ -13,7 +18,7 @@ class empresa extends Model
 
     protected $fillable = [
         'nit',
-        'pass',
+        'password',
         'nombre_comercial',
         'nombre_juridico',
         'descripcion',
