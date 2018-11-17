@@ -9,24 +9,24 @@
         <meta name="keywords" content="admin template, robust admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
         <meta name="author" content="PIXINVENT"> -->
         <title>Login Page - Robust - Responsive Bootstrap 4 Admin Dashboard Template for Web Application</title>
-        <link rel="apple-touch-icon" href="/css/login_register/app-assets/images/ico/apple-icon-120.png">
-        <link rel="shortcut icon" type="image/x-icon" href="/css/login_register/app-assets/images/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="/app-assets/images/ico/apple-icon-120.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,400,500,700" rel="stylesheet">
         <!-- BEGIN VENDOR CSS-->
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/css/vendors.css">
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/vendors/css/forms/icheck/icheck.css">
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/vendors/css/forms/icheck/custom.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/css/vendors.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/icheck.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/custom.css">
         <!-- END VENDOR CSS-->
         <!-- BEGIN ROBUST CSS-->
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/css/app.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/css/app.css">
         <!-- END ROBUST CSS-->
         <!-- BEGIN Page Level CSS-->
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/css/core/menu/menu-types/vertical-content-menu.css">
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/css/core/colors/palette-gradient.css">
-        <link rel="stylesheet" type="text/css" href="/css/login_register/app-assets/css/pages/login-register.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-content-menu.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.css">
+        <link rel="stylesheet" type="text/css" href="/app-assets/css/pages/login-register.css">
         <!-- END Page Level CSS-->
         <!-- BEGIN Custom CSS-->
-        <link rel="stylesheet" type="text/css" href="/css/login_register/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <!-- END Custom CSS-->
     </head>
     <body class="vertical-layout vertical-menu 1-column   menu-expanded blank-page blank-page  pace-done" data-open="click" data-menu="vertical-menu" data-col="1-column">
@@ -49,7 +49,7 @@
                                     <div class="card-header border-0">
                                         <div class="card-title text-center">
                                             <div class="p-1">
-                                                <img src="/css/login_register/app-assets/images/logo/logo-dark.png" alt="branding logo">
+                                                <img src="/app-assets/images/logo/logo-dark.png" alt="branding logo">
                                             </div>
                                         </div>
                                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <form class="form-horizontal form-simple error" method="POST" action="{{ route('empresa.login.submit') }}" novalidate="">
+                                            <form class="form-horizontal form-simple error" method="POST" action="{{ route('empresa.login.submit') }}" novalidate="" autocomplete="off">
                                                 @csrf
                                                 <fieldset class="form-group position-relative has-icon-left mb-0 error">
                                                     <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} form-control-lg input-lg" id="correo" name="correo" type="email" placeholder="Correo" value="{{ old('email') }}" required="" autofocus aria-invalid="true">
@@ -125,18 +125,18 @@
         <!-- ////////////////////////////////////////////////////////////////////////////-->
 
         <!-- BEGIN VENDOR JS-->
-        <script src="/css/login_register/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+        <script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
         <!-- BEGIN VENDOR JS-->
         <!-- BEGIN PAGE VENDOR JS-->
-        <script src="/css/login_register/app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
-        <script src="/css/login_register/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
+        <script src="/app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+        <script src="/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
         <!-- END PAGE VENDOR JS-->
         <!-- BEGIN ROBUST JS-->
-        <script src="/css/login_register/app-assets/js/core/app-menu.js" type="text/javascript"></script>
-        <script src="/css/login_register/app-assets/js/core/app.js" type="text/javascript"></script>
+        <script src="/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+        <script src="/app-assets/js/core/app.js" type="text/javascript"></script>
         <!-- END ROBUST JS-->
         <!-- BEGIN PAGE LEVEL JS-->
-        <script src="/css/login_register/app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+        <script src="/app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL JS-->
     </body>
 </html>

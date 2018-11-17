@@ -58,10 +58,10 @@
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <form class="form-horizontal form-simple error" method="POST" action="{{ route('login') }}" novalidate="">
+                                            <form class="form-horizontal form-simple error" method="POST" action="{{ route('login') }}" novalidate="" autocomplete="off">
                                                 @csrf
                                                 <fieldset class="form-group position-relative has-icon-left mb-0 error">
-                                                    <input type="text" class="form-control{{ $errors->has('dui') ? ' is-invalid' : '' }} form-control-lg input-lg" id="dui" name="dui" type="text" placeholder="Dui" value="{{ old('dui') }}" required="" autofocus aria-invalid="true">
+                                                    <input type="text" class="form-control{{ $errors->has('dui') ? ' is-invalid' : '' }} form-control-lg input-lg" id="dui" name="dui" type="text" placeholder="Dui" value="{{ old('dui') }}" required="" autofocus aria-invalid="true" autocomplete="off">
                                                     <div class="form-control-position">
                                                         <i class="ft-user"></i>
                                                     </div>

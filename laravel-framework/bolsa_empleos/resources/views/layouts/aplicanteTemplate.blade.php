@@ -17,7 +17,7 @@
   <body>
 
     
-    @include('layouts.navbarPrincipal')
+    @include('layouts.aplicanteNavbar')
     
     @include('layouts.aplicanteLoginModal')
     
@@ -76,7 +76,6 @@
         </div>
       </div>
     </footer>
-  
   
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/bootstrap4/bootstrap.min.js"></script>

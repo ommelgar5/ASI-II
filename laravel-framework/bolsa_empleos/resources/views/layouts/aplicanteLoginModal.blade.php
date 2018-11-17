@@ -12,6 +12,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <form method="POST" action="{{ route('login') }}">
+          @csrf
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text bg-primary text-white"><i class="fas fa-user-tie fa-lg"></i></span>
