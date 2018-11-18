@@ -82,7 +82,8 @@ class EmpresaRegisterController extends Controller
         $direccion  = $request->input('direccion');
         $referencia = $request->input('referencia');
         $municipio = $request->input('municipio');
-        
+        $descripcion = $request->input('descripcion');
+
 
         $logo = trim( $request->logo->getClientOriginalName() );
         // path /storage/empresas_logo/
@@ -95,12 +96,13 @@ class EmpresaRegisterController extends Controller
             $empresa->pass = Hash::make($password);
             $empresa->nombre_comercial = $comercial;
             $empresa->nombre_juridico = $juridico;
-            $empresa->descripcion = $referencia;
+            $empresa->descripcion = $descripcion;
             $empresa->correo = $email;
             $empresa->telefono1 = $telefono1;
             $empresa->telefono2 = $telefono2;
             $empresa->logo = $logo;
             $empresa->cod_giro = $giro;
+
             $success = $empresa->save();
             if($success){
                 $direccionE = new direccion_empresa;
