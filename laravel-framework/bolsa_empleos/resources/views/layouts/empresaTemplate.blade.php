@@ -24,7 +24,7 @@
       <div class="row">
         <!--Ofertas-->
         <div class="col-lg-12">
-          
+          @include('layouts.empresaMenu')
           @yield('contenido')
 
         </div>

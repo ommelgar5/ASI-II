@@ -29,9 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/registroEmpresa', 'EmpresaRegisterController@index')->middleware('guest');
 Route::post('/registroEmpresa', 'EmpresaRegisterController@CrearEmpresa');
 Route::prefix('empresa')->group(function() {
-    Route::get('/login', 'EmpresaAuth\EmpresaLoginController@showLoginForm')->name('empresa.login')->middleware('guest');
-    Route::post('/login', 'EmpresaAuth\EmpresaLoginController@login')->name('empresa.login.submit');
-    Route::get('/dashboard', 'EmpresaAuth\EmpresaController@index')->name('empresa.dashboard');
+    Route::get('/login', 'Auth\EmpresaLoginController@showLoginForm')->name('empresa.login')->middleware('guest');
+    Route::post('/login', 'Auth\EmpresaLoginController@login')->name('empresa.login.submit');
+    Route::get('/dashboard', 'Auth\EmpresaController@index')->name('empresa.dashboard');
+    Route::get('/nueva_oferta','Auth\EmpresaController@showNuevaOferta')->name('empresa.nuevaoferta');
 });
 
 // fin
