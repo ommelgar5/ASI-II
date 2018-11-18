@@ -61,7 +61,7 @@ class EmpresaRegisterController extends Controller
             'giros_empresa' => giro_empresa::where('isActive',1)->get()
         );
 
-        return view('empresa.perfilEmpresa', [ 'data' => $data ]);
+        return view('empresa.crearPerfilEmpresa', [ 'data' => $data ]);
     }
 
     
