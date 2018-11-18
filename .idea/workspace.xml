@@ -2,82 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="421218a6-6bd0-4da0-871e-1a4159a8e0c8" name="Default" comment="Validacion y formato Registro Usuario">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ASI-II.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.eot" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.ttf" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.woff" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.woff2" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.eot" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.ttf" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.woff" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.woff2" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.eot" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.ttf" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.woff" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.woff2" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/icon/favicon.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/icon/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/Captura.PNG" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/Captura.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/banco_azul.jpg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/banco_azul.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/claro.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/claro.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/davivienda.jpg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/davivienda.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/pollo_campero.jpg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/pollo_campero.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/tigo.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/tigo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/unicomer.jpg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos/unicomer.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/escudo.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/escudo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/logo-blanco.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/logo-blanco.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/logo.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/logos_st/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/admin.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/admin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/mujer.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/mujer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/user.png" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/img/users/user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/bootstrap/cache/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/bootstrap/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/metisMenu.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/metisMenu.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/sb-admin-2.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/css/sb-admin-2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/admin/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-grid.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-grid.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-grid.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-reboot.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap-reboot.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/bootstrap4/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/css/all.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/css/all.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.svg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-brands-400.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.svg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-regular-400.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.svg" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/css/fontawesome5.5/webfonts/fa-solid-900.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/bootstrap.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/jquery.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/metisMenu.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/metisMenu.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/sb-admin-2.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/sb-admin-2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown.html" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/all.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/bootstrap.min.css" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/bootstrap.min.js.descarga" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/bootstrap.min.js.descarga" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/browser-sync-client.js.descarga" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/browser-sync-client.js.descarga" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/jquery-3.3.1.min.js.descarga" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/jquery-3.3.1.min.js.descarga" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/popper.min.js.descarga" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/Dropdown_files/popper.min.js.descarga" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.bundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/popper.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/bootstrap4/popper.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/jquery-3.3.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/app/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/app/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/app/public/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/app/public/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/cache/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/cache/data/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/cache/data/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/sessions/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/sessions/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/testing/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/testing/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/views/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/framework/views/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/storage/logs/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/userRegister.blade.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/userRegister.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,96 +14,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="userRegister.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/userRegister.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5696">
-              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-              <folding>
-                <marker date="1542512051290" expanded="true" signature="9:44" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="56:86" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="98:108" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="864:873" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="2557:2571" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4074:5537" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4129:5502" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4217:4387" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4308:4338" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4447:4920" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4519:4875" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="4981:5463" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="5053:5418" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6452:7913" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6507:7878" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6595:6767" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6688:6718" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6827:7308" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="6899:7263" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="7369:7839" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="7441:7794" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="15308:15335" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="23696:23715" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="26296:26321" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="27640:27666" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="28774:28799" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="29910:29937" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="31286:31316" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="31879:31889" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="35791:35802" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="41443:41464" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="41470:41487" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="42659:42684" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="42690:42712" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="46468:46501" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="46507:46536" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="47636:47663" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="47669:47692" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="48936:48969" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="48975:49003" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="50088:50113" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="50119:50136" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="52420:52448" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="52454:52478" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="53709:53739" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="53745:53775" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="60957:60978" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="60984:61001" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="62074:62093" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="62099:62114" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="64323:64348" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="64354:64375" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="65451:65470" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="65476:65491" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="68335:68360" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="68366:68387" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="69395:69421" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="69427:69449" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="70467:70494" ph="..." />
-                <marker date="1542512051290" expanded="true" signature="70500:70523" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registroAplicanteTemplate.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/registroAplicanteTemplate.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="19" />
-              <folding>
-                <marker date="1542502156079" expanded="true" signature="220:228" ph="..." />
-                <marker date="1542502156079" expanded="true" signature="575:585" ph="..." />
-                <marker date="1542502156079" expanded="true" signature="786:811" ph="..." />
-                <marker date="1542502156079" expanded="true" signature="831:860" ph="..." />
-                <marker date="1542502156079" expanded="true" signature="1001:1012" ph="..." />
-                <marker date="1542502156079" expanded="true" signature="2218:2227" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -347,6 +184,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="empresa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bolsa_empleos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -477,7 +344,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542502339940</updated>
-      <workItem from="1542502342022" duration="9516000" />
+      <workItem from="1542502342022" duration="11912000" />
     </task>
     <task id="LOCAL-00001" summary="Validacion y formato Registro Usuario">
       <created>1542512677892</created>
@@ -490,21 +357,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9516000" />
+    <option name="totallyTimeSpent" value="11912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4830287" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.5025" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22062664" sideWeight="0.4975" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -518,25 +384,26 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4830287" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22062664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211875" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,71 +476,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Google.com.url">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/userRegister.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5696">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="294">
+          <caret line="1312" column="26" lean-forward="true" selection-start-line="1312" selection-start-column="26" selection-end-line="1312" selection-end-column="26" />
           <folding>
-            <marker date="1542512051290" expanded="true" signature="9:44" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="56:86" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="98:108" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="864:873" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="2557:2571" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4074:5537" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4129:5502" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4217:4387" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4308:4338" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4447:4920" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4519:4875" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="4981:5463" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="5053:5418" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6452:7913" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6507:7878" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6595:6767" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6688:6718" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6827:7308" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="6899:7263" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="7369:7839" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="7441:7794" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="15308:15335" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="23696:23715" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="26296:26321" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="27640:27666" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="28774:28799" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="29910:29937" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="31286:31316" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="31879:31889" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="35791:35802" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="41443:41464" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="41470:41487" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="42659:42684" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="42690:42712" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="46468:46501" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="46507:46536" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="47636:47663" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="47669:47692" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="48936:48969" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="48975:49003" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="50088:50113" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="50119:50136" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="52420:52448" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="52454:52478" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="53709:53739" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="53745:53775" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="60957:60978" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="60984:61001" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="62074:62093" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="62099:62114" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="64323:64348" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="64354:64375" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="65451:65470" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="65476:65491" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="68335:68360" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="68366:68387" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="69395:69421" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="69427:69449" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="70467:70494" ph="..." />
-            <marker date="1542512051290" expanded="true" signature="70500:70523" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="9:44" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="56:86" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="98:108" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="864:873" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="2557:2571" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4074:5537" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4129:5502" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4217:4387" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4308:4338" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4447:4920" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4519:4875" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="4981:5463" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="5053:5418" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6452:7913" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6507:7878" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6595:6767" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6688:6718" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6827:7308" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="6899:7263" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="7369:7839" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="7441:7794" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="15305:15332" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="23693:23712" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="26293:26318" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="27637:27663" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="28771:28796" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="29907:29934" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="31283:31313" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="31876:31886" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="35788:35799" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="41440:41461" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="41467:41484" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="42656:42681" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="42687:42709" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="46465:46498" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="46504:46533" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="47633:47660" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="47666:47689" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="48933:48966" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="48972:49000" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="50085:50110" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="50116:50133" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="52417:52445" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="52451:52475" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="53706:53736" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="53742:53772" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="60954:60975" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="60981:60998" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="62071:62090" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="62096:62111" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="64320:64345" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="64351:64372" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="65448:65467" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="65473:65488" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="68332:68357" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="68363:68384" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="69392:69418" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="69424:69446" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="70464:70491" ph="..." />
+            <marker date="1542515790438" expanded="true" signature="70497:70520" ph="..." />
           </folding>
         </state>
       </provider>
