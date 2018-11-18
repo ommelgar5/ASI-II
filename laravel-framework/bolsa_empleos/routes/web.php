@@ -31,7 +31,7 @@ Route::post('/registroEmpresa', 'EmpresaRegisterController@CrearEmpresa');
 Route::prefix('empresa')->group(function() {
     Route::get('/login', 'EmpresaAuth\EmpresaLoginController@showLoginForm')->name('empresa.login')->middleware('guest');
     Route::post('/login', 'EmpresaAuth\EmpresaLoginController@login')->name('empresa.login.submit');
-    Route::get('/dashboard', 'EmpresaAuth\EmpresaController@index')->name('empresa.dashboard')->middleware('auth');
+    Route::get('/dashboard', 'EmpresaAuth\EmpresaController@index')->name('empresa.dashboard');
 });
 
 // fin
