@@ -133,13 +133,16 @@ class UserRegisterController extends Controller
                     DB::commit(); 
                     $response['personaID'] = $persona->id;   
                 }else{
+                    $response['errorMessage'] = 'Error al registrar al usuario.';
                     DB::rollback();
                 }
             }else{
+                $response['errorMessage'] = 'Error al registrar a la pesona.';
                 DB::rollback();
             }
             
         } catch (\Exception $e) {
+            $response['errorMessage'] = 'Error al crear la cuenta :(.';
             $success = false;
             DB::rollback();
         }
@@ -168,8 +171,9 @@ class UserRegisterController extends Controller
             $estudio->cod_nivel_est = $nivelesEstudio[$i];
             $estudio->cod_area_est = $areasEstudio[$i];
             $estudio->especialidad = $especialidad[$i];
-            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
-            $estudio->a_fin =  date("Y", strtotime($fechasFin[$i]) );
+//            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
+            $estudio->a_inicio = $fechasInicio[$i];
+            $estudio->a_fin =  $fechasFin[$i];
             $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
             $estudio->persona_id = $id;
             $estudio->nombre_institucion = $instituciones[$i];
@@ -177,7 +181,11 @@ class UserRegisterController extends Controller
             $resultado = $estudio->save();
         }
 
-            $response['error'] = !$resultado;
+        if(!$resultado){
+            $response['errorMessage'] = 'Error al agregar los estudios.';
+        }
+
+        $response['error'] = !$resultado;
 
         return response()->json($response);
     }
@@ -197,8 +205,13 @@ class UserRegisterController extends Controller
             $idioma_solicitante->cod_nivel = $niveles[$i];
             $resultado = $idioma_solicitante->save();
         }
-            $response['error'] = !$resultado;
-            return response()->json($response);
+
+        if(!$resultado){
+            $response['errorMessage'] = 'Error al agregar los idiomas.';
+        }
+
+        $response['error'] = !$resultado;
+        return response()->json($response);
     }
 
     public function agregarProgramas($id, Request $request){
@@ -216,11 +229,17 @@ class UserRegisterController extends Controller
             $programa_solicitante->cod_nivel = $niveles[$i];
             $resultado = $programa_solicitante->save();
         }
-            $response['error'] = !$resultado;
+
+        if(!$resultado){
+            $response['errorMessage'] = 'Error al agregar los Programas.';
+        }
+
+        $response['error'] = !$resultado;
         return response()->json($response);
     }
 
     public function agregarExperiencias($id, Request $request){
+
         $response = array();
         $response['error'] = false;
 
@@ -245,10 +264,14 @@ class UserRegisterController extends Controller
             $experiencia_laboral->descripcion = $descripcionesPuesto[$i];
             $experiencia_laboral->a_inicio = $fechasInicioEmpresa[$i];
             $experiencia_laboral->a_fin = $fechasFinEmpresa[$i];
-            $experiencia_laboral->actual = $actualesEmpresa[$i];
+            $experiencia_laboral->actual = ($actualesEmpresa[$i] == 1 ? 1:0 );
             $resultado = $experiencia_laboral->save();
-
         }
+
+        if(!$resultado){
+            $response['errorMessage'] = 'Error al agregar las experiencias.';
+        }
+
         $response['error'] = !$resultado;
         return response()->json($response);
     }

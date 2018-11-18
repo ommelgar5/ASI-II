@@ -55,6 +55,15 @@
             $(this).parent().parent().parent().remove();
         });
 
+        // Obtener la fecha actual para los input fecha
+        var d = new Date();
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+        var ffin = d.getFullYear() + '/' + (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day;
+        $('#fechaFin,#fechaInicio,#fechaInicioEmpresa,#fechaFinEmpresa,#fechaNac').attr('max',ffin);
+
+
+
         // $(document).on("click",".quitarIdioma",function(){
         //     $(this).parent().parent().parent().remove();
         // });
@@ -78,21 +87,28 @@
                 $('#idioma option[value="'+idioma+'"]').remove();
                 objNivel.val("");
 
-                var html = `<li>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <input type="text" disabled value="${idiomaTxt}" />
-                            <input type="hidden" name="idiomas[]" value="${idioma}" />
-                        </div>
-                        <div class="col-md-5">
-                            <input type="text" disabled value="${nivelTxt}" />
-                            <input type="hidden" name="niveles[]" value="${nivel}" />
-                        </div>
-                        <div class="col-md-2">
-                            <i class="quitarIdioma fa fa-trash" style="cursor:pointer;"></i>
-                        </div>
-                    </div>
-                </li>`;
+                var html = `
+                            <li class="border p-2 rounded shadow mb-3">
+                                <div class="row mb-0">
+                                    <div class="col-md-12  d-flex justify-content-end">
+                                        <i class="quitarIdioma fa fa-trash fa-lg" style="cursor:pointer; color: tomato;"> </i>
+                                    </div>
+                                     <div class="col-md-6">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Idioma :</label>
+                                              <input type="hidden" name="idiomas[]" value="${idioma}" />
+                                              <input type="text" disabled  class="form-control" value="${idiomaTxt}" />
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Nivel de Estudio :</label>
+                                              <input type="hidden" name="niveles[]"  value="${nivel}"  />
+                                              <input type="text" disabled class="form-control" value="${nivelTxt}" />
+                                          </div>
+                                      </div>
+                                </div>
+                             </li>`;
 
                 $(html).hide().appendTo('.misIdiomas').fadeIn(1000);
             }
@@ -118,21 +134,28 @@
                 $('#programa option[value="'+programa+'"]').remove();
                 objPrograma.val("");
 
-                var html = `<li>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <input type="text" disabled value="${programaTxt}" />
-                            <input type="hidden" name="programas[]" value="${programa}" />
-                        </div>
-                        <div class="col-md-5">
-                            <input type="text" disabled value="${nivelTxt}" />
-                            <input type="hidden" name="nivelesP[]" value="${nivel}" />
-                        </div>
-                        <div class="col-md-2">
-                            <i class="quitarPrograma fa fa-trash" style="cursor:pointer;"></i>
-                        </div>
-                    </div>
-                </li>`;
+                var html= `
+                            <li class="border p-2 rounded shadow mb-3">
+                                <div class="row mb-0">
+                                    <div class="col-md-12  d-flex justify-content-end">
+                                        <i class="quitarPrograma fa fa-trash fa-lg" style="cursor:pointer; color: tomato;"> </i>
+                                    </div>
+                                     <div class="col-md-6">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Programa:</label>
+                                              <input type="hidden" name="programas[]" value="${programa}" />
+                                              <input type="text" disabled  class="form-control"  value="${programaTxt}" />
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Nivel:</label>
+                                              <input type="hidden" name="nivelesP[]" value="${nivel}" />
+                                              <input type="text" disabled class="form-control"  value="${nivelTxt}" />
+                                          </div>
+                                      </div>
+                                </div>
+                             </li> `;
 
                 $(html).hide().appendTo('.misProgramas').fadeIn(1000);
             }
@@ -165,7 +188,12 @@
                 var fechaInicioEmpresa = objFechaInicioEmpresa.val();
                 var fechaFinEmpresa = objFechaFinEmpresa.val();
                 var actualEmpresa = objActualEmpresa.val();
-                var actualEmpresaTxt = $('#actualEmpresa option[value="'+actualEmpresa+'"]').text();
+
+                if(actualEmpresa == 0){
+                    var actualEmpresaTxt = 'No'
+                }else{
+                    var actualEmpresaTxt = $('#actualEmpresa option[value="'+actualEmpresa+'"]').text();
+                }
 
                 objnombreEmpresa.val("");
                 objGiro.val("");
@@ -174,75 +202,83 @@
                 objDescripcionPuesto.val("");
                 objFechaInicioEmpresa.val("");
                 objFechaFinEmpresa.val("");
-                objActualEmpresa.val("");
+                objActualEmpresa.val("0");
+                objFechaFinEmpresa.attr('disabled', false);
 
                 var html = `
-                <li>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label>
-                                    Nombre de la empresa :
-                                </label>
-                                <input type="text" class="form-control" disabled value="${nombreEmpresa}" />
-                                <input type="hidden" name="nombresEmpresa[]" value="${nombreEmpresa}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Giro de la empresa :
-                                </label>
-                                <input type="text" disabled class="form-control" value="${giroTxt}" />
-                                <input type="hidden" name="girosEmpresa[]" value="${giro}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Area de la empresa :
-                                </label>
-                                <input type="text" class="form-control" disabled value="${areaEmpresaTxt}" />
-                                <input type="hidden" name="areasEmpresa[]" value="${areaEmpresa}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Cargo desempe&ntilde;ado :
-                                </label>
-                                <input type="text" class="form-control" disabled value="${cargoEmpresaTxt}" />
-                                <input type="hidden" name="cargosEmpresa[]" value="${cargoEmpresa}" />
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label>
-                                    Fecha de inicio :
-                                </label>
-                                <input type="text" disabled class="form-control" name="fechasInicioEmpresa[]" value="${fechaInicioEmpresa}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Fecha de finalizaci&oacute;n :
-                                </label>
-                                <input type="text" disabled class="form-control" name="fechasFinEmpresa[]" value="${fechaFinEmpresa}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Actual :
-                                </label>
-                                <input type="text" class="form-control" disabled value="${actualEmpresaTxt}" />
-                                <input type="hidden" name="actualesEmpresa[]" value="${actualEmpresa}" />
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Descripci&oacute;n del puesto :
-                                </label>
-                                <textarea class="form-control"  disabled>${descriptionPuesto}</textarea>
-                                <input type="hidden" name="descripcionesPuesto[]" value="${descriptionPuesto}" />
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="quitarExperiencia fa fa-trash" style="cursor:pointer;"></i>
-                        </div>
-                    </div>
-                </li>
-                `;
+                        <li class="border p-2 rounded shadow mb-3">
+                            <div class="row mb-0">
+
+                                <div class="col-md-12  d-flex justify-content-end">
+                                    <i class="borrarEstudio fa fa-trash fa-lg" style="cursor:pointer; color: tomato;"> </i>
+                                </div>
+
+                                 <div class="col-md-4">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Nombre Empresa:</label>
+                                          <input type="hidden" name="nombresEmpresa[]" value="${nombreEmpresa}" />
+                                          <input type="text" disabled  class="form-control"  value="${nombreEmpresa}" />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Giro empresa:</label>
+                                          <input type="hidden" name="girosEmpresa[]" value="${giro}" />
+                                          <input type="text" disabled class="form-control" value="${giroTxt}"/>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Area Empresa:</label>
+                                          <input type="hidden" name="areasEmpresa[]" value="${areaEmpresa}" />
+                                          <input type="text" disabled class="form-control" value="${areaEmpresaTxt}"  />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Area de la empresa:</label>
+                                          <input type="hidden" name="cargosEmpresa[]" value="${cargoEmpresa}" />
+                                          <input type="text" disabled class="form-control" value="${cargoEmpresaTxt}" />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Fecha Inicio:</label>
+                                          <input type="text" readonly="true" class="form-control" value="${fechaInicioEmpresa}" />
+                                          <input type="hidden" name="fechasInicioEmpresa[]" value="${fechaInicioEmpresa + '-01'}" />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Fecha de finalizaci&oacute;n :</label>
+                                          <input type="text" readonly="true" class="form-control " id="miFechaFin[]" value="${fechaFinEmpresa}" />
+                                           <input type="hidden" name="fechasFinEmpresa[]" value="${fechaFinEmpresa ? fechaFinEmpresa + '-01' : ''}" />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-2">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Actual:</label>
+                                           <input type="hidden" name="actualesEmpresa[]" value="${actualEmpresa}"/>
+                                           <input type="text" disabled class="form-control" value="${actualEmpresaTxt}"  />
+                                       </div>
+                                   </div>
+
+                                 <div class="col-md-12">
+                                    <div class="form-group mb-1">
+                                        <label class="m-0">Descripci&oacute;n del puesto:</label>
+                                        <input type="hidden" name="descripcionesPuesto[]" value="${descriptionPuesto}" />
+                                        <textarea class="form-control" disabled>${descriptionPuesto}</textarea>
+                                    </div>
+                                 </div>
+
+                              </div>
+                            </li> `;
 
                 $(html).hide().appendTo(".misExperiencias").fadeIn(1000);
             }
@@ -261,7 +297,28 @@
                     $(html).appendTo("#municipio");
                 })
             });
+        })
+
+        // Fecha estudios (ACTUAL)
+        $(document).on('change','#estudioActual', function(event){
+            $select = $(this).val();
+            if($select == 'true'){
+                $('#fechaFin').attr('disabled', true).val(null);
+            }else{
+                $('#fechaFin').attr('disabled', false).val(null);
+            }
         });
+
+        // Fecha experiencia (ATUAL)
+        $(document).on('change','#actualEmpresa', function(event){
+            $select = $(this).val();
+            if($select == 1){
+                $('#fechaFinEmpresa').attr('disabled', true).val(null);
+            }else{
+                $('#fechaFinEmpresa').attr('disabled', false).val(null);
+            }
+        });
+
 
         $(document).on("click","#agregarEstudio",function(event){
             event.preventDefault();
@@ -286,9 +343,12 @@
                 var fechaInicio = objFechaInicio.val();
                 var fechaFin = objFechaFin.val();
                 var estudioActual = objEstudioActual.val();
-                var estudioActualTxt = $('#estudioActual option[value="'+estudioActual+'"]').text();
 
-                var html  = '<li><div class="row"><div class="col-md-4"><div class="form-group"><label >Area de Estudio :</label><input type="hidden" name="miAreaEstudio[]" value="'+areaEstudio+'" /> <input type="text" disabled  class="form-control" value="'+areaEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nivel de Estudio :</label><input type="hidden" name="miNivelEstudio[]" value="'+nivelEstudio+'" /> <input type="text" disabled class="form-control" value="'+nivelEstudioTxt+'" /></div></div><div class="col-md-4"><div class="form-group"><label >Nombre de la Instituci&oacute;n :</label><input type="text" readonly="true" name="miInstitucion[]" class="form-control"  value="'+nombreInstitucion+'" /></div></div></div><div class="row"><div class="col-md-3"><div class="form-group"><label >Opcion&oacute;n  de la carrera:</label><input type="text" readonly="true" name="miCarrera[]" class="form-control" value="'+especialidadCarrera+'" /></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de inicio :</label><input type="text" readonly="true" class="form-control " id="miFechaInicio[]" name="miFechaInicio[]" value="'+fechaInicio+'" ></div></div><div class="col-md-3"><div class="form-group"><label >Fecha de finalizaci&oacute;n :</label><input type="text" readonly="true" class="form-control " id="miFechaFin[]" name="miFechaFin[]" value="'+fechaFin+'" /></div></div><div class="col-md-2"><div class="form-group"><label >Estudio actual:</label>  <input type="hidden" name="miEstudioActual[]" value="'+estudioActual+'" /> <input type="text" disabled class="form-control" value="'+estudioActualTxt+'" /></div></div><div class="col-md-1"><i class="borrarEstudio fa fa-trash" style="cursor:pointer"> </i></div></div></div></li>';
+                if(estudioActual == 0){
+                    var estudioActualTxt = 'No';
+                }else{
+                    var estudioActualTxt = $('#estudioActual option[value="'+estudioActual+'"]').text();
+                }
 
                 objAreaEstudio.val("");
                 objNivelEstudio.val("")
@@ -296,8 +356,70 @@
                 objEspecialidadCarrera.val("");
                 objFechaInicio.val("");
                 objFechaFin.val("");
-                objEstudioActual.val("");
-                
+                objEstudioActual.val("0");
+                objFechaFin.attr('disabled', false);
+
+                var html  = `
+                            <li class="border p-2 rounded shadow mb-3">
+                                <div class="row mb-0">
+                                    <div class="col-md-12  d-flex justify-content-end">
+                                        <i class="borrarEstudio fa fa-trash fa-lg" style="cursor:pointer; color: tomato;"> </i>
+                                    </div>
+                                     <div class="col-md-4">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Area de Estudio :</label>
+                                              <input type="hidden" name="miAreaEstudio[]" value="${areaEstudio}"/>
+                                              <input type="text" disabled  class="form-control" value="${areaEstudioTxt}" />
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Nivel de Estudio :</label>
+                                              <input type="hidden" name="miNivelEstudio[]" value="${nivelEstudio}" />
+                                              <input type="text" disabled class="form-control" value="${nivelEstudioTxt}" />
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group mb-1">
+                                              <label class="m-0">Nombre de la Instituci&oacute;n :</label>
+                                              <input type="text" readonly="true" name="miInstitucion[]" class="form-control"  value="${nombreInstitucion}" />
+                                          </div>
+                                      </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                  <div class="col-md-3">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Opcion&oacute;n  de la carrera:</label>
+                                          <input type="text" readonly="true" name="miCarrera[]" class="form-control" value="${especialidadCarrera}" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Fecha de inicio:</label>
+                                          <input type="text" readonly="true" class="form-control "  value="${fechaInicio}" >
+                                          <input type="hidden" name="miFechaInicio[]" value="${fechaInicio = fechaInicio +'-01'}" />
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-3 mb-1">
+                                      <div class="form-group">
+                                          <label class="m-0">Fecha de finalizaci&oacute;n :</label>
+                                          <input type="text" readonly="true" class="form-control " value="${fechaFin}" />
+                                          <input type="hidden" name="miFechaFin[]" value="${fechaFin ? fechaFin + '-01' : ''}" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <div class="form-group mb-1">
+                                          <label class="m-0">Estudio actual:</label>
+                                           <input type="hidden" name="miEstudioActual[]" value="${estudioActual}" />
+                                           <input type="text" disabled class="form-control" value="${estudioActualTxt}" />
+                                       </div>
+                                   </div>
+                              </div>
+                          </div>
+                        </li>`;
+
                 $(html).hide().appendTo(".misEstudios").fadeIn(1000);
             }
         });
@@ -513,7 +635,6 @@
                     });
 
                     var dataF = $(my_form).serialize();
-                    debugger;
                     $.ajax({
                         type: 'post',
                         url: '{{ url("/agregarExperiencias/") }}/'+id,
@@ -655,6 +776,7 @@
 @endsection
 
 @section('contenido')
+
 <div class="app-content content">
     <div class="content-wrapper">
         <!-- Form wizard with step validation section start -->
@@ -676,7 +798,7 @@
                                                         DUI :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="text" class="form-control required" id="DUI" name="DUI" >
+                                                    <input type="text" class="form-control required" id="DUI" name="DUI" pattern="[0-9]{8}-[0-9]" placeholder="00000000-0" minlength="10" maxlength="10">
                                                 </div>
                                             </div>
                                         </div>
@@ -687,7 +809,7 @@
                                                         Contrase&ntilde;a :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="password" class="form-control required" id="password" name="password" >
+                                                    <input type="password" class="form-control required" id="password" name="password" minlength="6" maxlength="12">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -696,7 +818,7 @@
                                                         Confirme contrase&ntilde;a :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="password" class="form-control required" id="confirmPassword" name="confirmPassword" >
+                                                    <input type="password" class="form-control required" id="confirmPassword" name="confirmPassword" minlength="6" maxlength="12">
                                                 </div>
                                             </div>
                                         </div>
@@ -705,6 +827,7 @@
                                     <!-- Step 2 -->
                                     <h6>Informacion Personal</h6>
                                     <fieldset>
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -712,7 +835,7 @@
                                                         Nombres :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="text" class="form-control required" id="userName" name="userName" >
+                                                    <input type="text" class="form-control required" id="userName" name="userName" maxlength="50">
                                                 </div>
                                             </div>
 
@@ -722,7 +845,7 @@
                                                         Apellidos :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="text" class="form-control required" id="userLastName" name="userLastName" >
+                                                    <input type="text" class="form-control required" id="userLastName" name="userLastName" maxlength="50">
                                                 </div>
                                             </div>
                                         </div>
@@ -768,7 +891,7 @@
                                                         Fecha de Nacimiento :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="date" class="form-control required" id="fechaNac" name="fechaNac" >
+                                                    <input type="date" class="form-control required" id="fechaNac" name="fechaNac"  min="1950-01-01">
                                                 </div>
                                             </div>
 
@@ -777,7 +900,7 @@
                                                     <label for="userEmail">
                                                         Correo :
                                                     </label>
-                                                    <input type="email" class="form-control" id="userEmail" name="userEmail">
+                                                    <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="correo@gmial.com">
                                                 </div>
                                             </div>
                                         </div>
@@ -786,14 +909,14 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="telFijo">Telefono Fijo :</label>
-                                                    <input type="tel" class="form-control phone-group" id="telFijo" name="telFijo" >
+                                                    <input type="tel" class="form-control phone-group" id="telFijo" name="telFijo" minlength="8" maxlength="8"  >
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="telMovil">Telefono Movil :</label>
-                                                    <input type="tel" class="form-control phone-group" id="telMovil" name="telMovil" >
+                                                    <input type="tel" class="form-control phone-group" id="telMovil" name="telMovil" minlength="8" maxlength="8"  >
                                                 </div>
                                             </div>
                                         </div>
@@ -806,7 +929,7 @@
                                                         <span class="danger">*</span>
                                                     </label>
                                                     <select class="custom-select form-control required" id="departamento" name="departamento">
-                                                        <option value="">Seleccione un departamento</option>
+                                                        <option value="0">Seleccione un departamento</option>
                                                         @foreach($data['departamentos'] as $departamento)
                                                             <option value="{{ $departamento->cod_departamento }}">{{ $departamento->departamento }}</option>
                                                         @endforeach
@@ -875,8 +998,8 @@
                                     <!-- Step 3 -->
                                     <h6>Estudios</h6>
                                     <fieldset>
-                                        <div class="row">
-                                            <div class="form-control">
+                                        {{--<div class="row">--}}
+                                            {{--<div class="form-control">--}}
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -892,6 +1015,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="nivelEstudio">
@@ -915,7 +1039,7 @@
                                                             Nombre de la Instituci&oacute;n :
                                                             <span class="danger">*</span>
                                                             </label>
-                                                            <input type="text" class="form-control required" id="nombreInstitucion" name="nombreInstitucion" />
+                                                            <input type="text" class="form-control required" id="nombreInstitucion" name="nombreInstitucion"  maxlength="100"/>
                                                         </div>
                                                     </div>
 
@@ -925,7 +1049,7 @@
                                                             Opci&oacute;n de la carrera :
                                                             <span class="danger">*</span>
                                                             </label>
-                                                            <input type="text" class="form-control required" id="especialidadCarrera" name="especialidadCarrera" />
+                                                            <input type="text" class="form-control required" id="especialidadCarrera" name="especialidadCarrera" maxlength="300" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -937,7 +1061,7 @@
                                                                 Fecha de inicio :
                                                                 <span class="danger">*</span>
                                                             </label>
-                                                            <input type="date" class="form-control required" id="fechaInicio" name="fechaInicio" />
+                                                            <input type="date" class="form-control required" id="fechaInicio" name="fechaInicio" min="1970-01-01"  />
                                                         </div>
                                                     </div>
 
@@ -947,7 +1071,7 @@
                                                                 Fecha de finalizaci&oacute;n :
                                                                 <span class="danger">*</span>
                                                             </label>
-                                                            <input type="date" class="form-control required" id="fechaFin" name="fechaFin" />
+                                                            <input type="date" class="form-control required" id="fechaFin" name="fechaFin" min="1970-01-01" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -960,9 +1084,8 @@
                                                                 <span class="danger">*</span>
                                                             </label>
                                                             <select id="estudioActual" name="estudioActual" class="required custom-select form-control">
-                                                                <option value="">Seleccione una opcion</option>
+                                                                <option value="0">Seleccione una opcion</option>
                                                                 <option value="true">Si</option>
-                                                                <option value="false">No</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -975,18 +1098,16 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h4> Mis Estudios</h4>
-                                                <ol class="misEstudios">
-                                                    
-                                                </ol>
-                                            </div>
-                                        </div>
-                                    </fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="mt-3 mb-2 mt-4"> Mis Estudios</h4>
+                                                        <ol class="container misEstudios">
+
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                        </fieldset>
 
                                     <!-- Step 4 -->
                                     <h6>Idiomas</h6>
@@ -1030,8 +1151,8 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4>Mis Idiomas</h4>
-                                                <ol class="misIdiomas">
+                                                <h4 class="mt-3 mb-2 mt-4">Mis Idiomas</h4>
+                                                <ol class="container misIdiomas">
                                                 </ol>
                                             </div>
                                         </div>
@@ -1079,8 +1200,8 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4>Mis Programas</h4>
-                                                <ol class="misProgramas">
+                                                <h4 class="mt-3 mb-2 mt-4">Mis Programas</h4>
+                                                <ol class="misProgramas container">
                                                 </ol>
                                             </div>
                                         </div>
@@ -1096,7 +1217,7 @@
                                                         Nombre de la empresa :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="text" class="form-control required" id="nombreEmpresa" name="nombreEmpresa" >
+                                                    <input type="text" class="form-control required" id="nombreEmpresa" name="nombreEmpresa" maxlength="150">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="grioEmpresa">
@@ -1142,14 +1263,14 @@
                                                         Fecha de inicio :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="date" class="form-control required" id="fechaInicioEmpresa" name="fechaInicioEmpresa" />
+                                                    <input type="date" class="form-control required" id="fechaInicioEmpresa" name="fechaInicioEmpresa" min="1970-01-01" />
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="fechaFinEmpresa">
                                                         Fecha de finalizaci&oacute;n :
                                                         <span class="danger">*</span>
                                                     </label>
-                                                    <input type="date" class="form-control required" id="fechaFinEmpresa" name="fechaFinEmpresa" />
+                                                    <input type="date" class="form-control required" id="fechaFinEmpresa" name="fechaFinEmpresa" min="1970-01-01"/>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="actualEmpresa">
@@ -1157,9 +1278,8 @@
                                                         <span class="danger">*</span>
                                                     </label>
                                                     <select class="custom-select form-control required" id="actualEmpresa" name="actualEmpresa">
-                                                        <option value="">Seleccione una opci&oacute;n</option>
+                                                        <option value="0">Seleccione una opci&oacute;n</option>
                                                         <option value="1">Si</option>
-                                                        <option value="2">No</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
@@ -1167,7 +1287,7 @@
                                                     Descripci&oacute;n del puesto :
                                                     <span class="danger">*</span>
                                                     </label>
-                                                    <textarea class="form-control required" id="descripcionPuesto" name="descripcionPuesto"></textarea>
+                                                    <textarea class="form-control required" id="descripcionPuesto" name="descripcionPuesto" maxlength="500" minlength="10"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1179,7 +1299,8 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <ol class="misExperiencias">
+                                                <h4 class="mt-3 mb-2 mt-4">Experiencias</h4>
+                                                <ol class="misExperiencias container">
 
                                                 </ol>
                                             </div>
