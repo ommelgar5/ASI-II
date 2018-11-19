@@ -8,6 +8,7 @@ class persona extends Model
 {
     // protected $table = 'personas';
 
+
     public $timestamps = false;
 
     protected $fillable = [
@@ -38,8 +39,7 @@ class persona extends Model
 
     public function licencia()
     {
-    
-        return $this->hasOne('App\licencia','cod_licencia','cod_licencia');
+        return $this->belongsTo('App\licencia','cod_licencia','cod_licencia');
     }
 
     public function genero()
@@ -53,7 +53,8 @@ class persona extends Model
     }
 
     public function a_experiencia(){
-    	return $this->belongsTo('App\a_experiencia','cod_a_experiencia','cod_a_experiencia');	
+//    	return $this->belongsTo('App\a_experiencia','cod_a_experiencia','cod_a_experiencia');
+    	return $this->belongsTo('App\a_experiencia','cod_a_experiencia','cod_a_experiencia');
     }
 
     public function tipo_usuario()

@@ -18,6 +18,7 @@ class EmpresaLoginController extends Controller
     {
         return view('empresa.loginEmpresa');
     }
+
     protected function guard(){
         return Auth::guard('empresa');
     }
