@@ -2,9 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\a_experiencia;
+use App\estadocivil;
+use App\Http\Requests\UserUpdateRequest;
+use App\licencia;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\persona;
+use App\genero;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 
 class editUserController extends Controller
@@ -16,22 +23,12 @@ class editUserController extends Controller
      */
     public function index(){
 
-        $id = Auth::User()->id;
-
-        $persona = persona::find($id);
-        $genero  = persona::find($id)->genero;
-        $estadoCivil = persona::find($id)->estadocivil;
-        $aExperiencia = persona::find($id)->a_experiencia;
-        $licencia = persona::find($id)->licencia;
-
-        return view('usuario.index',
-                    ['persona'     => $persona,
-                     'genero'       => $genero,
-                     'estadoCivil'  => $estadoCivil,
-                     'aExperiencia' => $aExperiencia,
-                     'licencia'     => $licencia
-                    ]);
-
+        $persona = persona::where('dui',Auth::user()->dui)->first();
+        $persona->genero->genero;
+        $persona->estadoCivil->estado;
+        $persona->a_experiencia->a_experiecia;
+        $persona->licencia->tipo;
+        return view('usuario.index',['persona'=>$persona]);
     }
 
     /**
@@ -52,7 +49,7 @@ class editUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -63,7 +60,7 @@ class editUserController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -74,7 +71,15 @@ class editUserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+        'persona' => persona::find($id),
+        'generos' => genero::all(),
+        'estadosCivil' => estadocivil::all(),
+        'aExperiencias' => a_experiencia::all(),
+        'licencias' => licencia::all()
+        ];
+
+        return view('usuario.editPerfil',['data'=>$data]);
     }
 
     /**
@@ -84,9 +89,13 @@ class editUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
-        //
+        $persona = persona::find($id);
+        $persona->fill($request->all());
+        $persona->save();
+        Session::flash('message',"<strong>¡Usuario!</strong> editado correctamente");
+        return Redirect::to('/editPerfil');
     }
 
     /**

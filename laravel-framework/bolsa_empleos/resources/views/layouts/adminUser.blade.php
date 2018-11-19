@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Administración</title>
 
-    <link href="assets/css/admin/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/admin/css/metisMenu.min.css" rel="stylesheet">
-    <link href="assets/css/admin/css/sb-admin-2.css" rel="stylesheet">
-    <link href="assets/css/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/admin/css/metisMenu.min.css" rel="stylesheet">
+    <link href="/assets/css/admin/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/assets/css/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -131,7 +131,7 @@
 
     </nav>
 
-    <div id="page-wrapper">
+    <div id="page-wrapper" style="padding-top: 1em; padding-bottom: 2em">
 
         @yield('content')
 
@@ -139,10 +139,10 @@
 
     </div>
 
-    <script src="assets/js/admin/jquery.min.js"></script>
-    <script src="assets/js/admin/bootstrap.min.js"></script>
-    <script src="assets/js/admin/metisMenu.min.js"></script>
-    <script src="assets/js/admin/sb-admin-2.js"></script>
+    <script src="/assets/js/admin/jquery.min.js"></script>
+    <script src="/assets/js/admin/bootstrap.min.js"></script>
+    <script src="/assets/js/admin/metisMenu.min.js"></script>
+    <script src="/assets/js/admin/sb-admin-2.js"></script>
 
     </body>
 

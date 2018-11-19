@@ -12,7 +12,6 @@ class persona extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'dui', 
         'nombre', 
         'apellido', 
         'cod_genero', 

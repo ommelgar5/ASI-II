@@ -1,6 +1,5 @@
 @extends('layouts.aplicanteTemplate')
 
-
 @section('contenido')
 
 <!--Filtros -->
