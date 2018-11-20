@@ -8,7 +8,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text bg-primary text-white"><i class="fas fa-search"></i></span>
     </div>
-    <input type="password" class="form-control" placeholder="Buscar">
+    <input type="text" class="form-control" placeholder="Buscar">
   </div>
 </form>
 
@@ -97,107 +97,5 @@
   </div>
 </div>
 <!--End card-->
-
-<div class="card mb-2">
-  <div class="card-header py-1 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-8">
-          <p class="text-center text-lg-left m-0">Ejecutivo de ventas lo mas pro del mundo </p>
-        </div>
-        <div class="col-lg-4 text-center">
-          <span class="text-muted mr-3"> Fecha: 11/12/2018</span>
-          <span class="badge badge-pill badge-primary">Nuevo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-body py-2 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 text-center">
-          <img src="assets/img/logos/claro.png" alt="claro.png" width="100">
-        </div>
-        <div class="col-lg-10">
-          <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae cumque
-                                dicta, doloremque doloribus, illum maiores nisi nobis odit perferendis quam quas
-                                quia ratione repellendus sint tempora tempore voluptas voluptates?</p>
-          <div class="text-right">
-            <a href="#" class="btn btn-primary btn-sm mr-0">Ver oferta</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-2">
-  <div class="card-header py-1 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-8">
-          <p class="text-center text-lg-left m-0">Ejecutivo de ventas lo mas pro del mundo </p>
-        </div>
-        <div class="col-lg-4 text-center">
-          <span class="text-muted mr-3"> Fecha: 11/12/2018</span>
-          <span class="badge badge-pill badge-primary">Nuevo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-body py-2 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 text-center">
-          <img src="assets/img/logos/claro.png" alt="claro.png" width="100">
-        </div>
-        <div class="col-lg-10">
-          <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae cumque
-                                dicta, doloremque doloribus, illum maiores nisi nobis odit perferendis quam quas
-                                quia ratione repellendus sint tempora tempore voluptas voluptates?</p>
-          <div class="text-right">
-            <a href="#" class="btn btn-primary btn-sm mr-0">Ver oferta</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-2">
-  <div class="card-header py-1 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-8">
-          <p class="text-center text-lg-left m-0">Ejecutivo de ventas lo mas pro del mundo </p>
-        </div>
-        <div class="col-lg-4 text-center">
-          <span class="text-muted mr-3"> Fecha: 11/12/2018</span>
-          <span class="badge badge-pill badge-primary">Nuevo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-body py-2 px-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 text-center">
-          <img src="assets/img/logos/claro.png" alt="claro.png" width="100">
-        </div>
-        <div class="col-lg-10">
-          <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae cumque
-                                dicta, doloremque doloribus, illum maiores nisi nobis odit perferendis quam quas
-                                quia ratione repellendus sint tempora tempore voluptas voluptates?</p>
-          <div class="text-right">
-            <a href="#" class="btn btn-primary btn-sm mr-0">Ver oferta</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 @endsection

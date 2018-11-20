@@ -37,17 +37,7 @@
                 @foreach($categorias_menu as $menu)
                 <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }}</a>
                 @endforeach
-                <!-- <a href="#" class="list-group-item py-1">Informatica | intenet</a>
-                <a href="#" class="list-group-item py-1"> Finanzas | Contabilidad | Aditoria </a>
-                <a href="#" class="list-group-item py-1"> Mercadeo | Ventas </a>
-                <a href="#" class="list-group-item py-1"> Salud</a>
-                <a href="#" class="list-group-item py-1"> Recursos Humanos </a>
-                <a href="#" class="list-group-item py-1"> Publicidad | Comunicacion</a>
-                <a href="#" class="list-group-item py-1"> Compra </a>
-                <a href="#" class="list-group-item py-1"> Call Center</a>
-                <a href="#" class="list-group-item py-1"> Producción | Ingeniería | Calidad</a>
-                <a href="#" class="list-group-item py-1"> Restaurantes</a>
-                <a href="#" class="list-group-item py-1"> Telecomunicaciones </a> -->
+                
               </div>
             </div>
           </div>
