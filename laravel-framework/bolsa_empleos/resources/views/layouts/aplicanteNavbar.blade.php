@@ -47,7 +47,7 @@
           <a class="nav-link" href="#" data-toggle="modal" data-target="#showModal" ><i class="fas fa-user-tie fa-lg mr-1"></i>Ingresar usuario</a>
         </li>
     </ul>
-    <a  class="btn btn-outline-success my-2 my-sm-0 mr-4" href="contacto.html">Contacto</a>
+    <a  class="btn btn-outline-success my-2 my-sm-0 mr-4" href="{{ route('contactanos') }}">Contacto</a>
   </div>
 </nav>
 @endif

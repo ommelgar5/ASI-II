@@ -18,8 +18,19 @@ Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
 
+Route::get('/contactanos',function(){
+	return view('contactanos');
+})->name('contactanos');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
+/* 
+
+	ver ofertas de una categoria
+*/
+Route::get('/ofertas/{area?}','OfertasController@ofertasArea')->name('ofertas');
+
 
 /*
 
