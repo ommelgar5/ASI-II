@@ -11,7 +11,6 @@ class experiencia_laboral extends Model
     public $timestamps = false; 
 
     protected $fillable = [
-        'persona_id',
         'cod_giro',
         'cod_cargo',
         'empresa',

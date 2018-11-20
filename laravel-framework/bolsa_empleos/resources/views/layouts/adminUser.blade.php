@@ -57,7 +57,7 @@
                         <a href="#"><i class="fa fa-briefcase fa-fw"></i> Esperiencias profesionales<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                <a href="/editExperiencia/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                             </li>
                             <li>
                                 <a href="/editExperiencia"><i class='fa fa-list-ol fa-fw'></i> Esperiencias</a>
@@ -143,6 +143,8 @@
     <script src="/assets/js/admin/bootstrap.min.js"></script>
     <script src="/assets/js/admin/metisMenu.min.js"></script>
     <script src="/assets/js/admin/sb-admin-2.js"></script>
+    <script src="/assets/js/admin/personalizado.js"></script>
+
 
     </body>
 

@@ -1,12 +1,15 @@
-<?
+<?php
+
 namespace App\Http\ViewComposers;
 
 use App\area_empresa;
 use Illuminate\View\View;
 use App\Repositories\UserRepository;
 
+
 class CategoriasComposer
 {
+
     /**
      * The user repository implementation.
      *
@@ -37,4 +40,6 @@ class CategoriasComposer
     {
         $view->with('categorias_menu', $this->categorias);
     }
+
+
 }
