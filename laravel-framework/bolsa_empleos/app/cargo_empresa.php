@@ -13,4 +13,8 @@ class cargo_empresa extends Model
     public function experiencia_laboral(){
         return $this->hasMany('App\experiencia_laboral','cod_cargo','cod_cargo');
     }
+
+    public function ofertas_laboral(){
+    	return $this->hasMany('App\oferta_laboral','cod_cargo','cod_cargo');
+    }
 }
