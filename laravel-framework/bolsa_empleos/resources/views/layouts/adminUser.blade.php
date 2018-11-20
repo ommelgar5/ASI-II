@@ -69,34 +69,10 @@
                         <a href="#"><i class="fa fa-graduation-cap fa-fw"></i> Estudios<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                <a href="/editEstudio/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Estudios</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-building fa-fw"></i> Referencias profesionales<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Referencias</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-users fa-fw"></i> Referencias personales<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Referencias</a>
+                                <a href="/editEstudio"><i class='fa fa-list-ol fa-fw'></i> Estudios</a>
                             </li>
                         </ul>
                     </li>
@@ -105,10 +81,10 @@
                         <a href="#"><i class="fa fa-male fa-fw"></i> Habilidades<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                <a href="/editHabilidad/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Habilidades</a>
+                                <a href="/editHabilidad"><i class='fa fa-list-ol fa-fw'></i> Habilidades</a>
                             </li>
                         </ul>
                     </li>
@@ -117,12 +93,15 @@
                         <a href="#"><i class="fa fa-language fa-fw"></i> Idiomas<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                <a href=/editIdioma/create><i class='fa fa-plus fa-fw'></i> Agregar</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Idiomas</a>
+                                <a href="/editIdioma"><i class='fa fa-list-ol fa-fw'></i> Idiomas</a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-key fa-fw" aria-hidden="true"></i>Cambiar Contraseña</a>
                     </li>
 
                 </ul>

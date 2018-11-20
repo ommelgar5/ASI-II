@@ -15,13 +15,20 @@ class estudio extends Model
         'especialidad', 
         'a_inicio', 
         'a_fin', 
-        'actual', 
-        'persona_id', 
+        'actual',
         'nombre_institucion'
     ];
 
     public function persona()
     {
         return $this->belongsTo('App\persona','persona_id','dui');
+    }
+
+    public function  nivel_estudio(){
+        return $this->belongsTo('App\nivel_estudio','cod_nivel_est','cod_nivel_est');
+    }
+
+    public function  area_estudio(){
+        return $this->belongsTo('App\area_estudio','cod_area_est','cod_area_est');
     }
 }

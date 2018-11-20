@@ -6,16 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421218a6-6bd0-4da0-871e-1a4159a8e0c8" name="Default" comment="Validacion y formato Registro Usuario">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/ViewComposers/CategoriasComposer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/personalizado.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/create.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/ViewComposers/categoriasComposer.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/experiencias.blade.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/ExperienciaUserController.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/ExperienciaUserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/experiencia_laboral.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/experiencia_laboral.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/estudio.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/estudio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma_solicitante.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma_solicitante.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel_estudio.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel_estudio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa_solicitante.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa_solicitante.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/index.blade.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +37,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,16 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/.env" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/UserRegisterController.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/config/app.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/userRegister.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemAdapter.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/EmpresaRegisterController.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/empresa/crearPerfilEmpresa.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/Auth/EmpresaLoginController.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/empresa.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/config/auth.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteNavbar.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/licencia.php" />
@@ -67,7 +68,6 @@
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/alerts/sucess.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/UserUpdateRequest.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Persona.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/editUserController.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/giro_empresa.php" />
@@ -80,10 +80,34 @@
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/ExperienciaUpdateRequest.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/personalizado.js" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/create.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/ExperienciaUserController.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel_estudio.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/estudio.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/edit.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/create.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/EstudioResquest.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/edit.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/EstudiosUserController.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa_solicitante.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/create.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/HabilidadResquest.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/HabilidadUserController.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/edit.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/create.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma_solicitante.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/IdiomaResquest.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/IdiomaUserController.php" />
       </list>
     </option>
   </component>
@@ -131,8 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +293,74 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="idiomas" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bolsa_empleos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usuario" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="habilidades" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASI-II" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bolsa_empleos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usuario" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="experiencias" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -324,178 +414,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alerts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASI-II" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-framework" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolsa_empleos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -677,23 +595,27 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\usuario\idiomas" />
+      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\usuario\habilidades" />
+      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\usuario" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\usuario\experiencias" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -795,7 +717,8 @@
       <workItem from="1542552017307" duration="4251000" />
       <workItem from="1542569196343" duration="37885000" />
       <workItem from="1542652710404" duration="9046000" />
-      <workItem from="1542683053264" duration="20506000" />
+      <workItem from="1542683053264" duration="20632000" />
+      <workItem from="1542723287264" duration="15023000" />
     </task>
     <task id="LOCAL-00001" summary="Validacion y formato Registro Usuario">
       <created>1542512677892</created>
@@ -808,22 +731,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90481000" />
+    <option name="totallyTimeSpent" value="105630000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.5025" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.4975" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1775" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17493473" sideWeight="0.4975" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -832,30 +754,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4830287" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22062664" sideWeight="0.5025" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22062664" sideWeight="0.4975" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -874,182 +775,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Providers/BroadcastServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Providers/EventServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/channels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="82" column="27" lean-forward="false" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/empresa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/Auth/VerificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/CommonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-678">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/registroAplicanteTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteLoginModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/EstadoCivil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/genero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/empresaTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/empresaNavbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/licencia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteNavbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/empresaMenu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1094,14 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/giro_empresa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Persona.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1114,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,9 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,72 +852,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="66" lean-forward="true" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
-          <folding>
-            <marker date="1542694525136" expanded="true" signature="10:29" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="45:54" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="73:89" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="232:331" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="591:617" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="880:908" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="1181:1209" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="1484:1510" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="1775:1805" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2069:2098" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2416:2437" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2452:2469" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2548:2569" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2575:2592" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="2992:3017" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="3032:3054" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="3133:3158" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="3164:3186" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="4720:4745" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="4760:4777" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="4856:4881" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="4887:4904" ph="..." />
-            <marker date="1542694525136" expanded="true" signature="5225:5240" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/forms/experiencia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/experiencia_laboral.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="20" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/forms/experiencia.blade.php" />
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <marker date="1542608760456" expanded="true" signature="9:28" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="44:59" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="75:84" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="439:454" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="730:748" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="1026:1046" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="1335:1355" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="1631:1649" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="1929:1951" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="2231:2283" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="2560:2586" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="2868:2900" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="3189:3228" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="3512:3546" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="3833:3859" ph="..." />
-            <marker date="1542608760456" expanded="true" signature="3939:4062" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,18 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <marker date="1542608555531" expanded="true" signature="104:127" ph="..." />
-            <marker date="1542608555531" expanded="true" signature="368:374" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="301" column="6" lean-forward="false" selection-start-line="301" selection-start-column="6" selection-end-line="309" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,45 +889,6 @@
         <state relative-caret-position="459">
           <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
-          <folding>
-            <marker date="1542699578795" expanded="true" signature="1320:1383" ph="..." />
-            <marker date="1542699578795" expanded="true" signature="1388:1454" ph="..." />
-            <marker date="1542699578795" expanded="true" signature="5967:5976" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="72" selection-end-column="15" />
-          <folding>
-            <marker date="1542697176413" expanded="true" signature="10:29" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="45:54" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="74:90" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="104:213" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="450:473" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="746:768" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1038:1065" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1377:1394" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1409:1422" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1501:1518" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1524:1537" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1919:1938" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="1953:1968" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="2047:2066" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="2072:2086" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="2420:2444" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="2743:2764" ph="..." />
-            <marker date="1542697176413" expanded="true" signature="3499:3512" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,10 +916,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/experiencia_laboral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/giro_empresa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel_estudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="66" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="15" />
+          <folding>
+            <marker date="1542697176413" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="45:54" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="74:90" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="104:213" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="450:473" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="746:768" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1038:1065" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1377:1394" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1409:1422" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1501:1518" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1524:1537" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1919:1938" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="1953:1968" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="2047:2066" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="2072:2086" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="2420:2444" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="2743:2764" ph="..." />
+            <marker date="1542697176413" expanded="true" signature="3499:3512" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#569#590#0#HTML" expanded="true" />
+            <marker date="1542729790868" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="40:55" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="67:76" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="418:442" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="449:479" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="537:560" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="712:835" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="866:925" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="956:969" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="1133:1167" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="1251:1291" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="1381:1401" ph="..." />
+            <marker date="1542729790868" expanded="true" signature="1527:1544" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1542728382819" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="41:50" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="66:82" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="92:185" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="455:485" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="500:516" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="500:530" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="593:623" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="629:644" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="629:659" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="991:1019" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="1034:1058" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="1121:1149" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="1155:1179" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="1467:1491" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="1748:1778" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="2016:2036" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="2303:2320" ph="..." />
+            <marker date="1542728382819" expanded="true" signature="2923:2936" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <marker date="1542700176257" expanded="true" signature="9:28" ph="..." />
             <marker date="1542700176257" expanded="true" signature="40:49" ph="..." />
@@ -1333,32 +1036,302 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="171">
+          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
           <folding>
-            <marker date="1542703790113" expanded="true" signature="9:28" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="44:59" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="75:84" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="484:506" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="485:497" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="513:536" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="606:637" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="1364:1398" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="1645:1673" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="1762:1786" ph="..." />
-            <marker date="1542703790113" expanded="true" signature="1932:1953" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="41:50" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="66:82" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="92:153" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="414:444" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="450:480" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="787:815" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="821:845" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="2316:2329" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/EstudioResquest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/ExperienciaUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="32" selection-end-column="76" />
           <folding>
             <element signature="e#51#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/estudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/experiencias/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <marker date="1542725375686" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="44:59" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="75:84" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="477:499" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="478:490" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="506:529" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="599:630" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="794:929" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="976:1035" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="1078:1091" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="1291:1325" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="1572:1600" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="1689:1713" ph="..." />
+            <marker date="1542725375686" expanded="true" signature="1859:1880" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <marker date="1542734628213" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="40:55" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="67:76" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="418:450" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="457:483" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="543:572" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="724:855" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="886:945" ph="..." />
+            <marker date="1542734628213" expanded="true" signature="976:989" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1542735463494" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="45:54" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="74:90" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="104:215" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="515:540" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="555:576" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="655:680" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="686:707" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="1079:1098" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="1113:1128" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="1207:1226" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="1232:1247" ph="..." />
+            <marker date="1542735463494" expanded="true" signature="1568:1581" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/HabilidadUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="125" selection-end-column="46" />
+          <folding>
+            <element signature="e#51#102#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/habilidades/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding>
+            <marker date="1542736473505" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="40:49" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="65:81" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="91:154" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="402:427" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="433:454" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="745:764" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="752:764" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="770:779" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="770:784" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="777:779" ph="..." />
+            <marker date="1542736473505" expanded="true" signature="1025:1038" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/EstudiosUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/nivel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="98" column="52" lean-forward="false" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
+          <folding>
+            <marker date="1542738909164" expanded="true" signature="1320:1383" ph="..." />
+            <marker date="1542738909164" expanded="true" signature="1388:1454" ph="..." />
+            <marker date="1542738909164" expanded="true" signature="5036:5045" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding>
+            <marker date="1542740794216" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="40:55" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="67:76" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="411:436" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="443:466" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="523:550" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="702:828" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="859:918" ph="..." />
+            <marker date="1542740794216" expanded="true" signature="949:962" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/programa_solicitante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/IdiomaUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="e#51#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma_solicitante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/IdiomaResquest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoUser/HabilidadResquest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/idioma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding>
+            <marker date="1542741249748" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="45:54" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="74:90" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="104:209" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="496:517" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="532:549" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="628:649" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="655:672" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="1043:1062" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="1077:1092" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="1171:1190" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="1196:1211" ph="..." />
+            <marker date="1542741249748" expanded="true" signature="1529:1542" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/idiomas/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <marker date="1542741332704" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="40:49" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="65:81" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="91:151" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="391:412" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="418:435" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="726:745" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="751:765" ph="..." />
+            <marker date="1542741332704" expanded="true" signature="1006:1019" ph="..." />
           </folding>
         </state>
       </provider>

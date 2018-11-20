@@ -12,7 +12,19 @@ class programa_solicitante extends Model
 
     protected $fillable = [
         'cod_programa', 
-        'cod_nivel', 
-        'persona_id'
+        'cod_nivel',
     ];
+
+    public function persona()
+    {
+        return $this->belongsTo('App\persona','persona_id','dui');
+    }
+
+    public function  programa(){
+        return $this->belongsTo('App\programa','cod_programa','cod_programa');
+    }
+
+    public function  nivel(){
+        return $this->belongsTo('App\nivel','cod_nivel','cod_nivel');
+    }
 }

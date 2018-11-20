@@ -4,18 +4,16 @@
 
     @section('content')
         <div class="container" style="max-width: 80%">
-            <h2 class="text-muted">Experiencias laborales</h2>
+            <h2 class="text-muted">Experiencias</h2>
                 @foreach($data as $experiencia)
                     <div class="panel panel-primary mb-2 text- mb-3">
                         <div class="panel-heading py-1" >
-                            <div class="row">
-                                <span class="col-xs-10">{{ $experiencia->puesto }} - {{ $experiencia->empresa }}</span>
+                            <div class="row p-0">
+                                <span class="col-xs-9">{{ $experiencia->puesto }} - {{ $experiencia->empresa }}</span>
                                 <a href="/editExperiencia/{{ $experiencia->cod_experiencia }}/edit" style="color: white;" class="col-xs-1 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
-                                <div class="col'xs'1">
-                                    {!!Form::open(['route'=>['editExperiencia.destroy',$experiencia->cod_experiencia],'method'=>'DELETE'])!!}
-                                        {!!Form::submit('Eliminar',['class'=>'btn btn-danger display-inline'])!!}
+                                    {!!Form::open(['route'=>['editExperiencia.destroy',$experiencia->cod_experiencia],'method'=>'DELETE','class'=>'text-center col-xs-2 p-0'])!!}
+                                        {!!Form::submit('Eliminar',['class'=>'btn btn-danger btn-sm'])!!}
                                     {!!Form::close()!!}
-                                </div>
                             </div>
                         </div>
                         <div class="panel-body">
