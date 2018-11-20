@@ -24,10 +24,7 @@ class editUserController extends Controller
     public function index(){
 
         $persona = persona::where('dui',Auth::user()->dui)->first();
-        $persona->genero->genero;
-        $persona->estadoCivil->estado;
-        $persona->a_experiencia->a_experiecia;
-        $persona->licencia->tipo;
+        
         return view('usuario.index',['persona'=>$persona]);
     }
 
