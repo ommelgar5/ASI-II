@@ -60,5 +60,10 @@ class persona extends Model
     {
         return $this->hasMany('App\tipo_usuario','cod_tipo_usuario','cod_tipo_usuario');
     }
+
+    public function experiencia_laboral(){
+        return $this->hasMany('App\experiencia_laboral','persona_id','id');
+    }
+
     
 }

@@ -9,4 +9,8 @@ class cargo_empresa extends Model
     protected $table = 'cargo_empresa';
     protected $primaryKey = 'cod_cargo';
     public $incrementing = false;
+
+    public function experiencia_laboral(){
+        return $this->hasMany('App\experiencia_laboral','cod_cargo','cod_cargo');
+    }
 }

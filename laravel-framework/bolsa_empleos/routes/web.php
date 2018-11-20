@@ -68,3 +68,4 @@ Route::post('/validarDUI','UserRegisterController@validarDUI');
  */
 
 Route::resource('editPerfil','editUserController');
+Route::resource('editExperiencia','ManttoUser\ExperienciaUserController');

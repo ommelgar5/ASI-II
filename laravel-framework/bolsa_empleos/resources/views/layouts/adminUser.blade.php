@@ -51,7 +51,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i> Información personal</a>
+                        <a href="/editPerfil"><i class="fa fa-user fa-fw"></i> Información personal</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-briefcase fa-fw"></i> Esperiencias profesionales<span class="fa arrow"></span></a>
@@ -60,7 +60,7 @@
                                 <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Esperiencias</a>
+                                <a href="/editExperiencia"><i class='fa fa-list-ol fa-fw'></i> Esperiencias</a>
                             </li>
                         </ul>
                     </li>
