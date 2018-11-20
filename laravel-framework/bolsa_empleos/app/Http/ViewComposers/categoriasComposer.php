@@ -24,6 +24,7 @@ class CategoriasComposer
     {
         // Dependencies automatically resolved by service container...
         $this->categorias = area_empresa::all();
+        
     }
 
     /**
