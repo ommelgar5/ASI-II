@@ -7,6 +7,8 @@
                         <div class="panel panel-primary mb-2 text- mb-3">
                             <div class="panel-heading py-1">
                                     {{ $experiencia->puesto }} - {{ $experiencia->empresa }}
+                                <a href="/editExperiencia{{ $experiencia->cod_experiencia }}/edit"><i class="fa fa-pencil-square fa-lg" aria-hidden="true"></i></a>
+
                             </div>
                                 <div class="panel-body">
                                     <div>Giro de la empresa:  <span class="text-muted">{{ $experiencia->giro_empresa->giro }}</span></div>
