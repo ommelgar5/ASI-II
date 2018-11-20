@@ -71,3 +71,11 @@ Route::get('/obtenerMunicipios/{departamento}', 'CommonController@obtenerMunicip
 Route::post('/validarDUI','UserRegisterController@validarDUI');
 
 // fin
+
+/*
+ *
+ *  Editar perfil usuario
+ *
+ */
+
+Route::resource('editPerfil','editUserController');

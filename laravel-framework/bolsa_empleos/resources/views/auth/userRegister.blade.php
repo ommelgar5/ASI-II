@@ -174,7 +174,7 @@
                 var objCargoEmpresa = $("#cargoEmpresa");
                 var objDescripcionPuesto = $("#descripcionPuesto");
                 var objFechaInicioEmpresa = $("#fechaInicioEmpresa");
-                var objFechaFinEmpresa = $("#objFechaFinEmpresa");
+                var objFechaFinEmpresa = $("#fechaFinEmpresa");
                 var objActualEmpresa = $("#actualEmpresa");
 
                 var nombreEmpresa = objnombreEmpresa.val();

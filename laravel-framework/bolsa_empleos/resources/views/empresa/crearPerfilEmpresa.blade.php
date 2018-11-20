@@ -14,26 +14,26 @@
 
     <div class="form-group">
       <label for="correo">Contraseña: <strong class="text-danger">*</strong></label>
-      <input class="form-control" type="password" name="password" required>
+      <input class="form-control" type="password" name="password" required minlength="6" maxlength="12">
     </div>
     <div class="form-group">
       <label for="correo">Repetir contraseña: <strong class="text-danger">*</strong></label>
-      <input class="form-control" type="password" required>
+      <input class="form-control" type="password" required minlength="6" maxlength="12">
     </div>
 
     <div class="form-group">
       <label for="nombreJuridico">Nombre juridico: <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" id="nombreJuridico" name="juridico">
+      <input type="text"  class="form-control" id="juridico" name="juridico" maxlength="200">
     </div>
 
     <div class="form-group">
       <label for="nombreComercial">Nombre comercial: <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" id="nombreComercial" name="comercial">
+      <input type="text"  class="form-control" id="comercial" name="comercial" maxlength="200">
     </div>
 
     <div class="form-group">
       <label for="nit">NIT:  <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" id="nit" name="nit">
+      <input type="text"  class="form-control" id="nit" name="nit" placeholder="1111-111111-112-8" pattern="[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]" minlength="17" maxlength="17">
     </div>
 
     <div class="form-group">
@@ -46,29 +46,30 @@
       </select>
     </div>
 
+      <div class="form-group">
+          <label for="referencia">Descripción:</label>
+          <textarea class="form-control" rows="5" id="descripcion" name="descripcion" maxlength="1000"></textarea>
+      </div>
+
     <div class="form-group">
       <label for="tel1">Telefono 1 <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" name="telefono1" id="tel1">
+      <input type="text"  class="form-control" name="telefono1" id="tel1" minlength="8" maxlength="8">
     </div>
 
     <div class="form-group">
       <label for="tel2">Telefono 2</label>
-      <input type="text"  class="form-control" name="telefono2" id="tel2">
-    </div>
-  
-    <div class="form-group">
-      <label for="direccion">Dirección: <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" name="direccion" id="direccion">
+      <input type="text"  class="form-control" name="telefono2" id="tel2" minlength="8" maxlength="8">
     </div>
 
     <div class="form-group">
-      <label for="referencia">Descripción:</label>
-      <textarea class="form-control" rows="5" id="referencia" name="referencia"></textarea>
+      <label for="direccion">Dirección: <strong class="text-danger">*</strong></label>
+      <input type="text"  class="form-control" name="direccion" id="direccion" maxlength="300" required>
     </div>
+
 
     <div class="form-group">
       <label for="referencia">Referencia:</label>
-      <textarea class="form-control" rows="5" id="referencia" name="referencia"></textarea>
+      <textarea class="form-control" rows="5" id="referencia" name="referencia" maxlength="200"></textarea>
     </div>
 
     <div class="form-group">
@@ -91,10 +92,9 @@
       </select>
     </div>
 
-    <div class="custom-file">
+    <div class="form-group">
       <label for="mun">Imagen de la cuenta:</label>
-      <input type="file" class="custom-file-input" id="customFile" accept="image/*" name="logo">
-      <label class="custom-file-label" for="customFile">Buscar archivo</label>
+      <input type="file" class="form-control-file" id="logo" accept="image/*" name="logo">
     </div>
   </div>
   
@@ -130,8 +130,7 @@
     });
 
     $('#perfilEmpresa').submit(function(event){
-      event.preventDefault();
-      debugger;
+      event.preventDefault()
       // var myForm = $(this);
       var myForm = document.getElementById('perfilEmpresa');
       formData = new FormData(myForm);
@@ -146,10 +145,12 @@
           data: formData,
           success:function(response){
               if(response.error){
-                  // toastr.error(response.errorMessage);
-                  // $out = false;
+//                   toastr.error(response.errorMessage);
+//                   $out = false;
+                  console.log(response);
               }else{
                   window.location.replace("{{ url('/') }}");
+//                  console.log(response);
               }
           },
           error: function(){

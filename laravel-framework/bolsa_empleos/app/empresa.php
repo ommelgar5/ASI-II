@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class empresa extends Authenticatable
 {
     use Notifiable;
+
     // The authentication guard for admin
     protected $guard = 'empresa';
 
