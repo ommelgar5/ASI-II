@@ -30,7 +30,10 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 	ver ofertas de una categoria
 */
 Route::get('/ofertas/{area?}','OfertasController@ofertasArea')->name('ofertas');
-
+/*
+	ver detalle de la oferta
+*/
+Route::get('/oferta/{id}','OfertasController@ofertaDetalle')->name('oferta');
 
 /*
 
