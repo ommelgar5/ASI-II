@@ -38,7 +38,7 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="userPerfil.html"><i class="fa fa-user fa-fw"></i> Ver perfil</a>
+                    <li><a href="/perfil"><i class="fa fa-user fa-fw"></i> Ver perfil</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="/"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
@@ -100,9 +100,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><i class="fa fa-key fa-fw" aria-hidden="true"></i>Cambiar Contraseña</a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>

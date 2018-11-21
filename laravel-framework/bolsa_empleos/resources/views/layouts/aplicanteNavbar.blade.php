@@ -12,7 +12,7 @@
       <a href="#"></a>
       <img src="/assets/img/users/user.png" alt="user.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
       <div class="dropdown-menu ">
-        <a class="dropdown-item" href="userPerfil.html"><i class="fas fa-user-tie fa-sm mr-1"></i> Perfil</a>
+        <a class="dropdown-item" href="/perfil"><i class="fas fa-user-tie fa-sm mr-1"></i> Perfil</a>
         <a class="dropdown-item" href="/editPerfil"><i class="fas fa-pencil-alt fa-sm mr-1"></i> Editar Perfil</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

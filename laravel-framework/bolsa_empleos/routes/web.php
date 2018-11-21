@@ -86,4 +86,5 @@ Route::resource('editExperiencia','ManttoUser\ExperienciaUserController');
 Route::resource('editEstudio','ManttoUser\EstudiosUserController');
 Route::resource('editHabilidad','ManttoUser\HabilidadUserController');
 Route::resource('editIdioma','ManttoUser\IdiomaUserController');
+Route::get('perfil','editUserController@perfil');
 

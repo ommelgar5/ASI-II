@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\persona;
 use App\genero;
+use App\idioma_solicitante;
+use App\programa_solicitante;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
@@ -104,5 +106,44 @@ class editUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // VER PERFIL
+
+    public function perfil(){
+        $persona = persona::where('dui',Auth::user()->dui)->first();
+        $id = persona::where('dui',Auth::user()->dui)->first()->id;
+        $persona->estadocivil;
+        $persona->licencia;
+        $persona->a_experiencia;
+        $persona->experiencia_laboral;
+
+        foreach ($persona->experiencia_laboral as $experiencia){
+            $experiencia->giro_empresa;
+            $experiencia->cargo_empresa;
+        }
+
+        $persona->estudios;
+
+        foreach($persona->estudios as $estudio){
+            $estudio->nivel_estudio;
+            $estudio->area_estudio;
+        }
+
+        $idiomas = idioma_solicitante::where('persona_id',$id)->get();
+        foreach($idiomas as $idioma){
+            $idioma->idioma;
+            $idioma->nivel;
+        }
+
+        $programas = programa_solicitante::where('persona_id',$id)->get();
+        foreach($programas as $programa){
+            $programa->programa;
+            $programa->nivel;
+        }
+
+        // return response()->json($persona);
+
+        return view('usuario.perfil',['persona'=>$persona,'idiomas'=>$idiomas,'programas'=>$programas]);
     }
 }

@@ -65,5 +65,11 @@ class persona extends Model
         return $this->hasMany('App\experiencia_laboral','persona_id','id');
     }
 
+    public function idiomas(){
+        return $this->belongsToMany('App\idioma', 'idioma_solicitante', 'persona_id', 'cod_idioma');
+    }
+
+
+
     
 }
