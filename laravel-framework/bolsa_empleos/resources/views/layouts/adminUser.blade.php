@@ -34,7 +34,7 @@
 
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ App\Persona::where('dui', Auth::user()->dui)->first()->nombre }} {{ App\Persona::where('dui', Auth::user()->dui)->first()->apellido  }}
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ App\persona::where('dui', Auth::user()->dui)->first()->nombre }} {{ App\persona::where('dui', Auth::user()->dui)->first()->apellido  }}
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
