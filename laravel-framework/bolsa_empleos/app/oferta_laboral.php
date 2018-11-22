@@ -35,7 +35,19 @@ class oferta_laboral extends Model
     }
 
     public function niveles_estudio(){
-    	return $this->belongsToMany('App\nivel_estudio','estudio_oferta','cod_oferta','cod_oferta');
+    	return $this->belongsToMany('App\nivel_estudio','estudio_oferta','cod_oferta','cod_nivel_est');
+    }
+
+    public function programas_oferta(){
+    	return $this->hasMany('App\programas_oferta','cod_oferta','cod_oferta');
+    }
+
+    public function idiomas_oferta(){
+        return $this->hasMany('App\idiomas_oferta','cod_oferta','cod_oferta');
+    }
+
+    public function aplicaciones(){
+        return $this->hasMany('App\gestion','cod_oferta','cod_oferta');
     }
 
 }

@@ -93,7 +93,7 @@ class EmpresaRegisterController extends Controller
         try {
             $empresa = new empresa;
             $empresa->nit = $nit;
-            $empresa->pass = Hash::make($password);
+            $empresa->password = Hash::make($password);
             $empresa->nombre_comercial = $comercial;
             $empresa->nombre_juridico = $juridico;
             $empresa->descripcion = $descripcion;
