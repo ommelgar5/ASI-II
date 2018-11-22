@@ -4,6 +4,7 @@
 
 @section('contenido')
 <form id="perfilEmpresa" method="POST" enctype="multipart/form-data">
+  @csrf
   <div class="card p-3">
     <h4 class="text-center mb-3">Información Empresa</h4>
     

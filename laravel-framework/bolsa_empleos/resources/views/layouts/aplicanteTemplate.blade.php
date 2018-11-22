@@ -26,7 +26,6 @@
       <div class="row">
         <!--Categorias-->
         <div class="col-lg-4">
-  
           <div class="panel panel-default">
             <div class="panel-heading">
               <i class="fa fa-tasks fa-fw"></i> Categorias
@@ -35,17 +34,31 @@
               <div class="list-group">
 
                 @foreach($categorias_menu as $menu)
-                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }}</a>
+                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} <span class="badge badge-pill badge-primary">{{ $menu->cargos()->whereHas('ofertas_laboral',function($q){
+                  $q->where('isActive',1)->whereDate('fechaLimite', '>=', now()->timestamp);
+                })->count() }}</span></a> 
                 @endforeach
                 
               </div>
             </div>
           </div>
         </div>
-        
         <!--Ofertas-->
         <div class="col-lg-8">
           
+          <!--Opciones de ususuario Logueado -->
+          <ul class="nav nav-tabs mb-3 mt-3">
+            <li class="nav-item">
+              <a class="nav-link {{ isActiveRoute('inicio') }}" href="{{ route('inicio') }}"><i class="fas fa-book fa-lg mr-2"></i>Todas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ isActiveRoute('gestion') }}" href="{{ route('gestion') }}"> <i class="fas fa-folder-open fa-lg mr-2"></i> Gestion</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link {{ isActiveRoute('empresa.dashboard') }}" href="#"><i class="fas fa-bookmark fa-lg mr-2"></i>Favoritos</a>
+            </li> -->
+          </ul>
+
           @yield('contenido')
         
         </div>

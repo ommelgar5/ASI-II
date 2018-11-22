@@ -7,7 +7,7 @@
     </a>
     <div href="#" class="dropdown mr-2">
       <span class="text-muted small">
-        {{ App\Persona::where('dui', Auth::user()->dui)->first()->nombre }} {{ App\Persona::where('dui', Auth::user()->dui)->first()->apellido  }}
+        {{ App\persona::where('dui', Auth::user()->dui)->first()->nombre }} {{ App\persona::where('dui', Auth::user()->dui)->first()->apellido  }}
       </span>
       <a href="#"></a>
       <img src="/assets/img/users/user.png" alt="user.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">

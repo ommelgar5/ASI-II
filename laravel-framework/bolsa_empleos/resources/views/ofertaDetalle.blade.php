@@ -104,50 +104,49 @@
   <table class="mb-3">
     <thead>
 	    <th>Estudio</th>
-	    <th>Nivel academico</th>
+	    <!-- <th>Nivel academico</th> -->
     </thead>
     <tbody>
 	    
-
 	    <tr>
 	      <td>Diplomado en Ventas</td>
-	      <td>Completo</td>
+	      <!-- <td>Completo</td> -->
 	    </tr>
 	    
+	    @foreach($oferta->niveles_estudio as $estudios)
+	    <tr>
+	    	<td>{{ $estudios->nivel_estudio }}</td>
+	    </tr>
+	    @endforeach
     </tbody>
   </table>
   <h2 style="font-size: 1.2em">Tecnologías</h2>
   <table class="mb-3">
     <thead>
-    <th>Tecnologia</th>
-    <th>Nivel</th>
+	    <th>Tecnologia</th>
+	    <th>Nivel</th>
     </thead>
     <tbody>
-    <tr>
-      <td>Word</td>
-      <td>Intermedio</td>
-    </tr>
-    <tr>
-      <td>Excel</td>
-      <td>Básico</td>
-    </tr>
-    <tr>
-      <td>PowerPoint</td>
-      <td>Avanzado</td>
-    </tr>
+	    @foreach($oferta->programas_oferta as $programa_oferta)
+	    	<tr>
+	    		<td>{{ $programa_oferta->programa->programa }}</td>
+	    		<td>{{ $programa_oferta->nivel->nivel }}</td>
+	    @endforeach
     </tbody>
   </table>
   <h2 style="font-size: 1.2em">Idiomas</h2>
   <table class="mb-3">
     <thead>
-    <th>Idioma</th>
-    <th>Nivel</th>
+	    <th>Idioma</th>
+	    <th>Nivel</th>
     </thead>
     <tbody>
-    <tr>
-      <td>Inglés</td>
-      <td>Básico</td>
-    </tr>
+	    @foreach($oferta->idiomas_oferta as $idioma_oferta)
+	    <tr>
+	      <td>{{$idioma_oferta->idioma->idioma}}</td>
+	      <td>{{$idioma_oferta->nivel->nivel}}</td>
+	    </tr>
+	    @endforeach
     </tbody>
   </table>
   <h2 style="font-size: 1.2em">Información adicional</h2>
@@ -167,7 +166,7 @@
        Antiguo Cuscatlán o zonas cercanas a la sucursal.</p>
   </div>
   <div class="text-center mb-3">
-    <a href="#" class="btn btn-primary">Aplicar</a>
+    <a href="{{ route('aplicar',['id'=> $oferta->cod_oferta]) }}" class="btn btn-primary">Aplicar</a>
   </div>
   
 </div>

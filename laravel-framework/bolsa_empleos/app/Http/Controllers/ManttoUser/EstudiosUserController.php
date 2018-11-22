@@ -45,8 +45,8 @@ class EstudiosUserController extends Controller
     {
 
         $data = [
-            'areaEstudios' => area_estudio::all(),
-            'nivelEstudios' => nivel_estudio::all()
+            'areaEstudios' => area_estudio::where('isActive',1)->get(),
+            'nivelEstudios' => nivel_estudio::where('isActive',1)->get()
         ];
 
 
