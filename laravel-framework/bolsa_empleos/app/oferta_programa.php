@@ -10,6 +10,12 @@ class oferta_programa extends Model
     protected $primaryKey = 'cod_oferta_prog';
     public $timestamps = false;
 
+    protected $fillable = [
+        'cod_oferta',
+        'cod_programa',
+        'cod_nivel',
+    ];
+
 
     public function programa(){
         return $this->belongsTo('App\programa','cod_programa','cod_programa');

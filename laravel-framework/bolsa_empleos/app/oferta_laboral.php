@@ -45,11 +45,13 @@ class oferta_laboral extends Model
     	return $this->belongsTo('App\licencia','cod_licencia','cod_licencia');
     }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-    public function cargo_empresa(){
-        return $this->belongsToMany('App\cargo_empresa','experiencia_oferta','cod_oferta','cod_cargo');
-=======
+    public function cargo_empresa()
+    {
+        return $this->belongsToMany('App\cargo_empresa', 'experiencia_oferta', 'cod_oferta', 'cod_cargo');
+//=======
+    }
     public function niveles_estudio(){
     	return $this->belongsToMany('App\nivel_estudio','estudio_oferta','cod_oferta','cod_nivel_est');
     }
@@ -64,7 +66,7 @@ class oferta_laboral extends Model
 
     public function aplicaciones(){
         return $this->hasMany('App\gestion','cod_oferta','cod_oferta');
->>>>>>> 996e0821b540f29d523765915de3d93c45b852e5
+//>>>>>>> 996e0821b540f29d523765915de3d93c45b852e5
     }
 
 

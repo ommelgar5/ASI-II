@@ -5,23 +5,34 @@
 
     @include('alerts.request')
 
-    {!!Form::model($programa,['route'=>['editHabilidad.update',$programa->cod_oferta_prog],'method'=>'PUT'])!!}
+    {!!Form::model($programaOfer,['route'=>['editHabilidad.update',$programaOfer->cod_oferta_prog],'method'=>'PUT'])!!}
 
-    <label class="text-muted">Experiencia requerida: </label>
-    <select class="form-control" name="cod_cargo">
-        @foreach($cargos as $cargo)
-            @if($experiencia->cod_cargo == $cargo->cod_cargo)
-                <option value="{{ $cargo->cod_cargo }}" selected>{{ $cargo->cargo }}</option>
+    <label class="text-muted">Programa: </label>
+    <select class="form-control" name="cod_programa">
+        @foreach($programas as $programa)
+            @if($programaOfer->cod_programa == $programa->cod_programa)
+                <option value="{{ $programa->cod_programa }}" selected>{{ $programa->programa }}</option>
             @else
-                <option value="{{ $cargo->cod_cargo }}">{{ $cargo->cargo }}</option>
+                <option value="{{ $programa->cod_programa }}">{{ $programa->programa }}</option>
             @endif
         @endforeach
-            <input type="number" hidden name="cod_oferta" value="{{ $experiencia->cod_oferta }}">
     </select><br>
+
+    <label class="text-muted">Nivel: </label>
+    <select class="form-control" name="cod_nivel">
+    @foreach($niveles as $nivel)
+        @if($programaOfer->cod_nivel == $nivel->cod_nivel)
+            <option value="{{ $nivel->cod_nivel }}" selected>{{ $nivel->nivel }}</option>
+        @else
+            <option value="{{ $nivel->cod_nivel }}">{{ $nivel->nivel }}</option>
+        @endif
+    @endforeach
+    </select><br>
+            <input type="number" hidden name="cod_oferta" value="{{ $programaOfer->cod_oferta }}">
 
     <div class="text-center mb-5">
         <button class="btn btn-primary mr-5"> Actualizar</button>
-        <a href="/editExper/{{ $experiencia->id }}"  class="btn btn-default">Cancelar</a>
+        <a href="/editHab/{{ $programaOfer->cod_oferta_prog }}"  class="btn btn-default">Cancelar</a>
     </div>
 
     {!!Form::close()!!}

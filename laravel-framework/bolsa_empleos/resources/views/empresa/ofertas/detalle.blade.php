@@ -94,7 +94,7 @@
                 <div class="panel-heading py-1" >
                     <div class="row p-0 m-0">
                         <span class="col-xs-10">Idiomas </span>
-                        <a href="/editOferta/{{ $oferta->cod_oferta }}/edit" style="color: white;" class="col-xs-2 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="/editIdi/{{ $oferta->cod_oferta }}" style="color: white;" class="col-xs-2 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="panel-body">

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\ManttoEmpresa;
 
 use App\estudio_oferta;
+use App\Http\Requests\ManttoEmpresa\ProgramaRequest;
 use App\nivel;
 use App\oferta_programa;
 use App\programa;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class HabilidadController extends Controller
 {
@@ -34,11 +37,12 @@ class HabilidadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        $cargos = cargo_empresa::all();
+        $programas = programa::all();
+        $niveles = nivel::all();
 
-        return view('empresa.ofertas.experiencias.create',['cargos'=>$cargos,'idOferta'=>$id]);
+        return view('empresa.ofertas.programas.create',['programas'=>$programas,'niveles'=>$niveles,'idOferta'=>$id]);
     }
 
     /**
@@ -47,16 +51,16 @@ class HabilidadController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProgramaRequest $request)
     {
         $idOferta = $request->input('cod_oferta');
-        $experiencia = new experiencia_oferta();
-        $experiencia->fill($request->all());
-        $success = $experiencia->save();
+        $programaOferta = new oferta_programa();
+        $programaOferta->fill($request->all());
+        $success = $programaOferta->save();
 
         if($success){
-            Session::flash('message',"<strong>¡Experiencia!</strong> agregada correctamente");
-            return Redirect::to("/editExper/$idOferta");
+            Session::flash('message',"<strong>¡Habilidad!</strong> agregada correctamente");
+            return Redirect::to("/editHab/$idOferta");
         }
     }
 
@@ -79,13 +83,13 @@ class HabilidadController extends Controller
      */
     public function edit($id)
     {
-        $programa = oferta_programa::find($id);
+        $programaOfer = oferta_programa::find($id);
         $programas = programa::all();
         $niveles = nivel::all();
 
 //        return response()->json($experiencia);
 
-        return view('empresa.ofertas.programas.edit',['programa'=>$programa,'programas'=>$programas,'niveles'=>$niveles]);
+        return view('empresa.ofertas.programas.edit',['programaOfer'=>$programaOfer,'programas'=>$programas,'niveles'=>$niveles]);
     }
 
     /**
@@ -97,11 +101,11 @@ class HabilidadController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $experiencia = experiencia_oferta::find($id);
-        $experiencia->fill($request->all());
-        $experiencia->save();
-        Session::flash('message',"<strong>¡Experiencia!</strong> editada correctamente");
-        return Redirect::to("/editExper/$experiencia->cod_oferta");
+        $ofertaPrograma = oferta_programa::find($id);
+        $ofertaPrograma->fill($request->all());
+        $ofertaPrograma->save();
+        Session::flash('message',"<strong>¡Habilidad!</strong> editada correctamente");
+        return Redirect::to("/editHab/$ofertaPrograma->cod_oferta");
     }
 
     /**
@@ -112,10 +116,10 @@ class HabilidadController extends Controller
      */
     public function destroy($id)
     {
-        $experiencia = experiencia_oferta::find($id);
-        $experiencia->delete();
+        $ofertaPrograma = oferta_programa::find($id);
+        $ofertaPrograma->delete();
 
-        Session::flash('message',"<strong>¡Experiencia!</strong> eliminada correctamente");
-        return Redirect::to("/editExper/$experiencia->cod_oferta");
+        Session::flash('message',"<strong>¡Habilidad!</strong> eliminada correctamente");
+        return Redirect::to("/editHab/$ofertaPrograma->cod_oferta");
     }
 }

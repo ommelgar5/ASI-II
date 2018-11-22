@@ -4,13 +4,13 @@
 
     @include('alerts.request')
 
-    {!!Form::open(['route'=>['editHabilidad.store','method'=>'POST']])!!}
+    {!!Form::open(['route'=>['editIdioma.store','method'=>'POST']])!!}
 
-    <label class="text-muted">Programa: </label>
-    <select class="form-control" name="cod_programa">
+    <label class="text-muted">Idioma: </label>
+    <select class="form-control" name="cod_idioma">
         <option value="">Selecciona una opcion</option>
-        @foreach($programas as $programa)
-            <option value="{{ $programa->cod_programa }}">{{ $programa->programa }}</option>
+        @foreach($idiomas as $idioma)
+            <option value="{{ $idioma->cod_idioma }}">{{ $idioma->idioma }}</option>
         @endforeach
     </select><br>
 
@@ -25,7 +25,7 @@
 
     <div class="text-center mb-5">
         <button class="btn btn-primary mr-5"> Agregar</button>
-        <a href="/editHab/{{ $idOferta }}"  class="btn btn-default">Cancelar</a>
+        <a href="/editIdi/{{ $idOferta }}"  class="btn btn-default">Cancelar</a>
     </div>
 
     {!!Form::close()!!}

@@ -87,7 +87,7 @@ Route::resource('editHabilidad','ManttoUser\HabilidadUserController');
 Route::resource('editIdioma','ManttoUser\IdiomaUserController');
 Route::get('perfil','editUserController@perfil');
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 /* 
 	Editar Empresa
@@ -105,18 +105,18 @@ Route::get('/editExper/create/{id}','ManttoEmpresa\ExperienciaController@create'
 Route::resource('editEstudio','ManttoEmpresa\EstudioController');
 Route::get('/editEst/{id}','ManttoEmpresa\EstudioController@index');
 Route::get('/editEst/create/{id}','ManttoEmpresa\EstudioController@create');
-
 Route::resource('editHabilidad','ManttoEmpresa\HabilidadController');
 Route::get('/editHab/{id}','ManttoEmpresa\HabilidadController@index');
 Route::get('/editHab/create/{id}','ManttoEmpresa\HabilidadController@create');
-
 Route::resource('editIdioma','ManttoEmpresa\IdiomaController');
+Route::get('/editIdi/{id}','ManttoEmpresa\IdiomaController@index');
+Route::get('/editIdi/create/{id}','ManttoEmpresa\IdiomaController@create');
 
 
 
-=======
+//=======
 /*
 	Gestion de oferta - usuario
 */
 Route::get('/gestion','gestionOfertaAplicanteController@index')->name('gestion')->middleware('auth');
->>>>>>> 996e0821b540f29d523765915de3d93c45b852e5
+//>>>>>>> 996e0821b540f29d523765915de3d93c45b852e5

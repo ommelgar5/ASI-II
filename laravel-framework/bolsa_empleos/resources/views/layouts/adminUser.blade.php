@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Editar perfil</a>
+            <a class="navbar-brand" href="#">Editar perfil</a>
         </div>
 
 

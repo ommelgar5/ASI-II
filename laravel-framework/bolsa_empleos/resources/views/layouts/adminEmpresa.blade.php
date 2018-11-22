@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Editar perfil empresa</a>
+                <a class="navbar-brand" href="#">Editar perfil empresa</a>
             </div>
            
             <ul class="nav navbar-top-links navbar-right">
@@ -35,7 +35,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                          <a href="userPerfil.html"><i class="fa fa-user fa-fw"></i> Regresar</a>
+                          <a href="/empresa/dashboard"><i class="fa fa-user fa-fw"></i> Regresar</a>
                         </li>
                 
                     </ul>
