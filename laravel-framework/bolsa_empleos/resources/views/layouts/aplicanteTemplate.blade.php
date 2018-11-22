@@ -34,7 +34,7 @@
               <div class="list-group">
 
                 @foreach($categorias_menu as $menu)
-                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }}</a>
+                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} <span class="badge badge-pill badge-primary">{{ $menu->cargos()->whereHas('ofertas_laboral')->count() }}</span></a> 
                 @endforeach
                 
               </div>
