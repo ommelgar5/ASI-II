@@ -13,4 +13,9 @@ class giro_empresa extends Model
     public function experiencia_laboral(){
         return $this->hasMany('App\experiencia_laboral','cod_giro','cod_giro');
     }
+
+    public function empresa()
+    {
+    	return $this->hasMany('App\empresa','cod_giro','cod_giro');
+    }
 }

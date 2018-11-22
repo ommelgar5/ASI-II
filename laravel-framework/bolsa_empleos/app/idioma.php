@@ -19,4 +19,9 @@ class idioma extends Model
     {
         return $this->belongsToMany('App\persona');
     }
+
+    public function oferta_laboral()
+    {
+        return $this->belongsToMany('App\oferta_laboral');
+    }
 }

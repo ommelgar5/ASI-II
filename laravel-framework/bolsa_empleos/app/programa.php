@@ -13,4 +13,16 @@ class programa extends Model
     public function programa_solicitante(){
         return $this->hasMany('App\programa_solicitante','cod_programa','cod_programa');
     }
+
+    public function oferta_programa(){
+        return $this->hasMany('App\oferta_programa','cod_programa','cod_programa');
+    }
+
+
+    public function oferta_laboral()
+    {
+        return $this->belongsToMany('App\oferta_laboral');
+    }
+
+
 }

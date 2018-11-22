@@ -54,7 +54,8 @@
                 <span class="input-group-addon" id="basic-addon1">Tipo de licencia:</span>
                 <input type="text" class="form-control" aria-describedby="basic-addon1" value="{{ $persona->licencia->tipo }}" disabled style="cursor: pointer">
             </div><br>
-                {!!link_to_route('editPerfil.edit', $title = 'Editar', $parameters = $persona->id, $attributes = ['class'=>'btn btn-primary'])!!}
+                <div>
+                    {!!link_to_route('editPerfil.edit', $title = 'Editar', $parameters = $persona->id, $attributes = ['class'=>'btn btn-primary'])!!}
                 </div>
 
     @endsection

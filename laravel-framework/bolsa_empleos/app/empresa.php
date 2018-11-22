@@ -18,15 +18,17 @@ class empresa extends Authenticatable
     public $timestamps = false;
 
     protected $fillable = [
-        'nit',
-        'password',
         'nombre_comercial',
         'nombre_juridico',
         'descripcion',
         'correo',
         'telefono1',
         'telefono2',
-        'logo',
-        'cod_giro'
+        'cod_giro',
     ];
+
+    public function giro_empresa()
+    {
+        return $this->belongsTo('App\giro_empresa','cod_giro','cod_giro');
+    }
 }
