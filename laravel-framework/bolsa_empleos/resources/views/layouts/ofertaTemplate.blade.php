@@ -7,7 +7,7 @@
          <p class="text-center text-lg-left m-0">{{$oferta->titulo}}</p>
        </div>
        <div class="col-lg-4 text-center">
-         <span class="text-muted mr-3"> Fecha: {{$oferta->fecha}}</span>
+         <span class="text-muted mr-3"> Fecha: {{ date('Y-m-d', strtotime($oferta->fecha)) }}</span>
          <span class="badge badge-pill badge-primary">Nuevo</span>
        </div>
      </div>

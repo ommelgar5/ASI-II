@@ -11,83 +11,81 @@
       </div>
       <div class="form-group">
         <label for="descripcion">Descripcion:</label>
-        <textarea class="form-control" rows="3" id="descripcion"></textarea>
+        <textarea class="form-control" rows="3" id="descripcion" name="descipcion"></textarea>
       </div>
       <div class="form-group">
         <label for="ae">Años de experiencias laboral:</label>
-        <select class="form-control" id="ae">
-          <option value="1">Sin experiencia</option>
-          <option value="2">menos de un año</option>
-          <option value="3">de un año a tres años</option>
-          <option value="4">de un año a tres años</option>
+        <select class="form-control" id="ae" name="a_experiencia">
+          @foreach($data['a_experiencia'] as $a)
+            <option value="{{$a->cod_a_experiencia}}">{{$a->a_experiencia}}</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
         <label for="tc">Tipo de contrato:</label>
-        <select class="form-control" id="tc">
-          <option value="1">Tiempo indefinido</option>
-          <option value="2">Período determinado</option>
-          <option value="3">Servicio profesional</option>
-          <option value="4">Interinato</option>
+        <select class="form-control" id="tc" name="tipo_contrato">
+          @foreach($data['tipo_contrato'] as $c)
+            <option value="{{$c->cod_contrato}}">{{$c->contrato}}</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
-        <label for="descripcion">Número de plazas:</label>
-        <input  type="number" class="form-control" min="1" max="25" >
+        <label for="plazas">Número de plazas:</label>
+        <input  type="number" id="plazas" name="plazas" class="form-control" min="1" max="25" step="1" >
       </div>
       <div class="form-group">
-        <label for="descripcion">Edad minima:</label>
-        <input type="number"  class="form-control" min="18" max="65">
+        <label for="edad_min">Edad minima:</label>
+        <input type="number" id="edad_min" name="edad_min" class="form-control" min="18" max="65" step="1">
       </div>
       <div class="form-group">
-        <label for="descripcion">Edad maxima:</label>
-        <input class="form-control" type="number" min="18" max="65">
+        <label for="edad_max">Edad maxima:</label>
+        <input class="form-control" id="edad_max" name="edad_max" type="number" min="18" max="65" step="1">
       </div>
       <div class="form-group">
-        <label for="descripcion">Salario minimo:</label>
-        <input type="text"  class="form-control">
+        <label for="salarion_min">Salario minimo:</label>
+        <input type="text" id="salario_min" name="salario_min" class="form-control">
       </div>
       <div class="form-group">
-        <label for="descripcion">Salario Maximo:</label>
-        <input class="form-control" type="text">
+        <label for="salario_max">Salario Maximo:</label>
+        <input class="form-control" id="salario_max" name="salario_max" type="text">
       </div>
       <div class="form-group">
         <label for="genero">Seleccona el Genero:</label>
         <select class="form-control" id="genero" name="genero">
-          <option value="1">Masculino</option>
-          <option value="2">Femenino</option>
-          <option value="3">Indiferente</option>
+          @foreach($data['generos'] as $g)
+            <option value="{{$g->cod_genero}}">$g->genero</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
         <label for="depto">Departamento:</label>
-        <select class="form-control" id="depto" name="deptop">
-          <option value="1">La Libertad</option>
-          <option value="2">San Salvador</option>
+        <select class="form-control" id="depto" name="departamento">
+          @foreach($data['departamentos' as $d])
+            <option value="{{$d->cod_departamento}}">{{$d->departamento}}</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
-        <label for="mun">Departamento:</label>
-        <select class="form-control" id="mun" name="deptop">
-          <option value="1">Ciudad Arce</option>
-          <option value="2">Santa Tecla</option>
+        <label for="mun">Municipio:</label>
+        <select class="form-control" id="mun" name="municipio">
+          @foreach($data['municipios' as $m])
+            <option value="{{$m->cod_municipio}}">{{$m->municipio}}</option>
+          @endforeach
         </select>
       </div>
-      <div class="custom-control custom-radio w-25 d-inline-block">
-        <input type="radio" class="custom-control-input" id="vlic" name="vlic" value="customEx">
-        <label class="custom-control-label" for="vlic">Si</label>
-      </div>
-      <div class="custom-control custom-radio w-25 d-inline-block">
-        <input type="radio" class="custom-control-input" id="vlic2" name="vlic" value="customEx">
-        <label class="custom-control-label" for="vlic2">no</label>
+      <div class="form-group">
+        <label for="auto">Auto propio:</label>
+        <select class="form-control" id="auto" name="auto">
+          <option value="0">No</option>
+          <option value="1">Si</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="tl">Tipo de licencia:</label>
-        <select class="form-control" id="tl">
-          <option value="1">Liviana</option>
-          <option value="2">Motocicliste</option>
-          <option value="3">Particular</option>
-          <option value="4">Pesada</option>
+        <select class="form-control" id="tl" name="tipo_licencia">
+          @foreach($data['licencias'] as $l)
+            <option value="{{$l->cod_licencia}}">{{$l->tipo}}</option>
+          @endforeach
         </select>
       </div>
     </form>
@@ -110,19 +108,19 @@
         <button class="btn btn-primary text-right"><i class="fas fa-plus-circle mr-2 fa-lg"></i>Agregar</button>
       </div>
       
-        <div class="card mb-2">
-          <div class="card-header d-flex justify-content-between py-1">
-            <a class="card-link" data-toggle="collapse" href="#es1">Gefe de Recusos Humanos</a>
-            <i class="fas fa-trash-alt fa-lg pt-1"></i>
-          </div>
+      <div class="card mb-2">
+        <div class="card-header d-flex justify-content-between py-1">
+          <a class="card-link" data-toggle="collapse" href="#es1">Gefe de Recusos Humanos</a>
+          <i class="fas fa-trash-alt fa-lg pt-1"></i>
         </div>
-    
-        <div class="card mb-2">
-          <div class="card-header d-flex justify-content-between py-1">
-            <a class="card-link" data-toggle="collapse" href="#es2">Asistente de personal</a>
-            <i class="fas fa-trash-alt fa-lg pt-1"></i>
-          </div>
+      </div>
+  
+      <div class="card mb-2">
+        <div class="card-header d-flex justify-content-between py-1">
+          <a class="card-link" data-toggle="collapse" href="#es2">Asistente de personal</a>
+          <i class="fas fa-trash-alt fa-lg pt-1"></i>
         </div>
+      </div>
     </form>
 
       <!--ESTUDIOS-->
@@ -131,25 +129,23 @@
         <div class="form-group">
           <label for="areaEs">Area de estudio:</label>
           <select class="form-control" id="areaEs" name="ae">
-            <option value="1">Redes Informáticas</option>
-            <option value="2">Comunicaciones</option>
-            <option value="3">Economía</option>
-            <option value="4">Eléctrica</option>
+            @foreach($data['areasEstudio'] as $ae)
+              <option value="{{$ae->cod_area_est}}">{{$ae->area_est}}</option>
+            @endforeach
           </select>
         </div>
         <div class="form-group">
           <label for="ne">Nivel de estudio:</label>
           <select class="form-control" id="ne" name="ne">
-            <option value="1">Estudiante de Diploma Técnico</option>
-            <option value="1">Estudiante Universitario (5to Año)</option>
-            <option value="2">Estudiante Universitario (4to Año)</option>
-            <option value="3">Estudiante Universitario (1er Año)</option>
+            @foreach($data['nivelesEstudio'] as $ne)
+              <option value="{{$ne->cod_nivel_est}}">{{$ne->nivel_estudio}}</option>
+            @endforeach
           </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="especialidad">Especialidad</label>
           <input type="text" class="form-control" name="especialidad" id="especialidad">
-        </div>
+        </div> -->
         <div class="text-right mb-2">
           <button class="btn btn-primary text-right"><i class="fas fa-plus-circle mr-2 fa-lg"></i>Agregar</button>
         </div>
@@ -190,17 +186,17 @@
       <div class="form-group">
         <label for="programa">Seleccion el Programa:</label>
         <select class="form-control" id="programa" name="naprograma">
-          <option value="1">Word</option>
-          <option value="2">Excel</option>
-          <option value="3">PowerPoint</option>
+          @foreach($data['programas'] as $p)
+            <option value="{{$p->cod_programa}}">{{$p->programa}}</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
         <label for="nivel">Nivel:</label>
         <select class="form-control" id="nivel" name="nivel">
-          <option value="1">Basico</option>
-          <option value="1">Intermedio</option>
-          <option value="2">Avanzado</option>
+          @foreach($data['niveles'] as $n)
+            <option value="{{$n->cod_nivel}}">{{$n->nivel}}</option>
+          @endforeach
         </select>
       </div>
       <div class="text-right mb-2">
@@ -240,17 +236,17 @@
       <div class="form-group">
         <label for="idioma">Seleccion el idioma:</label>
         <select class="form-control" id="idioma" name="naidioma">
-          <option value="1">Ingles</option>
-          <option value="2">Frances</option>
-          <option value="3">Italiano</option>
+          @foreach($data['idiomas'] as $i)
+            <option value="{{$i->cod_idioma}}">{{$i->idioma}}</option>
+          @endforeach
         </select>
       </div>
       <div class="form-group">
         <label for="nivelI">Nivel:</label>
         <select class="form-control" id="nivelI" name="nivelI">
-          <option value="1">Basico</option>
-          <option value="1">Intermedio</option>
-          <option value="2">Avanzado</option>
+          @foreach($data['niveles'] as $n)
+            <option value="{{$n->cod_nivel}}">{{$n->nivel}}</option>
+          @endforeach
         </select>
       </div>
       <div class="text-right mb-2">

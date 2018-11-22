@@ -26,4 +26,8 @@ class cargo_empresa extends Model
     public function experiencia_oferta(){
         return $this->hasMany('App\experiencia_oferta','cod_cargo','cod_cargo');
     }
+
+    public function area_empresa(){
+        return $this->belongsTo('App\area_empresa','cod_area','cod_area');
+    }
 }

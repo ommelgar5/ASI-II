@@ -17,14 +17,19 @@ class OfertasController extends Controller
     public function ofertasArea($area = null){
     	
     	if($area){
-    		$areas = area_empresa::find($area);
+    		$ofertas = oferta_laboral::whereHas('cargo_empresa',function($q) use ($area){
+    			$q->whereHas('area_empresa',function($t) use ($area){
+    				$t->where('cod_area',$area);
+    			})->where('fechaLimite','>=', today()->toDateString() );
+    		})->get();
+    		// $areas = area_empresa::find($area);
     	}else{
-    		$areas = area_empresa::where('isActive',1)->get();
+    		$ofertas = oferta_laboral::where('isActive',1)->where('fechaLimite','>=', today()->toDateString() )->get();
     	}
 
     	$cargos = cargo_empresa::where('isActive',1)->get();
 
-    	return view('listado_ofertas',['areas'=>$areas, 'cargos' => $cargos]);
+    	return view('listado_ofertas',['ofertas'=>$ofertas, 'cargos' => $cargos]);
     }
 
     public function ofertaDetalle($id){
@@ -33,7 +38,7 @@ class OfertasController extends Controller
     }
 
     public function inicio(){
-    	$ofertas = oferta_laboral::where('isActive',1)->get();
+    	$ofertas = oferta_laboral::where('isActive',1)->where('fechaLimite','>=', today()->toDateString())->get();
     	$cargos = cargo_empresa::where('isActive',1)->get();
     	return view('inicio',['ofertas' => $ofertas, 'cargos' => $cargos]);
     }

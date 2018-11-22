@@ -27,8 +27,18 @@
       <td>{{$oferta->empresa->nombre_comercial}}</td>
     </tr>
     <tr>
-      <td>Cargo</td>
-      <td>{{$oferta->cargo->cargo}}</td>
+      <td>
+        @if($oferta->cargo_empresa->count() > 1)
+          Cargos
+        @else
+          Cargo
+        @endif
+      </td>
+      <td>
+        @foreach($oferta->cargo_empresa as $cargo)
+          - {{$cargo->cargo}}<br>
+        @endforeach
+      </td>
     </tr>
     <tr>
       <td>Número de puestos</td>
@@ -40,14 +50,14 @@
     </tr>
     <tr>
       <td>Nivel de experiencia</td>
-      <td>{{$oferta->tiempo_experiencia->a_experiecia}}</td>
+      <td>{{$oferta->a_experiencia->a_experiecia}}</td>
     </tr>
     <tr>
       <td>Género</td>
       <td>{{$oferta->genero->genero}}</td>
     </tr>
     <tr>
-      <td>edad</td>
+      <td>Edad</td>
       <td>{{$oferta->edad_min}} / {{$oferta->edad_max}}</td>
     </tr>
     <tr>

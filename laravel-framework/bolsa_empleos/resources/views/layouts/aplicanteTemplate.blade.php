@@ -33,10 +33,19 @@
             <div class="panel-body">
               <div class="list-group">
 
+
                 @foreach($categorias_menu as $menu)
-                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} <span class="badge badge-pill badge-primary">{{ $menu->cargos()->whereHas('ofertas_laboral',function($q){
-                  $q->where('isActive',1)->whereDate('fechaLimite', '>=', now()->timestamp);
-                })->count() }}</span></a> 
+                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} 
+                  <span class="badge badge-pill badge-primary">
+                    {{ 
+                      $menu->cargos()->whereHas('experiencia_oferta',function($q){
+                        $q->whereHas('oferta_laboral',function($t){
+                          $t->where('fechaLimite','>=', today()->toDateString() )->where('isActive',1);
+                        });
+                      })->get()->groupBy('cod_oferta')->count() 
+                    }}
+                  </span>
+                </a> 
                 @endforeach
                 
               </div>
