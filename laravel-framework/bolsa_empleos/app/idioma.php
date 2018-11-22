@@ -14,4 +14,9 @@ class idioma extends Model
     public function idioma_solicitante(){
         return $this->hasMany('App\idioma_solicitante','cod_idioma','cod_idioma');
     }
+
+    public function persona()
+    {
+        return $this->belongsToMany('App\persona');
+    }
 }
