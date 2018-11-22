@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2 text-center">
-          <img src="/storage/empresas_logo/{{$oferta->empresa->logo}}" alt="{{$oferta->empresa->logo}}" width="100">
+          <img src="/storage/public/empresas_logo/{{$oferta->empresa->logo}}" alt="{{$oferta->empresa->logo}}" width="100">
         </div>
         <div class="col-lg-10">
           <p class="card-text ">{{$oferta->descripcion}}</p>

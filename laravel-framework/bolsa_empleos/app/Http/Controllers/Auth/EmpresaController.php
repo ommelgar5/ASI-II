@@ -9,11 +9,12 @@ use App\departamento;
 use App\municipio;
 use App\licencia;
 use App\estudio;
+use App\area_estudio;
 use App\programa;
 use App\idioma;
+use App\nivel;
 use App\nivel_estudio;
 use App\cargo_empresa;
-use App\tipo_contrato;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 

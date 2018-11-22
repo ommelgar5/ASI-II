@@ -2,6 +2,6 @@
 
 @section('contenido')
 	@foreach($gestiones as $gestion)
-		@include('layouts.ofertaTemplate',['oferta'=>$gestion->oferta_laboral])
+		@include('layouts.ofertaGestion',['gestion'=>$gestion])
 	@endforeach
 @endsection

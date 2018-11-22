@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Persona;
+use App\persona;
 use App\gestion;
 use App\oferta_laboral;
 use Illuminate\Http\Request;

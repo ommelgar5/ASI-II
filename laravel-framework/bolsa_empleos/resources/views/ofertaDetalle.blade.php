@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2 text-center pt-0">
-        <img src="/storage/empresas_logo/{{$oferta->empresa->logo}}" alt="{{$oferta->empresa->logo}}" style="width: 80px; height: 80px">
+        <img src="/storage/public/empresas_logo/{{$oferta->empresa->logo}}" alt="{{$oferta->empresa->logo}}" style="width: 80px; height: 80px">
       </div>
       <div class="col-md-10">{{$oferta->descripcion}}</div>
     </div>
@@ -78,9 +78,9 @@
       <td>Vehículo</td>
       <td>
       	@if($oferta->vehiculo)
-      		Indiferente
-      	@else
       		Indispensable
+      	@else
+          Indiferente
       	@endif
       </td>
     </tr>
@@ -159,7 +159,8 @@
 	    @endforeach
     </tbody>
   </table>
-  <h2 style="font-size: 1.2em">Información adicional</h2>
+  
+  <!-- <h2 style="font-size: 1.2em">Información adicional</h2>
   <div class="mb-3">
     <p>Es el responsable de asesorar al cliente durante el proceso de compra siguiendo los estándares establecidos
        en el área, colabora en inventarios, ordena, surte y plancha mercadería.</p
@@ -174,7 +175,8 @@
     </ul>
     <p>NOTA: las plazas son permanentes y de tiempo completo, de preferencia residir en Santa Tecla, Merliot,
        Antiguo Cuscatlán o zonas cercanas a la sucursal.</p>
-  </div>
+  </div> -->
+  
   <div class="text-center mb-3">
     <a href="{{ route('aplicar',['id'=> $oferta->cod_oferta]) }}" class="btn btn-primary">Aplicar</a>
   </div>

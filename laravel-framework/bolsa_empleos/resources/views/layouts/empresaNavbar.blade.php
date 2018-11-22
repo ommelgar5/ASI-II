@@ -6,7 +6,7 @@
   <div href="#" class="dropdown mr-2">
     <span class="text-muted small">{{ Auth::guard('empresa')->user()->nombre_comercial }}</span>
     <a href="#"></a>
-    <img src="/storage/empresas_logo/{{ Auth::guard('empresa')->user()->logo }}" alt="{{ Auth::guard('empresa')->user()->logo }}" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+    <img src="/storage/public/empresas_logo/{{ Auth::guard('empresa')->user()->logo }}" alt="{{ Auth::guard('empresa')->user()->logo }}" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
     <div class="dropdown-menu ">
       <a class="dropdown-item" href="/editPerfilEmpresa"><i class="fas fa-user-tie fa-sm mr-1"></i> Perfil</a>
       <a class="dropdown-item" href="/editPerfilEmpresa"><i class="fas fa-pencil-alt fa-sm mr-1"></i> Editar Perfil</a>
