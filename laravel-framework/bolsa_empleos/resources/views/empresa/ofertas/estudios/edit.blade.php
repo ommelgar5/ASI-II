@@ -5,7 +5,7 @@
 
     @include('alerts.request')
 
-    {!!Form::model($estudio,['route'=>['editEstudio.update',$estudio->cod_estudio_oferta],'method'=>'PUT'])!!}
+    {!!Form::model($estudio,['route'=>['editEstudioEmp.update',$estudio->cod_estudio_oferta],'method'=>'PUT'])!!}
 
     <label class="text-muted">Nivel de estudio: </label>
     <select class="form-control" name="cod_nivel_est">

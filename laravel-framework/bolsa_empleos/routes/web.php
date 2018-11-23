@@ -99,16 +99,16 @@ Route::resource('editOferta','ManttoEmpresa\OfertaEmpresaController');
  *      Mostrar y Editar Oferta
  * */
 Route::resource('editDetalle','ManttoEmpresa\DetalleController');
-Route::resource('editExperiencia','ManttoEmpresa\ExperienciaController');
+Route::resource('editExperienciaEmp','ManttoEmpresa\ExperienciaController');
 Route::get('/editExper/{id}','ManttoEmpresa\ExperienciaController@index');
 Route::get('/editExper/create/{id}','ManttoEmpresa\ExperienciaController@create');
-Route::resource('editEstudio','ManttoEmpresa\EstudioController');
+Route::resource('editEstudioEmp','ManttoEmpresa\EstudioController');
 Route::get('/editEst/{id}','ManttoEmpresa\EstudioController@index');
 Route::get('/editEst/create/{id}','ManttoEmpresa\EstudioController@create');
-Route::resource('editHabilidad','ManttoEmpresa\HabilidadController');
+Route::resource('editHabilidadEmp','ManttoEmpresa\HabilidadController');
 Route::get('/editHab/{id}','ManttoEmpresa\HabilidadController@index');
 Route::get('/editHab/create/{id}','ManttoEmpresa\HabilidadController@create');
-Route::resource('editIdioma','ManttoEmpresa\IdiomaController');
+Route::resource('editIdiomaEmp','ManttoEmpresa\IdiomaController');
 Route::get('/editIdi/{id}','ManttoEmpresa\IdiomaController@index');
 Route::get('/editIdi/create/{id}','ManttoEmpresa\IdiomaController@create');
 

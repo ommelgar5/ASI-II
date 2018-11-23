@@ -4,7 +4,7 @@
 
     @include('alerts.request')
 
-    {!!Form::open(['route'=>['editIdioma.store','method'=>'POST']])!!}
+    {!!Form::open(['route'=>['editIdiomaEmp.store','method'=>'POST']])!!}
 
     <label class="text-muted">Idioma: </label>
     <select class="form-control" name="cod_idioma">

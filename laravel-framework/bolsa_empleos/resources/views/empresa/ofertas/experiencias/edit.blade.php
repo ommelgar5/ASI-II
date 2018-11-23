@@ -5,7 +5,7 @@
 
     @include('alerts.request')
 
-    {!!Form::model($experiencia,['route'=>['editExperiencia.update',$experiencia->id],'method'=>'PUT'])!!}
+    {!!Form::model($experiencia,['route'=>['editExperienciaEmp.update',$experiencia->id],'method'=>'PUT'])!!}
 
     <label class="text-muted">Experiencia requerida: </label>
     <select class="form-control" name="cod_cargo">

@@ -4,7 +4,7 @@
 
     @include('alerts.request')
 
-    {!!Form::open(['route'=>['editHabilidad.store','method'=>'POST']])!!}
+    {!!Form::open(['route'=>['editHabilidadEmp.store','method'=>'POST']])!!}
 
     <label class="text-muted">Programa: </label>
     <select class="form-control" name="cod_programa">

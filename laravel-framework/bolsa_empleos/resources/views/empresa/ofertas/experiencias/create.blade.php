@@ -4,7 +4,7 @@
 
     @include('alerts.request')
 
-    {!!Form::open(['route'=>['editExperiencia.store','method'=>'POST']])!!}
+    {!!Form::open(['route'=>['editExperienciaEmp.store','method'=>'POST']])!!}
 
     <label class="text-muted"> Experiencia: </label>
     <select class="form-control" name="cod_cargo">
