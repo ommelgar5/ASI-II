@@ -109,7 +109,7 @@ class UserRegisterController extends Controller
         DB::beginTransaction();
         try {
             $persona = new persona;
-            // $persona->cod_tipo_usuario = 2;
+//             $persona->cod_tipo_usuario = 2;
             $persona->dui = $request->input('dui');
             $persona->nombre = $request->input('nombres');
             $persona->apellido = $request->input('apellidos');

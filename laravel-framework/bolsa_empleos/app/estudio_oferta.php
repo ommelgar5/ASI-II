@@ -12,6 +12,7 @@ class estudio_oferta extends Model
     protected $fillable = [
         'cod_oferta',
         'cod_nivel_est',
+        'cod_area_est',
     ];
 
     public function  oferta_laboral(){
@@ -21,5 +22,11 @@ class estudio_oferta extends Model
     public function  nivel_estudio(){
         return $this->belongsTo('App\nivel_estudio','cod_nivel_est','cod_nivel_est');
     }
+
+    public function  area_estudio(){
+        return $this->belongsTo('App\area_estudio','cod_area_est','cod_area_est');
+    }
+
+
 
 }

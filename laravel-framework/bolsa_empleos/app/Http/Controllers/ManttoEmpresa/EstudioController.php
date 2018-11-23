@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ManttoEmpresa;
 
+use App\area_estudio;
 use App\estudio_oferta;
 use App\Http\Requests\ManttoEmpresa\EstudioRequest;
 use App\nivel_estudio;
@@ -23,7 +24,10 @@ class EstudioController extends Controller
         $estudios = estudio_oferta::where('cod_oferta',$id)->get();
         foreach ($estudios as $estudio){
             $estudio->nivel_estudio;
+            $estudio->area_estudio;
         }
+
+
 //        return response()->json($estudios);
 
         return view('empresa.ofertas.estudios.index',['estudios'=>$estudios,'idOferta'=>$id]);
@@ -39,8 +43,9 @@ class EstudioController extends Controller
     public function create($id)
     {
         $nivelesEstudios = nivel_estudio::all();
+        $areasEstudios = area_estudio::all();
 
-        return view('empresa.ofertas.estudios.create',['nivelesEstudios'=>$nivelesEstudios,'idOferta'=>$id]);
+        return view('empresa.ofertas.estudios.create',['nivelesEstudios'=>$nivelesEstudios,'areasEstudios'=> $areasEstudios,'idOferta'=>$id]);
     }
 
     /**
@@ -83,10 +88,11 @@ class EstudioController extends Controller
     {
         $estudio = estudio_oferta::find($id);
         $nivelesEstudios = nivel_estudio::all();
+        $areasEstudios = area_estudio::all();
 
 //        return response()->json($estudio);
 
-        return view('empresa.ofertas.estudios.edit',['estudio'=>$estudio,'nivelesEstudios'=>$nivelesEstudios]);
+        return view('empresa.ofertas.estudios.edit',['estudio'=>$estudio,'areasEstudios'=>$areasEstudios,'nivelesEstudios'=>$nivelesEstudios]);
     }
 
     /**

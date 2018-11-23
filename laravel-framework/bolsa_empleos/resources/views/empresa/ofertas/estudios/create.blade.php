@@ -6,6 +6,14 @@
 
     {!!Form::open(['route'=>['editEstudioEmp.store','method'=>'POST']])!!}
 
+    <label class="text-muted"> Área estudio: </label>
+    <select class="form-control" name="cod_area_est">
+        <option value="">Selecciona una opcion</option>
+        @foreach($areasEstudios as $areaEstudio)
+            <option value="{{ $areaEstudio->cod_area_est }}">{{ $areaEstudio->area_est }}</option>
+        @endforeach
+    </select><br>
+
     <label class="text-muted"> Nivel estudio: </label>
     <select class="form-control" name="cod_nivel_est">
         <option value="">Selecciona una opcion</option>
@@ -13,6 +21,7 @@
             <option value="{{ $nivelEstudio->cod_nivel_est }}">{{ $nivelEstudio->nivel_estudio }}</option>
         @endforeach
     </select><br>
+
     <input type="number" hidden name="cod_oferta" value="{{ $idOferta }}">
 
     <div class="text-center mb-5">
