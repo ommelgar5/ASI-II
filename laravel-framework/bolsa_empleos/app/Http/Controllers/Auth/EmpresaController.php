@@ -15,7 +15,16 @@ use App\idioma;
 use App\nivel;
 use App\nivel_estudio;
 use App\cargo_empresa;
+use App\oferta_laboral;
+use App\experiencia_oferta;
+use App\oferta_idioma;
+use App\estudio_oferta;
+use App\oferta_programa;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class EmpresaController extends Controller
@@ -63,6 +72,103 @@ class EmpresaController extends Controller
             'tipo_contrato' => tipo_contrato::where('isActive',1)->get()
         );
         return view('empresa.nuevaOferta',['data'=>$data]);
+    }
+
+    public function creaOferta(Request $request){
+        $success = false;
+        DB::beginTransaction();
+        try {
+
+            $nueva_oferta = new oferta_laboral;
+
+            $nueva_oferta->titulo = $request->input('cargo');
+            $nueva_oferta->descripcion = $request->input('descripcion');
+            $nueva_oferta->fechaLimite = $request->input('fechaLimite');
+            $nueva_oferta->cod_a_experiencia = $request->input('a_experiencia');
+            $nueva_oferta->cod_contrato = $request->input('tipo_contrato');
+            $nueva_oferta->numero_plaza = $request->input('plazas');
+            $nueva_oferta->edad_min = $request->input('edad_min');
+            $nueva_oferta->edad_max = $request->input('edad_max');
+            $nueva_oferta->salario_min = $request->input('salario_min');
+            $nueva_oferta->salario_max = $request->input('salario_max');
+            $nueva_oferta->cod_genero = $request->input('genero');
+            // $nueva_oferta-> = $request->input('departamento');
+            // $nueva_oferta-> = $request->input('municipio');
+            $nueva_oferta->vehiculo = $request->input('auto');
+            $nueva_oferta->cod_licencia = $request->input('tipo_licencia');
+            $nueva_oferta->isActive = 1;
+            $nueva_oferta->nit = Auth::guard('empresa')->user()->nit;
+            
+            $success = $nueva_oferta->save();
+            
+            if($success){
+                foreach($request->input('cargos') as $cargo){
+                    try {
+                        $tmp = new experiencia_oferta;
+                        $tmp->cod_cargo = $cargo;
+                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                        $success = $tmp->save();   
+                    }catch (\Exception $e) {
+                        $success = false;
+                        DB::rollback();
+                    }
+                }
+
+                for ($i=0; $i < count($request->input('nivelEst')) ; $i++) { 
+                    try{    
+                        $tmp = new estudio_oferta;
+                        // $tmp->cod_idioma = $request->input('estudio');
+                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                        $tmp->cod_nivel_est = $request->input('nivelEst')[$i];
+                        $success = $tmp->save();
+                    }catch (\Exception $e) {
+                        $success = false;
+                        DB::rollback();
+                    }
+                }
+                
+                for ($i=0; $i < count($request->input('programa')); $i++) { 
+                    try{ 
+                        $tmp = new oferta_programa;
+                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                        $tmp->cod_programa = $request->input('programa')[$i];
+                        $tmp->cod_nivel = $request->input('nivelPrograma')[$i];
+                        $success = $tmp->save();
+                    }catch (\Exception $e) {
+                        $success = false;
+                        DB::rollback();
+                    }
+                }
+                
+                for ($i=0; $i < count($request->input('idioma')); $i++) { 
+                    try{
+                        $tmp = new oferta_idioma;
+                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                        $tmp->cod_idioma = $request->input('idioma')[$i];
+                        $tmp->cod_nivel = $request->input('idiomaNivel')[$i];
+                        $success = $tmp->save();
+                    }catch (\Exception $e) {
+                        $success = false;
+                        DB::rollback();
+                    }
+                }
+                
+                if($success){
+                     DB::commit(); 
+                }else{
+                    DB::rollback();
+                }
+            }else{
+                $success = false;
+                DB::rollback();
+            }
+        }catch (\Exception $e) {
+            $success = false;
+            DB::rollback();
+        }
+
+        $response['error'] = !$success;
+        return response()->json($response);
     }
 
 }

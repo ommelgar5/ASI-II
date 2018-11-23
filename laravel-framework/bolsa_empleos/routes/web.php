@@ -59,6 +59,7 @@ Route::prefix('empresa')->group(function() {
     Route::post('/login', 'Auth\EmpresaLoginController@login')->name('empresa.login.submit');
     Route::get('/dashboard', 'Auth\EmpresaController@index')->name('empresa.dashboard');
     Route::get('/nueva_oferta','Auth\EmpresaController@showNuevaOferta')->name('empresa.nuevaoferta');
+    Route::post('/nueva_oferta','Auth\EmpresaController@creaOferta')->name('crearOferta');
 });
 
 // fin

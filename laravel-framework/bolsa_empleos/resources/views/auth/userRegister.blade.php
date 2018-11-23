@@ -10,35 +10,36 @@
 <!-- END VENDOR CSS-->
 
 <!-- BEGIN Page Level CSS-->
-<link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+<!-- <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css"> -->
 <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/wizard.css">
 <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
-<link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.css">
+<link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
+<link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.css">
 <!-- END Page Level CSS-->
 @endsection
 
 @section('jsExtra')
 <!-- BEGIN PAGE VENDOR JS-->
-<script type="text/javascript" src="app-assets/vendors/js/ui/jquery.sticky.js"></script>
-<script type="text/javascript" src="app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
-<script type="text/javascript" src="app-assets/vendors/js/ui/headroom.min.js"></script>
-<script src="app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
-<script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
-<script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
-<script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
-<script src="app-assets/vendors/js/forms/validation/jquery.validate.additional-methods.min.js" type="text/javascript"></script>
-<script src="app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+<script type="text/javascript" src="/app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="/app-assets/vendors/js/ui/headroom.min.js"></script>
+<script src="/app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/forms/validation/jquery.validate.additional-methods.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
 <!-- END PAGE VENDOR JS-->
 
 <!-- BEGIN ROBUST JS-->
-<script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
-<script src="app-assets/js/core/app.js" type="text/javascript"></script>
-<script src="app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+<script src="/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+<!-- <script src="/app-assets/js/core/app.js" type="text/javascript"></script> -->
+<!-- <script src="/app-assets/js/scripts/customizer.js" type="text/javascript"></script> -->
 <!-- END ROBUST JS-->
 
 <!-- BEGIN PAGE LEVEL JS-->
-<script type="text/javascript" src="app-assets/js/scripts/ui/breadcrumbs-with-stats.js"></script>
-<script src="app-assets/js/scripts/extensions/toastr.js" type="text/javascript"></script>
+<script type="text/javascript" src="/app-assets/js/scripts/ui/breadcrumbs-with-stats.js"></script>
+<script src="/app-assets/js/scripts/extensions/toastr.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
 
 <script type="text/javascript">

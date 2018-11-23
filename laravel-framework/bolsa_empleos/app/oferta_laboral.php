@@ -10,6 +10,7 @@ class oferta_laboral extends Model
     protected $table = 'oferta_laboral';
     protected $primaryKey = 'cod_oferta';
     public $timestamps = false;
+    
     protected $fillable = [
         'titulo',
         'descripcion',

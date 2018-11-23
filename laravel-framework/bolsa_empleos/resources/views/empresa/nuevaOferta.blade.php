@@ -4,27 +4,37 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,400,500,700" rel="stylesheet">
 <!-- BEGIN Page Level CSS-->
 <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.css">
+<link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
 <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.css">
 <!-- END Page Level CSS-->
 @endsection
 
 @section('contenido')
-<form id="ofertaLaboral" action="#" class="border p-2 rounded mb-3">
+<form id="ofertaLaboral" action="{{route('crearOferta')}}" method="post" class="border p-2 rounded mb-3">
+  @csrf
   <div class="row">
     
       <div class="col-lg-6">
         <h4>Detalle de la Oferta</h4>
           <div class="form-group">
-            <label for="cargo">Cargo:</label>
+            <label for="cargo">Titulo:</label>
             <input type="text" name="cargo" id="cargo" class="form-control">
           </div>
           <div class="form-group">
             <label for="descripcion">Descripcion:</label>
-            <textarea class="form-control" rows="3" id="descripcion" name="descipcion"></textarea>
+            <textarea class="form-control" rows="3" id="descripcion" name="descripcion"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="fechaLimite">
+                  Fecha de limite :
+                  <span class="danger">*</span>
+              </label>
+              <input type="date" class="form-control required" id="fechaLimite" name="fechaLimite" min="1970-01-01"/>
           </div>
           <div class="form-group">
             <label for="ae">Años de experiencias laboral:</label>
             <select class="form-control" id="ae" name="a_experiencia">
+              <option value="">Años de experiencias</option>
               @foreach($data['a_experiencia'] as $a)
                 <option value="{{$a->cod_a_experiencia}}">{{$a->a_experiecia}}</option>
               @endforeach
@@ -33,6 +43,7 @@
           <div class="form-group">
             <label for="tc">Tipo de contrato:</label>
             <select class="form-control" id="tc" name="tipo_contrato">
+              <option value="">Tipo de contrato</option>
               @foreach($data['tipo_contrato'] as $c)
                 <option value="{{$c->cod_contrato}}">{{$c->contrato}}</option>
               @endforeach
@@ -61,16 +72,16 @@
           <div class="form-group">
             <label for="genero">Seleccona el Genero:</label>
             <select class="form-control" id="genero" name="genero">
-              <option value="0">Genero</option>
+              <option value="">Genero</option>
               @foreach($data['generos'] as $g)
                 <option value="{{$g->cod_genero}}">{{$g->genero}}</option>
               @endforeach
             </select>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="depto">Departamento:</label>
             <select class="form-control" id="depto" name="departamento">
-              <option value="0">Departamentos</option>
+              <option value="">Departamentos</option>
               @foreach($data['departamentos'] as $d)
                 <option value="{{$d->cod_departamento}}">{{$d->departamento}}</option>
               @endforeach
@@ -79,12 +90,12 @@
           <div class="form-group">
             <label for="mun">Municipio:</label>
             <select class="form-control" id="mun" name="municipio">
-              <option value="0">Municipios</option>
+              <option value="">Municipios</option>
               @foreach($data['municipios'] as $m)
                 <option value="{{$m->cod_municipio}}">{{$m->municipio}}</option>
               @endforeach
             </select>
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="auto">Auto propio:</label>
             <select class="form-control" id="auto" name="auto">
@@ -111,7 +122,7 @@
          <div class="form-group">
             <label for="expeLaboral">Nombre de la experiencia: </label>
             <select id="expList" class="form-control">
-              <option value="0">Lista de cargos</option>
+              <option value="">Lista de cargos</option>
               @foreach($data['cargos_empresa'] as $cargo)
                 <option value="{{$cargo->cod_cargo}}">{{$cargo->cargo}}</option>
               @endforeach
@@ -130,7 +141,7 @@
             <div class="form-group">
               <label for="estudioList">Area de estudio:</label>
               <select id="#estudioList" class="estudioList form-control">
-                <option vale="0">Area de estudio</option>
+                <option vale="">Area de estudio</option>
                 @foreach($data['areasEstudio'] as $ae)
                   <option value="{{$ae->cod_area_est}}">{{$ae->area_est}}</option>
                 @endforeach
@@ -165,6 +176,7 @@
           <div class="form-group">
             <label for="programa">Seleccion el Programa:</label>
             <select class="form-control" id="programa">
+              <option value="0">Habilidades</option>
               @foreach($data['programas'] as $p)
                 <option value="{{$p->cod_programa}}">{{$p->programa}}</option>
               @endforeach
@@ -173,6 +185,7 @@
           <div class="form-group">
             <label for="nivelPrograma">Nivel:</label>
             <select class="form-control" id="nivelPrograma">
+              <option value="0"></option>
               @foreach($data['niveles'] as $n)
                 <option value="{{$n->cod_nivel}}">{{$n->nivel}}</option>
               @endforeach
@@ -229,6 +242,8 @@
 @section('jsExtra')
 <script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
 <script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/forms/validation/jquery.validate.additional-methods.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $.ajaxSetup({
@@ -236,21 +251,126 @@
             'X-CSRF-TOKEN': '{{ csrf_token() }}'
         }
     });
-    
-    //Actualiza los municipios cuando se selecciona un departamento
-    $(document).on("change","#depto",function(event){
-        var departamento = $(this).val();
-        $.ajax({
-            method: "get",
-            url: "{{ url('/obtenerMunicipios') }}/"+departamento,
-        }).done(function( msg ) {
-            $("#mun").html('<option value="0">Municipios</option>');
-            $(msg).each(function(k,v){
-                var html = '<option value="'+v.cod_municipio+'">'+v.municipio+'</option>' ;
-                $(html).appendTo("#mun");
-            })
-        });
+
+    // Obtener la fecha actual para los input fecha
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+    var ffin = d.getFullYear() + '/' + (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day;
+    $('#fechaFinEmpresa').attr('max',ffin);
+
+    $("#ofertaLaboral").validate({
+            ignore: 'input[type=hidden]', // ignore hidden fields
+            errorClass: 'danger',
+            successClass: 'success',
+            highlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+            },
+            errorPlacement: function(error, element) {
+                error.insertAfter(element);
+            },
+            rules: {
+                cargo: "required",
+                descripcion: "required",
+                fechaLimite: "required",
+                a_experiencia: "required",
+                tipo_contrato: "required",
+                plazas: "required",
+                edad_min:"required",
+                edad_max:"required",
+                genero:"required",
+                // departamento:"required",
+                // municipio:"required",
+                auto:"required",
+                tipo_licencia:"required",
+            },
+            messages:{
+              cargo:{
+                required: "Titulo requerido"
+              },
+              descripcion:{
+                required: "Descripcion requerido"
+              },
+              fechaLimite:{
+                required: "Fecha Limite requerido"
+              },
+              a_experiencia:{
+                required: "Años de experiencia requerido"
+              },
+              tipo_contrato:{
+                required: "Tipo de contrato requerido"
+              },
+              plazas:{
+                required: "Plazas disponibles requerido"
+              },
+              edad_min:{
+                required: "Edad minima requerida"
+              },
+              edad_max:{
+                required: "Titulo requerido"
+              },
+              genero:{
+                required: "Genero requerido"
+              },
+              // departamento:{
+              //   required: "Departamento requerido"
+              // },
+              // municipio:{
+              //   required: "Municipio requerido"
+              // },
+              auto:"required",
+              tipo_licencia:{
+                required: "Tipo de licencia requerida"
+              },
+            }
     });
+
+    $("#ofertaLaboral").submit(function(event){
+      event.preventDefault();
+      if($(this).valid()){
+        var dataF = $(this).serialize();
+        $.ajax({
+            type: 'post',
+            url: '{{route('crearOferta')}}',
+            async: false,
+            dataType: 'json',
+            data:dataF,
+            success:function(response){
+                if(response.error){
+                    toastr.error(response.errorMessage);
+                    $out = false;
+                }else{
+                    $out = true;
+                    window.location.replace("{{ route('empresa.dashboard') }}");
+                }
+            },
+            error: function(){
+                $out = false;
+            }
+        });
+      }else{
+        return false;
+      }
+    });
+
+    
+    // //Actualiza los municipios cuando se selecciona un departamento
+    // $(document).on("change","#depto",function(event){
+    //     var departamento = $(this).val();
+    //     $.ajax({
+    //         method: "get",
+    //         url: "{{ url('/obtenerMunicipios') }}/"+departamento,
+    //     }).done(function( msg ) {
+    //         $("#mun").html('<option value="0">Municipios</option>');
+    //         $(msg).each(function(k,v){
+    //             var html = '<option value="'+v.cod_municipio+'">'+v.municipio+'</option>' ;
+    //             $(html).appendTo("#mun");
+    //         })
+    //     });
+    // });
 
     //Agrega experiencia a la lista
     $(document).on("click",".agregarExp", function(event){
@@ -301,33 +421,37 @@
       var obj2 = $("#NivelEstudio");
       
       var valor1 = objE.val();
-      var texto1 = $('.estudioList option[value="'+valor1+'"]').text();
-      
-      objE.val("0");
-
       var valor2 = obj2.val();
-      var texto2 = $('#NivelEstudio option[value="'+valor2+'"]').text();
-      obj2.val("0");
-
       var especialidad = $("#especialidad").val();
-      $("#especialidad").val("");
       
-      html = `<div class="card mb-2">
-            <div class="card-header d-flex justify-content-between py-1">
-              <input type="hidden" value="${valor1}" name="estudio[]" class="estudioValor" />
-              <input type="hidden" value="${valor2}" name="nivelEst[]" />
-              <a class="card-link estudioTexto" data-toggle="collapse" href="#es1">${especialidad}</a>
-              <i class="fas fa-trash-alt fa-lg pt-1 quitarEstudio"></i>
-            </div>
-            <div id="es1" class="collapse" data-parent="#estudios">
-              <div class="card-body py-1 px-4">
-                  <p class="m-0">Area estudio: <span class="text-muted">${texto1}</span></p>
-                  <p class="m-0">Nivel estudio: <span class="text-muted">${texto2}</span></p>
-              </div>
-            </div>
-          </div>`;
+      if( valor1 != 0&& valor2 != 0 && especialidad != "")
+      {
+        objE.val("0");
+        var texto1 = $('.estudioList option[value="'+valor1+'"]').text();
+        var texto2 = $('#NivelEstudio option[value="'+valor2+'"]').text();
+        obj2.val("0");
 
-      $(html).appendTo('#estudios');
+        $("#especialidad").val("");
+        
+        html = `<div class="card mb-2">
+              <div class="card-header d-flex justify-content-between py-1">
+                <input type="hidden" value="${valor1}" name="estudio[]" class="estudioValor" />
+                <input type="hidden" value="${valor2}" name="nivelEst[]" />
+                <a class="card-link estudioTexto" data-toggle="collapse" href="#es1">${especialidad}</a>
+                <i class="fas fa-trash-alt fa-lg pt-1 quitarEstudio"></i>
+              </div>
+              <div id="es1" class="collapse" data-parent="#estudios">
+                <div class="card-body py-1 px-4">
+                    <p class="m-0">Area estudio: <span class="text-muted">${texto1}</span></p>
+                    <p class="m-0">Nivel estudio: <span class="text-muted">${texto2}</span></p>
+                </div>
+              </div>
+            </div>`;
+
+        $(html).appendTo('#estudios');
+      }else{
+        toastr.error('Faltan campos en estudio.');
+      }
 
     });
     //Quitar estudio 
@@ -344,29 +468,34 @@
       var nivelprg = $("#nivelPrograma");
       
       var valor = prg.val();
-      var texto = $('#programa option[value="'+valor+'"]').text();
-      $('#programa option[value="'+valor+'"]').remove();
-      prg.val("0");
-
       var valor2 = nivelprg.val();
-      var texto2 = $('#nivelPrograma option[value="'+valor2+'"]').text();
-      nivelprg.val("0");
-      
-      html = `<div class="card mb-2">
-          <div class="card-header d-flex justify-content-between py-1">
-            <input type="hidden" value="${valor}" name="programa[]" class="programaValor"/>
-            <input type="hidden" value="${valor2}" name="nivelPrograma[]" />
-            <a class="card-link programaTexto" data-toggle="collapse" href="#p1">${texto}</a>
-            <i class="fas fa-trash-alt fa-lg pt-1 quitarPrograma"></i>
-          </div>
-          <div id="p1" class="collapse" data-parent="#programas">
-            <div class="card-body py-1 px-4">
-              <p class="m-0">Nivel: <span class="text-muted">${texto2}</span></p>
-            </div>
-          </div>
-        </div>`;
 
-      $(html).appendTo('#programasList');
+      if(valor != 0 && valor2 != 0){
+        var texto = $('#programa option[value="'+valor+'"]').text();
+        $('#programa option[value="'+valor+'"]').remove();
+        prg.val("0");
+
+        var texto2 = $('#nivelPrograma option[value="'+valor2+'"]').text();
+        nivelprg.val("0");
+        
+        html = `<div class="card mb-2">
+            <div class="card-header d-flex justify-content-between py-1">
+              <input type="hidden" value="${valor}" name="programa[]" class="programaValor"/>
+              <input type="hidden" value="${valor2}" name="nivelPrograma[]" />
+              <a class="card-link programaTexto" data-toggle="collapse" href="#p1">${texto}</a>
+              <i class="fas fa-trash-alt fa-lg pt-1 quitarPrograma"></i>
+            </div>
+            <div id="p1" class="collapse" data-parent="#programas">
+              <div class="card-body py-1 px-4">
+                <p class="m-0">Nivel: <span class="text-muted">${texto2}</span></p>
+              </div>
+            </div>
+          </div>`;
+
+        $(html).appendTo('#programasList');
+      }else{
+        toastr.error('Faltan campos habilidades.');
+      }
 
     });
     //Quitar programa 
@@ -390,30 +519,34 @@
       var nivelIdioma = $("#nivelI");
 
       var valor = idioma.val();
-      var texto = $('#idioma option[value="'+valor+'"]').text();
-      $('#idioma option[value="'+valor+'"]').remove();
-      idioma.val("0");
-
       var valor2 = nivelIdioma.val();
-      var texto2 = $('#nivelI option[value="'+valor2+'"]').text();
-      nivelIdioma.val("0");
 
-      html = `<div class="card mb-2">
-          <div class="card-header d-flex justify-content-between py-1">
-            <input type="hidden" value="${valor}" name="idioma[]" class="valorIdioma"/>
-            <input type="hidden" value="${valor2}" name="idiomaNivel[]" />
-            <a class="card-link textoIdioma" data-toggle="collapse" href="#i1">${texto}</a>
-            <i class="fas fa-trash-alt fa-lg pt-1 quitarIdioma"></i>
-          </div>
-          <div id="i1" class="collapse" data-parent="#idiomas">
-            <div class="card-body py-1 px-4">
-              <p class="m-0">Nivel: <span class="text-muted">${texto2}</span></p>
+      if(valor != 0 && valor2 !=0){
+        var texto = $('#idioma option[value="'+valor+'"]').text();
+        $('#idioma option[value="'+valor+'"]').remove();
+        idioma.val("0");
+
+        var texto2 = $('#nivelI option[value="'+valor2+'"]').text();
+        nivelIdioma.val("0");
+
+        html = `<div class="card mb-2">
+            <div class="card-header d-flex justify-content-between py-1">
+              <input type="hidden" value="${valor}" name="idioma[]" class="valorIdioma"/>
+              <input type="hidden" value="${valor2}" name="idiomaNivel[]" />
+              <a class="card-link textoIdioma" data-toggle="collapse" href="#i1">${texto}</a>
+              <i class="fas fa-trash-alt fa-lg pt-1 quitarIdioma"></i>
             </div>
-          </div>
-        </div>`;
+            <div id="i1" class="collapse" data-parent="#idiomas">
+              <div class="card-body py-1 px-4">
+                <p class="m-0">Nivel: <span class="text-muted">${texto2}</span></p>
+              </div>
+            </div>
+          </div>`;
 
-      $(html).appendTo('#idiomas');
-
+        $(html).appendTo('#idiomas');
+      }else{
+        toastr.error('Falta seleccionar campos en idiomas.');
+      }
     });
     //Quitar idiomas 
     $(document).on('click','.quitarIdioma',function(event){
