@@ -65,6 +65,16 @@ Route::prefix('empresa')->group(function() {
 // fin
 
 /*
+	para el gestor(Admin)
+*/
+Route::prefix('gestor')->group(function(){
+	Route::get('dashboard',function(){
+		return view('gestor.dashboard');
+	})->middleware('auth','gestor');
+});
+
+
+/*
 	registro de aplicantes 
 */
 Route::get('/registro', 'UserRegisterController@index')->middleware('guest');

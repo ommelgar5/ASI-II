@@ -108,8 +108,8 @@ class UserRegisterController extends Controller
 
         DB::beginTransaction();
         try {
-            $persona = new Persona;
-            $persona->cod_tipo_usuario = 2;
+            $persona = new persona;
+            // $persona->cod_tipo_usuario = 2;
             $persona->dui = $request->input('dui');
             $persona->nombre = $request->input('nombres');
             $persona->apellido = $request->input('apellidos');
@@ -128,6 +128,7 @@ class UserRegisterController extends Controller
                 $login = new User;
                 $login->dui = $request->input('dui');
                 $login->password = Hash::make($request->input('pass'));
+                $login->cod_tipo_usuario = 2;
                 $success = $login->save();
                 if($success){
                     DB::commit(); 
