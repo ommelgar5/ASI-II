@@ -156,10 +156,10 @@
                 @endforeach
               </select>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="especialidad">Especialidad</label>
               <input type="text" class="form-control" id="especialidad">
-            </div>
+            </div> -->
             <div class="text-right mb-2">
               <button class="btn btn-primary text-right agregarEstudio"><i class="fas fa-plus-circle mr-2 fa-lg"></i>Agregar</button>
             </div>
@@ -422,22 +422,19 @@
       
       var valor1 = objE.val();
       var valor2 = obj2.val();
-      var especialidad = $("#especialidad").val();
       
-      if( valor1 != 0&& valor2 != 0 && especialidad != "")
+      if( valor1 != 0&& valor2 != 0 )
       {
         objE.val("0");
         var texto1 = $('.estudioList option[value="'+valor1+'"]').text();
         var texto2 = $('#NivelEstudio option[value="'+valor2+'"]').text();
         obj2.val("0");
-
-        $("#especialidad").val("");
         
         html = `<div class="card mb-2">
               <div class="card-header d-flex justify-content-between py-1">
                 <input type="hidden" value="${valor1}" name="estudio[]" class="estudioValor" />
                 <input type="hidden" value="${valor2}" name="nivelEst[]" />
-                <a class="card-link estudioTexto" data-toggle="collapse" href="#es1">${especialidad}</a>
+                <a class="card-link estudioTexto" data-toggle="collapse" href="#es1">${texto1 +' '+texto2}</a>
                 <i class="fas fa-trash-alt fa-lg pt-1 quitarEstudio"></i>
               </div>
               <div id="es1" class="collapse" data-parent="#estudios">
