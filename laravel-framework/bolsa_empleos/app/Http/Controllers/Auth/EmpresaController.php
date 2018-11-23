@@ -53,7 +53,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        return view('empresa.dashboard');
+        $ofertas = oferta_laboral::where('nit',Auth::guard('empresa')->user()->nit)->get();
+        return view('empresa.dashboard',['ofertas'=>$ofertas]);
     }
 
     public function showNuevaOferta(){
