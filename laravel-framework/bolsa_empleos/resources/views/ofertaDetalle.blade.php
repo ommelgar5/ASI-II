@@ -70,7 +70,7 @@
       	@elseif($oferta->salario_max)
       		{{ $oferta->salario_max }}
       	@else
-      		en base a experiencia
+      		con base a experiencia
       	@endif
       </td>
     </tr>
