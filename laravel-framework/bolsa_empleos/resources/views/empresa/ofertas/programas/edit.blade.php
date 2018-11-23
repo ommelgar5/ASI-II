@@ -5,7 +5,7 @@
 
     @include('alerts.request')
 
-    {!!Form::model($programaOfer,['route'=>['editHabilidad.update',$programaOfer->cod_oferta_prog],'method'=>'PUT'])!!}
+    {!!Form::model($programaOfer,['route'=>['editHabilidadEmp.update',$programaOfer->cod_oferta_prog],'method'=>'PUT'])!!}
 
     <label class="text-muted">Programa: </label>
     <select class="form-control" name="cod_programa">

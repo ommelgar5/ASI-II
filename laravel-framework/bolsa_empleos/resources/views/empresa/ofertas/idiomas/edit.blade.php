@@ -5,7 +5,7 @@
 
     @include('alerts.request')
 
-    {!!Form::model($idiomaOfer,['route'=>['editIdioma.update',$idiomaOfer->cod_oferta_idioma],'method'=>'PUT'])!!}
+    {!!Form::model($idiomaOfer,['route'=>['editIdiomaEmp.update',$idiomaOfer->cod_oferta_idioma],'method'=>'PUT'])!!}
 
         <label class="text-muted">Idioma: </label>
         <select class="form-control" name="cod_idioma">

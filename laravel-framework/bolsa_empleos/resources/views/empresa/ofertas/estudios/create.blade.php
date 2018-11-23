@@ -4,7 +4,7 @@
 
     @include('alerts.request')
 
-    {!!Form::open(['route'=>['editEstudio.store','method'=>'POST']])!!}
+    {!!Form::open(['route'=>['editEstudioEmp.store','method'=>'POST']])!!}
 
     <label class="text-muted"> Nivel estudio: </label>
     <select class="form-control" name="cod_nivel_est">

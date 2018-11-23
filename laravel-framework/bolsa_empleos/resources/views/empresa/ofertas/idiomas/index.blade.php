@@ -14,8 +14,8 @@
                 <div class="panel-heading py-1" >
                     <div class="row p-0">
                         <span class="col-xs-9">{{ $idioma->idioma->idioma }} - {{ $idioma->nivel->nivel }}</span>
-                        <a href="/editIdioma/{{ $idioma->cod_oferta_idioma }}/edit" style="color: white;" class="col-xs-1 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
-                        {!!Form::open(['route'=>['editIdioma.destroy',$idioma->cod_oferta_idioma],'method'=>'DELETE','class'=>'text-center col-xs-2 p-0'])!!}
+                        <a href="/editIdiomaEmp/{{ $idioma->cod_oferta_idioma }}/edit" style="color: white;" class="col-xs-1 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
+                        {!!Form::open(['route'=>['editIdiomaEmp.destroy',$idioma->cod_oferta_idioma],'method'=>'DELETE','class'=>'text-center col-xs-2 p-0'])!!}
                         {!!Form::submit('Eliminar',['class'=>'btn btn-danger btn-sm'])!!}
                         {!!Form::close()!!}
                     </div>
