@@ -65,9 +65,7 @@ Route::prefix('empresa')->group(function() {
 	para el gestor(Admin)
 */
 Route::prefix('gestor')->group(function(){
-	Route::get('dashboard',function(){
-		return view('gestor.dashboard');
-	})->middleware('auth','gestor');
+	Route::get('/dashboard','GestorController@index')->name('gestor.dashboard')->middleware('auth','gestor');
 });
 //fin
 
@@ -81,7 +79,6 @@ Route::post('/agregarEstudios/{id}','UserRegisterController@agregarEstudios');
 Route::post('/agregarIdiomas/{id}', 'UserRegisterController@agregarIdiomas');
 Route::post('/agregarProgramas/{id}', 'UserRegisterController@agregarProgramas');
 Route::post('/agregarExperiencias/{id}', 'UserRegisterController@agregarExperiencias');
-
 // fin
 
 /*
