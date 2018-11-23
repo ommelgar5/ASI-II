@@ -47,9 +47,7 @@ Route::get('/aplicarOferta/{id}','OfertasController@aplicarOferta')->name('aplic
 
 
 /*
-
 	registro de perfil de empresas
-
 */
 Route::get('/registroEmpresa', 'EmpresaRegisterController@index')->middleware('guest');
 Route::post('/registroEmpresa', 'EmpresaRegisterController@CrearEmpresa');
@@ -61,7 +59,6 @@ Route::prefix('empresa')->group(function() {
     Route::get('/nueva_oferta','Auth\EmpresaController@showNuevaOferta')->name('empresa.nuevaoferta');
     Route::post('/nueva_oferta','Auth\EmpresaController@creaOferta')->name('crearOferta');
 });
-
 // fin
 
 /*
@@ -72,6 +69,7 @@ Route::prefix('gestor')->group(function(){
 		return view('gestor.dashboard');
 	})->middleware('auth','gestor');
 });
+//fin
 
 
 /*
