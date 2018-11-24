@@ -55,37 +55,21 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-building fa-fw"></i>Empresas<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Empresa</a>
-                            </li>
-                        </ul>
+                        <a href="/gestor/empresas"><i class="fa fa-building fa-fw"></i>Empresas</a>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-users fa-fw"></i> Usuarios<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class='fa fa-list-ol fa-fw'></i> Usuarios</a>
-                            </li>
-                        </ul>
+                        <a href="/gestor/usuarios"><i class="fa fa-users fa-fw"></i> Usuarios</a>
                     </li>
 
                     <li>
                         <a href="#"><i class="fa fa-list-alt fa-fw"></i> Mantto tablas catalogos<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-check-square fa-fw"></i> Áreas empresa</a>
+                                <a href="/areaEmpresa"><i class="fa fa-check-square fa-fw"></i> Áreas empresa</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Áreas estudio</a>
+                                <a href="/areaEstudio"><i class='fa fa-check-square fa-fw'></i> Áreas estudio</a>
                             </li>
                             <li>
                                 <a href="#"><i class='fa fa-check-square fa-fw'></i> Años de experiencia</a>
@@ -143,6 +127,143 @@
 <script src="/assets/js/admin/bootstrap.min.js"></script>
 <script src="/assets/js/admin/metisMenu.min.js"></script>
 <script src="/assets/js/admin/sb-admin-2.js"></script>
+
+{{--Mostrar detalle--}}
+<script>
+    $(document).ready(function () {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        });
+
+        // Detalle Empresa
+        $(document).on( 'click','#detalle', function () {
+
+            var nit = this.parentElement.parentElement.children[0].textContent;
+
+            $.ajax({
+                type: 'post',
+                url: '{{ url("gestor/empDet") }}/'+nit,
+                async: false,
+                success:function(response){
+
+                    console.log(response);
+                    var data = "";
+                    if(!response.error){
+                        data += `
+                            <div class="modal-header bg-success">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"> ${response.data.nombre_juridico}</h4>
+                            </div>
+                            <div class="modal-body">
+                                  <div class="mb-2">Nombre comercial: <span class="text-muted">${response.data.nombre_comercial}</span></div>
+                                  <div>Giro: <span class="text-muted">${response.data.giro_empresa.giro}</span></div>
+                                  <div>Descripcion de la empresa:</div>
+                                  <p class="text-muted">${response.data.descripcion }</p>
+                                  <div>Correo: <span class="text-muted">${response.data.correo }</span></div>
+                                  <div>Telefono 1: <span class="text-muted">${response.data.telefono1 }</span></div>
+                                  <div>Telefono2: <span class="text-muted">${response.data.telefono2}</span></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                            </div>
+                        `;
+                    }else{
+
+                        data += `
+                            <div class="modal-header bg-danger">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-white">No existe el registro :(</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                            </div>
+                        `;
+
+                    }
+
+                    $('#data').empty().append(data);
+
+                },
+                error: function(response){
+                    console.log(response);
+                }
+            });
+
+        });
+
+
+        // Detalle ususario
+
+        $(document).on( 'click','#detUs', function () {
+
+            var dui = this.parentElement.parentElement.children[0].textContent;
+
+            $.ajax({
+                type: 'post',
+                url: '{{ url("gestor/useDet") }}/'+dui,
+                async: false,
+                success:function(response){
+
+                    console.log(response);
+                    var data = "";
+                    if(!response.error){
+                        data += `
+                            <div class="modal-header bg-success">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"> ${response.data.nombre} ${response.data.apellido}</h4>
+                            </div>
+                            <div class="modal-body">
+                                  <div class="mb-2">DUI: <span class="text-muted">${response.data.dui}</span></div>
+                                  <div>Correo: <span class="text-muted">${response.data.correo}</span></div>
+                                  <div>Fecha Nacimiento: <span class="text-muted">${response.data.fech_nac }</span></div>
+                                  <div>Telefono 1: <span class="text-muted">${response.data.telefono1 }</span></div>
+                                  <div>Telefono 2: <span class="text-muted">${response.data.telefono2}</span></div>
+                                  <div>Genero: <span class="text-muted">${response.data.genero.genero}</span></div>
+                                  <div>Estado civil: <span class="text-muted">${response.data.estado_civil.estado}</span></div>
+                                  <div>Años de experiencia: <span class="text-muted">${response.data.a_experiencia.a_experiencia}</span></div>
+                                  <div>Vehículo: <span class="text-muted">${ response.vehiculo ? 'Si' : 'No' }</span></div>
+                                  <div>Licencia: <span class="text-muted">${response.data.licencia.tipo }</span></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                            </div>
+                        `;
+                    }else{
+
+                        data += `
+                            <div class="modal-header bg-danger">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-white">No existe el registro :(</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                            </div>
+                        `;
+
+                    }
+
+                    $('#dataUse').empty().append(data);
+
+                },
+                error: function(response){
+                    console.log(response);
+                }
+            });
+
+        });
+
+
+
+    });
+</script>
+
+
+
+
+
 
 </body>
 

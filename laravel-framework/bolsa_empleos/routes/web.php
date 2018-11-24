@@ -66,6 +66,19 @@ Route::prefix('empresa')->group(function() {
 */
 Route::prefix('gestor')->group(function(){
 	Route::get('/dashboard','GestorController@index')->name('gestor.dashboard')->middleware('auth','gestor');
+
+	Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
+	Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');
+	Route::post('/empDet/{id}','GestorController@empDet')->name('gestor.empDet')->middleware('auth','gestor');
+
+	Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
+	Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
+	Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');
+
+    Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
+    Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
+    Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');
+
 });
 //fin
 
@@ -119,10 +132,16 @@ Route::get('/editIdi/{id}','ManttoEmpresa\IdiomaController@index');
 Route::get('/editIdi/create/{id}','ManttoEmpresa\IdiomaController@create');
 
 
-
-//=======
 /*
 	Gestion de oferta - usuario
 */
 Route::get('/gestion','gestionOfertaAplicanteController@index')->name('gestion')->middleware('auth');
-//>>>>>>> 996e0821b540f29d523765915de3d93c45b852e5
+
+
+/*
+ * MANTTO TABLAS
+ *
+ * */
+
+Route::resource('areaEmpresa','ManttoGestor\AreaEmpresaController');
+Route::resource('areaEstudio','ManttoGestor\AreaEstudioController');

@@ -1,10 +1,7 @@
 
-
-
-// Seleciona opcion Actual UpdateExperiencia
-
 $(document).ready(function () {
 
+    // Seleciona opcion Actual UpdateExperiencia
     $select = $('#actual').val();
     if($select == 1){
         $('#a_fin').attr('disabled', true).val(null);
@@ -19,7 +16,14 @@ $(document).ready(function () {
         }
     });
 
+
 });
+
+
+
+
+
+
 
 
 
