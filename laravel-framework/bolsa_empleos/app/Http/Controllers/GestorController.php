@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\empresa;
+use App\genero;
 use App\persona;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class GestorController extends Controller
 {
@@ -13,11 +17,55 @@ class GestorController extends Controller
     	return view('gestor.dashboard');
     }
 
+    public function perfil(){
+
+        $gestor = persona::where('dui',Auth::user()->dui)->first();
+        $gestor->genero;
+//        return response()->json($gestor);
+        return view('gestor.perfil',['gestor'=>$gestor]);
+
+    }
+
+    public function editPerfil(){
+        $gestor = persona::where('dui',Auth::user()->dui)->first();
+        $generos = genero::all();
+
+        return view('gestor.editPerfil',['gestor'=>$gestor,'generos'=>$generos]);
+    }
+
+
+    public function updatePerfil(Request $request){
+        $gestor = persona::where('dui',Auth::user()->dui)->first();
+        $gestor->nombre = $request->input('nombre');
+        $gestor->apellido = $request->input('apellido');
+        $gestor->fech_nac = $request->input('fech_nac');
+        $gestor->correo = $request->input('correo');
+        $gestor->telefono1 = $request->input('telefono1');
+        $gestor->telefono2 = $request->input('telefono2');
+        $gestor->cod_genero = $request->input('cod_genero');
+        $gestor->save();
+        Session::flash('message',"<strong>¡Perfil!</strong> editado correctamente");
+        return Redirect::to('/gestor/perfil');
+    }
+
+    public function createPerfil(){
+        $generos = genero::all();
+        return view('gestor.create', ['generos'=>$generos]);
+    }
+
+    public function storePerfil(Request $request){
+
+        return response()->json($request);
+
+    }
+
+
+
+
 
     public function empresas(){
 
         $empresas = empresa::paginate(15);
-//        return response()->json($empresas);
         return view('gestor.empresas',['empresas'=>$empresas]);
     }
 

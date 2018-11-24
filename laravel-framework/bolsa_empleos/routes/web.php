@@ -66,6 +66,11 @@ Route::prefix('empresa')->group(function() {
 */
 Route::prefix('gestor')->group(function(){
 	Route::get('/dashboard','GestorController@index')->name('gestor.dashboard')->middleware('auth','gestor');
+	Route::get('/perfil','GestorController@perfil')->name('gestor.perfil')->middleware('auth','gestor');
+	Route::get('/editPerfil','GestorController@editPerfil')->name('gestor.editPerfil')->middleware('auth','gestor');
+	Route::put('/updatePerfil','GestorController@updatePerfil')->name('gestor.updatePerfil')->middleware('auth','gestor');
+	Route::get('/createPerfil','GestorController@createPerfil')->name('gestor.createPerfil')->middleware('auth','gestor');
+//	Route::post('/createPerfil','GestorController@storePerfil')->name('gestor.storePerfil')->middleware('auth','gestor');
 
 	Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
 	Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');

@@ -13,6 +13,10 @@
     <link href="/assets/css/admin/css/sb-admin-2.css" rel="stylesheet">
     <link href="/assets/css/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <style>
+        pre{display: none;}
+    </style>
+
 </head>
 
 <body>
@@ -38,7 +42,9 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Ver perfil</a>
+                    <li><a href="/gestor/perfil"><i class="fa fa-user fa-fw"></i> Ver perfil</a>
+                    </li>
+                    <li><a href="/gestor/createPerfil"><i class="fa fa-plus-square fa-fw"></i> Agregar usuario admin</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="/"><i class="fa fa-sign-out fa-fw"></i> Salir</a>

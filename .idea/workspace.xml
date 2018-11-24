@@ -9,22 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421218a6-6bd0-4da0-871e-1a4159a8e0c8" name="Default" comment="Validacion y formato Registro Usuario">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/empresas.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/forms/tabla.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/usuarios.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEstudio/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEstudio/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEstudio/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/editPerfil.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/perfil.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/User.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/a_experiencia.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/a_experiencia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_empresa.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_empresa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_estudio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/personalizado.js" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/public/assets/js/admin/personalizado.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" afterPath="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
     </list>
@@ -37,7 +26,48 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+              <folding>
+                <marker date="1543055265208" expanded="true" signature="9:30" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="42:51" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="67:83" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="224:287" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="2618:2639" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="2645:2662" ph="..." />
+                <marker date="1543055265208" expanded="true" signature="2935:2950" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GestorController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="57" column="42" lean-forward="false" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+              <folding>
+                <element signature="e#40#56#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,9 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoEmpresa/IdiomaRequest.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoEmpresa/IdiomaController.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminEmpresa.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/empresa/ofertas/experiencias/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/empresa/ofertas/experiencias/create.blade.php" />
@@ -92,14 +119,11 @@
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/empresas.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/User.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/usuarios.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/a_experiencia.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/area_empresa.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoGestor/AreEmpresaRequest.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/create.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/edit.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoGestor/AreaEmpresaController.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEmpresa/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/mantto/areaEstudio/index.blade.php" />
@@ -109,6 +133,12 @@
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoGestor/AreEstudioRequest.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/ManttoGestor/AreaEstudioRequest.php" />
         <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoGestor/AreaEstudioController.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/perfil.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/editPerfil.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/create.blade.php" />
       </list>
     </option>
   </component>
@@ -197,11 +227,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\gestor" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\app\Http\Controllers\ManttoGestor" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\mantto" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\empresa\ofertas\idiomas" />
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\empresa\ofertas\programas" />
-      <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\empresa\ofertas\estudios" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\inetpub\wwwroot\ASI-II\laravel-framework\bolsa_empleos\resources\views\mantto\areaEmpresa" />
@@ -315,7 +345,7 @@
       <workItem from="1542827218642" duration="40514000" />
       <workItem from="1542907300167" duration="710000" />
       <workItem from="1542944657571" duration="6096000" />
-      <workItem from="1542996736058" duration="37712000" />
+      <workItem from="1542996736058" duration="43957000" />
     </task>
     <task id="LOCAL-00001" summary="Validacion y formato Registro Usuario">
       <created>1542512677892</created>
@@ -328,7 +358,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191399000" />
+    <option name="totallyTimeSpent" value="197644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -338,9 +368,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21018277" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1775457" sideWeight="0.4975" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1775457" sideWeight="0.4975" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -380,184 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/registroAplicanteTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542688192210" expanded="true" signature="220:228" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="575:585" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="786:811" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="831:860" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="1001:1012" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="1086:1102" ph="..." />
-            <marker date="1542688192210" expanded="true" signature="1243:1252" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/ofertaTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <marker date="1542944782041" expanded="true" signature="217:232" ph="..." />
-            <marker date="1542944782041" expanded="true" signature="344:386" ph="..." />
-            <marker date="1542944782041" expanded="true" signature="697:719" ph="..." />
-            <marker date="1542944782041" expanded="true" signature="730:752" ph="..." />
-            <marker date="1542944782041" expanded="true" signature="850:870" ph="..." />
-            <marker date="1542944782041" expanded="true" signature="935:984" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542944782025" expanded="true" signature="220:228" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="578:588" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="693:718" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="738:767" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1215:1233" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1238:1253" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1288:1301" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1391:1761" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1441:1699" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1475:1698" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1513:1673" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1543:1672" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="1717:1729" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2158:2183" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2195:2212" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2351:2377" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2389:2407" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2562:2598" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2723:2734" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2808:2824" ph="..." />
-            <marker date="1542944782025" expanded="true" signature="2967:2976" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/filtroTemplate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542866892624" expanded="true" signature="1430:1447" ph="..." />
-            <marker date="1542866892624" expanded="true" signature="1453:1466" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542688192205" expanded="true" signature="452:474" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/ofertaGestion.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542944782035" expanded="true" signature="217:249" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="361:420" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="553:594" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="838:877" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="888:927" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="1025:1062" ph="..." />
-            <marker date="1542944782035" expanded="true" signature="1127:1193" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/ofertaTemplateEmpresa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1543000255277" expanded="true" signature="217:232" ph="..." />
-            <marker date="1543000255277" expanded="true" signature="344:386" ph="..." />
-            <marker date="1543000255277" expanded="true" signature="706:728" ph="..." />
-            <marker date="1543000255277" expanded="true" signature="739:761" ph="..." />
-            <marker date="1543000255277" expanded="true" signature="859:879" ph="..." />
-            <marker date="1543000255277" expanded="true" signature="944:993" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteNavbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/aplicanteLoginModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-          <folding>
-            <marker date="1542502156071" expanded="true" signature="523:539" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="4" lean-forward="true" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="61" />
-          <folding>
-            <marker date="1542944781985" expanded="true" signature="1311:1374" ph="..." />
-            <marker date="1542944781985" expanded="true" signature="1379:1445" ph="..." />
-            <marker date="1542944781985" expanded="true" signature="5028:5037" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminEmpresa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="61" column="77" lean-forward="true" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
-          <folding>
-            <marker date="1542871595870" expanded="true" signature="1451:1501" ph="..." />
-            <marker date="1542871595870" expanded="true" signature="2666:2675" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/OfertasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/editUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/HabilidadUserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -595,16 +447,6 @@
         <state relative-caret-position="255">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/UserRegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="93" column="54" lean-forward="false" selection-start-line="93" selection-start-column="54" selection-end-line="93" selection-end-column="54" />
-          <folding>
-            <marker date="1543014862860" expanded="true" signature="4377:4720" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,16 +566,6 @@
             <marker date="1542946575455" expanded="true" signature="919:1049" ph="..." />
             <marker date="1542946575455" expanded="true" signature="1080:1139" ph="..." />
             <marker date="1542946575455" expanded="true" signature="1170:1183" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,44 +698,6 @@
         <state relative-caret-position="255">
           <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-          <folding>
-            <marker date="1543046430363" expanded="true" signature="5098:5107" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="5507:5521" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="5794:5816" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="6118:6354" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="6209:6216" ph="×" />
-            <marker date="1543046430363" expanded="true" signature="6407:7206" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="7261:7411" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="7565:7803" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="7656:7663" ph="×" />
-            <marker date="1543046430363" expanded="true" signature="7858:8008" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="8511:8533" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="8835:9088" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="8926:8933" ph="×" />
-            <marker date="1543046430363" expanded="true" signature="9141:9917" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="9141:10386" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="10441:10591" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="10745:10983" ph="..." />
-            <marker date="1543046430363" expanded="true" signature="10836:10843" ph="×" />
-            <marker date="1543046430363" expanded="true" signature="11038:11188" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="143" column="5" lean-forward="true" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,6 +848,321 @@
             <marker date="1543030869487" expanded="true" signature="2459:2474" ph="..." />
             <marker date="1543030869487" expanded="true" signature="2682:2697" ph="..." />
             <marker date="1543030869487" expanded="true" signature="3407:3428" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminUser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+          <folding>
+            <marker date="1542944781985" expanded="true" signature="1311:1374" ph="..." />
+            <marker date="1542944781985" expanded="true" signature="1379:1445" ph="..." />
+            <marker date="1542944781985" expanded="true" signature="5028:5037" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/perfil.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1542789955684" expanded="true" signature="9:29" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="45:54" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="410:428" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="433:453" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1076:1096" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1173:1194" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1428:1449" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1547:1565" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1643:1674" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="1903:1942" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="2250:2276" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3040:3065" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3139:3161" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3782:3813" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3837:3859" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3866:3889" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="3962:3993" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4163:4186" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4273:4307" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4380:4416" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4516:4543" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4627:4651" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="4777:4798" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5424:5447" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5472:5495" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5567:5590" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5761:5795" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5868:5908" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="5995:6025" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="6118:6138" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="6258:6275" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="7260:7290" ph="..." />
+            <marker date="1542789955684" expanded="true" signature="7365:7390" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/editPerfil.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1169">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1542694525136" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="45:54" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="73:89" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="232:331" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="591:617" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="880:908" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="1181:1209" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="1484:1510" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="1775:1805" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2069:2098" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2416:2437" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2452:2469" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2548:2569" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2575:2592" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="2992:3017" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3032:3054" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3133:3158" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3164:3186" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3620:3654" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3669:3698" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3777:3811" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="3817:3846" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="4720:4745" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="4760:4777" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="4856:4881" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="4887:4904" ph="..." />
+            <marker date="1542694525136" expanded="true" signature="5225:5240" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/auth/verify.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1542502156061" expanded="true" signature="9:22" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="34:43" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="219:252" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="447:517" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="601:676" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="701:741" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="756:786" ph="..." />
+            <marker date="1542502156061" expanded="true" signature="792:829" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/editUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/Auth/EmpresaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/UserRegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="95" column="37" lean-forward="true" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
+          <folding>
+            <marker date="1543014862860" expanded="true" signature="4377:4720" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/editPerfil.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="55" selection-end-column="15" />
+          <folding>
+            <marker date="1543053386905" expanded="true" signature="10:31" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="47:56" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="76:92" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="240:322" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="341:412" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="672:689" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="952:971" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="1244:1263" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="1538:1555" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="1820:1841" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2105:2125" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2426:2447" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2462:2479" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2558:2579" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2585:2602" ph="..." />
+            <marker date="1543053386905" expanded="true" signature="2926:2941" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/gestion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1542944782064" expanded="true" signature="9:36" ph="..." />
+            <marker date="1542944782064" expanded="true" signature="48:59" ph="..." />
+            <marker date="1542944782064" expanded="true" signature="106:151" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="15" />
+          <folding>
+            <element signature="e#1368#1391#0#HTML" expanded="true" />
+            <marker date="1542849422145" expanded="true" signature="9:28" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="44:59" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="75:84" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="439:454" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="730:748" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="1026:1046" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="1335:1355" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="1631:1649" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="1929:1951" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="2231:2283" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="2560:2586" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="2868:2900" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="3189:3228" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="3512:3546" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="3833:3859" ph="..." />
+            <marker date="1542849422145" expanded="true" signature="3965:4088" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/perfil.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <folding>
+            <element signature="e#171#193#0#HTML" expanded="true" />
+            <element signature="e#1282#1305#0#HTML" expanded="true" />
+            <marker date="1543052171517" expanded="true" signature="9:30" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="42:57" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="69:78" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="405:419" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="679:696" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="958:977" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="1250:1269" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="1529:1546" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="1810:1831" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="2095:2150" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="2411:2436" ph="..." />
+            <marker date="1543052171517" expanded="true" signature="2523:2625" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Requests/UserUpdateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/ManttoUser/EstudiosUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="119" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/usuario/estudios/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <marker date="1542730813833" expanded="true" signature="10:29" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="41:50" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="66:82" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="92:153" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="414:444" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="450:480" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="787:815" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="821:845" ph="..." />
+            <marker date="1542730813833" expanded="true" signature="2316:2329" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/layouts/adminGestor.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+          <folding>
+            <marker date="1543054866831" expanded="true" signature="5312:5321" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="5721:5735" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="6008:6030" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="6332:6568" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="6423:6430" ph="×" />
+            <marker date="1543054866831" expanded="true" signature="6621:7420" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="7475:7625" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="7779:8017" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="7870:7877" ph="×" />
+            <marker date="1543054866831" expanded="true" signature="8072:8222" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="8725:8747" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="9049:9302" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="9140:9147" ph="×" />
+            <marker date="1543054866831" expanded="true" signature="9355:10131" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="9355:10600" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="10655:10805" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="10959:11197" ph="..." />
+            <marker date="1543054866831" expanded="true" signature="11050:11057" ph="×" />
+            <marker date="1543054866831" expanded="true" signature="11252:11402" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/app/Http/Controllers/GestorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="57" column="42" lean-forward="false" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-framework/bolsa_empleos/resources/views/gestor/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding>
+            <marker date="1543055265208" expanded="true" signature="9:30" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="42:51" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="67:83" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="224:287" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="2618:2639" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="2645:2662" ph="..." />
+            <marker date="1543055265208" expanded="true" signature="2935:2950" ph="..." />
           </folding>
         </state>
       </provider>
