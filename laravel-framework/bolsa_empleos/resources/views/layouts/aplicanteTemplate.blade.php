@@ -41,8 +41,8 @@
                       $menu->cargos()->whereHas('experiencia_oferta',function($q){
                         $q->whereHas('oferta_laboral',function($t){
                           $t->where('fechaLimite','>=', today()->toDateString() )->where('isActive',1);
-                        });
-                      })->get()->groupBy('cod_oferta')->count() 
+                        })->groupBy('cod_oferta');
+                      })->get()->count() 
                     }}
                   </span>
                 </a> 
