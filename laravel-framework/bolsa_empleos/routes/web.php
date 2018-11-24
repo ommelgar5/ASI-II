@@ -84,6 +84,11 @@ Route::prefix('gestor')->group(function(){
     Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
     Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');
 
+    Route::get('/usuarios/registrados/dia','GestorController@usuariosDia')->name('gestor.usuarios.dia')->middleware('auth','gestor');
+    Route::get('/usuarios/registrados/mes','GestorController@usuariosMes')->name('gestor.usuarios.mes')->middleware('auth','gestor');
+
+    Route::get('/empresas/registradas/dia','GestorController@empresasDia')->name('gestor.empresas.dia')->middleware('auth','gestor');
+    Route::get('/empresas/registradas/mes','GestorController@empresasMes')->name('gestor.empresas.mes')->middleware('auth','gestor');
 });
 //fin
 
