@@ -22,6 +22,7 @@ use App\municipio;
 use App\estudio;
 use App\area_estudio;
 use App\nivel_estudio;
+use App\direccion_solicitante;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -130,7 +131,15 @@ class UserRegisterController extends Controller
                 $login->password = Hash::make($request->input('pass'));
                 $login->cod_tipo_usuario = 2;
                 $success = $login->save();
-                if($success){
+
+                $direccion = new direccion_solicitante;
+
+                $direccion->persona_id = $persona->id;
+                $direccion->cod_municipio = $request->input('municipio');
+                $direccion->lugar = $request->input('direccion');
+                $success2 = $direccion->save();
+
+                if($success && $success2){
                     DB::commit(); 
                     $response['personaID'] = $persona->id;   
                 }else{
@@ -197,22 +206,27 @@ class UserRegisterController extends Controller
 
         $idiomas = $request->input('idiomas');
         $niveles = $request->input('niveles');
+        
+        if(count($idiomas) > 0){
+            for ($i=0; $i < count($idiomas); $i++) { 
+                $idioma_solicitante = new idioma_solicitante;
 
-        for ($i=0; $i < count($idiomas); $i++) { 
-            $idioma_solicitante = new idioma_solicitante;
+                $idioma_solicitante->persona_id = $id;
+                $idioma_solicitante->cod_idioma = $idiomas[$i];
+                $idioma_solicitante->cod_nivel = $niveles[$i];
+                $resultado = $idioma_solicitante->save();
+            }
 
-            $idioma_solicitante->persona_id = $id;
-            $idioma_solicitante->cod_idioma = $idiomas[$i];
-            $idioma_solicitante->cod_nivel = $niveles[$i];
-            $resultado = $idioma_solicitante->save();
+            if(!$resultado){
+                $response['errorMessage'] = 'Error al agregar los idiomas.';
+            }
+
+            $response['error'] = !$resultado;
+        }else{
+            $response['error'] = false;
         }
 
-        if(!$resultado){
-            $response['errorMessage'] = 'Error al agregar los idiomas.';
-        }
-
-        $response['error'] = !$resultado;
-        return response()->json($response);
+        return response()->json($response);    
     }
 
     public function agregarProgramas($id, Request $request){
@@ -222,20 +236,25 @@ class UserRegisterController extends Controller
         $programas = $request->input('programas');
         $niveles = $request->input('nivelesP');
 
-        for ($i=0; $i < count($programas); $i++) { 
-            $programa_solicitante = new programa_solicitante;
+        if(count($programas) > 0){
+            for ($i=0; $i < count($programas); $i++) { 
+                $programa_solicitante = new programa_solicitante;
 
-            $programa_solicitante->persona_id = $id;
-            $programa_solicitante->cod_programa = $programas[$i];
-            $programa_solicitante->cod_nivel = $niveles[$i];
-            $resultado = $programa_solicitante->save();
+                $programa_solicitante->persona_id = $id;
+                $programa_solicitante->cod_programa = $programas[$i];
+                $programa_solicitante->cod_nivel = $niveles[$i];
+                $resultado = $programa_solicitante->save();
+            }
+
+            if(!$resultado){
+                $response['errorMessage'] = 'Error al agregar los Programas.';
+            }
+
+            $response['error'] = !$resultado;
+        }else{
+            $response['error'] = false;
         }
-
-        if(!$resultado){
-            $response['errorMessage'] = 'Error al agregar los Programas.';
-        }
-
-        $response['error'] = !$resultado;
+            
         return response()->json($response);
     }
 
