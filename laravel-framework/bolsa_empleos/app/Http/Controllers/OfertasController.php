@@ -20,8 +20,8 @@ class OfertasController extends Controller
     		$ofertas = oferta_laboral::whereHas('cargo_empresa',function($q) use ($area){
     			$q->whereHas('area_empresa',function($t) use ($area){
     				$t->where('cod_area',$area);
-    			})->where('fechaLimite','>=', today()->toDateString() );
-    		})->get();
+    			});
+    		})->where('isActive',1)->where('fechaLimite','>=', today()->toDateString() )->get();
     		// $areas = area_empresa::find($area);
     	}else{
     		$ofertas = oferta_laboral::where('isActive',1)->where('fechaLimite','>=', today()->toDateString() )->get();
