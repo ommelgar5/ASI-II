@@ -485,6 +485,7 @@
                         var telMovil = $("#telMovil").val();
                         var departamento = $("#departamento").val();
                         var municipio = $("#municipio").val();
+                        var direccion = $("#direccion").val();
                         var a_experiencia = $("#a_experiencia").val();
                         var licencia = $("#licencia").val();
 
@@ -499,6 +500,7 @@
                             'telMovil': telMovil,
                             'departamento': departamento,
                             'municipio': municipio,
+                            'direccion': direccion,
                             'a_experiencia': a_experiencia,
                             'licencia': licencia,
                             'dui': dui,
@@ -531,105 +533,111 @@
                     
                 if(currentIndex == 2){
                     
-                    my_form = document.createElement('FORM');
-                    
-                    $(".misEstudios input").each(function(k,v){
-                        my_form.appendChild(v); 
-                    });
+                    if($(".misEstudios").children().length > 0){
+                      my_form = document.createElement('FORM');
+                      
+                      $(".misEstudios input").each(function(k,v){
+                          my_form.appendChild(v); 
+                      });
 
-                    var dataF = $(my_form).serialize();
+                      var dataF = $(my_form).serialize();
 
-                    $.ajax({
-                        type: 'post',
-                        url: '{{ url("/agregarEstudios/") }}/'+id,
-                        async: false,
-                        // cache: false,
-                        // timeout: 30000,
-                        dataType: 'json',
-                        data:dataF,
-                        success:function(response){
-                            if(response.error){
-                                toastr.error(response.errorMessage);
-                                $out = false;
-                            }else{
-                                $out = true;
-                            }
-                        },
-                        error: function(){
-                            $out = false;
-                        }
-                    });
+                      $.ajax({
+                          type: 'post',
+                          url: '{{ url("/agregarEstudios/") }}/'+id,
+                          async: false,
+                          // cache: false,
+                          // timeout: 30000,
+                          dataType: 'json',
+                          data:dataF,
+                          success:function(response){
+                              if(response.error){
+                                  toastr.error(response.errorMessage);
+                                  $out = false;
+                              }else{
+                                  $out = true;
+                              }
+                          },
+                          error: function(){
+                              $out = false;
+                          }
+                      });
+                    }else{
+                      $out = false;
+                      toastr.error("Ingrese al menos un estudio.");
+                    }
+                      
                 }
 
                 if(currentIndex == 3){
-                    my_form = document.createElement('Form');
-                    $(".misIdiomas input").each(function(k,v){
-                        my_form.appendChild(v);
-                    });
+                  my_form = document.createElement('Form');
+                  $(".misIdiomas input").each(function(k,v){
+                      my_form.appendChild(v);
+                  });
 
-                    var dataF = $(my_form).serialize();
+                  var dataF = $(my_form).serialize();
 
-                    $.ajax({
-                        type: 'post',
-                        url: '{{ url("/agregarIdiomas/") }}/'+id,
-                        async: false,
-                        // cache: false,
-                        // timeout: 30000,
-                        dataType: 'json',
-                        data:dataF,
-                        success:function(response){
-                            if(response.error){
-                                toastr.error(response.errorMessage);
-                                $out = false;
-                            }else{
-                                $out = true;
-                            }
-                        },
-                        error: function(){
-                            $out = false;
-                        }
-                    });
-
+                  $.ajax({
+                      type: 'post',
+                      url: '{{ url("/agregarIdiomas/") }}/'+id,
+                      async: false,
+                      // cache: false,
+                      // timeout: 30000,
+                      dataType: 'json',
+                      data:dataF,
+                      success:function(response){
+                          if(response.error){
+                              toastr.error(response.errorMessage);
+                              $out = false;
+                          }else{
+                              $out = true;
+                          }
+                      },
+                      error: function(){
+                          $out = false;
+                      }
+                  });
                 }
 
                 if(currentIndex == 4){
-                    my_form = document.createElement('Form');
-                    $(".misProgramas input").each(function(k,v){
-                        my_form.appendChild(v);
-                    });
+                  my_form = document.createElement('Form');
+                  $(".misProgramas input").each(function(k,v){
+                      my_form.appendChild(v);
+                  });
 
-                    var dataF = $(my_form).serialize();
+                  var dataF = $(my_form).serialize();
 
-                    $.ajax({
-                        type: 'post',
-                        url: '{{ url("/agregarProgramas/") }}/'+id,
-                        async: false,
-                        // cache: false,
-                        // timeout: 30000,
-                        dataType: 'json',
-                        data:dataF,
-                        success:function(response){
-                            if(response.error){
-                                toastr.error(response.errorMessage);
-                                $out = false;
-                            }else{
-                                $out = true;
-                            }
-                        },
-                        error: function(){
-                            $out = false;
-                        }
-                    });
+                  $.ajax({
+                      type: 'post',
+                      url: '{{ url("/agregarProgramas/") }}/'+id,
+                      async: false,
+                      // cache: false,
+                      // timeout: 30000,
+                      dataType: 'json',
+                      data:dataF,
+                      success:function(response){
+                          if(response.error){
+                              toastr.error(response.errorMessage);
+                              $out = false;
+                          }else{
+                              $out = true;
+                          }
+                      },
+                      error: function(){
+                          $out = false;
+                      }
+                  });
                 }
                 return $out;
             },
             onFinishing: function (event, currentIndex)
             {
-                
+              var $out = false;
                 // form.validate().settings.ignore = ":disabled";
                 // return form.valid();
 
                 if(currentIndex == 5){
+                  if($(".misExperiencias").children().length > 0){
                     my_form = document.createElement('Form');
                     $(".misExperiencias input").each(function(k,v){
                         my_form.appendChild(v);
@@ -657,9 +665,12 @@
                             $out = false;
                         }
                     });
-
+                  }else{
+                    $out = false;
+                    toastr.error("Ingrese al menos una experiencia laboral.");
+                  }
                 }
-                
+                return $out;
             },
             onFinished: function (event, currentIndex)
             {
@@ -693,6 +704,7 @@
                 },
                 departamento: "required",
                 municipio: "required",
+                direccion: "required",
                 a_experiencia: "required",
                 telFijo:{
                     require_from_group: [1, ".phone-group"]
@@ -733,6 +745,9 @@
                 },
                 municipio:{
                     required: "Seleccione un municipio."
+                },
+                direccion:{
+                  required: "Dirección es requerida."
                 },
                 a_experiencia:{
                     required: "Seleccione una Opción."
@@ -955,18 +970,36 @@
                                         </div>
 
                                         <div class="row">
+
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label for="direccion">Dirección :</label>
+                                                  <input type="text" class="form-control" id="direccion" name="direccion" />
+                                              </div>
+                                          </div>
+
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label for="a_experiencia">
+                                                      A&ntilde;os de experiencia :
+                                                      <span class="danger">*</span>
+                                                  </label>
+                                                  <select class="custom-select form-control required" id="a_experiencia" name="a_experiencia">
+                                                      <option value="">Seleccione una opci&oacute;n</option>
+                                                      @foreach($data['a_experiencia'] as $experiencia)
+                                                          <option value="{{ $experiencia->cod_a_experiencia }}">{{ $experiencia->a_experiecia }}</option>
+                                                      @endforeach
+                                                  </select>
+                                              </div>
+                                          </div>
+
+                                        </div>
+
+                                        <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="a_experiencia">
-                                                        A&ntilde;os de experiencia :
-                                                        <span class="danger">*</span>
-                                                    </label>
-                                                    <select class="custom-select form-control required" id="a_experiencia" name="a_experiencia">
-                                                        <option value="">Seleccione una opci&oacute;n</option>
-                                                        @foreach($data['a_experiencia'] as $experiencia)
-                                                            <option value="{{ $experiencia->cod_a_experiencia }}">{{ $experiencia->a_experiecia }}</option>
-                                                        @endforeach
-                                                    </select>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="vehiculo" id="vehiculo">
+                                                    <label class="custom-control-label" for="vehiculo">Posee Vehiculo?</label>
                                                 </div>
                                             </div>
 
@@ -982,15 +1015,6 @@
                                                             <option value="{{ $licencia->cod_licencia }}">{{ $licencia->tipo }}</option>
                                                         @endforeach
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" name="vehiculo" id="vehiculo">
-                                                    <label class="custom-control-label" for="vehiculo">Posee Vehiculo?</label>
                                                 </div>
                                             </div>
                                         </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\empresa;
 use App\genero;
 use App\persona;
+use App\oferta_laboral;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,15 @@ use Illuminate\Support\Facades\Session;
 class GestorController extends Controller
 {
     public function index(){
-    	return view('gestor.dashboard');
+        $usuarios_dia = User::whereDate('created_at','=',today()->toDateString())->get()->count();
+        $empresas_dia  = empresa::whereDate('created_at','=',today()->toDateString())->get()->count();
+        $ofertas_dia = oferta_laboral::whereDate('fecha','=',today()->toDateString())->get()->count();
+
+        $usuarios_mes = User::whereMonth('created_at','=', now()->month)->get()->count();
+        $empresas_mes  = empresa::whereMonth('created_at','=',now()->month)->get()->count();
+        $ofertas_mes = oferta_laboral::whereMonth('fecha','=',now()->month)->get()->count();
+
+    	return view('gestor.dashboard',['usuarios_nuevos_dia'=>$usuarios_dia, 'empresas_nuevas_dia'=>$empresas_dia, 'ofertas_nuevas_dia'=>$ofertas_dia, 'usuarios_nuevos_mes'=>$usuarios_mes, 'empresas_nuevas_mes'=>$empresas_mes, 'ofertas_nuevas_mes'=>$ofertas_mes ]);
     }
 
     public function perfil(){
@@ -59,10 +68,6 @@ class GestorController extends Controller
 
     }
 
-
-
-
-
     public function empresas(){
 
         $empresas = empresa::paginate(15);
@@ -93,8 +98,6 @@ class GestorController extends Controller
 
         return response()->json($respose);
     }
-
-
 
     public function usuarios(){
 
@@ -139,5 +142,32 @@ class GestorController extends Controller
         return response()->json($respose);
     }
 
+    public function usuariosDia(){
+        $usuarios = User::whereDate('created_at','=',today()->toDateString())->paginate(15);
+        return view('gestor.usuarios',['usuarios'=>$usuarios]);
+    }
+
+    public function usuariosMes(){
+        $usuarios = User::whereMonth('created_at','=', now()->month)->paginate(15);
+        return view('gestor.usuarios',['usuarios'=>$usuarios]);
+    }
+
+    public function empresasDia(){
+        $empresas  = empresa::whereDate('created_at','=',today()->toDateString())->paginate(15);
+        return view('gestor.empresas',['empresas'=>$empresas]);
+    }
+
+    public function empresasMes(){
+        $empresas  = empresa::whereMonth('created_at','=',now()->month)->paginate(15);
+        return view('gestor.empresas',['empresas'=>$empresas]);
+    }
+
+    public function ofertasDia(){
+        $ofertas = oferta_laboral::whereDate('fecha','=',today()->toDateString())->get();
+    }
+
+    public function ofertasMes(){
+        $ofertas = oferta_laboral::whereMonth('fecha','=',now()->month)->get();
+    }
 
 }

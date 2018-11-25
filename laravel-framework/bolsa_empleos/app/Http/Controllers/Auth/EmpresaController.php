@@ -103,54 +103,64 @@ class EmpresaController extends Controller
             $success = $nueva_oferta->save();
             
             if($success){
-                foreach($request->input('cargos') as $cargo){
-                    try {
-                        $tmp = new experiencia_oferta;
-                        $tmp->cod_cargo = $cargo;
-                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
-                        $success = $tmp->save();   
-                    }catch (\Exception $e) {
-                        $success = false;
-                        DB::rollback();
+                
+                $cargos_oferta = $request->input('cargos');
+                if(count($cargos_oferta)>0){
+                    foreach($cargos_oferta as $cargo){
+                        try {
+                            $tmp = new experiencia_oferta;
+                            $tmp->cod_cargo = $cargo;
+                            $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                            $success = $tmp->save();   
+                        }catch (\Exception $e) {
+                            $success = false;
+                            DB::rollback();
+                        }
                     }
                 }
 
-                for ($i=0; $i < count($request->input('nivelEst')) ; $i++) { 
-                    try{    
-                        $tmp = new estudio_oferta;
-                        // $tmp->cod_idioma = $request->input('estudio');
-                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
-                        $tmp->cod_nivel_est = $request->input('nivelEst')[$i];
-                        $success = $tmp->save();
-                    }catch (\Exception $e) {
-                        $success = false;
-                        DB::rollback();
+                if(count($request->input('nivelEst')) > 0 ){
+                    for ($i=0; $i < count($request->input('nivelEst')) ; $i++) { 
+                        try{    
+                            $tmp = new estudio_oferta;
+                            // $tmp->cod_idioma = $request->input('estudio');
+                            $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                            $tmp->cod_nivel_est = $request->input('nivelEst')[$i];
+                            $success = $tmp->save();
+                        }catch (\Exception $e) {
+                            $success = false;
+                            DB::rollback();
+                        }
                     }
                 }
                 
-                for ($i=0; $i < count($request->input('programa')); $i++) { 
-                    try{ 
-                        $tmp = new oferta_programa;
-                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
-                        $tmp->cod_programa = $request->input('programa')[$i];
-                        $tmp->cod_nivel = $request->input('nivelPrograma')[$i];
-                        $success = $tmp->save();
-                    }catch (\Exception $e) {
-                        $success = false;
-                        DB::rollback();
+                if(count($request->input('programa')) > 0 ){
+                    for ($i=0; $i < count($request->input('programa')); $i++) { 
+                        try{ 
+                            $tmp = new oferta_programa;
+                            $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                            $tmp->cod_programa = $request->input('programa')[$i];
+                            $tmp->cod_nivel = $request->input('nivelPrograma')[$i];
+                            $success = $tmp->save();
+                        }catch (\Exception $e) {
+                            $success = false;
+                            DB::rollback();
+                        }
                     }
                 }
                 
-                for ($i=0; $i < count($request->input('idioma')); $i++) { 
-                    try{
-                        $tmp = new oferta_idioma;
-                        $tmp->cod_oferta = $nueva_oferta->cod_oferta;
-                        $tmp->cod_idioma = $request->input('idioma')[$i];
-                        $tmp->cod_nivel = $request->input('idiomaNivel')[$i];
-                        $success = $tmp->save();
-                    }catch (\Exception $e) {
-                        $success = false;
-                        DB::rollback();
+                if(count($request->input('idioma')) > 0){
+                    for ($i=0; $i < count($request->input('idioma')); $i++) { 
+                        try{
+                            $tmp = new oferta_idioma;
+                            $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                            $tmp->cod_idioma = $request->input('idioma')[$i];
+                            $tmp->cod_nivel = $request->input('idiomaNivel')[$i];
+                            $success = $tmp->save();
+                        }catch (\Exception $e) {
+                            $success = false;
+                            DB::rollback();
+                        }
                     }
                 }
                 

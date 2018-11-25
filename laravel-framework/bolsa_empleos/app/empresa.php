@@ -15,7 +15,7 @@ class empresa extends Authenticatable
     protected $table = 'empresa';
     protected $primaryKey = 'nit';
     public $incrementing = false;
-    public $timestamps = false;
+    // public $timestamps = false;
 
     protected $fillable = [
         'nombre_comercial',

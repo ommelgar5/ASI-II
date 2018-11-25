@@ -6,7 +6,7 @@
   
       <!-- Modal Header -->
       <div class="modal-header py-1">
-        <img class="d-block mx-auto" src="assets/img/logos_st/escudo.png" alt="">
+        <img class="d-block mx-auto" src="/assets/img/logos_st/escudo.png" alt="">
       </div>
   
       <!-- Modal body -->
