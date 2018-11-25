@@ -155,3 +155,16 @@ Route::get('/gestion','gestionOfertaAplicanteController@index')->name('gestion')
 
 Route::resource('areaEmpresa','ManttoGestor\AreaEmpresaController');
 Route::resource('areaEstudio','ManttoGestor\AreaEstudioController');
+Route::resource('aExperiencia','ManttoGestor\YearExperienciaController');
+Route::resource('departamento','ManttoGestor\DepartamentoController');
+Route::resource('estadoCivil','ManttoGestor\EstadoCivilController');
+Route::resource('genero','ManttoGestor\GeneroController');
+Route::resource('giroEmpresa','ManttoGestor\GiroEmpresaController');
+Route::resource('idioma','ManttoGestor\IdiomaController');
+Route::resource('tipoLicencia','ManttoGestor\TipoLicenciaController');
+Route::resource('nivel','ManttoGestor\NivelController');
+Route::resource('programa','ManttoGestor\ProgramaController');
+Route::resource('tipoContrato','ManttoGestor\TipoContratoController');
+Route::resource('municipio','ManttoGestor\MunicipioController');
+Route::post('deleteMunicipio','ManttoGestor\MunicipioController@delete');
+

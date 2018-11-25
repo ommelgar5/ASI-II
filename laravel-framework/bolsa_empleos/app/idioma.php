@@ -3,12 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class idioma extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'idioma';
     protected $primaryKey = 'cod_idioma';
     public $timestamps = false;
+    protected $dates = ['deleted_at'];
+
+    protected $fillable = [
+        'idioma',
+    ];
+
 
 
     public function idioma_solicitante(){

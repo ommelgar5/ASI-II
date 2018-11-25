@@ -78,37 +78,37 @@
                                 <a href="/areaEstudio"><i class='fa fa-check-square fa-fw'></i> Áreas estudio</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Años de experiencia</a>
+                                <a href="/aExperiencia"><i class='fa fa-check-square fa-fw'></i> Años de experiencia</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Departamentos</a>
+                                <a href="/departamento"><i class='fa fa-check-square fa-fw'></i> Departamentos</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Estado civil</a>
+                                <a href="/estadoCivil"><i class='fa fa-check-square fa-fw'></i> Estado civil</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i>Genero </a>
+                                <a href="/genero"><i class='fa fa-check-square fa-fw'></i>Genero </a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Giro de la empresa</a>
+                                <a href="/giroEmpresa"><i class='fa fa-check-square fa-fw'></i> Giro de la empresa</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Idiomas</a>
+                                <a href="/idioma"><i class='fa fa-check-square fa-fw'></i> Idiomas</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Tipos de licencia</a>
+                                <a href="/tipoLicencia"><i class='fa fa-check-square fa-fw'></i> Tipos de licencia</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Municipios</a>
+                                <a href="/municipio"><i class='fa fa-check-square fa-fw'></i> Municipios</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Niveles</a>
+                                <a href="/nivel"><i class='fa fa-check-square fa-fw'></i> Niveles</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Programas</a>
+                                <a href="/programa"><i class='fa fa-check-square fa-fw'></i> Programas</a>
                             </li>
                             <li>
-                                <a href="#"><i class='fa fa-check-square fa-fw'></i> Tipo de contrato </a>
+                                <a href="/tipoContrato"><i class='fa fa-check-square fa-fw'></i> Tipo de contrato </a>
                             </li>
 
                         </ul>
@@ -261,7 +261,67 @@
 
         });
 
+//        Buscar los municipios por el departamento seleccionado
 
+        $(document).on("change","#departamento",function(event){
+            var departamento = $(this).val();
+            var html = "";
+            if(departamento) {
+                $.ajax({
+                    method: "get",
+                    url: "{{ url('/obtenerMunicipios') }}/" + departamento,
+                }).done(function (msg) {
+                    $('#municipios').empty();
+                    for(var municipio of msg){
+                        html += `
+                                <div class="panel panel-primary mb-2 text- mb-3">
+                                    <div class="panel-heading py-1" >
+                                        <div class="row p-0">
+                                            <span class="col-xs-9">${ municipio.municipio }</span>
+                                            <a href="/municipio/${ municipio.cod_municipio }/edit" style="color: white;" class="col-xs-1 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
+                                            <input type="text" hidden value="${municipio.cod_municipio}" id="delete">
+                                            <button class="btn btn-danger" id="delete">Eliminar</button>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                    $(html).appendTo('#municipios');
+                })
+            };
+            });
+
+
+            //        Delete Municipio
+        $(document).on( 'click','#delete', function (event) {
+            var elMun = this;
+            var mun = (this.previousElementSibling.value);
+
+            $.ajax({
+                type: 'post',
+                url: '{{ url("deleteMunicipio") }}',
+                async: false,
+                dataType: 'json',
+                data:{
+                    'municipio': mun
+                },
+                success:function(response){
+                    if(!response.error){
+                       $(elMun).parent().parent().parent().fadeOut(1000);
+                       $('#mensaje').fadeIn(1000);
+                       setInterval(function () {
+                           $('#mensaje').fadeOut(1000);
+                       },3000);
+                    }
+                },
+                error: function(response){
+                    $('#error').fadeIn(1000);
+                    setInterval(function () {
+                        $('#error').fadeOut(1000);
+                    },3000)
+                }
+            });
+
+        });
 
     });
 </script>
