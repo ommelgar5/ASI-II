@@ -20,7 +20,7 @@ class cargo_empresa extends Model
 
     public function oferta_laboral()
     {
-        return $this->belongsToMany('App\oferta_laboral');
+        return $this->belongsToMany('App\oferta_laboral','experiencia_oferta','cod_cargo','cod_oferta');
     }
 
     public function experiencia_oferta(){

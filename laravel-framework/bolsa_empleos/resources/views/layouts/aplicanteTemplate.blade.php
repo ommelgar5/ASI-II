@@ -32,21 +32,16 @@
             </div>
             <div class="panel-body">
               <div class="list-group">
-
-                @foreach($categorias_menu as $menu)
+                @foreach($categorias_cantidad as $menu)
                 <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} 
-                  <span class="badge badge-pill badge-primary">
-                    {{ 
-                      $menu->cargos()->whereHas('experiencia_oferta',function($q){
-                        $q->whereHas('oferta_laboral',function($t){
-                          $t->where('fechaLimite','>=', today()->toDateString() )->where('isActive',1);
-                        })->groupBy('cod_oferta');
-                      })->get()->count() 
-                    }}
-                  </span>
+                  <span class="badge badge-pill badge-primary">{{$menu->cantidad}}</span>
                 </a> 
                 @endforeach
-                
+                @foreach($categorias as $menu)
+                <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} 
+                  <span class="badge badge-pill badge-primary">0</span>
+                </a> 
+                @endforeach
               </div>
             </div>
           </div>
