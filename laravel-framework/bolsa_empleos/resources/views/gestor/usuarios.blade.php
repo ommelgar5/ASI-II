@@ -39,7 +39,7 @@
                                         <td>{{ $usuario->persona->correo }}</td>
                                         <td>{{ $usuario->persona->telefono1 }}</td>
                                         <td class="text-center">
-                                            @if( $usuario->is_active == 1)
+                                            @if( $usuario->isActive == 1)
                                                 <a href="/gestor/usuario/{{ $usuario->dui }}"><i class="fa fa-unlock fa-2x text-success" aria-hidden="true"></i></a>
                                             @else
                                                 <a href="/gestor/usuario/{{ $usuario->dui }}"><i class="fa fa-lock fa-2x text-danger" aria-hidden="true"></i></a>
