@@ -98,13 +98,15 @@ class editUserController extends Controller
         $persona->fill($request->all());
         $persona->save();
         
-        $ext = trim( $request->avatar->getClientOriginalExtension() );
-        $nombre_avatar = md5(($persona->dui)).'.'.$ext;
-        $path = $request->avatar->storeAs('aplicantes_avatar',$nombre_avatar);
+        if($request->avatar){
+            $ext = trim( $request->avatar->getClientOriginalExtension() );
+            $nombre_avatar = md5(($persona->dui)).'.'.$ext;
+            $path = $request->avatar->storeAs('aplicantes_avatar',$nombre_avatar);
 
-        $user = User::find(Auth::user()->id);
-        $user->avatar = $nombre_avatar;
-        $user->save();
+            $user = User::find(Auth::user()->id);
+            $user->avatar = $nombre_avatar;
+            $user->save();
+        }
 
         Session::flash('message',"<strong>¡Usuario!</strong> editado correctamente");
         return Redirect::to('/editPerfil');
