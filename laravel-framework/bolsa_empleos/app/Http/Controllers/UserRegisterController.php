@@ -130,7 +130,7 @@ class UserRegisterController extends Controller
                 $login->dui = $request->input('dui');
                 $login->password = Hash::make($request->input('pass'));
                 $login->cod_tipo_usuario = 2;
-                $login->isActive = 1;
+                $login->is_active = 1;
                 $success = $login->save();
 
                 $direccion = new direccion_solicitante;
