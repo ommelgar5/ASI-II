@@ -73,10 +73,12 @@ Route::prefix('gestor')->group(function(){
     Route::get('/createPerfil','GestorController@createPerfil')->name('gestor.createPerfil')->middleware('auth','gestor');
 //	Route::post('/createPerfil','GestorController@storePerfil')->name('gestor.storePerfil')->middleware('auth','gestor');
 
+    Route::get('/crearEmpresa', 'EmpresaRegisterController@index')->name('gestorCrearEmpresa');
     Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
     Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');
     Route::post('/empDet/{id}','GestorController@empDet')->name('gestor.empDet')->middleware('auth','gestor');
 
+    Route::get('/crearPerfil','UserRegisterController@index')->name('gestor.crearPerfilAplicante');
     Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
     Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
     Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');

@@ -11,8 +11,8 @@
 
 <!-- BEGIN Page Level CSS-->
 <!-- <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css"> -->
-<link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/wizard.css">
-<link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
+<link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/forms/wizard.css">
+<link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/pickers/daterange/daterange.css">
 <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
 <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.css">
 <!-- END Page Level CSS-->

@@ -5,12 +5,14 @@
 
     <!-- Tabla -->
     <div class="col-lg-12" style="margin-top: 1em; ">
+        <div style="margin-bottom: 1em">
+            <a href="{{route('gestor.crearPerfilAplicante')}}" class="btn btn-primary"> <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i> Crear Perfil</a>
+        </div>
         <div class="panel panel-default">
 
             <div class="panel-heading">
                 usuarios
             </div>
-
             <!-- /.panel-heading -->
             <div class="panel-body">
                 <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -39,7 +41,7 @@
                                         <td>{{ $usuario->persona->correo }}</td>
                                         <td>{{ $usuario->persona->telefono1 }}</td>
                                         <td class="text-center">
-                                            @if( $usuario->isActive == 1)
+                                            @if( $usuario->is_active )
                                                 <a href="/gestor/usuario/{{ $usuario->dui }}"><i class="fa fa-unlock fa-2x text-success" aria-hidden="true"></i></a>
                                             @else
                                                 <a href="/gestor/usuario/{{ $usuario->dui }}"><i class="fa fa-lock fa-2x text-danger" aria-hidden="true"></i></a>
