@@ -3,12 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class cargo_empresa extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'cargo_empresa';
     protected $primaryKey = 'cod_cargo';
-    public $incrementing = false;
+    public $timestamps = false;
+    protected $dates = ['deleted_at'];
+
+    protected $fillable = [
+        'cargo',
+        'cod_area'
+    ];
+
+
 
     public function experiencia_laboral(){
         return $this->hasMany('App\experiencia_laboral','cod_cargo','cod_cargo');

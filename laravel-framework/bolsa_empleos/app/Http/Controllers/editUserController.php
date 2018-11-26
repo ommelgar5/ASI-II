@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\a_experiencia;
+use App\direccion_solicitante;
 use App\estadocivil;
 use App\Http\Requests\UserUpdateRequest;
 use App\licencia;
@@ -142,8 +143,13 @@ class editUserController extends Controller
             $programa->nivel;
         }
 
-        // return response()->json($persona);
+        $direccion = direccion_solicitante::where('persona_id',$id)->first();
+        $direccion->municipio;
+        $direccion->municipio->departamento;
 
-        return view('usuario.perfil',['persona'=>$persona,'idiomas'=>$idiomas,'programas'=>$programas]);
+
+//         return response()->json($direccion);
+
+        return view('usuario.perfil',['persona'=>$persona,'idiomas'=>$idiomas,'programas'=>$programas,'direccion'=>$direccion]);
     }
 }

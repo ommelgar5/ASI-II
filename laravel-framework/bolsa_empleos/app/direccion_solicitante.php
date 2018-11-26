@@ -17,4 +17,12 @@ class direccion_solicitante extends Model
         'persona_id',
         'cod_municipio'
     ];
+
+    public function municipio()
+    {
+        return $this->belongsTo('App\municipio','cod_municipio','cod_municipio');
+    }
+
+
+
 }

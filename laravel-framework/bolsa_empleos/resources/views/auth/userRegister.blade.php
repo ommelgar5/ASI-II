@@ -518,7 +518,7 @@
                             success:function(response){
                                 if(response.error){
                                     toastr.error(response.errorMessage);
-                                    $out = false;
+                                    $out = false
                                 }else{
                                     id = response.personaID;
                                     $out = true;

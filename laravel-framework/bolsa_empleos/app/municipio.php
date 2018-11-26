@@ -23,4 +23,10 @@ class municipio extends Model
     {
         return $this->belongsTo('App\departamento','cod_departamento','cod_departamento');
     }
+
+    public function direccion_solicitante(){
+        return $this->hasMany('App\direccion_solicitante','cod_municipio','cod_municipio');
+    }
+
+
 }

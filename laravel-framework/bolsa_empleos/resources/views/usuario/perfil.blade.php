@@ -26,7 +26,7 @@
             </div>
             <div id="if1" class="collapse show" data-parent="#if">
               <div class="card-body" style="font-size: .8em">
-                <div>Fecha de nacimiento: <span class="text-muted">{{ $persona->fech_nac }}</span></div>
+                <div>Fecha de nacimiento: <span class="text-muted">{{ date('d-m-Y',strtotime($persona->fech_nac)) }}</span></div>
                 <div>Telefono 1:  <span class="text-muted">{{ $persona->telefono1 }}</span></div>
                   @if( $persona->telefono2)
                     <div>Telefono 2:  <span class="text-muted">--------</span></div>
@@ -36,7 +36,9 @@
                 <div>correo:  <span class="text-muted">{{ $persona->correo }}</span></div>
                 <div>Estado civil: <span class="text-muted">{{ $persona->estadocivil->estado }} </span></div>
                 <div>Direción:</div>
-                <p class="text-muted m-0">San Salvador, 23 av. Sur casi al Norte, Juan Pablo V, Roma</p>
+                <p class="text-muted m-0">{{ $direccion->lugar }}</p>
+                <div>Mununicipio:  <span class="text-muted">{{ $direccion->municipio->municipio }}</span></div>
+                <div>Departamento:  <span class="text-muted">{{ $direccion->municipio->departamento->departamento }}</span></div>
                 <div>Años de experiencia:  <span class="text-muted">{{ $persona->a_experiencia->a_experiecia }}</span></div>
                 @if( $persona->vehiculo)
                   <div>Vehiculo: <span class="text-muted">Si</span></div>

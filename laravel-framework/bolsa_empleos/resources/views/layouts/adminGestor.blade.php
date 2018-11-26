@@ -43,9 +43,6 @@
                 </a>
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="/gestor/perfil"><i class="fa fa-user fa-fw"></i> Ver perfil</a>
-                    </li>
-                    <li><a href="/gestor/createPerfil"><i class="fa fa-plus-square fa-fw"></i> Agregar usuario admin</a>
-                    </li>
                     <li class="divider"></li>
                     <li><a href="/"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                     </li>
@@ -66,6 +63,9 @@
 
                     <li>
                         <a href="/gestor/usuarios"><i class="fa fa-users fa-fw"></i> Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Agregar Usuario Administrador</a>
                     </li>
 
                     <li>
@@ -109,6 +109,9 @@
                             </li>
                             <li>
                                 <a href="/tipoContrato"><i class='fa fa-check-square fa-fw'></i> Tipo de contrato </a>
+                            </li>
+                            <li>
+                                <a href="/cargoEmpresa"><i class='fa fa-check-square fa-fw'></i> Cargos empresas </a>
                             </li>
 
                         </ul>
@@ -322,6 +325,77 @@
             });
 
         });
+
+
+
+
+
+        //        Buscar los cargos por el area seleccionada
+
+        $(document).on("change","#area",function(event){
+            var area = $(this).val();
+            var html = "";
+            if(area) {
+                $.ajax({
+                    method: "get",
+                    url: "{{ url('/obtenerCargos') }}/" + area,
+                }).done(function (msg) {
+                    $('#cargosEmpresas').empty();
+                    for(var cargo of msg){
+                        html += `
+                                <div class="panel panel-primary mb-2 text- mb-3">
+                                    <div class="panel-heading py-1" >
+                                        <div class="row p-0">
+                                            <span class="col-xs-9">${ cargo.cargo }</span>
+                                            <a href="/cargoEmpresa/${ cargo.cod_cargo }/edit" style="color: white;" class="col-xs-1 text-center"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a>
+                                            <input type="text" hidden value="${cargo.cod_cargo}">
+                                            <button class="btn btn-danger" id="deleteCargo">Eliminar</button>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                    $(html).appendTo('#cargosEmpresas');
+                })
+            };
+        });
+
+
+        //        Delete cargo
+        $(document).on( 'click','#deleteCargo', function (event) {
+            var elCargo = this;
+            var cargo = (this.previousElementSibling.value);
+
+            $.ajax({
+                type: 'post',
+                url: '{{ url("deleteCargoEmpresa") }}',
+                async: false,
+                dataType: 'json',
+                data:{
+                    'cod_cargo': cargo
+                },
+                success:function(response){
+                    if(!response.error){
+                        $(elCargo).parent().parent().parent().fadeOut(1000);
+                        $('#mensaje').fadeIn(1000);
+                        setInterval(function () {
+                            $('#mensaje').fadeOut(1000);
+                        },3000);
+                    }
+                },
+                error: function(response){
+                    $('#error').fadeIn(1000);
+                    setInterval(function () {
+                        $('#error').fadeOut(1000);
+                    },3000)
+                }
+            });
+
+        })
+
+
+
+
+
 
     });
 </script>

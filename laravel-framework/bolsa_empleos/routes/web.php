@@ -17,7 +17,7 @@
 Route::get('/', 'OfertasController@inicio')->name('inicio');
 
 Route::get('/contactanos',function(){
-	return view('contactanos');
+    return view('contactanos');
 })->name('contactanos');
 
 Auth::routes();
@@ -32,7 +32,7 @@ Route::get('/obtenerMunicipios/{departamento}', 'CommonController@obtenerMunicip
 Route::post('/validarDUI','UserRegisterController@validarDUI');
 // fin
 
-/* 
+/*
 	ver ofertas de una categoria
 */
 Route::get('/ofertas/{area?}','OfertasController@ofertasArea')->name('ofertas');
@@ -65,20 +65,20 @@ Route::prefix('empresa')->group(function() {
 	para el gestor(Admin)
 */
 Route::prefix('gestor')->group(function(){
-	Route::get('/dashboard','GestorController@index')->name('gestor.dashboard')->middleware('auth','gestor');
-	Route::get('/perfil','GestorController@perfil')->name('gestor.perfil')->middleware('auth','gestor');
-	Route::get('/editPerfil','GestorController@editPerfil')->name('gestor.editPerfil')->middleware('auth','gestor');
-	Route::put('/updatePerfil','GestorController@updatePerfil')->name('gestor.updatePerfil')->middleware('auth','gestor');
-	Route::get('/createPerfil','GestorController@createPerfil')->name('gestor.createPerfil')->middleware('auth','gestor');
+    Route::get('/dashboard','GestorController@index')->name('gestor.dashboard')->middleware('auth','gestor');
+    Route::get('/perfil','GestorController@perfil')->name('gestor.perfil')->middleware('auth','gestor');
+    Route::get('/editPerfil','GestorController@editPerfil')->name('gestor.editPerfil')->middleware('auth','gestor');
+    Route::put('/updatePerfil','GestorController@updatePerfil')->name('gestor.updatePerfil')->middleware('auth','gestor');
+    Route::get('/createPerfil','GestorController@createPerfil')->name('gestor.createPerfil')->middleware('auth','gestor');
 //	Route::post('/createPerfil','GestorController@storePerfil')->name('gestor.storePerfil')->middleware('auth','gestor');
 
-	Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
-	Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');
-	Route::post('/empDet/{id}','GestorController@empDet')->name('gestor.empDet')->middleware('auth','gestor');
+    Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
+    Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');
+    Route::post('/empDet/{id}','GestorController@empDet')->name('gestor.empDet')->middleware('auth','gestor');
 
-	Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
-	Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
-	Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');
+    Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
+    Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
+    Route::post('/useDet/{id}','GestorController@useDet')->name('gestor.useDet')->middleware('auth','gestor');
 
     Route::get('/usuarios','GestorController@usuarios')->name('gestor.usuarios')->middleware('auth','gestor');
     Route::get('/usuario/{id}','GestorController@usuario')->name('gestor.usuario')->middleware('auth','gestor');
@@ -94,7 +94,7 @@ Route::prefix('gestor')->group(function(){
 
 
 /*
-	registro de aplicantes 
+	registro de aplicantes
 */
 Route::get('/registro', 'UserRegisterController@index')->middleware('guest');
 Route::post('/registrarUsuario','UserRegisterController@registrarUsuario');
@@ -118,7 +118,7 @@ Route::get('perfil','editUserController@perfil');
 
 //<<<<<<< HEAD
 
-/* 
+/*
 	Editar Empresa
 */
 Route::resource('editPerfilEmpresa','editEmpresaController');
@@ -167,4 +167,7 @@ Route::resource('programa','ManttoGestor\ProgramaController');
 Route::resource('tipoContrato','ManttoGestor\TipoContratoController');
 Route::resource('municipio','ManttoGestor\MunicipioController');
 Route::post('deleteMunicipio','ManttoGestor\MunicipioController@delete');
+Route::resource('cargoEmpresa','ManttoGestor\CargoEmpresaController');
+Route::get('/obtenerCargos/{id}', 'CommonController@obtenerCargos');
+Route::post('deleteCargoEmpresa','ManttoGestor\CargoEmpresaController@delete');
 
