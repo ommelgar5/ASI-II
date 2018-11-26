@@ -32,11 +32,13 @@
             </div>
             <div class="panel-body">
               <div class="list-group">
+                
                 @foreach($categorias_cantidad as $menu)
                 <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} 
                   <span class="badge badge-pill badge-primary">{{$menu->cantidad}}</span>
                 </a> 
                 @endforeach
+                
                 @foreach($categorias as $menu)
                 <a href="{{ route('ofertas') }}/{{$menu->cod_area}}" class="list-group-item py-1">{{ $menu->area }} 
                   <span class="badge badge-pill badge-primary">0</span>

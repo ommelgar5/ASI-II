@@ -8,7 +8,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\DB;
 
 
-class CategoriasComposer
+class categoriasComposer
 {
 
     /**
