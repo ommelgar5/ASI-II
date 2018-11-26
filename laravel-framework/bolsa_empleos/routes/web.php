@@ -172,3 +172,10 @@ Route::resource('cargoEmpresa','ManttoGestor\CargoEmpresaController');
 Route::get('/obtenerCargos/{id}', 'CommonController@obtenerCargos');
 Route::post('deleteCargoEmpresa','ManttoGestor\CargoEmpresaController@delete');
 
+/*
+ * CONTACTO
+ *
+ * */
+
+Route::resource('mail','MailController');
+

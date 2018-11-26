@@ -246,6 +246,9 @@
 <script src="/app-assets/vendors/js/forms/validation/jquery.validate.additional-methods.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
+
+    $('.dropdown-toggle').dropdown();
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': '{{ csrf_token() }}'

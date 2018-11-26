@@ -114,7 +114,7 @@ class GestorController extends Controller
     public function usuario($id){
 
         $usuario = User::where('dui',$id)->first();
-        $usuario->is_active = !$usuario->is_active;
+        $usuario->isActive = !$usuario->isActive;
         $usuario->save();
 
         $usuarios = User::where('cod_tipo_usuario',2)->paginate(15);
