@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\a_experiencia;
 use App\direccion_solicitante;
 use App\estadocivil;
@@ -15,6 +16,8 @@ use App\idioma_solicitante;
 use App\programa_solicitante;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 
 
 class editUserController extends Controller
@@ -94,6 +97,15 @@ class editUserController extends Controller
         $persona = persona::find($id);
         $persona->fill($request->all());
         $persona->save();
+        
+        $ext = trim( $request->avatar->getClientOriginalExtension() );
+        $nombre_avatar = md5(($persona->dui)).'.'.$ext;
+        $path = $request->avatar->storeAs('aplicantes_avatar',$nombre_avatar);
+
+        $user = User::find(Auth::user()->id);
+        $user->avatar = $nombre_avatar;
+        $user->save();
+
         Session::flash('message',"<strong>¡Usuario!</strong> editado correctamente");
         return Redirect::to('/editPerfil');
     }
