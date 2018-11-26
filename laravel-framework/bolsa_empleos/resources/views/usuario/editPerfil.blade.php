@@ -5,8 +5,13 @@
         @include('alerts.request')
         <h2 class="text-center text-muted">Editar infomación personal</h2>
         <div class="container" style="max-width: 80%">
-        {!!Form::model($data['persona'],['route'=>['editPerfil.update',$data['persona']->id],'method'=>'PUT'])!!}
+        {!!Form::model($data['persona'],['route'=>['editPerfil.update',$data['persona']->id],'method'=>'PUT','files'=>true])!!}
             @method('PUT')
+            <div class="form-group">
+                <label for="avatar">Avatar</label>
+                <input type="file" class="form-control-file" id="avatar" name="avatar">
+            </div> <br>
+
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Nombre</span>
                 <input type="text" class="form-control" aria-describedby="basic-addon1" name="nombre" value="{{ $data['persona']->nombre }}" >

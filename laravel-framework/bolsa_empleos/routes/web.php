@@ -21,6 +21,7 @@ Route::get('/contactanos',function(){
 })->name('contactanos');
 
 Auth::routes();
+Route::post('/autenticar','Auth\LoginController@authenticate')->name('autenticar');
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*

@@ -123,7 +123,7 @@ class EmpresaController extends Controller
                     for ($i=0; $i < count($request->input('nivelEst')) ; $i++) { 
                         try{    
                             $tmp = new estudio_oferta;
-                            // $tmp->cod_idioma = $request->input('estudio');
+                            $tmp->cod_area_est = $request->input('estudio')[$i];
                             $tmp->cod_oferta = $nueva_oferta->cod_oferta;
                             $tmp->cod_nivel_est = $request->input('nivelEst')[$i];
                             $success = $tmp->save();

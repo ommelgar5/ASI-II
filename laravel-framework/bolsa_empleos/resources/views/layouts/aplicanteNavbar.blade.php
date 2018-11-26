@@ -10,7 +10,11 @@
         {{ App\persona::where('dui', Auth::user()->dui)->first()->nombre }} {{ App\persona::where('dui', Auth::user()->dui)->first()->apellido  }}
       </span>
       <a href="#"></a>
-      <img src="/assets/img/users/user.png" alt="user.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+      @if(Auth::user()->avatar)
+      <img src="/storage/public/aplicantes_avatar/{{Auth::user()->avatar}}" alt="{{Auth::user()->avatar}}" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+      @else
+      <img src="assets/img/users/user.png" alt="user.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+      @endif
       <div class="dropdown-menu ">
         <a class="dropdown-item" href="/perfil"><i class="fas fa-user-tie fa-sm mr-1"></i> Perfil</a>
         <a class="dropdown-item" href="/editPerfil"><i class="fas fa-pencil-alt fa-sm mr-1"></i> Editar Perfil</a>

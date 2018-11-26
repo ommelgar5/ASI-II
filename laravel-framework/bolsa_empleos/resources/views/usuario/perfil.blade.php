@@ -7,7 +7,11 @@
         <!--AVATAR-->
         <div class="card my-4 border-0">
           <div class="text-center mt-2">
-            <img class="card-img-top rounded" src="assets/img/users/user.png" alt="user.png" style="max-width: 150px">
+            @if(Auth::user()->avatar)
+              <img class="card-img-top rounded" src="/storage/public/{{Auth::user()->avatar}}" alt="{{Auth::user()->avatar}}" style="max-width: 150px">
+            @else
+              <img class="card-img-top rounded" src="assets/img/users/user.png" alt="user.png" style="max-width: 150px">
+            @endif
           </div>
           <div class="card-body">
             <h4 class="card-title">{{ $persona->nombre }} {{ $persona->apellido }}</h4>
