@@ -11,7 +11,7 @@
   
       <!-- Modal body -->
       <div class="modal-body">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('autenticar') }}">
           @csrf
           <div class="input-group mb-3">
             <div class="input-group-prepend">
