@@ -16,7 +16,7 @@ class gestion extends Model
     }
 
     public function persona(){
-        return $this->belongsTo('App\persona');
+        return $this->belongsTo('App\persona','persona_id','id');
     }
 
     public function estado_gestion(){

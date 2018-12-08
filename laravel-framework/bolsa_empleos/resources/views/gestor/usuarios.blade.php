@@ -5,6 +5,9 @@
 
     <!-- Tabla -->
     <div class="col-lg-12" style="margin-top: 1em; ">
+        <div style="margin-bottom: 1em">
+            <a href="{{route('gestorCrearEmpresa')}}" class="btn btn-primary"> <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i> Crear Perfil</a>
+        </div>
         <div class="panel panel-default">
 
             <div class="panel-heading">

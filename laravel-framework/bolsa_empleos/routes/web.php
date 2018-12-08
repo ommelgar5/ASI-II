@@ -94,6 +94,12 @@ Route::prefix('gestor')->group(function(){
 
     Route::get('/empresas/registradas/dia','GestorController@empresasDia')->name('gestor.empresas.dia')->middleware('auth','gestor');
     Route::get('/empresas/registradas/mes','GestorController@empresasMes')->name('gestor.empresas.mes')->middleware('auth','gestor');
+
+    Route::get('/oferta/{id}','GestorController@oferta')->name('gestor.oferta')->middleware('auth','gestor');
+    Route::get('/ofertaActivar/{id}','GestorController@ofertaActivar')->name('gestor.ofertaActivar')->middleware('auth','gestor');
+    Route::get('/ofertas','GestorController@ofertas')->name('gestor.ofertas')->middleware('auth','gestor');
+    Route::get('/ofertas/regitradas/dia','GestorController@ofertasDia')->name('gestor.ofertas.dia')->middleware('auth','gestor');
+    Route::get('/ofertas/registradas/mes','GestorController@ofertasMes')->name('gestor.ofertas.mes')->middleware('auth','gestor');
 });
 //fin
 

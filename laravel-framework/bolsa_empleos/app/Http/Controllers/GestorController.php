@@ -23,7 +23,11 @@ class GestorController extends Controller
         $empresas_mes  = empresa::whereMonth('created_at','=',now()->month)->get()->count();
         $ofertas_mes = oferta_laboral::whereMonth('fecha','=',now()->month)->get()->count();
 
-    	return view('gestor.dashboard',['usuarios_nuevos_dia'=>$usuarios_dia, 'empresas_nuevas_dia'=>$empresas_dia, 'ofertas_nuevas_dia'=>$ofertas_dia, 'usuarios_nuevos_mes'=>$usuarios_mes, 'empresas_nuevas_mes'=>$empresas_mes, 'ofertas_nuevas_mes'=>$ofertas_mes ]);
+        $usuarios_total = User::all()->count();
+        $empresas_total = empresa::all()->count();
+        $ofertas_total = oferta_laboral::all()->count();
+
+    	return view('gestor.dashboard',['usuarios_nuevos_dia'=>$usuarios_dia, 'empresas_nuevas_dia'=>$empresas_dia, 'ofertas_nuevas_dia'=>$ofertas_dia, 'usuarios_nuevos_mes'=>$usuarios_mes, 'empresas_nuevas_mes'=>$empresas_mes, 'ofertas_nuevas_mes'=>$ofertas_mes, 'usuarios_total' => $usuarios_total, 'empresas_total' => $empresas_total, 'ofertas_total' => $ofertas_total ]);
     }
 
     public function perfil(){
@@ -162,12 +166,35 @@ class GestorController extends Controller
         return view('gestor.empresas',['empresas'=>$empresas]);
     }
 
+    public function ofertaActivar($id){
+
+        $oferta = oferta_laboral::find($id);
+        $oferta->isActive = !$oferta->isActive;
+        $oferta->save();
+
+        $ofertas = oferta_laboral::paginate(15);
+        return view('gestor.ofertas')->with('ofertas',$ofertas);
+    }
+
+    public function oferta($id){
+        $oferta = oferta_laboral::find($id);
+        $oferta->setRelation('aplicaciones', $oferta->aplicaciones()->paginate(15));
+        return view('gestor.ofertaDetalle')->with('oferta',$oferta);
+    }
+
+    public function ofertas(){
+        $ofertas = oferta_laboral::paginate(15);
+        return view('gestor.ofertas')->with('ofertas',$ofertas);
+    }
+
     public function ofertasDia(){
-        $ofertas = oferta_laboral::whereDate('fecha','=',today()->toDateString())->get();
+        $ofertas = oferta_laboral::whereDate('fecha','=',today()->toDateString())->paginate(15);
+        return view('gestor.ofertas')->with('ofertas',$ofertas);
     }
 
     public function ofertasMes(){
-        $ofertas = oferta_laboral::whereMonth('fecha','=',now()->month)->get();
+        $ofertas = oferta_laboral::whereMonth('fecha','=',now()->month)->paginate(15);
+        return view('gestor.ofertas')->with('ofertas',$ofertas);
     }
 
 }

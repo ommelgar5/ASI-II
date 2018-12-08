@@ -156,7 +156,7 @@ class UserRegisterController extends Controller
             $response['errorMessage'] = 'Error al crear la cuenta :(.';
             $success = false;
             DB::rollback();
-        
+        }
         $response['error'] = !$success;
 
         return response()->json($response);
