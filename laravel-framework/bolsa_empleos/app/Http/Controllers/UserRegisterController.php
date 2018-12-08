@@ -50,7 +50,7 @@ class UserRegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -59,7 +59,7 @@ class UserRegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        // $this->middleware('guest');
     }
 
 
@@ -167,35 +167,37 @@ class UserRegisterController extends Controller
         $response = array();
         $response['error'] = false;
 
-        $areasEstudio = $request->input('miAreaEstudio');
-        $nivelesEstudio = $request->input('miNivelEstudio');
-        $instituciones = $request->input('miInstitucion');
-        $especialidad = $request->input('miCarrera');
-        $fechasInicio = $request->input('miFechaInicio');
-        $fechasFin = $request->input('miFechaFin');
-        $actuales = $request->input('miEstudioActual');
+        if($request->has('miAreaEstudio')){
+            $areasEstudio = $request->input('miAreaEstudio');
+            $nivelesEstudio = $request->input('miNivelEstudio');
+            $instituciones = $request->input('miInstitucion');
+            $especialidad = $request->input('miCarrera');
+            $fechasInicio = $request->input('miFechaInicio');
+            $fechasFin = $request->input('miFechaFin');
+            $actuales = $request->input('miEstudioActual');
+            for ($i=0; $i < count($areasEstudio) ; $i++) { 
+                $estudio = new estudio;
 
-        for ($i=0; $i < count($areasEstudio) ; $i++) { 
-            $estudio = new estudio;
+                $estudio->cod_nivel_est = $nivelesEstudio[$i];
+                $estudio->cod_area_est = $areasEstudio[$i];
+                $estudio->especialidad = $especialidad[$i];
+    //            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
+                $estudio->a_inicio = $fechasInicio[$i];
+                $estudio->a_fin =  $fechasFin[$i];
+                $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
+                $estudio->persona_id = $id;
+                $estudio->nombre_institucion = $instituciones[$i];
+                
+                $resultado = $estudio->save();
+            }
 
-            $estudio->cod_nivel_est = $nivelesEstudio[$i];
-            $estudio->cod_area_est = $areasEstudio[$i];
-            $estudio->especialidad = $especialidad[$i];
-//            $estudio->a_inicio = date("Y", strtotime($fechasInicio[$i]) );
-            $estudio->a_inicio = $fechasInicio[$i];
-            $estudio->a_fin =  $fechasFin[$i];
-            $estudio->actual = ( $actuales[$i] == "true" ? 1:0 );
-            $estudio->persona_id = $id;
-            $estudio->nombre_institucion = $instituciones[$i];
-            
-            $resultado = $estudio->save();
+            if(!$resultado){
+                $response['errorMessage'] = 'Error al agregar los estudios.';
+            }
+
+            $response['error'] = !$resultado;
         }
 
-        if(!$resultado){
-            $response['errorMessage'] = 'Error al agregar los estudios.';
-        }
-
-        $response['error'] = !$resultado;
 
         return response()->json($response);
     }
@@ -204,26 +206,29 @@ class UserRegisterController extends Controller
         $response = array();
         $response['error'] = false;
 
-        $idiomas = $request->input('idiomas');
-        $niveles = $request->input('niveles');
         
-        if(count($idiomas) > 0){
-            for ($i=0; $i < count($idiomas); $i++) { 
-                $idioma_solicitante = new idioma_solicitante;
+        
+        if($request->has('idiomas')){
+            $idiomas = $request->input('idiomas');
+            $niveles = $request->input('niveles');
+            if(count($idiomas) > 0){
+                for ($i=0; $i < count($idiomas); $i++) { 
+                    $idioma_solicitante = new idioma_solicitante;
 
-                $idioma_solicitante->persona_id = $id;
-                $idioma_solicitante->cod_idioma = $idiomas[$i];
-                $idioma_solicitante->cod_nivel = $niveles[$i];
-                $resultado = $idioma_solicitante->save();
+                    $idioma_solicitante->persona_id = $id;
+                    $idioma_solicitante->cod_idioma = $idiomas[$i];
+                    $idioma_solicitante->cod_nivel = $niveles[$i];
+                    $resultado = $idioma_solicitante->save();
+                }
+
+                if(!$resultado){
+                    $response['errorMessage'] = 'Error al agregar los idiomas.';
+                }
+
+                $response['error'] = !$resultado;
+            }else{
+                $response['error'] = false;
             }
-
-            if(!$resultado){
-                $response['errorMessage'] = 'Error al agregar los idiomas.';
-            }
-
-            $response['error'] = !$resultado;
-        }else{
-            $response['error'] = false;
         }
 
         return response()->json($response);    
@@ -233,28 +238,30 @@ class UserRegisterController extends Controller
         $response = array();
         $response['error'] = false;
 
-        $programas = $request->input('programas');
-        $niveles = $request->input('nivelesP');
+        if($request->has('programas')){
+            $programas = $request->input('programas');
+            $niveles = $request->input('nivelesP');
 
-        if(count($programas) > 0){
-            for ($i=0; $i < count($programas); $i++) { 
-                $programa_solicitante = new programa_solicitante;
+            if(count($programas) > 0){
+                for ($i=0; $i < count($programas); $i++) { 
+                    $programa_solicitante = new programa_solicitante;
 
-                $programa_solicitante->persona_id = $id;
-                $programa_solicitante->cod_programa = $programas[$i];
-                $programa_solicitante->cod_nivel = $niveles[$i];
-                $resultado = $programa_solicitante->save();
+                    $programa_solicitante->persona_id = $id;
+                    $programa_solicitante->cod_programa = $programas[$i];
+                    $programa_solicitante->cod_nivel = $niveles[$i];
+                    $resultado = $programa_solicitante->save();
+                }
+
+                if(!$resultado){
+                    $response['errorMessage'] = 'Error al agregar los Programas.';
+                }
+
+                $response['error'] = !$resultado;
+            }else{
+                $response['error'] = false;
             }
-
-            if(!$resultado){
-                $response['errorMessage'] = 'Error al agregar los Programas.';
-            }
-
-            $response['error'] = !$resultado;
-        }else{
-            $response['error'] = false;
         }
-            
+
         return response()->json($response);
     }
 
@@ -263,36 +270,39 @@ class UserRegisterController extends Controller
         $response = array();
         $response['error'] = false;
 
-        $nombresEmpresa = $request->input('nombresEmpresa');
-        $girosEmpresa = $request->input('girosEmpresa');
-        $areasEmpresa = $request->input('areasEmpresa');
-        $cargosEmpresa = $request->input('cargosEmpresa');
-        $fechasInicioEmpresa = $request->input('fechasInicioEmpresa');
-        $fechasFinEmpresa = $request->input('fechasFinEmpresa');
-        $actualesEmpresa = $request->input('actualesEmpresa');
-        $descripcionesPuesto = $request->input('descripcionesPuesto');
+        if($request->has('nombresEmpresa')){
+            $nombresEmpresa = $request->input('nombresEmpresa');
+            $girosEmpresa = $request->input('girosEmpresa');
+            $areasEmpresa = $request->input('areasEmpresa');
+            $cargosEmpresa = $request->input('cargosEmpresa');
+            $fechasInicioEmpresa = $request->input('fechasInicioEmpresa');
+            $fechasFinEmpresa = $request->input('fechasFinEmpresa');
+            $actualesEmpresa = $request->input('actualesEmpresa');
+            $descripcionesPuesto = $request->input('descripcionesPuesto');
 
-        for ($i=0; $i < count($nombresEmpresa) ; $i++) { 
-            $experiencia_laboral = new experiencia_laboral;
-            $cargoID = $cargosEmpresa[$i];
-            $cargo = cargo_empresa::find($cargoID);
-            $experiencia_laboral->persona_id= $id;
-            $experiencia_laboral->cod_giro = $girosEmpresa[$i];
-            $experiencia_laboral->cod_cargo = $cargoID;
-            $experiencia_laboral->empresa = $nombresEmpresa[$i];
-            $experiencia_laboral->puesto = $cargo->cargo;
-            $experiencia_laboral->descripcion = $descripcionesPuesto[$i];
-            $experiencia_laboral->a_inicio = $fechasInicioEmpresa[$i];
-            $experiencia_laboral->a_fin = $fechasFinEmpresa[$i];
-            $experiencia_laboral->actual = ($actualesEmpresa[$i] == 1 ? 1:0 );
-            $resultado = $experiencia_laboral->save();
+            for ($i=0; $i < count($nombresEmpresa) ; $i++) { 
+                $experiencia_laboral = new experiencia_laboral;
+                $cargoID = $cargosEmpresa[$i];
+                $cargo = cargo_empresa::find($cargoID);
+                $experiencia_laboral->persona_id= $id;
+                $experiencia_laboral->cod_giro = $girosEmpresa[$i];
+                $experiencia_laboral->cod_cargo = $cargoID;
+                $experiencia_laboral->empresa = $nombresEmpresa[$i];
+                $experiencia_laboral->puesto = $cargo->cargo;
+                $experiencia_laboral->descripcion = $descripcionesPuesto[$i];
+                $experiencia_laboral->a_inicio = $fechasInicioEmpresa[$i];
+                $experiencia_laboral->a_fin = $fechasFinEmpresa[$i];
+                $experiencia_laboral->actual = ($actualesEmpresa[$i] == 1 ? 1:0 );
+                $resultado = $experiencia_laboral->save();
+            }
+
+            if(!$resultado){
+                $response['errorMessage'] = 'Error al agregar las experiencias.';
+            }
+
+            $response['error'] = !$resultado;
         }
-
-        if(!$resultado){
-            $response['errorMessage'] = 'Error al agregar las experiencias.';
-        }
-
-        $response['error'] = !$resultado;
+        
         return response()->json($response);
     }
 

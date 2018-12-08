@@ -177,9 +177,13 @@
        Antiguo Cuscatlán o zonas cercanas a la sucursal.</p>
   </div> -->
   
-  <div class="text-center mb-3">
-    <a href="{{ route('aplicar',['id'=> $oferta->cod_oferta]) }}" class="btn btn-primary">Aplicar</a>
-  </div>
+  @if(Auth::user())
+    @if(Auth::user()->cod_tipo_usuario != 1)
+    <div class="text-center mb-3">
+      <a href="{{ route('aplicar',['id'=> $oferta->cod_oferta]) }}" class="btn btn-primary">Aplicar</a>
+    </div>
+    @endif
+  @endif
   
 </div>
 @endsection

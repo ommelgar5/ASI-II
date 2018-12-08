@@ -34,7 +34,7 @@
 
     <div class="form-group">
       <label for="nit">NIT:  <strong class="text-danger">*</strong></label>
-      <input type="text"  class="form-control" id="nit" name="nit" placeholder="1111-111111-112-8" pattern="[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]" minlength="17" maxlength="17">
+      <input type="text"  class="form-control nit-inputmask" id="nit" name="nit" placeholder="1111-111111-112-8" pattern="[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]" minlength="17" maxlength="17">
     </div>
 
     <div class="form-group">
@@ -106,10 +106,14 @@
 @endsection
 
 @section('jsExtra')
-<script src="assets/js/script.js"></script>
-<script src="css/login_register/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+<!-- <script src="/assets/js/script.js"></script> -->
+<script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+<script src="/app-assets/vendors/js/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
+    // NIT
+    $('.nit-inputmask').inputmask("9999-999999-999-9");
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': '{{ csrf_token() }}'
