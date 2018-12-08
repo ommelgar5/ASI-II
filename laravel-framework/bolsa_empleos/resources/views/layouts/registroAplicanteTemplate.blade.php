@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/assets/img/icon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/bootstrap4/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/fontawesome5.5/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     @yield('cssExtra')
 
