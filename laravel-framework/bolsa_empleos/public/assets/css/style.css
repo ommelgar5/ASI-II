@@ -22,3 +22,19 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
     color: #aaa;
     text-decoration: none;
 }
+
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead,th,tr,td,tfoot,tbody{
+    border: 1px solid #ccc;
+    padding-left: 1em;
+}
+
+th{
+    background: #eee;
+}
