@@ -84,10 +84,12 @@ class EmpresaRegisterController extends Controller
         $municipio = $request->input('municipio');
         $descripcion = $request->input('descripcion');
 
-
-        $logo = trim( $request->logo->getClientOriginalName() );
-        // path /storage/empresas_logo/
-        $path = $request->logo->storeAs('empresas_logo', $logo );
+        $logo = 'empresa_generico.png';
+        if($request->hasFile('logo')){
+            $logo = trim( $request->logo->getClientOriginalName() );
+            // path /storage/empresas_logo/
+            $path = $request->logo->storeAs('empresas_logo', $logo );    
+        }
         
         DB::beginTransaction();
         try {

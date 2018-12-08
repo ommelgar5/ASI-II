@@ -104,22 +104,25 @@ class EmpresaController extends Controller
             
             if($success){
                 
-                $cargos_oferta = $request->input('cargos');
-                if(count($cargos_oferta)>0){
-                    foreach($cargos_oferta as $cargo){
-                        try {
-                            $tmp = new experiencia_oferta;
-                            $tmp->cod_cargo = $cargo;
-                            $tmp->cod_oferta = $nueva_oferta->cod_oferta;
-                            $success = $tmp->save();   
-                        }catch (\Exception $e) {
-                            $success = false;
-                            DB::rollback();
+                if($request->has('cargos')){
+                    $cargos_oferta = $request->input('cargos');
+                    if(count($cargos_oferta)>0){
+                        foreach($cargos_oferta as $cargo){
+                            try {
+                                $tmp = new experiencia_oferta;
+                                $tmp->cod_cargo = $cargo;
+                                $tmp->cod_oferta = $nueva_oferta->cod_oferta;
+                                $success = $tmp->save();   
+                            }catch (\Exception $e) {
+                                $success = false;
+                                DB::rollback();
+                            }
                         }
                     }
                 }
-
-                if(count($request->input('nivelEst')) > 0 ){
+                
+                // if(count($request->input('nivelEst')) > 0 ){
+                if($request->has('nivelEst')){
                     for ($i=0; $i < count($request->input('nivelEst')) ; $i++) { 
                         try{    
                             $tmp = new estudio_oferta;
@@ -134,7 +137,8 @@ class EmpresaController extends Controller
                     }
                 }
                 
-                if(count($request->input('programa')) > 0 ){
+                // if(count($request->input('programa')) > 0 ){
+                if($request->has('programa')){
                     for ($i=0; $i < count($request->input('programa')); $i++) { 
                         try{ 
                             $tmp = new oferta_programa;
@@ -149,7 +153,8 @@ class EmpresaController extends Controller
                     }
                 }
                 
-                if(count($request->input('idioma')) > 0){
+                // if(count($request->input('idioma')) > 0){
+                if($request->has('idioma')){
                     for ($i=0; $i < count($request->input('idioma')); $i++) { 
                         try{
                             $tmp = new oferta_idioma;
