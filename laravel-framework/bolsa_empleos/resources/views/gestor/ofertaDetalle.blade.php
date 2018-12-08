@@ -185,7 +185,13 @@
               <tbody style="font-size: .8em;">
               @foreach( $oferta->aplicaciones()->get() as $aplicante)
                   <tr class="gradeA odd" role="row">
-                    <td><img src="{{ $aplicante->persona->usuarios->first()->avatar }}" /> </td>
+                    <td>
+                      @if($aplicante->persona->usuarios->first()->avatar)
+                        <img style="max-width: 100px" class="rounded-circle " src="/storage/public/aplicantes_avatar/{{ $aplicante->persona->usuarios->first()->avatar }}"/> 
+                      @else
+                        <img style="max-width: 100px" class="rounded-circle "src="/assets/img/users/user.png" alt="user.png" />
+                      @endif
+                    </td>
                     <td>{{ $aplicante->persona->nombre }} {{ $aplicante->persona->apellido }} </td>
                     <td>{{ $aplicante->persona->fech_nac }}</td>
                     <td>{{ $aplicante->persona->genero->genero }}</td>

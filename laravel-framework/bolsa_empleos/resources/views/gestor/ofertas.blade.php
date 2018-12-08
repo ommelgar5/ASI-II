@@ -36,7 +36,13 @@
                             <tbody style="font-size: .8em;">
                             @foreach( $ofertas as $oferta)
                                 <tr class="gradeA odd" role="row">
-                                    <td><img src="{{ $oferta->empresa->logo }}" /> </td>
+                                    <td>
+                                        @if($oferta->empresa->logo)
+                                            <img style="max-width: 100px" class="rounded-circle " src="/storage/public/empresas_logo/{{$oferta->empresa->logo}}" />
+                                        @else
+                                            <img style="max-width: 100px" class="rounded-circle " src="/storage/public/empresas_logo/empresa.png" />
+                                        @endif   
+                                    </td>
                                     <td>{{ $oferta->empresa->nombre_comercial }}</td>
                                     <td>{{ $oferta->titulo }}</td>
                                     <td>{{ $oferta->descripcion }}</td>

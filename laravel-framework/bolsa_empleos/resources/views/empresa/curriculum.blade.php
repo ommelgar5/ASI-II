@@ -10,7 +10,12 @@
 
             <h3 class="text-center">Curriculum Vitae</h3>
             <div class="text-center">
-                <img src="/storage/public/aplicantes_avatar/{{ $persona->usuarios->first()->avatar }}" align="user.png" width="120">
+                
+                @if($persona->usuarios->first()->avatar)
+                  <img src="/storage/public/aplicantes_avatar/{{ $persona->usuarios->first()->avatar }}" align="user.png" width="120">
+                @else
+                  <img class="card-img-top rounded" src="/assets/img/users/user.png" alt="user.png" style="max-width: 150px">
+                @endif
             </div>
             <h4>Información personal</h4>
             <table class="mb-3">
