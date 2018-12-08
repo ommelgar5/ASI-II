@@ -15,6 +15,10 @@ class gestion extends Model
     	return $this->belongsTo('App\oferta_laboral','cod_oferta','cod_oferta');
     }
 
+    public function persona(){
+        return $this->belongsTo('App\persona');
+    }
+
     public function estado_gestion(){
     	return $this->belongsTo('App\estados_gestion','cod_estado_gestion','cod_estado_gestion');
     }

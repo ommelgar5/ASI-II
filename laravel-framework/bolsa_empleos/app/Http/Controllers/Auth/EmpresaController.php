@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\a_experiencia;
+use App\gestion;
+use App\persona;
 use App\tipo_contrato;
 use App\genero;
 use App\departamento;
@@ -54,6 +56,12 @@ class EmpresaController extends Controller
     public function index()
     {
         $ofertas = oferta_laboral::where('nit',Auth::guard('empresa')->user()->nit)->get();
+
+        foreach ($ofertas as $oferta){
+            $oferta->aplicaciones;
+        }
+
+//        return response()->json($ofertas);
         return view('empresa.dashboard',['ofertas'=>$ofertas]);
     }
 
@@ -180,6 +188,31 @@ class EmpresaController extends Controller
 
         $response['error'] = !$success;
         return response()->json($response);
+    }
+
+    public function aplicantes($id){
+
+        $aplicantes = gestion::where('cod_oferta', $id)->get();
+
+        foreach ($aplicantes as $aplicante){
+            $aplicante->persona->direccion;
+
+            foreach ($aplicante->persona->direccion as $mun){
+                $mun->municipio->departamento;
+            }
+        }
+
+//        return response()->json($aplicantes);
+
+        return view('empresa.aplicantes',['aplicantes'=>$aplicantes]);
+
+    }
+
+    public function curriculum($id){
+
+        return response()->json($id);
+
+
     }
 
 }

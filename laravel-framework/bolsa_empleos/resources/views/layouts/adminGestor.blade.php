@@ -65,7 +65,7 @@
                         <a href="/gestor/usuarios"><i class="fa fa-users fa-fw"></i> Usuarios</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i> Agregar Usuario Administrador</a>
+                        <a href="/gestor/createPerfil"><i class="fa fa-user fa-fw"></i> Agregar Usuario Administrador</a>
                     </li>
 
                     <li>

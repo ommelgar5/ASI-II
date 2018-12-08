@@ -7,7 +7,7 @@
     <h2 class="text-center text-muted">Editar infomación personal</h2>
     <div class="container" style="max-width: 80%">
 
-        {{--{!!Form::open(['route'=>['gestor.createPerfil','method'=>'POST']])!!}--}}
+        {!!Form::open(['route'=>['gestor.createPerf','method'=>'POST']])!!}
         @method('PUT')
         <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">DUI</span>
@@ -55,7 +55,7 @@
             <button class="btn btn-primary mr-5"> Agregar</button>
             <a href="/gestor/dashboard"  class="btn btn-default">Cancelar</a>
         </div>
-        {{--{!! Form::close() !!}--}}
+        {!! Form::close() !!}
     </div>
 
 @endsection

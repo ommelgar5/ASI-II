@@ -9,3 +9,16 @@ NOTE:
 ------
 PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+/* Estilos para los enlaces de las card de los aplicantes a una oferta - Empresa */
+
+.link{
+    color: #000;
+    text-decoration: none;
+    transition: all .1s linear;
+}
+
+.link:hover{
+    color: #aaa;
+    text-decoration: none;
+}

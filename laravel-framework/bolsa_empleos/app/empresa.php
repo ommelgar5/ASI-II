@@ -31,4 +31,11 @@ class empresa extends Authenticatable
     {
         return $this->belongsTo('App\giro_empresa','cod_giro','cod_giro');
     }
+
+     public function oferta_laboral()
+    {
+        return $this->hasMany('App\oferta_laboral','nit','nit');
+    }
+
+
 }

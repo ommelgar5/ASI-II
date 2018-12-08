@@ -59,6 +59,8 @@ Route::prefix('empresa')->group(function() {
     Route::get('/dashboard', 'Auth\EmpresaController@index')->name('empresa.dashboard');
     Route::get('/nueva_oferta','Auth\EmpresaController@showNuevaOferta')->name('empresa.nuevaoferta');
     Route::post('/nueva_oferta','Auth\EmpresaController@creaOferta')->name('crearOferta');
+    Route::get('/aplicantes/{id}','Auth\EmpresaController@aplicantes')->name('empresa.aplicantes');
+    Route::get('/curriculum/{id}','Auth\EmpresaController@curriculum')->name('empresa.curriculum');
 });
 // fin
 
@@ -71,7 +73,7 @@ Route::prefix('gestor')->group(function(){
     Route::get('/editPerfil','GestorController@editPerfil')->name('gestor.editPerfil')->middleware('auth','gestor');
     Route::put('/updatePerfil','GestorController@updatePerfil')->name('gestor.updatePerfil')->middleware('auth','gestor');
     Route::get('/createPerfil','GestorController@createPerfil')->name('gestor.createPerfil')->middleware('auth','gestor');
-//	Route::post('/createPerfil','GestorController@storePerfil')->name('gestor.storePerfil')->middleware('auth','gestor');
+	Route::post('/createPerfil','GestorController@createPerf')->name('gestor.createPerf')->middleware('auth','gestor');
 
     Route::get('/empresas','GestorController@empresas')->name('gestor.empresas')->middleware('auth','gestor');
     Route::get('/empresa/{id}','GestorController@empresa')->name('gestor.empresa')->middleware('auth','gestor');
@@ -117,7 +119,6 @@ Route::resource('editHabilidad','ManttoUser\HabilidadUserController');
 Route::resource('editIdioma','ManttoUser\IdiomaUserController');
 Route::get('perfil','editUserController@perfil');
 
-//<<<<<<< HEAD
 
 /*
 	Editar Empresa

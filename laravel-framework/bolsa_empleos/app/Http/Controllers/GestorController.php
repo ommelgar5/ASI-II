@@ -62,7 +62,7 @@ class GestorController extends Controller
         return view('gestor.create', ['generos'=>$generos]);
     }
 
-    public function storePerfil(Request $request){
+    public function createPerf(Request $request){
 
         return response()->json($request);
 
@@ -114,7 +114,7 @@ class GestorController extends Controller
     public function usuario($id){
 
         $usuario = User::where('dui',$id)->first();
-        $usuario->isActive = !$usuario->isActive;
+        $usuario->is_active = !$usuario->is_active;
         $usuario->save();
 
         $usuarios = User::where('cod_tipo_usuario',2)->paginate(15);

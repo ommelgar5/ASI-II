@@ -13,18 +13,17 @@
      </div>
    </div>
   </div>
-  <div class="card-body py-2 px-0">
+  <div class="card-body py-2">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2 text-center">
-          <img src="/storage/public/empresas_logo/{{$oferta->empresa->logo}}" alt="{{$oferta->empresa->logo}}" width="100">
-        </div>
-        <div class="col-lg-10">
-          <p class="card-text ">{{$oferta->descripcion}}</p>
+        <div class="col-md-10 p-0">
+          <p class="card-text mb-0">{{$oferta->descripcion}}</p>
           <div class="text-right">
-            <a href="{{ route('oferta', ['id'=> $oferta->cod_oferta ] ) }}" class="btn btn-primary btn-sm mr-0">Ver oferta</a>
+            <a href="{{ route('empresa.aplicantes', ['id'=> $oferta->cod_oferta ] ) }}" class="btn btn-primary btn-sm mr-0">Ver detalle</a>
           </div>
-          
+        </div>
+        <div class="col-md-2 p-1 d-flex justify-content-center mt-3">
+          <div class="bg-success text-white rounded-circle d-flex justify-content-center align-items-center" style="width:70px; height: 70px;">{{count($oferta->aplicaciones) }}</div>
         </div>
       </div>
     </div>

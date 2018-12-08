@@ -31,6 +31,7 @@ class HabilidadUserController extends Controller
             $programa->nivel;
         }
 
+
         return view('usuario.habilidades.index', ['data'=> $programas]);
     }
 
@@ -41,8 +42,11 @@ class HabilidadUserController extends Controller
      */
     public function create()
     {
+        $persona = persona::where('dui',Auth::user()->dui)->first()->id;
+        $programas_solicitante = programa_solicitante::select('cod_programa')->where('persona_id',$persona)->get();
+
         $data = [
-            'programas' => programa::all(),
+            'programas' => programa::whereNotIn('cod_programa',$programas_solicitante)->get(),
             'niveles' => nivel::all()
         ];
 

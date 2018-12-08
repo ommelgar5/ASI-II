@@ -23,6 +23,12 @@ class direccion_solicitante extends Model
         return $this->belongsTo('App\municipio','cod_municipio','cod_municipio');
     }
 
+    public function persona()
+    {
+        return $this->belongsTo('App\persona', 'persona_id','persona_id');
+    }
+
+
 
 
 }

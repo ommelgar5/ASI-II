@@ -68,9 +68,19 @@ class persona extends Model
         return $this->belongsToMany('App\idioma', 'idioma_solicitante', 'persona_id', 'cod_idioma');
     }
 
+    public function aplicaciones()
+    {
+        return $this->hasMany('App\gestion');
+    }
+
+    public function direccion()
+    {
+        return $this->hasMany('App\direccion_solicitante','persona_id','id');
+    }
 
 
 
 
-    
+
+
 }
