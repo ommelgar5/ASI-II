@@ -191,7 +191,7 @@
                     <td>{{ $aplicante->persona->genero->genero }}</td>
                     <td>{{ $aplicante->persona->estadocivil->estado }}</td>
                     <td class="text-center">
-                      <a href="{{route('gestor.oferta', ['id' => $oferta->cod_oferta])}}" id="detalle"  class="btn btn-primary btn-xs" style="margin-left: 3em;"> Detalle</a>
+                      <a href="{{ route('gestor.curriculum', ['id'=> $aplicante->persona->id ] ) }}" id="detalle"  class="btn btn-primary btn-xs" style="margin-left: 3em;"> Detalle</a>
                     </td>
                   </tr>
               @endforeach

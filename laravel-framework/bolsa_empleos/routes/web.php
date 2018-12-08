@@ -100,6 +100,8 @@ Route::prefix('gestor')->group(function(){
     Route::get('/ofertas','GestorController@ofertas')->name('gestor.ofertas')->middleware('auth','gestor');
     Route::get('/ofertas/regitradas/dia','GestorController@ofertasDia')->name('gestor.ofertas.dia')->middleware('auth','gestor');
     Route::get('/ofertas/registradas/mes','GestorController@ofertasMes')->name('gestor.ofertas.mes')->middleware('auth','gestor');
+
+    Route::get('/curriculum/{id}','GestorController@curriculum')->name('gestor.curriculum');
 });
 //fin
 
