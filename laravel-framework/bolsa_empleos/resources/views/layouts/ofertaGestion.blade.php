@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2 text-center">
-          <img src="/storage/public/empresas_logo/{{$gestion->oferta_laboral->empresa->logo}}" alt="{{$gestion->oferta_laboral->empresa->logo}}" width="100">
+          <img src="/storage/empresas_logo/{{$gestion->oferta_laboral->empresa->logo}}" alt="{{$gestion->oferta_laboral->empresa->logo}}" width="100">
         </div>
         <div class="col-lg-10">
           <p class="card-text ">{{$gestion->oferta_laboral->descripcion}}</p>
