@@ -1,9 +1,9 @@
-@extends('layouts.empresaTemplate')
+@extends('layouts.adminGestor');
 
 
 @section('titulo','Curriculum')
 
-@section('contenido')
+@section('content')
 
     <main class="container my-3">
         <div class="border rounded px-3">
@@ -212,4 +212,3 @@
     </main>
 
 @endsection
-

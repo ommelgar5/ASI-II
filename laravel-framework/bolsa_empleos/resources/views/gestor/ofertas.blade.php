@@ -24,22 +24,30 @@
                                style="width: 100%;">
                             <thead>
                             <tr role="row">
-                                <th rowspan="1" colspan="1" style="width: 13%;"></th>
+                                <th rowspan="1" colspan="1" style="width: 10%;"></th>
                                 <th rowspan="1" colspan="1" style="width: 10%;">Empresa</th>
                                 <th rowspan="1" colspan="1" style="width: 20%;">Titulo</th>
                                 <th rowspan="1" colspan="1" style="width: 20%">Descripcion</th>
                                 <th rowspan="1" colspan="1" style="width: 15%;">Vacantes</th>
-                                <th rowspan="1" colspan="1">Acciones</th>
+                                <th rowspan="1" colspan="1" style="width: 10%;">Aplicaciones</th>
+                                <th rowspan="1" colspan="1" style="width: 15%;">Acciones</th>
                             </tr>
                             </thead>
                             <tbody style="font-size: .8em;">
                             @foreach( $ofertas as $oferta)
                                 <tr class="gradeA odd" role="row">
-                                    <td><img src="{{ $oferta->empresa->logo }}" /> </td>
+                                    <td>
+                                        @if($oferta->empresa->logo)
+                                            <img style="max-width: 100px" class="rounded-circle " src="/storage/public/empresas_logo/{{$oferta->empresa->logo}}" />
+                                        @else
+                                            <img style="max-width: 100px" class="rounded-circle " src="/storage/public/empresas_logo/empresa.png" />
+                                        @endif   
+                                    </td>
                                     <td>{{ $oferta->empresa->nombre_comercial }}</td>
                                     <td>{{ $oferta->titulo }}</td>
                                     <td>{{ $oferta->descripcion }}</td>
                                     <td>{{ $oferta->numero_plaza }}</td>
+                                    <td>{{ $oferta->aplicaciones->count() }}</td>
                                     <td class="text-center">
                                         @if( $oferta->isActive == 1)
                                             <a href="/gestor/ofertaActivar/{{$oferta->cod_oferta}}"><i class="fa fa-unlock fa-2x text-success" aria-hidden="true"></i></a>

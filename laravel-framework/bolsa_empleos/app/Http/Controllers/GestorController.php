@@ -3,10 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\empresa;
-use App\genero;
-use App\persona;
-use App\oferta_laboral;
 use App\User;
+use App\a_experiencia;
+use App\direccion_solicitante;
+use App\gestion;
+use App\idioma_solicitante;
+use App\persona;
+use App\programa_solicitante;
+use App\tipo_contrato;
+use App\genero;
+use App\departamento;
+use App\municipio;
+use App\licencia;
+use App\estudio;
+use App\area_estudio;
+use App\programa;
+use App\idioma;
+use App\nivel;
+use App\nivel_estudio;
+use App\cargo_empresa;
+use App\oferta_laboral;
+use App\experiencia_oferta;
+use App\oferta_idioma;
+use App\estudio_oferta;
+use App\oferta_programa;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -195,6 +216,54 @@ class GestorController extends Controller
     public function ofertasMes(){
         $ofertas = oferta_laboral::whereMonth('fecha','=',now()->month)->paginate(15);
         return view('gestor.ofertas')->with('ofertas',$ofertas);
+    }
+
+    public function curriculum($id){
+
+        $persona = persona::where('id',$id)->first();
+
+        if(!$persona){
+            return Redirect::to('/empresa/dashboard');
+        }
+
+        $persona->estadocivil;
+        $persona->licencia;
+        $persona->a_experiencia;
+        $persona->experiencia_laboral;
+
+        foreach ($persona->experiencia_laboral as $experiencia){
+            $experiencia->giro_empresa;
+            $experiencia->cargo_empresa;
+        }
+
+        $persona->estudios;
+
+        foreach($persona->estudios as $estudio){
+            $estudio->nivel_estudio;
+            $estudio->area_estudio;
+        }
+
+        $idiomas = idioma_solicitante::where('persona_id',$id)->get();
+        foreach($idiomas as $idioma){
+            $idioma->idioma;
+            $idioma->nivel;
+        }
+
+        $programas = programa_solicitante::where('persona_id',$id)->get();
+        foreach($programas as $programa){
+            $programa->programa;
+            $programa->nivel;
+        }
+
+        $direccion = direccion_solicitante::where('persona_id',$id)->first();
+        $direccion->municipio;
+        $direccion->municipio->departamento;
+
+//        return response()->json($direccion);
+
+        return view('gestor.curriculum',['persona'=>$persona,'idiomas'=>$idiomas,'programas'=>$programas,'direccion'=>$direccion]);
+
+
     }
 
 }

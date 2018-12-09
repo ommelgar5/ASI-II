@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/assets/css/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/fontawesome5.5/css/all.min.css">
   <script src="/assets/js/bootstrap4/popper.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 

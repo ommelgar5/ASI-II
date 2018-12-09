@@ -185,13 +185,19 @@
               <tbody style="font-size: .8em;">
               @foreach( $oferta->aplicaciones()->get() as $aplicante)
                   <tr class="gradeA odd" role="row">
-                    <td><img src="{{ $aplicante->persona->usuarios->first()->avatar }}" /> </td>
+                    <td>
+                      @if($aplicante->persona->usuarios->first()->avatar)
+                        <img style="max-width: 100px" class="rounded-circle " src="/storage/public/aplicantes_avatar/{{ $aplicante->persona->usuarios->first()->avatar }}"/> 
+                      @else
+                        <img style="max-width: 100px" class="rounded-circle "src="/assets/img/users/user.png" alt="user.png" />
+                      @endif
+                    </td>
                     <td>{{ $aplicante->persona->nombre }} {{ $aplicante->persona->apellido }} </td>
                     <td>{{ $aplicante->persona->fech_nac }}</td>
                     <td>{{ $aplicante->persona->genero->genero }}</td>
                     <td>{{ $aplicante->persona->estadocivil->estado }}</td>
                     <td class="text-center">
-                      <a href="{{route('gestor.oferta', ['id' => $oferta->cod_oferta])}}" id="detalle"  class="btn btn-primary btn-xs" style="margin-left: 3em;"> Detalle</a>
+                      <a href="{{ route('gestor.curriculum', ['id'=> $aplicante->persona->id ] ) }}" id="detalle"  class="btn btn-primary btn-xs" style="margin-left: 3em;"> Detalle</a>
                     </td>
                   </tr>
               @endforeach

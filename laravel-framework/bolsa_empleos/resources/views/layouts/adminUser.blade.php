@@ -12,6 +12,7 @@
     <link href="/assets/css/admin/css/metisMenu.min.css" rel="stylesheet">
     <link href="/assets/css/admin/css/sb-admin-2.css" rel="stylesheet">
     <link href="/assets/css/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
