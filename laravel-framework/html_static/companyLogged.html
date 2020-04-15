@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio</title>
+  <meta name="description" content="Bolsa de trabajo de la Alcaldia de Santa Tecla">
+  <link rel="shortcut icon" href="assets/img/icon/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome5.5/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <script src="assets/js/bootstrap4/popper.min.js"></script>
+</head>
+<body>
+
+<!--Barra de navegacion principal -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <a class="navbar-brand" href="/">
+    <img src="assets/img/logos_st/logo.png" alt="logo.png" width="120">
+  </a>
+  <div href="#" class="dropdown mr-2">
+    <span class="text-muted small">Ana Maria Melgar</span>
+    <a href="#"></a>
+    <img src="assets/img/logos/claro.png" alt="claro.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+    <div class="dropdown-menu ">
+      <a class="dropdown-item" href="#"><i class="fas fa-user-tie fa-sm mr-1"></i> Perfil</a>
+      <a class="dropdown-item" href="companyAdmin.html"><i class="fas fa-cogs fa-sm mr-1"></i> Ajustes</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/"><i class="fas fa-sign-out-alt mr-1"></i>Salir</a>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="container my-3">
+    
+    <!--Categorias-->
+    <div class="row">
+      <div class="col-lg-4">
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <i class="fa fa-tasks fa-fw"></i> Filtrar por Categorias
+          </div>
+          <div class="panel-body">
+            <div class="list-group">
+              <a href="#" class="list-group-item py-1">Informatica | intenet</a>
+              <a href="#" class="list-group-item py-1"> Finanzas | Contabilidad | Aditoria </a>
+              <a href="#" class="list-group-item py-1"> Mercadeo | Ventas </a>
+              <a href="#" class="list-group-item py-1"> Salud</a>
+              <a href="#" class="list-group-item py-1"> Recursos Humanos </a>
+              <a href="#" class="list-group-item py-1"> Publicidad | Comunicacion</a>
+              <a href="#" class="list-group-item py-1"> Compra </a>
+              <a href="#" class="list-group-item py-1"> Call Center</a>
+              <a href="#" class="list-group-item py-1"> Producción | Ingeniería | Calidad</a>
+              <a href="#" class="list-group-item py-1"> Restaurantes</a>
+              <a href="#" class="list-group-item py-1"> Telecomunicaciones </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Ofertas-->
+      <div class="col-lg-8">
+        
+        <!--Opciones de ususuario Logueado -->
+        <ul class="nav nav-tabs mb-3 mt-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fas fa-book fa-lg mr-2"></i>Todas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="companyAddOfert.html"> <i class="fas fa-plus-circle fa-lg mr-2"></i> Agregar</a>
+          </li>
+        </ul>
+        
+        <!--BUSCAR -->
+        <form action="">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-primary text-white"><i class="fas fa-search"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Buscar">
+          </div>
+        </form>
+        
+        <h5>Fitros de busqueda</h5>
+        
+        <div id="accordion" class="mb-3">
+          <div class="card">
+            <div class="card-header py-1">
+              <div class="row d-flex justify-content-between align-items-center ">
+                <a class="card-link col-8 col-md-10 " data-toggle="collapse" href="#collapseOne">
+                  Filtros de búsqueda
+                </a>
+              </div>
+            </div>
+            
+            <div id="collapseOne" class="collapse px-2" data-parent="#accordion">
+              <form action="#">
+                <div class="form-group">
+                  <label for="area">Area de la empresa</label>
+                  <select class="form-control" id="area">
+                    <option value="1">Informática | Internet</option>
+                    <option value="2">Mercadeo | Ventas</option>
+                    <option value="3">Recursos Humanos</option>
+                    <option value="4">Operaciones | Logística</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="cargo">Cargo empresa</label>
+                  <select class="form-control" id="cargo">
+                    <option value="1">Gerente Comercial</option>
+                    <option value="2">Vendedor</option>
+                    <option value="3">Programador Senior</option>
+                    <option value="4">Administrador de Base de Datos</option>
+                  </select>
+                </div>
+                
+                <div class="text-right mb-2">
+                  <button class="btn btn-primary">Buscar</button>
+                </div>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+        
+        <!--OFERTAS PUBLICADAS-->
+        <h5>Ofertas publicadas</h5>
+        
+        <a href="companySolic.html" class="link">
+          <div class="card mb-3">
+            <div class="card-header py-1 d-flex justify-content-between">
+                <span>Ejecutivo de venta</span><span>Feha: 11/11/2018</span>
+            </div>
+            <div class="card-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-10 p-0">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae cumque
+                    dicta, doloremque doloribus, illum maiores nisi nobis odit perferendis quam quas
+                    quia ratione repellendus sint tempora tempore voluptas voluptates?
+                  </div>
+                  <div class="col-md-2 p-1 d-flex justify-content-center">
+                      <div class="o-circle bg-success">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+  
+        <a href="companyOfert.html" class="link">
+          <div class="card mb-3">
+            <div class="card-header py-1 d-flex justify-content-between">
+              <span>Programador en PHP</span><span>Feha: 10/11/2018</span>
+            </div>
+            <div class="card-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-10 p-0">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur cupiditate dolores,
+                   dolorum eius eligendi harum iure minima nam numquam officiis optio quibusdam temporibus tenetur totam
+                   ullam unde velit voluptas!
+                  </div>
+                  <div class="col-md-2 p-1 d-flex justify-content-center">
+                    <div class="o-circle bg-success">23</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        
+      </div>
+        <!--end co-lg-8 -->
+      
+    </div>
+  </main>
+
+
+  <footer class="container-fluid bg-light">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="assets/img/logos_st/escudo.png" alt="">
+      </div>
+      <div class="col-md-4 text-center text-muted">
+        <p>&copy; 2018 - Alcaldía Municipal de Santa Tecla / 2a Av. Norte y 1a Calle Poniente No. 2-3, Santa Tecla, El Salvado</p>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <a href="https://mail.amst.gob.sv/webmail/login/"><i class="fas fa-envelope fa-2x mr-2 text-success"></i></a>
+        <a href="https://www.facebook.com/SantaTeclaSV"><i class="fab fa-facebook-square fa-2x mr-2 text-success"></i> </a>
+        <a href="https://twitter.com/SantaTeclaSV"><i class="fab fa-twitter-square fa-2x mr-2 text-success"></i></a>
+        <a href="https://www.instagram.com/santateclasv/"><i class="fab fa-instagram fa-2x mr-2 text-success"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/bootstrap4/bootstrap.min.js"></script>
+
+
+</body>
+</html>

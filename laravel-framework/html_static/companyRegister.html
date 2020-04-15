@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <meta name="description" content="Bolsa de trabajo de la Alcaldia de Santa Tecla">
+    <link rel="shortcut icon" href="assets/img/icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome5.5/css/all.min.css">
+    <script src="assets/js/bootstrap4/popper.min.js"></script>
+  </head>
+  <body>
+    <!--Barra de navegacion principal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src="assets/img/logos_st/logo.png" alt="logo.png" width="120">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/"> <i class="fas fa-arrow-circle-left fa-lg mr-1"></i>Inicio</a>
+            </li>
+        </ul>
+        <a  class="btn btn-outline-success my-2 my-sm-0 mr-4" href="contacto.html">Contacto</a>
+      </div>
+      
+    </nav>
+    
+    <main class="container mt-3 mb-4">
+      
+        <form action="#" method="POST"></form>
+        <div class="card p-3 mb-3">
+          <h4 class="text-center">Cuenta</h4>
+          <div class="form-group">
+            <label for="usuario">Usuario: <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="usuario" id="usuario">
+          </div>
+          <div class="form-group">
+            <label for="pass">Contraseña: <strong class="text-danger">*</strong></label>
+            <input type="password"  class="form-control" name="pass" id="pass">
+          </div>
+          <div class="form-group">
+            <label for="pass2">Contraseña: <strong class="text-danger">*</strong></label>
+            <input type="password"  class="form-control" name="pass2" id="pass2">
+          </div>
+        </div>
+    
+        <div class="card p-3">
+          <h4 class="text-center mb-3">Información Empresa</h4>
+          <div class="form-group">
+            <label for="nombreJuridico">Nombre juridico: <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="nombreJuridico" id="nombreJuridico">
+          </div>
+          <div class="form-group">
+            <label for="nombreComercial">Nombre comercial: <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="nombreComercial" id="nombreComercial">
+          </div>
+          <div class="form-group">
+            <label for="nit">NIT:  <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="nit" id="nit">
+          </div>
+          <div class="form-group">
+            <label for="giroEmpresa">Giro Empresa: <strong class="text-danger">*</strong></label>
+            <select class="form-control" id="giroEmpresa">
+              <option value="1">Extractiva | Agricola</option>
+              <option value="2">Industrial</option>
+              <option value="3">Comercial</option>
+              <option value="4">Financiera</option>
+              <option value="5">Call Center</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo: <strong class="text-danger">*</strong></label>
+            <input type="email"  class="form-control" name="correo" id="correo" placeholder="correo@gmail.com">
+          </div>
+          <div class="form-group">
+            <label for="tel1">Telefono 1 <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="tel1" id="tel1">
+          </div>
+          <div class="form-group">
+            <label for="tel2">Telefono 2</label>
+            <input type="text"  class="form-control" name="tel2" id="tel2">
+          </div>
+          <div class="form-group">
+            <label for="direccion">Dirección: <strong class="text-danger">*</strong></label>
+            <input type="text"  class="form-control" name="direccion" id="direccion">
+          </div>
+          <div class="form-group">
+            <label for="referencia">Referencia:</label>
+            <textarea class="form-control" rows="5" id="referencia" name="referencia"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="depto">Departamento:  <strong class="text-danger">*</strong></label>
+            <select class="form-control" id="depto" name="depto">
+              <option value="1">La Libertad</option>
+              <option value="2">San Salvador</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mun">Municipio:  <strong class="text-danger">*</strong></label>
+            <select class="form-control" id="mun" name="num">
+              <option value="1">Ciudad Arce</option>
+              <option value="2">Santa Tecla</option>
+              <option value="3">Colón</option>
+            </select>
+          </div>
+          <div class="custom-file">
+            <label for="mun">Imagen de la cuenta:</label>
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">Buscar archivo</label>
+            </div>
+            
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary mt-2" >Guardar</button>
+        </div>
+        </form>
+      </div>
+    </main>
+    
+    
+    <footer class="container-fluid bg-light">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="assets/img/logos_st/escudo.png" alt="">
+        </div>
+        <div class="col-md-4 text-center text-muted">
+          <p>&copy; 2018 - Alcaldía Municipal de Santa Tecla / 2a Av. Norte y 1a Calle Poniente No. 2-3, Santa Tecla, El Salvado</p>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <a href="https://mail.amst.gob.sv/webmail/login/"><i class="fas fa-envelope fa-2x mr-2 text-success"></i></a>
+          <a href="https://www.facebook.com/SantaTeclaSV"><i class="fab fa-facebook-square fa-2x mr-2 text-success"></i> </a>
+          <a href="https://twitter.com/SantaTeclaSV"><i class="fab fa-twitter-square fa-2x mr-2 text-success"></i></a>
+          <a href="https://www.instagram.com/santateclasv/"><i class="fab fa-instagram fa-2x mr-2 text-success"></i></a>
+        </div>
+      </div>
+    
+    </footer>
+  
+  
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap4/bootstrap.min.js"></script>
+  
+  </body>
+</html>

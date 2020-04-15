@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio</title>
+  <meta name="description" content="Bolsa de trabajo de la Alcaldia de Santa Tecla">
+  <link rel="shortcut icon" href="assets/img/icon/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome5.5/css/all.min.css">
+  <script src="assets/js/bootstrap4/popper.min.js"></script>
+</head>
+<body>
+
+  <!--Barra de navegacion principal -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="/">
+      <img src="assets/img/logos_st/logo.png" alt="logo.png" width="120">
+    </a>
+    <div href="#" class="dropdown mr-2">
+      <span class="text-muted small">Oscar Cecilio Ortiz Melgar</span>
+      <img src="assets/img/users/user.png" alt="user.png" width="50" class="rounded-circle dropdown-toggle" data-toggle="dropdown" style="border: 1px solid steelblue">
+      <div class="dropdown-menu ">
+        <a class="dropdown-item" href="userLogged.html"><i class="fas fa-chevron-circle-left fa-sm mr-1"></i> regresar</a>
+        <a class="dropdown-item" href="userAdmin.html"><i class="fas fa-pencil-alt fa-sm mr-1"></i> Editar Perfil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/"><i class="fas fa-sign-out-alt mr-1"></i>Salir</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="container my-3">
+    <div class="row">
+      <div class="col-lg-4">
+        
+        <!--AVATAR-->
+        <div class="card my-4 border-0">
+          <div class="text-center mt-2">
+            <img class="card-img-top rounded" src="assets/img/users/user.png" alt="user.png" style="max-width: 150px">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Oscar Cecilio Ortiz Melgar</h4>
+            <a href="userAdmin.html" class="btn btn-primary">Editar Perfil</a>
+          </div>
+        </div>
+  
+        <!--IFORMACION PERSONAL-->
+        <div id="if" class="mb-3">
+    
+          <div class="card mb-2">
+            <div class="card-header py-1">
+              <a class="card-link d-block" data-toggle="collapse" href="#if1">
+                Información personal
+              </a>
+            </div>
+            <div id="if1" class="collapse show" data-parent="#if">
+              <div class="card-body" style="font-size: .8em">
+                <div>Fecha de nacimiento: <span class="text-muted">01/01/1990</span></div>
+                <div>Telefono 1:  <span class="text-muted">78289787</span></div>
+                <div>Telefono 2:  <span class="text-muted">25259878</span></div>
+                <div>correo:  <span class="text-muted">correo@gmail.com</span></div>
+                <div>Estado Civil: <span class="text-muted">Casado/a</span></div>
+                <div>Direción:</div>
+                <p class="text-muted m-0">San Salvador, 23 av. Sur casi al Norte, Juan Pablo V, Roma</p>
+                <div>Vehiculo: <span class="text-muted">No</span></div>
+                <div>Licencia: <span class="text-muted">Liviana</span></div>
+              </div>
+            </div>
+          </div>
+    
+          
+        </div>
+
+        <!--IDIMAS-->
+        <h3 style="font-size: 1.1em" class="text-center">Idiomas</h3>
+        <div id="idioma" class="mb-3">
+    
+          <div class="card mb-2">
+            <div class="card-header py-1">
+              <a class="card-link d-block" data-toggle="collapse" href="#i1">
+                Idiomas
+              </a>
+            </div>
+            <div id="i1" class="collapse show" data-parent="#idioma">
+              <div class="card-body" style="font-size: .8em">
+                <!--Agrupadas-->
+                <div class="mb-2">
+                  <div>Programa: <span class="text-muted">Excel</span></div>
+                  <div>nivel: <span class="text-muted">Básico</span></div>
+                </div>
+                <div>
+                  <div>Programa: <span class="text-muted">Word</span></div>
+                  <div>nivel: <span class="text-muted">Básico</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+ 
+    </div>
+    <!--end col 4-->
+      
+      <div class="col-lg-8">
+        
+          <!--ESPECIENCIAS LABORALES-->
+          <h3 style="font-size: 1.1em" class="text-center ">Expeciencias profesionales</h3>
+          <div id="accordion" class="mb-3">
+            
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#ex1">
+                 Ejecutivo de ventas - EMPRESA
+                </a>
+              </div>
+              <div id="ex1" class="collapse show" data-parent="#accordion">
+
+                <div class="card-body" style="font-size: .8em">
+                  <div>Empresa: <span class="text-muted">Claro S.A de C.V</span></div>
+                  <div>Giro de la empresa:  <span class="text-muted">Comercial</span></div>
+                  <div>Cargo: <span class="text-muted">Ejectivo de venta</span></div>
+                  <div>Descripcion:</div>
+                  <p class="text-muted">Involucra principalmente dar solución a las problemáticas de los clientes, atenderles de manera optima
+                     aún el cliente se encuentre con el peor carácter, poder dar solución a su problema en base a las politicas
+                     de la empresa y además de eso tener que tener siempre una sonrisa para hacer sentir al cliente una prioridad.</p>
+                  <span>Fecga inicio:</span> <span class="text-muted mr-4">01/2018</span>
+                  <span>Fecha fin:</span> <span class="text-muted">06/2018</span>
+                </div>
+
+              </div>
+              
+            </div>
+            
+            <div class="card mb-2">
+                <div class="card-header py-1">
+                  <a class="card-link d-block" data-toggle="collapse" href="#ex2">
+                    Ejecutivo de ventas 2 - EMPRESA
+                  </a>
+                </div>
+                <div id="ex2" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="font-size: .8em">
+                    <div>Empresa: <span class="text-muted">Claro S.A de C.V</span></div>
+                    <div>Giro de la empresa:  <span class="text-muted">Comercial</span></div>
+                    <div>Cargo: <span class="text-muted">Ejectivo de venta</span></div>
+                    <div>Descripcion:</div>
+                    <p class="text-muted">Involucra principalmente dar solución a las problemáticas de los clientes, atenderles de manera optima
+                                          aún el cliente se encuentre con el peor carácter, poder dar solución a su problema en base a las politicas
+                                          de la empresa y además de eso tener que tener siempre una sonrisa para hacer sentir al cliente una prioridad.</p>
+                    <span>Fecga inicio:</span> <span class="text-muted mr-4">01/2018</span>
+                    <span>Fecha fin:</span> <span class="text-muted">06/2018</span>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card mb-2">
+                <div class="card-header py-1">
+                  <a class="card-link d-block" data-toggle="collapse" href="#ex3">
+                    Ejecutivo de ventas 3 - EMPRESA
+                  </a>
+                </div>
+                <div id="ex3" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="font-size: .8em">
+                    <div>Empresa: <span class="text-muted">Claro S.A de C.V</span></div>
+                    <div>Giro de la empresa:  <span class="text-muted">Comercial</span></div>
+                    <div>Cargo: <span class="text-muted">Ejectivo de venta</span></div>
+                    <div>Descripcion:</div>
+                    <p class="text-muted">Involucra principalmente dar solución a las problemáticas de los clientes, atenderles de manera optima
+                                          aún el cliente se encuentre con el peor carácter, poder dar solución a su problema en base a las politicas
+                                          de la empresa y además de eso tener que tener siempre una sonrisa para hacer sentir al cliente una prioridad.</p>
+                    <span>Fecga inicio:</span> <span class="text-muted mr-4">01/2018</span>
+                    <span>Fecha fin:</span> <span class="text-muted">06/2018</span>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+
+          <!--ESTUDIOS-->
+          <h3 style="font-size: 1.1em" class="text-center ">Estudios</h3>
+          <div id="ed" class="mb-3">
+      
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#es1">
+                  Técnico en Ingenieria en redes
+                </a>
+              </div>
+              <div id="es1" class="collapse show" data-parent="#ed">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Area de estudio: <span class="text-muted">Telecomunicaciones</span></div>
+                  <div>Especialidad:  <span class="text-muted">Tecnico en eingenieria en red </span></div>
+                  <div>Nivel: <span class="text-muted">4to de ingenierie</span></div>
+                  <span>Fecha inicio:</span> <span class="text-muted mr-4">01/2018</span>
+                  <span class="badge badge-pill badge-primary ml-4">Actual</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#es2">
+                  Técnico en Ingenieria en redes
+                </a>
+              </div>
+              <div id="es2" class="collapse" data-parent="#ed">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Area de estudio: <span class="text-muted">Telecomunicaciones</span></div>
+                  <div>Especialidad:  <span class="text-muted">Tecnico en eingenieria en red </span></div>
+                  <div>Nivel: <span class="text-muted">4to de ingenierie</span></div>
+                  <span>Fecha inicio:</span> <span class="text-muted mr-4">01/2018</span>
+                    <span>Fecha fin: </span> <span class="text-muted mr-4">01/2018</span>
+                  <span class="badge badge-pill badge-primary ml-4">Actual</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+  
+          <!--REFERENCIAS-->
+          <h3 style="font-size: 1.1em" class="text-center">Referencias Profesionales</h3>
+          <div id="accordionEP" class="mb-3">
+  
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#ep1">
+                  Calos Ismael Alas Ramos
+                </a>
+              </div>
+              <div id="ep1" class="collapse show" data-parent="#accordionEP">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Nombre: <span class="text-muted">Calos Ismael Alas Ramos</span></div>
+                  <div>Empresa: <span class="text-muted">Tigo S.A de C.V</span></div>
+                  <div>Area:  <span class="text-muted">Atención al cliente</span></div>
+                  <div>Cargo: <span class="text-muted">Ejectivo de venta</span></div>
+                  <div>Telefono fijo: <span class="text-muted">253632559</span></div>
+                  <div>Celular: <span class="text-muted">7889878</span></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#ep2">
+                  Calos Ismael Alas Ramos
+                </a>
+              </div>
+              <div id="ep2" class="collapse" data-parent="#accordionEP">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Nombre: <span class="text-muted">Calos Ismael Alas Ramos</span></div>
+                  <div>Empresa: <span class="text-muted">Tigo S.A de C.V</span></div>
+                  <div>Area:  <span class="text-muted">Atención al cliente</span></div>
+                  <div>Cargo: <span class="text-muted">Ejectivo de venta</span></div>
+                  <div>Telefono fijo: <span class="text-muted">253632559</span></div>
+                  <div>Celular: <span class="text-muted">7889878</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            <!--REFERENCIA PERSONAL-->
+          <h3 style="font-size: 1.1em" class="text-center">Referencias personales</h3>
+          <div id="rp" class="mb-3">
+  
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#epp1">
+                  Calos Ismael Alas Ramos
+                </a>
+              </div>
+              <div id="epp1" class="collapse show" data-parent="#rp">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Nombre: <span class="text-muted">Calos Ismael Alas Ramos</span></div>
+                  <div>Telefono fijo: <span class="text-muted">253632559</span></div>
+                  <div>Celular: <span class="text-muted">7889878</span></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#epp2">
+                  Calos Ismael Alas Ramos
+                </a>
+              </div>
+              <div id="epp2" class="collapse" data-parent="#rp">
+                <div class="card-body" style="font-size: .8em">
+                  <div>Nombre: <span class="text-muted">Calos Ismael Alas Ramos</span></div>
+                  <div>Telefono fijo: <span class="text-muted">253632559</span></div>
+                  <div>Celular: <span class="text-muted">7889878</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!--HABILIDADES-->
+          <h3 style="font-size: 1.1em" class="text-center">Habilidades</h3>
+          <div id="habilidades" class="mb-3">
+  
+            <div class="card mb-2">
+              <div class="card-header py-1">
+                <a class="card-link d-block" data-toggle="collapse" href="#h1">
+                Programas
+                </a>
+              </div>
+              <div id="h1" class="collapse show" data-parent="#habilidades">
+                <div class="card-body" style="font-size: .8em">
+                  <!--Agrupadas-->
+                  <div class="mb-2">
+                    <div>Programa: <span class="text-muted">Excel</span></div>
+                    <div>nivel: <span class="text-muted">Básico</span></div>
+                  </div>
+                  <div>
+                    <div>Programa: <span class="text-muted">Word</span></div>
+                    <div>nivel: <span class="text-muted">Básico</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+      <!--end col-8-->
+    </div>
+    <!--end row-->
+  </main>
+
+
+<footer class="container-fluid bg-light">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="assets/img/logos_st/escudo.png" alt="">
+    </div>
+    <div class="col-md-4 text-center text-muted">
+      <p>&copy; 2018 - Alcaldía Municipal de Santa Tecla / 2a Av. Norte y 1a Calle Poniente No. 2-3, Santa Tecla, El Salvado</p>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <a href="https://mail.amst.gob.sv/webmail/login/"><i class="fas fa-envelope fa-2x mr-2 text-success"></i></a>
+      <a href="https://www.facebook.com/SantaTeclaSV"><i class="fab fa-facebook-square fa-2x mr-2 text-success"></i> </a>
+      <a href="https://twitter.com/SantaTeclaSV"><i class="fab fa-twitter-square fa-2x mr-2 text-success"></i></a>
+      <a href="https://www.instagram.com/santateclasv/"><i class="fab fa-instagram fa-2x mr-2 text-success"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/bootstrap4/bootstrap.min.js"></script>
+
+
+</body>
+</html>

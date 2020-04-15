@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <meta name="description" content="Bolsa de trabajo de la Alcaldia de Santa Tecla">
+    <link rel="shortcut icon" href="assets/img/icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome5.5/css/all.min.css">
+    <script src="assets/js/bootstrap4/popper.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+
+    <h4 class="mt-3 mb-2 mt-4">Mis Estudios</h4>
+    <ol class="container">
+        <li class="border p-3 rounded shadow">
+            <div class="row">
+                <div class="col-md-12  d-flex justify-content-end">
+                    <i class="borrarEstudio fa fa-trash-alt fa-lg" style="cursor:pointer; color: tomato;"> </i>
+                </div>
+                 <div class="col-md-4">
+                      <div class="form-group mb-1">
+                          <label class="m-0">Area de Estudio :</label>
+                          <input type="hidden" name="miAreaEstudio[]" value="'+areaEstudio+'"/>
+                          <input type="text" disabled  class="form-control" value="'+areaEstudioTxt+'" />
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group mb-1">
+                          <label class="m-0">Nivel de Estudio :</label><input type="hidden" name="miNivelEstudio[]" value="'+nivelEstudio+'" />
+                          <input type="text" disabled class="form-control" value="'+nivelEstudioTxt+'" />
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group mb-1">
+                          <label class="m-0">Nombre de la Instituci&oacute;n :</label>
+                          <input type="text" readonly="true" name="miInstitucion[]" class="form-control"  value="'+nombreInstitucion+'" />
+                      </div>
+                  </div>
+            </div>
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="form-group mb-1">
+                      <label class="m-0">Opcion&oacute;n  de la carrera:</label>
+                      <input type="text" readonly="true" name="miCarrera[]" class="form-control" value="'+especialidadCarrera+'" />
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="form-group mb-1">
+                      <label class="m-0">Fecha de inicio :</label>
+                      <input type="text" readonly="true" class="form-control " id="miFechaInicio[]" name="miFechaInicio[]" value="'+fechaInicio+'" >
+                  </div>
+              </div>
+              <div class="col-md-3 mb-1">
+                  <div class="form-group">
+                      <label class="m-0">Fecha de finalizaci&oacute;n :</label>
+                      <input type="date"  class="form-control " id="fechaFin" name="miFechaFin[]"/>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="form-group mb-1">
+                      <label class="m-0">Estudio actual:</label>
+                      <select id="estudioActual" name="estudioActual" class="required custom-select form-control">
+                        <option value="">Seleccione una opcion</option>
+                        <option value="true">Si</option>
+                    </select>
+                   </div>
+               </div>
+          </div>
+      </div>
+    </li>
+    </ol>
+
+    <script>
+    $(document).on('change','#estudioActual', function(event){
+        $select = $(this).val();
+        console.log($select)
+        if($select == 'true'){
+            $('#fechaFin').attr('disabled', true).val(null);
+           console.log($('#fechaFin').val());
+        }else{
+            $('#fechaFin').attr('disabled', false).val(null);
+           console.log($('#fechaFin').val());
+        }
+    })
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
